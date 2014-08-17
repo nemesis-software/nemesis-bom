@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ nemesis Platform - NExt-generation Multichannel E-commerce SYStem
+  ~
+  ~ Copyright (c) 2010 - 2013 nemesis
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of nemesis
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with nemesis.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>io.spring.platform</groupId>
+		<artifactId>platform-foundation-bom</artifactId>
+		<version>1.2.0.BUILD-SNAPSHOT</version>
+		<relativePath />
+	</parent>
+	
+    <groupId>com.nemesis</groupId>
+    <artifactId>bom</artifactId>
+    <version>0.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Nemesis BOM</name>
+	<description>BOM module for the Nemesis platform.</description>
+	<url>http://wiki.nemesis.com/bom/</url>
+    <organization>
+        <name>Nemesis Software, Ltd.</name>
+        <url>http://nemesis.bg/</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Nemesis Platform Commercial License</name>
+            <url>http://nemesis.com/license</url>
+            <distribution>repo</distribution>
+            <comments>This platform is proprietary software.</comments>
+        </license>
+    </licenses>
+	<developers>
+		<developer>
+			<id>ptahchiev</id>
+			<name>Petar Tahchiev</name>
+			<email>ptahchiev at nemesis.bg</email>
+			<organization>Nemesis Software, Ltd.</organization>
+			<organizationUrl>http://www.nemesis.bg</organizationUrl>
+			<roles>
+				<role>Project lead</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>ngochev</id>
+			<name>Nayden Gochev</name>
+			<email>ngochev at nemesis.bg</email>
+			<organization>Nemesis Software, Ltd.</organization>
+			<organizationUrl>http://www.nemesis.bg</organizationUrl>
+		</developer>
+	</developers>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/paranoiabla/nemesis-bom.git</developerConnection>
+        <url>https://github.com/paranoiabla/nemesis-bom.git</url>
+    </scm>
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://nemesis.atlassian.net/browse/NEMESIS</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Bamboo</system>
+        <url>https://nemesis.atlassian.net/builds/browse/NEMESIS-NEMESIS</url>
+    </ciManagement>
+    <distributionManagement>
+        <site>
+            <id>website</id>
+            <url>scp://www.nemesis.com/www/docs/wiki/${project.version}/</url>
+        </site>
+        <repository>
+            <id>nemesis-official-repository</id>
+            <name>Nemesis Official Repository</name>
+            <url>ftp://repository.nemesis.bg/repository</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+		<asciidoctor.version>1.5.0-SNAPSHOT</asciidoctor.version>
+		<asm.version>4.1</asm.version>
+		<atmosphere.version>2.2.0</atmosphere.version>
+		<cglib.version>3.1</cglib.version>
+		<clover.version>3.3.0</clover.version>
+        <codemodel.version>2.6</codemodel.version>
+		<codemirror.webjars.version>4.4</codemirror.webjars.version>
+		<commons.collections4.version>4.0</commons.collections4.version>
+        <commons.validator.version>1.4.0</commons.validator.version>
+        <commons.vfs2.version>2.0</commons.vfs2.version>
+		<drools.version>6.0.1.Final</drools.version>
+        <drools.spring.version>6.0.0.Beta2</drools.spring.version>
+		<ecj.version>4.4</ecj.version>
+		<ehcache.jcache.version>1.0.0</ehcache.jcache.version>
+		<extjs.webjars.version>5.0.0</extjs.webjars.version>
+		<fastutil.version>5.0.9</fastutil.version>
+		<geb.version>0.9.3</geb.version>
+		<geotools.version>12-beta</geotools.version>
+        <google.concurrentlinkedhashmap.version>1.4</google.concurrentlinkedhashmap.version>
+        <google.geocoder.version>0.16</google.geocoder.version>
+        <granule.version>1.0.11-SNAPSHOT</granule.version>
+		<hibernate.tools.version>4.3.1.CR1</hibernate.tools.version>
+        <hazelcast.version>3.3-EA2</hazelcast.version>
+		<htmlunit.version>2.15</htmlunit.version>
+        <infinispan.version>6.0.0.Final</infinispan.version>
+		<itextpdf5.version>5.5.2</itextpdf5.version>
+		<jadira.usertype.version>3.2.0.GA</jadira.usertype.version>
+		<jawr.version>3.6-SNAPSHOT</jawr.version>
+		<jasypt.version>1.9.2</jasypt.version>
+		<jboss.logging.version>3.2.0.Beta1</jboss.logging.version>
+		<jets3t.version>0.9.0</jets3t.version>
+		<jetty.version>9.2.0.v20140526</jetty.version>
+        <jetty.npn.boot.version>1.1.6.v20130911</jetty.npn.boot.version>
+        <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
+		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
+		<jquery.webjars.version>1.10.2</jquery.webjars.version>
+        <jqueryui.webjars.version>1.11.0</jqueryui.webjars.version>
+        <jqueryatmosphere.webjars.version>2.1.6</jqueryatmosphere.webjars.version>
+        <jqueryform.webjars.version>3.28.0-2013.02.06-1</jqueryform.webjars.version>
+        <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
+        <jquerycookie.version>1.4.0</jquerycookie.version>
+        <jquerycolorbox.webjars.version>1.4.33</jquerycolorbox.webjars.version>
+        <jqueryjcarousel.webjars.version>0.3.1</jqueryjcarousel.webjars.version>
+        <jqueryraty.webjars.version>2.5.2</jqueryraty.webjars.version>
+        <jquerychosen.webjars.version>1.1.0</jquerychosen.webjars.version>
+        <jqueryeasyzoom.webjars.version>2.0.5</jqueryeasyzoom.webjars.version>
+        <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
+		<jsoup.version>1.7.3</jsoup.version>
+		<log4j2.version>2.0</log4j2.version>
+		<lucene.version>4.1.0</lucene.version>
+        <maven.compile.source>1.7</maven.compile.source>
+        <maven.compile.target>1.7</maven.compile.target>
+        <maven.war.plugin.version>2.4</maven.war.plugin.version>
+        <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
+        <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
+        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+        <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
+        <maven.site.plugin.version>3.3</maven.site.plugin.version>
+        <maven.failsafe.plugin.version>2.15</maven.failsafe.plugin.version>
+        <maven.enforcer.plugin.version>1.3.1</maven.enforcer.plugin.version>
+        <maven.release.plugin.version>2.4.1</maven.release.plugin.version>
+        <maven.plugin.log4j.version>1.0.1</maven.plugin.log4j.version>
+        <maven.plugin.plugin.version>3.2</maven.plugin.plugin.version>
+        <maven.project.info.reports.plugin>2.7</maven.project.info.reports.plugin>
+        <maven.appassembler.plugin.version>1.8</maven.appassembler.plugin.version>
+        <maven.changes.plugin.version>2.9</maven.changes.plugin.version>
+        <maven.findbugs.plugin.version>2.5.2</maven.findbugs.plugin.version>
+        <maven.rat.version.plugin>0.10</maven.rat.version.plugin>
+        <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
+        <maven.cargo.plugin>1.4.3</maven.cargo.plugin>
+        <maven.tomcat7.plugin>2.2</maven.tomcat7.plugin>
+        <maven.build.helper.plugin.version>1.8</maven.build.helper.plugin.version>
+        <maven.plexus.plugin.version>1.5.5</maven.plexus.plugin.version>
+        <maven.wagon.plugin.version>1.0-beta-5-SNAPSHOT</maven.wagon.plugin.version>
+        <maven.jasmine.plugin.version>1.3.1.5</maven.jasmine.plugin.version>
+		<maven.plugin.api.version>3.2.2</maven.plugin.api.version>
+        <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
+		<mchange.commons.version>0.2.7</mchange.commons.version>
+		<opencmis.version>0.11.0</opencmis.version>
+        <orika.version>1.4.5</orika.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<recaptcha4j.version>0.0.7</recaptcha4j.version>
+        <reflections.version>0.9.9-RC2</reflections.version>
+		<selenium.version>2.42.2</selenium.version>
+		<smartsprites.version>0.2.11-SNAPSHOT</smartsprites.version>
+		<spring.bom.version>1.2.0.BUILD-SNAPSHOT</spring.bom.version>
+		<spring.data.elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring.data.elasticsearch.version>
+        <spring.payment.version>0.5.0.SNAPSHOT</spring.payment.version>
+        <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
+		<supercsv.version>2.2.0</supercsv.version>
+        <spring.elasticsearch.version>1.0.0</spring.elasticsearch.version>
+        <tomcat.version>8.0.9</tomcat.version>
+		<wagon.version>2.6</wagon.version>
+		<xml.apis.version>1.4.01</xml.apis.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>official-m2-repo</id>
+            <name>Official Maven2 Repository</name>
+            <url>http://repo1.maven.org/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+        </repository>
+        <repository>
+            <id>osgeo</id>
+            <name>Open Source Geospatial Foundation Repository</name>
+            <url>http://download.osgeo.org/webdav/geotools/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+        </repository>
+		<repository>
+            <id>spring-snapshot</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+        </repository>
+		<repository>
+            <id>spring-milestone</id>
+            <url>http://repo.spring.io/libs-milestone</url>
+            <snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+        </repository>
+		<repository>
+            <id>spring-release</id>
+            <url>http://repo.spring.io/libs-release</url>
+            <snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+        </repository>
+        <repository>
+            <id>sonatype-snapshot</id>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+        </repository>
+        <repository>
+            <id>apache-snapshots</id>
+            <url>https://repository.apache.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+        </repository>
+        <repository>
+            <id>nemesis-official-repository</id>
+            <url>https://repository-polar.forge.cloudbees.com/release/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+        </repository>
+    </repositories>
+	
+    <dependencies>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-web</artifactId>
+            <version>${log4j2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+            <version>${log4j2.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j2.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.fusesource.jansi</groupId>
+            <artifactId>jansi</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+			<version>${commons.collections4.version}</version>
+        </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
