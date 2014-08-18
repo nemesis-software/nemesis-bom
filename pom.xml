@@ -118,7 +118,7 @@
 		<jasypt.version>1.9.2</jasypt.version>
 		<jboss.logging.version>3.2.0.Beta1</jboss.logging.version>
 		<jets3t.version>0.9.0</jets3t.version>
-		<jetty.version>9.2.0.v20140526</jetty.version>
+		<jetty.version>9.1.4.v20140401</jetty.version>
         <jetty.npn.boot.version>1.1.6.v20130911</jetty.npn.boot.version>
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
 		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
