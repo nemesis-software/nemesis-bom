@@ -97,6 +97,7 @@
 		<commons.collections4.version>4.0</commons.collections4.version>
         <commons.validator.version>1.4.0</commons.validator.version>
         <commons.vfs2.version>2.0</commons.vfs2.version>
+		<commons.jcs.version>2.0-SNAPSHOT</commons.jcs.version>
 		<drools.version>6.0.1.Final</drools.version>
         <drools.spring.version>6.0.0.Beta2</drools.spring.version>
 		<ecj.version>4.4</ecj.version>
@@ -180,6 +181,7 @@
         <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
 		<supercsv.version>2.2.0</supercsv.version>
         <spring.elasticsearch.version>1.0.0</spring.elasticsearch.version>
+		<stripe.api.version>1.17.0</stripe.api.version>
         <tomcat.version>8.0.9</tomcat.version>
 		<wagon.version>2.6</wagon.version>
 		<xml.apis.version>1.4.01</xml.apis.version>
