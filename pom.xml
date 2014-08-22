@@ -87,7 +87,7 @@
     </distributionManagement>
 
     <properties>
-		<asciidoctor.version>1.5.0-SNAPSHOT</asciidoctor.version>
+		<asciidoctor.version>1.5.0</asciidoctor.version>
 		<asm.version>4.1</asm.version>
 		<atmosphere.version>2.2.0</atmosphere.version>
 		<cglib.version>3.1</cglib.version>
@@ -136,7 +136,7 @@
         <jqueryeasyzoom.webjars.version>2.0.5</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
 		<jsoup.version>1.7.3</jsoup.version>
-		<log4j2.version>2.0</log4j2.version>
+		<log4j2.version>2.0.2</log4j2.version>
 		<lucene.version>4.1.0</lucene.version>
         <maven.compile.source>1.7</maven.compile.source>
         <maven.compile.target>1.7</maven.compile.target>
