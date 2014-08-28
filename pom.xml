@@ -132,7 +132,7 @@
         <jquerycolorbox.webjars.version>1.4.33</jquerycolorbox.webjars.version>
         <jqueryjcarousel.webjars.version>0.3.1</jqueryjcarousel.webjars.version>
         <jqueryraty.webjars.version>2.5.2</jqueryraty.webjars.version>
-        <jquerychosen.webjars.version>1.1.0</jquerychosen.webjars.version>
+        <jquerychosen.webjars.version>1.1.0-1</jquerychosen.webjars.version>
         <jqueryeasyzoom.webjars.version>2.0.5</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
 		<jsoup.version>1.7.3</jsoup.version>
@@ -176,7 +176,7 @@
 		<selenium.version>2.42.2</selenium.version>
 		<smartsprites.version>0.2.11-SNAPSHOT</smartsprites.version>
 		<spring.bom.version>1.2.0.BUILD-SNAPSHOT</spring.bom.version>
-		<spring.data.elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring.data.elasticsearch.version>
+		<spring-data-elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring-data-elasticsearch.version>
         <spring.payment.version>0.5.0.SNAPSHOT</spring.payment.version>
         <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
 		<supercsv.version>2.2.0</supercsv.version>
