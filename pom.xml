@@ -125,6 +125,7 @@
 		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
 		<jquery.webjars.version>1.10.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.0</jqueryui.webjars.version>
+		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
         <jqueryatmosphere.webjars.version>2.1.6</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.28.0-2013.02.06-1</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
