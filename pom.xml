@@ -136,6 +136,7 @@
         <jquerychosen.webjars.version>1.1.0-1</jquerychosen.webjars.version>
         <jqueryeasyzoom.webjars.version>2.0.5</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
+		<jqueryflowmplayer.webjars.version>5.4.6</jqueryflowmplayer.webjars.version>
 		<jsoup.version>1.7.3</jsoup.version>
 		<log4j2.version>2.0.2</log4j2.version>
 		<lucene.version>4.1.0</lucene.version>
