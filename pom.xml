@@ -187,6 +187,7 @@
         <tomcat.version>8.0.9</tomcat.version>
 		<wagon.version>2.6</wagon.version>
 		<xml.apis.version>1.4.01</xml.apis.version>
+		<zxing.version>3.1.0</zxing.version>
     </properties>
 
 	<dependencyManagement>
@@ -496,4 +497,48 @@
             </plugin>
         </plugins>
     </build>
+	
+	<profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env>dev</env>
+            </properties>
+		</profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>${maven.failsafe.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <useManifestOnlyJar>false</useManifestOnlyJar>
+                            <useSystemClassLoader>true</useSystemClassLoader>
+                            <groups>com.nemesis.platform.util.test.IntegrationTest</groups>
+                            <includes>
+                                <include>**/*IntegrationTest.java</include>
+                            </includes>
+                            <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m</argLine>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
