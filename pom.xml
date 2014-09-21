@@ -134,6 +134,7 @@
         <jqueryjcarousel.webjars.version>0.3.1</jqueryjcarousel.webjars.version>
         <jqueryraty.webjars.version>2.5.2</jqueryraty.webjars.version>
         <jquerychosen.webjars.version>1.1.0-1</jquerychosen.webjars.version>
+		<jqueryeasing.webjars.version>1.3</jqueryeasing.webjars.version>
         <jqueryeasyzoom.webjars.version>2.0.5</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
 		<jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
