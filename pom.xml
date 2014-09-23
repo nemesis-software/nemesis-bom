@@ -476,6 +476,7 @@
                                         <ignoreClass>javax.servlet.*</ignoreClass>
                                         <ignoreClass>javax.persistence.*</ignoreClass>
                                         <ignoreClass>org.codehaus.plexus.util.*</ignoreClass>
+										<ignoreClass>org.bouncycastle.*</ignoreClass>
                                     </ignoreClasses>
                                 </banDuplicateClasses>
                             </rules>
