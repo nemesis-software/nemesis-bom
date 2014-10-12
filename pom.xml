@@ -102,7 +102,7 @@
         <drools.spring.version>6.0.0.Beta2</drools.spring.version>
 		<ecj.version>4.4</ecj.version>
 		<ehcache.jcache.version>1.0.0</ehcache.jcache.version>
-		<extjs.webjars.version>5.0.0</extjs.webjars.version>
+		<extjs.webjars.version>5.0.1</extjs.webjars.version>
 		<fastutil.version>5.0.9</fastutil.version>
 		<geb.version>0.9.3</geb.version>
 		<geotools.version>12-beta</geotools.version>
@@ -181,6 +181,7 @@
 		<smartsprites.version>0.2.11-SNAPSHOT</smartsprites.version>
 		<spring.bom.version>1.2.0.BUILD-SNAPSHOT</spring.bom.version>
 		<spring-data-elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring-data-elasticsearch.version>
+		<spring-data-releasetrain.version>Fowler-BUILD-SNAPSHOT</spring-data-releasetrain.version>
         <spring.payment.version>0.5.0.SNAPSHOT</spring.payment.version>
         <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
 		<supercsv.version>2.2.0</supercsv.version>
