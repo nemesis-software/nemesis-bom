@@ -111,6 +111,7 @@
         <granule.version>1.0.11-SNAPSHOT</granule.version>
 		<hibernate.tools.version>4.3.1.CR1</hibernate.tools.version>
         <hazelcast.version>3.3.1</hazelcast.version>
+		<hikaricp.version>2.1.0</hikaricp.version>
 		<htmlunit.version>2.15</htmlunit.version>
         <infinispan.version>6.0.0.Final</infinispan.version>
 		<itextpdf5.version>5.5.2</itextpdf5.version>
