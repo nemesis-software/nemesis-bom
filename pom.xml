@@ -116,7 +116,7 @@
         <infinispan.version>6.0.0.Final</infinispan.version>
 		<itextpdf5.version>5.5.2</itextpdf5.version>
 		<jadira.usertype.version>3.2.0.GA</jadira.usertype.version>
-		<jawr.version>3.6</jawr.version>
+		<jawr.version>3.7-SNAPSHOT</jawr.version>
 		<jasypt.version>1.9.2</jasypt.version>
 		<jboss.logging.version>3.2.0.Beta1</jboss.logging.version>
 		<jets3t.version>0.9.0</jets3t.version>
