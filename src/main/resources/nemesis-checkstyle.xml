@@ -16,11 +16,16 @@
 -->
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN" "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <module name="Checker">
-    <property name="severity" value="warning"/>
-    <module name="Header">
+	<module name="SuppressWarningsFilter"/>
+	<module name="SuppressionCommentFilter">
+		<property name="offCommentFormat" value="CHECKSTYLE.OFF\: ([\w\|]+)"/>
+		<property name="onCommentFormat" value="CHECKSTYLE.ON\: ([\w\|]+)"/>
+		<property name="checkFormat" value="$1"/>
+	</module>
+    <!--module name="Header">
       <property name="headerFile" value="${checkstyle.header.file}"/>
-      <property name="ignoreLines" value="4"/>
-    </module>
+      <property name="ignoreLines" value="1"/>
+    </module-->
     <module name="FileLength"/>
     <!--module name="FileTabCharacter"/-->
     <module name="RegexpSingleline">
@@ -36,17 +41,21 @@
       <property name="message" value="No @author tag allowed"/>
     </module>
     <module name="TreeWalker">
-	<property name="tabWidth" value="4"/>        
+	<property name="tabWidth" value="4"/>     
+	<module name="SuppressWarningsHolder"/>
 	<module name="LineLength">
             <property name="ignorePattern" value="(@version|@see|^import)"/>
-            <property name="max" value="176"/>
+            <property name="max" value="180"/>
+			<property name="severity" value="warning"/>
         </module>
         <module name="AvoidStarImport"/>
         <module name="IllegalImport"/>
         <module name="RedundantImport"/>
         <module name="UnusedImports"/>
         <module name="ConstantName"/>
-        <module name="MemberName"/>
+        <module name="MemberName">
+			<property name="severity" value="warning"/>
+		</module>
         <module name="MethodName"/>
         <module name="LocalFinalVariableName"/>
         <module name="LocalVariableName"/>
@@ -61,7 +70,6 @@
             <property name="tokens" value="LITERAL_CATCH"/>
         </module>
         <module name="NeedBraces"/>
-        <module name="NoWhitespaceAfter"/>
         <module name="NoWhitespaceBefore"/>
         <module name="NoWhitespaceAfter">
             <property name="tokens" value="DOT"/>
@@ -102,9 +110,12 @@
         <module name="FinalClass"/>
         <module name="JavadocType">
             <property name="versionFormat" value="\$Id.*\$"/>
+			<property name="severity" value="warning"/>
         </module>
         <!--module name="JavadocMethod">
             <property name="allowUndeclaredRTE" value="true"/>
+			<property name="severity" value="warning"/>
+			<property name="scope" value="protected"/>
         </module>
         <module name="JavadocVariable"/-->
         <module name="JavadocStyle"/>
@@ -113,7 +124,7 @@
         </module>
         <module name="SuperClone"/>
         <module name="SuperFinalize"/>
-        <module name="TodoComment"/>
+        <!--module name="TodoComment"/-->
     </module>
     <module name="NewlineAtEndOfFile">
         <property name="lineSeparator" value="lf"/>

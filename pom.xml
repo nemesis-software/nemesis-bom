@@ -489,6 +489,20 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!--plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>${maven.findbugs.plugin.version}</version>
+				<executions>
+					<execution>
+						<id>findbugs-check</id>
+						<phase>install</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -576,6 +590,7 @@
                         <exclude>**/.settings/**</exclude>
                         <exclude>**/.svn/**/*</exclude>
 						<exclude>**/.git/**/*</exclude>
+						<exclude>**/sitemap.xml</exclude>
                     </excludes>
                     <licenses>
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
@@ -639,9 +654,13 @@
 						</reportSet>
 				</reportSets>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>${maven.findbugs.plugin.version}</version>
+			</plugin>
 		</plugins>
 	</reporting>
-	
 	<profiles>
         <profile>
             <id>dev</id>
