@@ -504,7 +504,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!--plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>${maven.pmd.plugin.version}</version>
@@ -520,14 +520,14 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>cpd-check</id>
+						<id>check</id>
 						<phase>install</phase>
 						<goals>
-							<goal>cpd-check</goal>
+							<goal>check</goal>
 						</goals>
 					</execution>
 				</executions>
-			</plugin-->
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
