@@ -181,6 +181,7 @@
         <maven.appassembler.plugin.version>1.8</maven.appassembler.plugin.version>
         <maven.changes.plugin.version>2.9</maven.changes.plugin.version>
         <maven.findbugs.plugin.version>2.5.5</maven.findbugs.plugin.version>
+		<maven.pmd.plugin.version>3.3</maven.pmd.plugin.version>
         <maven.rat.version.plugin>0.10</maven.rat.version.plugin>
         <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
         <maven.cargo.plugin>1.4.3</maven.cargo.plugin>
@@ -489,7 +490,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!--plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>${maven.findbugs.plugin.version}</version>
@@ -499,6 +500,30 @@
 						<phase>install</phase>
 						<goals>
 							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!--plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>${maven.pmd.plugin.version}</version>
+				<configuration>
+					<targetJdk>${maven.compiler.source}</targetJdk>
+					<rulesets>
+						<ruleset>rulesets/maven.xml</ruleset>
+					</rulesets>
+					<excludeRoots>
+						<excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
+						<excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
+					</excludeRoots>
+				</configuration>
+				<executions>
+					<execution>
+						<id>cpd-check</id>
+						<phase>install</phase>
+						<goals>
+							<goal>cpd-check</goal>
 						</goals>
 					</execution>
 				</executions>
