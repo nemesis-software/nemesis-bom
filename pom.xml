@@ -95,11 +95,13 @@
         </site>
 		<repository>
 			<id>nemesis-repository</id>
+			<uniqueVersion>true</uniqueVersion>
 			<name>nemesis-repository-releases</name>
 			<url>https://repository.nemesis.bg/artifactory/ext-release-local</url>
 		</repository>
 		<snapshotRepository>
 			<id>nemesis-repository</id>
+			<uniqueVersion>false</uniqueVersion>
 			<name>nemesis-repository-snapshots</name>
 			<url>https://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
 		</snapshotRepository>
@@ -275,13 +277,6 @@
         <repository>
             <id>apache-snapshots</id>
             <url>https://repository.apache.org/content/repositories/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-        </repository>
-        <repository>
-            <id>nemesis-official-repository</id>
-            <url>https://repository-polar.forge.cloudbees.com/release/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
