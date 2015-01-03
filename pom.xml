@@ -172,7 +172,9 @@
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
 		<maven.checkstyle.plugin.version>2.13</maven.checkstyle.plugin.version>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+        <maven.coveralls.plugin.version>3.0.1</maven.coveralls.plugin.version>
         <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
+        <maven.jacoco.plugin.version>0.7.2.201409121644</maven.jacoco.plugin.version>
         <maven.site.plugin.version>3.3</maven.site.plugin.version>
         <maven.failsafe.plugin.version>2.15</maven.failsafe.plugin.version>
         <maven.enforcer.plugin.version>1.3.1</maven.enforcer.plugin.version>
@@ -464,7 +466,7 @@
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <skip>false</skip>
-                    <!--argLine>${surefireArgLine}</argLine-->
+                    <argLine>${surefireArgLine}</argLine>
                     <environmentVariables>
                         <env>dev</env>
                     </environmentVariables>
@@ -699,6 +701,70 @@
             </properties>
             <build>
                 <plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>${maven.jacoco.plugin.version}</version>
+						<executions>
+							<execution>
+								<id>pre-unit-test</id>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+								<configuration>
+									<!-- Sets the path to the file which contains the execution data. -->
+									<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+									<!--
+										Sets the name of the property containing the settings
+										for JaCoCo runtime agent.
+									-->
+									<propertyName>surefireArgLine</propertyName>
+								</configuration>
+							</execution>
+							<execution>
+								<id>post-unit-test</id>
+								<phase>test</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+								<configuration>
+									<!-- Sets the path to the file which contains the execution data. -->
+									<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+									<!-- Sets the output directory for the code coverage report. -->
+									<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+								</configuration>
+							</execution>
+							<execution>
+								<id>pre-integration-test</id>
+								<phase>pre-integration-test</phase>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+								<configuration>
+									<!-- Sets the path to the file which contains the execution data. -->
+									<destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
+									<!--
+										Sets the name of the property containing the settings
+										for JaCoCo runtime agent.
+									-->
+									<propertyName>failsafeArgLine</propertyName>
+								</configuration>
+							</execution>
+							<execution>
+								<id>post-integration-test</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+								<configuration>
+									<!-- Sets the path to the file which contains the execution data. -->
+									<dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
+									<!-- Sets the output directory for the code coverage report. -->
+									<outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
@@ -707,20 +773,31 @@
                             <execution>
                                 <goals>
                                     <goal>integration-test</goal>
-                                    <goal>verify</goal>
                                 </goals>
                             </execution>
                         </executions>
                         <configuration>
+							<argLine>${failsafeArgLine}</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <groups>com.nemesis.platform.util.test.IntegrationTest</groups>
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
-                            <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m</argLine>
                         </configuration>
                     </plugin>
+					<plugin>
+						<groupId>org.eluder.coveralls</groupId>
+						<artifactId>coveralls-maven-plugin</artifactId>
+						<version>${maven.coveralls.plugin.version}</version>
+						<configuration>
+							<repoToken>DyJQ7uNmyGl1g743YRVfQitVM27mbhpu2</repoToken>
+							<jacocoReports>
+								<jacocoReport>${project.reporting.outputDirectory}/jacoco-it/jacoco.xml</jacocoReport>
+								<jacocoReport>${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml</jacocoReport>
+							</jacocoReports>
+						</configuration>
+					</plugin>
                 </plugins>
             </build>
         </profile>
