@@ -123,7 +123,7 @@
 		<drools.version>6.0.1.Final</drools.version>
         <drools.spring.version>6.0.0.Beta2</drools.spring.version>
 		<ecj.version>4.4</ecj.version>
-		<ehcache.jcache.version>1.0.0</ehcache.jcache.version>
+		<ehcache.jcache.version>1.0.1</ehcache.jcache.version>
 		<extjs.webjars.version>5.0.1</extjs.webjars.version>
 		<fastutil.version>5.0.9</fastutil.version>
 		<geb.version>0.9.3</geb.version>
@@ -132,6 +132,7 @@
         <google.geocoder.version>0.16</google.geocoder.version>
         <granule.version>1.0.11-SNAPSHOT</granule.version>
 		<hibernate.tools.version>4.3.1.CR1</hibernate.tools.version>
+		<!--hibernate.version>4.3.8-SNAPSHOT</hibernate.version-->
         <hazelcast.version>3.3.1</hazelcast.version>
 		<hikaricp.version>2.1.0</hikaricp.version>
 		<htmlunit.version>2.15</htmlunit.version>
@@ -177,7 +178,7 @@
         <maven.coveralls.plugin.version>3.0.1</maven.coveralls.plugin.version>
         <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
         <maven.jacoco.plugin.version>0.7.2.201409121644</maven.jacoco.plugin.version>
-        <maven.site.plugin.version>3.3</maven.site.plugin.version>
+        <maven.site.plugin.version>3.4.1-SNAPSHOT</maven.site.plugin.version>
         <maven.failsafe.plugin.version>2.15</maven.failsafe.plugin.version>
         <maven.enforcer.plugin.version>1.3.1</maven.enforcer.plugin.version>
         <maven.release.plugin.version>2.5.1</maven.release.plugin.version>
@@ -197,11 +198,12 @@
         <maven.wagon.plugin.version>1.0-beta-5-SNAPSHOT</maven.wagon.plugin.version>
         <maven.jasmine.plugin.version>1.3.1.5</maven.jasmine.plugin.version>
 		<maven.plugin.api.version>3.2.2</maven.plugin.api.version>
+		<maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
 		<mchange.commons.version>0.2.7</mchange.commons.version>
 		<nemesis.version>0.6-SNAPSHOT</nemesis.version>
 		<opencmis.version>0.11.0</opencmis.version>
-        <orika.version>1.4.5</orika.version>
+        <orika.version>1.4.6-SNAPSHOT</orika.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<recaptcha4j.version>0.0.7</recaptcha4j.version>
@@ -217,7 +219,6 @@
 		<supercsv.version>2.2.0</supercsv.version>
         <spring.elasticsearch.version>1.0.0</spring.elasticsearch.version>
 		<stripe.api.version>1.17.0</stripe.api.version>
-        <tomcat.version>8.0.9</tomcat.version>
 		<wagon.version>2.6</wagon.version>
 		<xml.apis.version>1.4.01</xml.apis.version>
 		<zxing.version>3.1.0</zxing.version>
@@ -401,6 +402,7 @@
 						<feedType>atom_1.0</feedType>
 						<relativizeDecorationLinks>false</relativizeDecorationLinks>
 						<locales>en</locales>
+						<merge>true</merge>
 						<path>${project.distributionManagement.site.url}</path> <!-- This should allow multimodules to have friendly urls -->
 						<!--topSiteURL></topSiteURL--> <!-- try this also -->
 					</configuration>
@@ -435,7 +437,6 @@
 					<configuration>
 						<configLocation>src/main/resources/nemesis-checkstyle.xml</configLocation>
 						<headerLocation>src/main/resources/nemesis-header.txt</headerLocation>
-						<!-- workaround to avoid analysing generated content (Modello, plugin help mojo, ...) -->
 						<sourceDirectory>src/main/java</sourceDirectory>
 						<testSourceDirectory>src/test/java</testSourceDirectory>
 						<failOnViolation>true</failOnViolation>
@@ -475,7 +476,7 @@
                     <excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups>
                 </configuration>
             </plugin>
-			<plugin>
+			<!--plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>${maven.checkstyle.plugin.version}</version>
@@ -527,7 +528,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -616,6 +617,7 @@
                         <exclude>**/.svn/**/*</exclude>
 						<exclude>**/.git/**/*</exclude>
 						<exclude>**/sitemap.xml</exclude>
+						<exclude>**/*.properties</exclude>
                     </excludes>
                     <licenses>
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
@@ -758,11 +760,20 @@
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <version>${maven.failsafe.plugin.version}</version>
                         <executions>
-                            <execution>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                </goals>
-                            </execution>
+							<execution>
+								<id>functional-tests</id>
+								<phase>test</phase>
+								<goals>
+									<goal>integration-test</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>verify</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>verify</goal>
+								</goals>
+							</execution>
                         </executions>
                         <configuration>
 							<!--argLine>${failsafeArgLine}</argLine-->
