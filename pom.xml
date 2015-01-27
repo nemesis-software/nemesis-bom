@@ -784,6 +784,9 @@
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
+                            <systemPropertyVariables>
+								<spring.profiles.active>test</spring.profiles.active>
+							</systemPropertyVariables>
                         </configuration>
                     </plugin>
                 </plugins>
