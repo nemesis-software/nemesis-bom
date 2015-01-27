@@ -21,7 +21,7 @@
 		<version>2.0.0.BUILD-SNAPSHOT</version>
 		<relativePath />
 	</parent>
-	
+
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
     <version>0.6-SNAPSHOT</version>
@@ -150,6 +150,8 @@
 		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
 		<jquery.webjars.version>1.10.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.0</jqueryui.webjars.version>
+    <jquerymobile.webjars.version>1.4.3</jquerymobile.webjars.version>
+    <fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
 		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
         <jqueryatmosphere.webjars.version>2.1.6</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.28.0-2013.02.06-1</jqueryform.webjars.version>
@@ -233,7 +235,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
     <repositories>
         <repository>
             <id>official-m2-repo</id>
@@ -287,7 +289,7 @@
 			</snapshots>
         </repository>
     </repositories>
-	
+
     <dependencies>
         <dependency>
             <groupId>commons-logging</groupId>
@@ -362,7 +364,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-	
+
 	<build>
         <resources>
             <resource>
@@ -579,7 +581,7 @@
 							<goal>check</goal>
 						</goals-->
 						<!--
-							The following configuration is needed otherwise 
+							The following configuration is needed otherwise
 							a release source package can't be built without
 							changing it.
 							https://issues.apache.org/jira/browse/RAT-184
@@ -649,7 +651,7 @@
             </plugin>
         </plugins>
     </build>
-	
+
 	<reporting>
 		<plugins>
 			<plugin>
