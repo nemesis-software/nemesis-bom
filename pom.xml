@@ -120,8 +120,7 @@
         <commons.validator.version>1.4.0</commons.validator.version>
         <commons.vfs2.version>2.0</commons.vfs2.version>
 		<commons.jcs.version>2.0-SNAPSHOT</commons.jcs.version>
-		<drools.version>6.0.1.Final</drools.version>
-        <drools.spring.version>6.0.0.Beta2</drools.spring.version>
+		<drools.version>6.2.0.CR4</drools.version>
 		<ecj.version>4.4</ecj.version>
 		<ehcache.jcache.version>1.0.1</ehcache.jcache.version>
 		<extjs.webjars.version>5.0.1</extjs.webjars.version>
@@ -232,6 +231,13 @@
 				<groupId>com.nemesis.platform</groupId>
 				<artifactId>nemesis-platform-core</artifactId>
 				<version>${nemesis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.drools</groupId>
+				<artifactId>drools-bom</artifactId>
+				<type>pom</type>
+				<version>${drools.version}</version>
+				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
