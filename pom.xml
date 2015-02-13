@@ -97,13 +97,13 @@
 			<id>nemesis-repository</id>
 			<uniqueVersion>true</uniqueVersion>
 			<name>nemesis-repository-releases</name>
-			<url>https://repository.nemesis.bg/artifactory/ext-release-local</url>
+			<url>http://repository.nemesis.bg/artifactory/ext-release-local</url>
 		</repository>
 		<snapshotRepository>
 			<id>nemesis-repository</id>
 			<uniqueVersion>false</uniqueVersion>
 			<name>nemesis-repository-snapshots</name>
-			<url>https://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
+			<url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
 		</snapshotRepository>
     </distributionManagement>
 
