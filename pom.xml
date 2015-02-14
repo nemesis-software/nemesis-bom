@@ -108,7 +108,7 @@
     </distributionManagement>
 
     <properties>
-		<asciidoctor.version>1.5.3-SNAPSHOT</asciidoctor.version>
+		<asciidoctor.version>1.5.2</asciidoctor.version>
 		<asm.version>4.1</asm.version>
 		<atmosphere.version>2.2.0</atmosphere.version>
 		<cglib.version>3.1</cglib.version>
@@ -383,6 +383,11 @@
 			<artifactId>hamcrest-all</artifactId>
 			<scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<scope>test</scope>
+		</dependency>
     </dependencies>
 
 	<build>
