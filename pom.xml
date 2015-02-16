@@ -220,7 +220,7 @@
 		<supercsv.version>2.2.0</supercsv.version>
         <spring.elasticsearch.version>1.0.0</spring.elasticsearch.version>
 		<stripe.api.version>1.17.0</stripe.api.version>
-		<wagon.version>2.6</wagon.version>
+		<wagon.version>2.8</wagon.version>
 		<xml.apis.version>1.4.01</xml.apis.version>
 		<zxing.version>3.1.0</zxing.version>
     </properties>
@@ -247,61 +247,53 @@
             <id>official-m2-repo</id>
             <name>Official Maven2 Repository</name>
             <url>http://repo1.maven.org/maven2/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+            <snapshots><enabled>false</enabled></snapshots>
+            <releases><enabled>true</enabled></releases>
         </repository>
         <repository>
             <id>osgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
             <url>http://download.osgeo.org/webdav/geotools/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+            <snapshots><enabled>false</enabled></snapshots>
+            <releases><enabled>true</enabled></releases>
         </repository>
 		<repository>
             <id>spring-snapshot</id>
             <url>http://repo.spring.io/libs-snapshot</url>
-            <snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+            <snapshots><enabled>true</enabled></snapshots>
+            <releases><enabled>false</enabled></releases>
         </repository>
 		<repository>
             <id>spring-milestone</id>
             <url>http://repo.spring.io/libs-milestone</url>
-            <snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+            <snapshots><enabled>false</enabled></snapshots>
+            <releases><enabled>true</enabled></releases>
         </repository>
 		<repository>
             <id>spring-release</id>
             <url>http://repo.spring.io/libs-release</url>
-            <snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+            <snapshots><enabled>false</enabled></snapshots>
+            <releases><enabled>true</enabled></releases>
         </repository>
         <repository>
             <id>sonatype-snapshot</id>
             <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+            <snapshots><enabled>true</enabled></snapshots>
+            <releases><enabled>false</enabled></releases>
         </repository>
         <repository>
             <id>apache-snapshots</id>
             <url>https://repository.apache.org/content/repositories/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+            <snapshots><enabled>true</enabled></snapshots>
+            <releases><enabled>false</enabled></releases>
         </repository>
     </repositories>
     <pluginRepositories>
 		<pluginRepository>
 			<id>sonatype-snapshot</id>
             <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+            <snapshots><enabled>true</enabled></snapshots>
+            <releases><enabled>false</enabled></releases>
 		</pluginRepository>
     </pluginRepositories>
 
@@ -429,8 +421,10 @@
 						<relativizeDecorationLinks>false</relativizeDecorationLinks>
 						<locales>en</locales>
 						<merge>true</merge>
-						<path>${project.distributionManagement.site.url}</path> <!-- This should allow multimodules to have friendly urls -->
-						<!--topSiteURL></topSiteURL--> <!-- try this also -->
+						<chmod>true</chmod>
+						<inputEncoding>UTF-8</inputEncoding>
+						<outputEncoding>UTF-8</outputEncoding>
+						<path>${project.distributionManagement.site.url}</path>
 						<attributes>
 							<generated>${basedir}/src/site/asciidoc/generated</generated>
 						</attributes>
@@ -441,13 +435,40 @@
 							<artifactId>asciidoctor-maven-plugin</artifactId>
 							<version>${asciidoctor.version}</version>
 						</dependency>
-						<dependency><!-- add support for ssh/scp -->
+						<dependency>
 							<groupId>org.apache.maven.wagon</groupId>
 							<artifactId>wagon-ssh</artifactId>
-							<version>2.8</version>
+							<version>${wagon.version}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
+				<!--plugin>
+					<groupId>org.asciidoctor</groupId>
+					<artifactId>asciidoctor-maven-plugin</artifactId>
+					<version>${asciidoctor.version}</version>
+					<executions>
+						<execution>
+							<id>html</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>process-asciidoc</goal>
+							</goals>
+							<configuration>
+								<backend>html5</backend>
+								<sourceDirectory>${basdir}/src/site/asciidoc/</sourceDirectory>
+								<outputDirectory>${basedir}/target/site/reference/html</outputDirectory>
+								<sectids>false</sectids>
+								<sourceHighlighter>prettify</sourceHighlighter>
+								<attributes>
+									<linkcss>true</linkcss>
+									<icons>font</icons>
+									<sectanchors>true</sectanchors>
+									<stylesheet>spring.css</stylesheet>
+								</attributes>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin-->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
