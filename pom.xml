@@ -147,9 +147,9 @@
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
 		<jgravatar.version>1.0</jgravatar.version>
 		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
-		<jquery.webjars.version>1.10.2</jquery.webjars.version>
-        <jqueryui.webjars.version>1.11.0</jqueryui.webjars.version>
-		<jquerymobile.webjars.version>1.4.3</jquerymobile.webjars.version>
+    <jquery.webjars.version>1.11.2</jquery.webjars.version>
+        <jqueryui.webjars.version>1.11.3</jqueryui.webjars.version>
+		<jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
 		<fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
 		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
         <jqueryatmosphere.webjars.version>2.1.6</jqueryatmosphere.webjars.version>
