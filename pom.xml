@@ -110,7 +110,7 @@
     <properties>
 		<asciidoctor.version>1.5.2</asciidoctor.version>
 		<asm.version>4.1</asm.version>
-		<atmosphere.version>2.2.0</atmosphere.version>
+		<atmosphere.version>2.2.6</atmosphere.version>
 		<cglib.version>3.1</cglib.version>
 		<checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
 		<clover.version>3.3.0</clover.version>
@@ -147,12 +147,12 @@
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
 		<jgravatar.version>1.0</jgravatar.version>
 		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
-    <jquery.webjars.version>1.11.2</jquery.webjars.version>
+		<jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.3</jqueryui.webjars.version>
 		<jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
 		<fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
 		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
-        <jqueryatmosphere.webjars.version>2.1.6</jqueryatmosphere.webjars.version>
+        <jqueryatmosphere.webjars.version>2.2.7</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.28.0-2013.02.06-1</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
         <jquerycookie.version>1.4.0</jquerycookie.version>
