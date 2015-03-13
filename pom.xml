@@ -67,18 +67,18 @@
 			<timezone>+2</timezone>
 		</developer>
 	</developers>
-
     <scm>
-        <developerConnection>scm:git:https://github.com/paranoiabla/nemesis-bom.git</developerConnection>
-        <url>https://github.com/paranoiabla/nemesis-bom.git</url>
+		<connection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</connection>
+        <developerConnection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</developerConnection>
+        <url>https://github.com/nemesis-software/nemesis-bom.git</url>
     </scm>
     <issueManagement>
-        <system>JIRA</system>
-        <url>https://nemesis.atlassian.net/browse/NEMESIS</url>
+        <system>Github</system>
+        <url>https://github.com/nemesis-software/nemesis-bom/issues</url>
     </issueManagement>
     <ciManagement>
-        <system>Bamboo</system>
-        <url>https://nemesis.atlassian.net/builds/browse/NEMESIS-NEMESIS</url>
+        <system>CircleCI</system>
+        <url>https://circleci.com/gh/nemesis-software/</url>
 		<notifiers>
 			<notifier>
 				<type>mail</type>
@@ -118,7 +118,7 @@
 		<codemirror.webjars.version>4.4</codemirror.webjars.version>
 		<commons.collections4.version>4.0</commons.collections4.version>
         <commons.validator.version>1.4.0</commons.validator.version>
-        <commons.vfs2.version>2.0</commons.vfs2.version>
+        <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
 		<commons.jcs.version>2.0-SNAPSHOT</commons.jcs.version>
 		<drools.version>6.2.0.CR4</drools.version>
 		<ecj.version>4.4</ecj.version>
@@ -152,7 +152,7 @@
 		<jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
 		<fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
 		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
-        <jqueryatmosphere.webjars.version>2.2.7</jqueryatmosphere.webjars.version>
+        <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.28.0-2013.02.06-1</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
         <jquerycookie.version>1.4.0</jquerycookie.version>
@@ -300,6 +300,12 @@
 		<pluginRepository>
 			<id>sonatype-snapshot</id>
             <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots><enabled>true</enabled></snapshots>
+            <releases><enabled>false</enabled></releases>
+		</pluginRepository>
+		<pluginRepository>
+			<id>nemesis-repository</id>
+            <url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
             <snapshots><enabled>true</enabled></snapshots>
             <releases><enabled>false</enabled></releases>
 		</pluginRepository>
