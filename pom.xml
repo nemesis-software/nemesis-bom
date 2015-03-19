@@ -108,6 +108,7 @@
     </distributionManagement>
 
     <properties>
+		<amazon.aws.sdk.version>1.8.3</amazon.aws.sdk.version>
 		<asciidoctor.version>1.5.2</asciidoctor.version>
 		<asm.version>4.1</asm.version>
 		<atmosphere.version>2.2.6</atmosphere.version>
@@ -119,6 +120,7 @@
 		<commons.collections4.version>4.0</commons.collections4.version>
         <commons.validator.version>1.4.0</commons.validator.version>
         <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
+        <commons.vfs2.s3.version>2.3.0</commons.vfs2.s3.version>
 		<commons.jcs.version>2.0-SNAPSHOT</commons.jcs.version>
 		<drools.version>6.2.0.CR4</drools.version>
 		<ecj.version>4.4</ecj.version>
@@ -129,9 +131,7 @@
 		<geotools.version>12-beta</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-        <granule.version>1.0.11-SNAPSHOT</granule.version>
-		<hibernate.tools.version>4.3.1.CR1</hibernate.tools.version>
-		<!--hibernate.version>4.3.8-SNAPSHOT</hibernate.version-->
+		<!--hibernate.version>5.0.0-SNAPSHOT</hibernate.version-->
         <hazelcast.version>3.4</hazelcast.version>
 		<hikaricp.version>2.3.2</hikaricp.version>
 		<htmlunit.version>2.15</htmlunit.version>
@@ -190,7 +190,7 @@
         <maven.appassembler.plugin.version>1.8</maven.appassembler.plugin.version>
         <maven.changes.plugin.version>2.9</maven.changes.plugin.version>
         <maven.findbugs.plugin.version>2.5.5</maven.findbugs.plugin.version>
-		<maven.pmd.plugin.version>3.3</maven.pmd.plugin.version>
+		<maven.pmd.plugin.version>3.4</maven.pmd.plugin.version>
         <maven.rat.version.plugin>0.10</maven.rat.version.plugin>
         <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
         <maven.cargo.plugin>1.4.3</maven.cargo.plugin>
@@ -210,6 +210,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.9</reflections.version>
+        <reflections.version>0.9.9-RC1</reflections.version>
 		<selenium.version>2.45.0</selenium.version>
 		<smartsprites.version>0.2.10</smartsprites.version>
 		<slick.webjars.version>1.3.13</slick.webjars.version>
@@ -573,7 +574,7 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>${maven.pmd.plugin.version}</version>
 				<configuration>
-					<targetJdk>${maven.compiler.source}</targetJdk>
+					<targetJdk>${maven.compile.source}</targetJdk>
 					<printFailingErrors>true</printFailingErrors>
 					<rulesets>
 						<ruleset>rulesets/maven.xml</ruleset>
