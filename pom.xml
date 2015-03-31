@@ -121,7 +121,7 @@
         <commons.validator.version>1.4.0</commons.validator.version>
         <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
         <commons.vfs2.s3.version>2.3.0</commons.vfs2.s3.version>
-		<commons.jcs.version>2.0-SNAPSHOT</commons.jcs.version>
+		<commons.jcs.version>2.0-beta-1</commons.jcs.version>
 		<drools.version>6.2.0.CR4</drools.version>
 		<ecj.version>4.4</ecj.version>
 		<ehcache.jcache.version>1.0.1</ehcache.jcache.version>
