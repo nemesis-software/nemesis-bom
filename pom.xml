@@ -15,12 +15,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>io.spring.platform</groupId>
-		<artifactId>platform-foundation-bom</artifactId>
-		<version>2.0.0.BUILD-SNAPSHOT</version>
-		<relativePath />
-	</parent>
+    <parent>
+        <groupId>io.spring.platform</groupId>
+        <artifactId>platform-foundation-bom</artifactId>
+        <version>2.0.0.BUILD-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
@@ -28,9 +28,9 @@
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
-	<description>BOM module for the Nemesis platform.</description>
-	<url>http://wiki.nemesis.com/bom/</url>
-	<inceptionYear>2010</inceptionYear>
+    <description>BOM module for the Nemesis platform.</description>
+    <url>http://wiki.nemesis.com/bom/</url>
+    <inceptionYear>2010</inceptionYear>
     <organization>
         <name>Nemesis Software, Ltd.</name>
         <url>http://nemesis.bg/</url>
@@ -43,32 +43,32 @@
             <comments>This platform is proprietary software.</comments>
         </license>
     </licenses>
-	<developers>
-		<developer>
-			<id>tahchiev</id>
-			<name>Petar Tahchiev</name>
-			<email>tahchiev@nemesis.bg</email>
-			<organization>Nemesis Software, Ltd.</organization>
-			<organizationUrl>http://www.nemesis.bg</organizationUrl>
-			<roles>
-				<role>Project lead</role>
-			</roles>
-			<timezone>+2</timezone>
-		</developer>
-		<developer>
-			<id>gochev</id>
-			<name>Nayden Gochev</name>
-			<email>gochev@nemesis.bg</email>
-			<organization>Nemesis Software, Ltd.</organization>
-			<organizationUrl>http://www.nemesis.bg</organizationUrl>
-			<roles>
-				<role>Committer</role>
-			</roles>
-			<timezone>+2</timezone>
-		</developer>
-	</developers>
+    <developers>
+        <developer>
+            <id>tahchiev</id>
+            <name>Petar Tahchiev</name>
+            <email>tahchiev@nemesis.bg</email>
+            <organization>Nemesis Software, Ltd.</organization>
+            <organizationUrl>http://www.nemesis.bg</organizationUrl>
+            <roles>
+                <role>Project lead</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+        <developer>
+            <id>gochev</id>
+            <name>Nayden Gochev</name>
+            <email>gochev@nemesis.bg</email>
+            <organization>Nemesis Software, Ltd.</organization>
+            <organizationUrl>http://www.nemesis.bg</organizationUrl>
+            <roles>
+                <role>Committer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
     <scm>
-		<connection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</connection>
+        <connection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</connection>
         <developerConnection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</developerConnection>
         <url>https://github.com/nemesis-software/nemesis-bom.git</url>
     </scm>
@@ -79,80 +79,78 @@
     <ciManagement>
         <system>CircleCI</system>
         <url>https://circleci.com/gh/nemesis-software/</url>
-		<notifiers>
-			<notifier>
-				<type>mail</type>
-				<configuration>
-					<address>notifications@nemesis.bg</address>
-				</configuration>
-			</notifier>
-		</notifiers>
+        <notifiers>
+            <notifier>
+                <type>mail</type>
+                <configuration>
+                    <address>notifications@nemesis.bg</address>
+                </configuration>
+            </notifier>
+        </notifiers>
     </ciManagement>
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
             <url>scp://www.nemesis.bg/var/www/html/docs/${project.version}/</url>
         </site>
-		<repository>
-			<id>nemesis-repository</id>
-			<uniqueVersion>true</uniqueVersion>
-			<name>nemesis-repository-releases</name>
-			<url>http://repository.nemesis.bg/artifactory/ext-release-local</url>
-		</repository>
-		<snapshotRepository>
-			<id>nemesis-repository</id>
-			<uniqueVersion>false</uniqueVersion>
-			<name>nemesis-repository-snapshots</name>
-			<url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
-		</snapshotRepository>
+        <repository>
+            <id>nemesis-repository</id>
+            <uniqueVersion>true</uniqueVersion>
+            <name>nemesis-repository-releases</name>
+            <url>http://repository.nemesis.bg/artifactory/ext-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>nemesis-repository</id>
+            <uniqueVersion>false</uniqueVersion>
+            <name>nemesis-repository-snapshots</name>
+            <url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <properties>
-		<amazon.aws.sdk.version>1.8.3</amazon.aws.sdk.version>
-		<asciidoctor.version>1.5.2</asciidoctor.version>
-		<asm.version>4.1</asm.version>
-		<atmosphere.version>2.2.6</atmosphere.version>
-		<cglib.version>3.1</cglib.version>
-		<checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
-		<clover.version>3.3.0</clover.version>
+        <amazon.aws.sdk.version>1.8.3</amazon.aws.sdk.version>
+        <asciidoctor.version>1.5.2</asciidoctor.version>
+        <asm.version>4.1</asm.version>
+        <atmosphere.version>2.2.6</atmosphere.version>
+        <cglib.version>3.1</cglib.version>
+        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
+        <clover.version>3.3.0</clover.version>
         <codemodel.version>2.6</codemodel.version>
-		<codemirror.webjars.version>4.4</codemirror.webjars.version>
-		<commons.collections4.version>4.0</commons.collections4.version>
+        <codemirror.webjars.version>4.4</codemirror.webjars.version>
+        <commons.collections4.version>4.0</commons.collections4.version>
         <commons.validator.version>1.4.0</commons.validator.version>
         <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
         <commons.vfs2.s3.version>2.3.0</commons.vfs2.s3.version>
-		<commons.jcs.version>2.0-beta-1</commons.jcs.version>
-		<drools.version>6.2.0.CR4</drools.version>
-		<ecj.version>4.4</ecj.version>
-		<ehcache.jcache.version>1.0.1</ehcache.jcache.version>
-		<extjs.webjars.version>5.1.0</extjs.webjars.version>
-		<fastutil.version>5.0.9</fastutil.version>
-		<geb.version>0.9.3</geb.version>
-		<geotools.version>12-beta</geotools.version>
+        <commons.jcs.version>2.0-beta-1</commons.jcs.version>
+        <drools.version>6.2.0.CR4</drools.version>
+        <ecj.version>4.4</ecj.version>
+        <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
+        <extjs.webjars.version>5.1.0</extjs.webjars.version>
+        <fastutil.version>5.0.9</fastutil.version>
+        <geb.version>0.9.3</geb.version>
+        <geotools.version>12-beta</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-		<!--hibernate.version>5.0.0-SNAPSHOT</hibernate.version-->
+        <!--hibernate.version>5.0.0.Beta1</hibernate.version-->
         <hazelcast.version>3.4</hazelcast.version>
-		<hikaricp.version>2.3.2</hikaricp.version>
-		<htmlunit.version>2.15</htmlunit.version>
+        <hikaricp.version>2.3.2</hikaricp.version>
+        <htmlunit.version>2.15</htmlunit.version>
         <infinispan.version>6.0.0.Final</infinispan.version>
-		<itextpdf5.version>5.5.2</itextpdf5.version>
-		<jadira.usertype.version>3.2.0.GA</jadira.usertype.version>
-		<jawr.version>3.7-SNAPSHOT</jawr.version>
-		<jasypt.version>1.9.2</jasypt.version>
-		<jboss.logging.version>3.2.0.Beta1</jboss.logging.version>
-		<jets3t.version>0.9.0</jets3t.version>
-		<jetty.version>9.1.3.v20140225</jetty.version>
+        <itextpdf5.version>5.5.2</itextpdf5.version>
+        <jadira.usertype.version>3.2.0.GA</jadira.usertype.version>
+        <jawr.version>3.7-SNAPSHOT</jawr.version>
+        <jasypt.version>1.9.2</jasypt.version>
+        <jets3t.version>0.9.0</jets3t.version>
+        <jetty.version>9.1.3.v20140225</jetty.version>
         <jetty.npn.boot.version>1.1.7.v20140316</jetty.npn.boot.version>
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
-		<jgravatar.version>1.0</jgravatar.version>
-		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
-		<jquery.webjars.version>1.11.2</jquery.webjars.version>
+        <jgravatar.version>1.0</jgravatar.version>
+        <joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
+        <jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.3</jqueryui.webjars.version>
-		<jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
-        <jquerymobile.spinbox.webjars.version>1.4.4</jquerymobile.spinbox.webjars.version>
-		<fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
-		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
+        <jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
+        <fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
+        <jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
         <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.28.0-2013.02.06-1</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
@@ -163,22 +161,23 @@
         <jqueryjcarousel.webjars.version>0.3.1</jqueryjcarousel.webjars.version>
         <jqueryraty.webjars.version>2.5.2</jqueryraty.webjars.version>
         <jquerychosen.webjars.version>1.1.0-1</jquerychosen.webjars.version>
-		<jqueryeasing.webjars.version>1.3</jqueryeasing.webjars.version>
+        <jqueryeasing.webjars.version>1.3</jqueryeasing.webjars.version>
         <jqueryeasyzoom.webjars.version>2.2.0</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
-		<jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
-		<jsoup.version>1.7.3</jsoup.version>
-		<log4j2.version>2.0.2</log4j2.version>
-		<lucene.version>4.1.0</lucene.version>
+        <jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
+        <jsoup.version>1.7.3</jsoup.version>
+        <log4j2.version>2.0.2</log4j2.version>
+        <lucene.version>4.1.0</lucene.version>
         <maven.compile.source>1.7</maven.compile.source>
         <maven.compile.target>1.7</maven.compile.target>
-        <maven.archetype.plugin.version>2.3-SNAPSHOT</maven.archetype.plugin.version>
+        <maven.archetype.plugin.version>2.3</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
         <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
-		<maven.checkstyle.plugin.version>2.13</maven.checkstyle.plugin.version>
+        <maven.checkstyle.plugin.version>2.13</maven.checkstyle.plugin.version>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.coveralls.plugin.version>3.1.0</maven.coveralls.plugin.version>
+        <!-- 3.1.0 is release but still not working -->
         <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
         <maven.jacoco.plugin.version>0.7.2.201409121644</maven.jacoco.plugin.version>
         <maven.site.plugin.version>3.4</maven.site.plugin.version>
@@ -190,126 +189,115 @@
         <maven.project.info.reports.plugin>2.7</maven.project.info.reports.plugin>
         <maven.appassembler.plugin.version>1.8</maven.appassembler.plugin.version>
         <maven.changes.plugin.version>2.9</maven.changes.plugin.version>
-        <maven.findbugs.plugin.version>2.5.5</maven.findbugs.plugin.version>
-		<maven.pmd.plugin.version>3.4</maven.pmd.plugin.version>
+        <maven.findbugs.plugin.version>3.0.1</maven.findbugs.plugin.version>
+        <maven.pmd.plugin.version>3.4</maven.pmd.plugin.version>
         <maven.rat.version.plugin>0.10</maven.rat.version.plugin>
         <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
         <maven.cargo.plugin>1.4.3</maven.cargo.plugin>
         <maven.tomcat7.plugin>2.2</maven.tomcat7.plugin>
         <maven.build.helper.plugin.version>1.8</maven.build.helper.plugin.version>
         <maven.plexus.plugin.version>1.5.5</maven.plexus.plugin.version>
-        <maven.wagon.plugin.version>1.0-beta-5-SNAPSHOT</maven.wagon.plugin.version>
         <maven.jasmine.plugin.version>1.3.1.5</maven.jasmine.plugin.version>
-		<maven.plugin.api.version>3.2.2</maven.plugin.api.version>
-		<maven.resource.plugin.version>2.7</maven.resource.plugin.version>
+        <maven.plugin.api.version>3.2.2</maven.plugin.api.version>
+        <maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
-		<mchange.commons.version>0.2.7</mchange.commons.version>
-		<nemesis.version>0.6-SNAPSHOT</nemesis.version>
-		<opencmis.version>0.11.0</opencmis.version>
+        <mchange.commons.version>0.2.7</mchange.commons.version>
+        <nemesis.version>0.6-SNAPSHOT</nemesis.version>
+        <opencmis.version>0.11.0</opencmis.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<recaptcha4j.version>0.0.7</recaptcha4j.version>
+        <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.9</reflections.version>
-		<selenium.version>2.45.0</selenium.version>
-		<smartsprites.version>0.2.10</smartsprites.version>
-		<slick.webjars.version>1.3.13</slick.webjars.version>
-		<spring.bom.version>1.2.0.BUILD-SNAPSHOT</spring.bom.version>
-		<spring-data-elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring-data-elasticsearch.version>
-		<spring-data-releasetrain.version>Gosling-BUILD-SNAPSHOT</spring-data-releasetrain.version>
+        <selenium.version>2.45.0</selenium.version>
+        <smartsprites.version>0.2.10</smartsprites.version>
+        <slick.webjars.version>1.3.13</slick.webjars.version>
+        <spring.bom.version>1.2.0.BUILD-SNAPSHOT</spring.bom.version>
+        <spring-data-elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring-data-elasticsearch.version>
+        <spring-data-releasetrain.version>Gosling-BUILD-SNAPSHOT</spring-data-releasetrain.version>
         <spring.payment.version>0.5.0.SNAPSHOT</spring.payment.version>
         <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
-		<supercsv.version>2.2.0</supercsv.version>
+        <supercsv.version>2.2.0</supercsv.version>
         <spring.elasticsearch.version>1.0.0</spring.elasticsearch.version>
-		<stripe.api.version>1.17.0</stripe.api.version>
-		<wagon.version>2.8</wagon.version>
-		<xml.apis.version>1.4.01</xml.apis.version>
-		<zxing.version>3.1.0</zxing.version>
+        <stripe.api.version>1.17.0</stripe.api.version>
+        <wagon.version>2.8</wagon.version>
+        <xml.apis.version>1.4.01</xml.apis.version>
+        <zxing.version>3.1.0</zxing.version>
     </properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.nemesis.platform</groupId>
-				<artifactId>nemesis-platform-core</artifactId>
-				<version>${nemesis.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.drools</groupId>
-				<artifactId>drools-bom</artifactId>
-				<type>pom</type>
-				<version>${drools.version}</version>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-core</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-bom</artifactId>
+                <type>pom</type>
+                <version>${drools.version}</version>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <repositories>
         <repository>
             <id>official-m2-repo</id>
             <name>Official Maven2 Repository</name>
             <url>http://repo1.maven.org/maven2/</url>
-            <snapshots><enabled>false</enabled></snapshots>
-            <releases><enabled>true</enabled></releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
         <repository>
             <id>osgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
             <url>http://download.osgeo.org/webdav/geotools/</url>
-            <snapshots><enabled>false</enabled></snapshots>
-            <releases><enabled>true</enabled></releases>
-        </repository>
-		<repository>
-            <id>spring-snapshot</id>
-            <url>http://repo.spring.io/libs-snapshot</url>
-            <snapshots><enabled>true</enabled></snapshots>
-            <releases><enabled>false</enabled></releases>
-        </repository>
-		<repository>
-            <id>spring-milestone</id>
-            <url>http://repo.spring.io/libs-milestone</url>
-            <snapshots><enabled>false</enabled></snapshots>
-            <releases><enabled>true</enabled></releases>
-        </repository>
-		<repository>
-            <id>spring-release</id>
-            <url>http://repo.spring.io/libs-release</url>
-            <snapshots><enabled>false</enabled></snapshots>
-            <releases><enabled>true</enabled></releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
         <repository>
-            <id>sonatype-snapshot</id>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-            <snapshots><enabled>true</enabled></snapshots>
-            <releases><enabled>false</enabled></releases>
+            <id>spring-snapshot</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
         </repository>
-        <!--repository>
-            <id>apache-snapshots</id>
-            <url>https://repository.apache.org/content/repositories/snapshots</url>
-            <snapshots><enabled>true</enabled></snapshots>
-            <releases><enabled>false</enabled></releases>
-        </repository-->
-		<repository>
-			<id>jboss-3rd-party-releases</id>
-			<name>We need this only for drools-jsr</name>
-			<url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/</url>
-			<snapshots><enabled>false</enabled></snapshots>
-            <releases><enabled>true</enabled></releases>
-		</repository>
+        <repository>
+            <id>spring-milestone</id>
+            <name>Spring milestones (We need this for commons-vfs2 and com.intridea)</name>
+            <url>http://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
     </repositories>
     <pluginRepositories>
-		<pluginRepository>
-			<id>sonatype-snapshot</id>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-            <snapshots><enabled>true</enabled></snapshots>
-            <releases><enabled>false</enabled></releases>
-		</pluginRepository>
-		<pluginRepository>
-			<id>nemesis-repository</id>
+        <pluginRepository>
+            <id>nemesis-repository</id>
             <url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
-            <snapshots><enabled>true</enabled></snapshots>
-            <releases><enabled>false</enabled></releases>
-		</pluginRepository>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
     </pluginRepositories>
 
     <dependencies>
@@ -372,7 +360,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
-			<version>${commons.collections4.version}</version>
+            <version>${commons.collections4.version}</version>
         </dependency>
         <!-- test -->
         <dependency>
@@ -386,18 +374,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-all</artifactId>
-			<scope>test</scope>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
         </dependency>
-		<dependency>
-			<groupId>com.jayway.jsonpath</groupId>
-			<artifactId>json-path</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
-	<build>
+    <build>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -414,107 +402,107 @@
                 </excludes>
             </resource>
         </resources>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>${maven.compile.source}</source>
-						<target>${maven.compile.target}</target>
-						<compilerArgument>-proc:none</compilerArgument>
-						<compilerArgument>-Xlint:unchecked</compilerArgument>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>${maven.site.plugin.version}</version>
-					<configuration>
-						<generateReports>false</generateReports>
-						<generateSitemap>true</generateSitemap>
-						<relativizeDecorationLinks>false</relativizeDecorationLinks>
-						<locales>en</locales>
-						<merge>true</merge>
-						<chmod>true</chmod>
-						<inputEncoding>UTF-8</inputEncoding>
-						<outputEncoding>UTF-8</outputEncoding>
-						<path>${project.distributionManagement.site.url}</path>
-						<attributes>
-							<generated>${basedir}/src/site/asciidoc/generated</generated>
-						</attributes>
-					</configuration>
-					<dependencies>
-						<dependency>
-							<groupId>org.asciidoctor</groupId>
-							<artifactId>asciidoctor-maven-plugin</artifactId>
-							<version>${asciidoctor.version}</version>
-						</dependency>
-						<dependency>
-							<groupId>org.apache.maven.wagon</groupId>
-							<artifactId>wagon-ssh</artifactId>
-							<version>${wagon.version}</version>
-						</dependency>
-					</dependencies>
-				</plugin>
-				<!--plugin>
-					<groupId>org.asciidoctor</groupId>
-					<artifactId>asciidoctor-maven-plugin</artifactId>
-					<version>${asciidoctor.version}</version>
-					<executions>
-						<execution>
-							<id>html</id>
-							<phase>generate-resources</phase>
-							<goals>
-								<goal>process-asciidoc</goal>
-							</goals>
-							<configuration>
-								<backend>html5</backend>
-								<sourceDirectory>${basdir}/src/site/asciidoc/</sourceDirectory>
-								<outputDirectory>${basedir}/target/site/reference/html</outputDirectory>
-								<sectids>false</sectids>
-								<sourceHighlighter>prettify</sourceHighlighter>
-								<attributes>
-									<linkcss>true</linkcss>
-									<icons>font</icons>
-									<sectanchors>true</sectanchors>
-									<stylesheet>spring.css</stylesheet>
-								</attributes>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin-->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>${maven.release.plugin.version}</version>
-					<configuration>
-						<useReleaseProfiles>true</useReleaseProfiles>
-						<releaseProfiles>apache-release</releaseProfiles>
-						<goals>deploy</goals>
-						<arguments>${arguments}</arguments>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-checkstyle-plugin</artifactId>
-					<version>${maven.checkstyle.plugin.version}</version>
-					<configuration>
-						<configLocation>src/main/resources/nemesis-checkstyle.xml</configLocation>
-						<headerLocation>src/main/resources/nemesis-header.txt</headerLocation>
-						<sourceDirectory>src/main/java</sourceDirectory>
-						<testSourceDirectory>src/test/java</testSourceDirectory>
-						<failOnViolation>true</failOnViolation>
-						<logViolationsToConsole>true</logViolationsToConsole>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>findbugs-maven-plugin</artifactId>
-					<version>${maven.findbugs.plugin.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${maven.compile.source}</source>
+                        <target>${maven.compile.target}</target>
+                        <compilerArgument>-proc:none</compilerArgument>
+                        <compilerArgument>-Xlint:unchecked</compilerArgument>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${maven.site.plugin.version}</version>
+                    <configuration>
+                        <generateReports>false</generateReports>
+                        <generateSitemap>true</generateSitemap>
+                        <relativizeDecorationLinks>false</relativizeDecorationLinks>
+                        <locales>en</locales>
+                        <merge>true</merge>
+                        <chmod>true</chmod>
+                        <inputEncoding>UTF-8</inputEncoding>
+                        <outputEncoding>UTF-8</outputEncoding>
+                        <path>${project.distributionManagement.site.url}</path>
+                        <attributes>
+                            <generated>${basedir}/src/site/asciidoc/generated</generated>
+                        </attributes>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.asciidoctor</groupId>
+                            <artifactId>asciidoctor-maven-plugin</artifactId>
+                            <version>${asciidoctor.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.wagon</groupId>
+                            <artifactId>wagon-ssh</artifactId>
+                            <version>${wagon.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <!--plugin>
+                    <groupId>org.asciidoctor</groupId>
+                    <artifactId>asciidoctor-maven-plugin</artifactId>
+                    <version>${asciidoctor.version}</version>
+                    <executions>
+                        <execution>
+                            <id>html</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>process-asciidoc</goal>
+                            </goals>
+                            <configuration>
+                                <backend>html5</backend>
+                                <sourceDirectory>${basdir}/src/site/asciidoc/</sourceDirectory>
+                                <outputDirectory>${basedir}/target/site/reference/html</outputDirectory>
+                                <sectids>false</sectids>
+                                <sourceHighlighter>prettify</sourceHighlighter>
+                                <attributes>
+                                    <linkcss>true</linkcss>
+                                    <icons>font</icons>
+                                    <sectanchors>true</sectanchors>
+                                    <stylesheet>spring.css</stylesheet>
+                                </attributes>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven.release.plugin.version}</version>
+                    <configuration>
+                        <useReleaseProfiles>true</useReleaseProfiles>
+                        <releaseProfiles>apache-release</releaseProfiles>
+                        <goals>deploy</goals>
+                        <arguments>${arguments}</arguments>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${maven.checkstyle.plugin.version}</version>
+                    <configuration>
+                        <configLocation>src/main/resources/nemesis-checkstyle.xml</configLocation>
+                        <headerLocation>src/main/resources/nemesis-header.txt</headerLocation>
+                        <sourceDirectory>src/main/java</sourceDirectory>
+                        <testSourceDirectory>src/test/java</testSourceDirectory>
+                        <failOnViolation>true</failOnViolation>
+                        <logViolationsToConsole>true</logViolationsToConsole>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>${maven.findbugs.plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -541,111 +529,111 @@
                     <excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups>
                 </configuration>
             </plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>${maven.checkstyle.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>checkstyle-check</id>
-						<phase>install</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>${maven.findbugs.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>findbugs-check</id>
-						<phase>install</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>${maven.pmd.plugin.version}</version>
-				<configuration>
-					<targetJdk>${maven.compile.source}</targetJdk>
-					<printFailingErrors>true</printFailingErrors>
-					<rulesets>
-						<ruleset>rulesets/maven.xml</ruleset>
-					</rulesets>
-					<excludeRoots>
-						<excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
-						<excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
-					</excludeRoots>
-				</configuration>
-				<executions>
-					<execution>
-						<id>check</id>
-						<phase>install</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>${maven.enforcer.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>enforce-bytecode-version</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireMavenVersion>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven.checkstyle.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>checkstyle-check</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${maven.findbugs.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>findbugs-check</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${maven.pmd.plugin.version}</version>
+                <configuration>
+                    <targetJdk>${maven.compile.source}</targetJdk>
+                    <printFailingErrors>true</printFailingErrors>
+                    <rulesets>
+                        <ruleset>rulesets/maven.xml</ruleset>
+                    </rulesets>
+                    <excludeRoots>
+                        <excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
+                        <excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
+                    </excludeRoots>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${maven.enforcer.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>enforce-bytecode-version</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
                                     <version>3.0.0-alpha-1</version>
                                 </requireMavenVersion>
-								<enforceBytecodeVersion>
-									<maxJdkVersion>${maven.compile.target}</maxJdkVersion>
-								</enforceBytecodeVersion>
-								<!--banDuplicateClasses>
+                                <!--enforceBytecodeVersion>
+                                    <maxJdkVersion>${maven.compile.target}</maxJdkVersion>
+                                </enforceBytecodeVersion-->
+                                <!--banDuplicateClasses>
                                     <findAllDuplicates>true</findAllDuplicates>
                                     <ignoreClasses>
                                         <ignoreClass>javax.servlet.*</ignoreClass>
                                         <ignoreClass>javax.persistence.*</ignoreClass>
                                         <ignoreClass>org.codehaus.plexus.util.*</ignoreClass>
-										<ignoreClass>org.bouncycastle.*</ignoreClass>
+                                        <ignoreClass>org.bouncycastle.*</ignoreClass>
                                     </ignoreClasses>
                                 </banDuplicateClasses-->
-							</rules>
-							<fail>true</fail>
-						</configuration>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>extra-enforcer-rules</artifactId>
-						<version>${maven.extraenforcer.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>extra-enforcer-rules</artifactId>
+                        <version>${maven.extraenforcer.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
                 <version>${maven.rat.version.plugin}</version>
-				<executions>
-					<execution>
-						<id>rat-check</id>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
+                <executions>
+                    <execution>
+                        <id>rat-check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <excludeSubProjects>false</excludeSubProjects>
                     <includes>
@@ -657,9 +645,9 @@
                         <exclude>**/target/**/*</exclude>
                         <exclude>**/.settings/**</exclude>
                         <exclude>**/.svn/**/*</exclude>
-						<exclude>**/.git/**/*</exclude>
-						<exclude>**/sitemap.xml</exclude>
-						<exclude>**/*.properties</exclude>
+                        <exclude>**/.git/**/*</exclude>
+                        <exclude>**/sitemap.xml</exclude>
+                        <exclude>**/*.properties</exclude>
                     </excludes>
                     <licenses>
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
@@ -692,45 +680,46 @@
         </plugins>
     </build>
 
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>${maven.project.info.reports.plugin}</version>
-				<configuration>
-					<dependencyLocationsEnabled>false</dependencyLocationsEnabled><!-- waiting for MPIR-267 -->
-				</configuration>
-				<reportSets>
-					<reportSet>
-							<reports>
-								<report>index</report>
-								<report>summary</report>
-								<report>dependency-info</report>
-								<report>modules</report>
-								<report>project-team</report>
-								<report>scm</report>
-								<report>issue-tracking</report>
-								<report>mailing-list</report>
-								<report>dependency-management</report>
-								<report>dependencies</report>
-								<report>dependency-convergence</report>
-								<report>cim</report>
-								<report>plugin-management</report>
-								<report>plugins</report>
-								<report>distribution-management</report>
-							</reports>
-						</reportSet>
-				</reportSets>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>${maven.findbugs.plugin.version}</version>
-			</plugin>
-		</plugins>
-	</reporting>
-	<profiles>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven.project.info.reports.plugin}</version>
+                <configuration>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+                    <!-- waiting for MPIR-267 -->
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependency-info</report>
+                            <report>modules</report>
+                            <report>project-team</report>
+                            <report>scm</report>
+                            <report>issue-tracking</report>
+                            <report>mailing-list</report>
+                            <report>dependency-management</report>
+                            <report>dependencies</report>
+                            <report>dependency-convergence</report>
+                            <report>cim</report>
+                            <report>plugin-management</report>
+                            <report>plugins</report>
+                            <report>distribution-management</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${maven.findbugs.plugin.version}</version>
+            </plugin>
+        </plugins>
+    </reporting>
+    <profiles>
         <profile>
             <id>dev</id>
             <activation>
@@ -739,7 +728,7 @@
             <properties>
                 <env>dev</env>
             </properties>
-		</profile>
+        </profile>
         <profile>
             <id>test</id>
             <properties>
@@ -747,92 +736,92 @@
             </properties>
             <build>
                 <plugins>
-					<plugin>
-						<groupId>org.jacoco</groupId>
-						<artifactId>jacoco-maven-plugin</artifactId>
-						<version>${maven.jacoco.plugin.version}</version>
-						<configuration>
-							<excludes>
-								<exclude>**org.drools*</exclude>
-							</excludes>
-						</configuration>
-						<executions>
-							<execution>
-								<id>pre-unit-test</id>
-								<phase>test-compile</phase>
-								<goals>
-									<goal>prepare-agent</goal>
-								</goals>
-								<configuration>
-									<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-									<propertyName>surefireArgLine</propertyName>
-								</configuration>
-							</execution>
-							<execution>
-								<id>pre-integration-test</id>
-								<phase>pre-integration-test</phase>
-								<goals>
-									<goal>prepare-agent</goal>
-								</goals>
-								<configuration>
-									<destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
-									<propertyName>failsafeArgLine</propertyName>
-								</configuration>
-							</execution>
-							<execution>
-								<id>merge-execs</id>
-								<phase>post-integration-test</phase>
-								<goals>
-									<goal>merge</goal>
-								</goals>
-								<configuration>
-									<fileSets>
-										<fileSet>
-											<directory>${project.build.directory}/coverage-reports/</directory>
-											<includes>
-												<include>*.exec</include>
-											</includes>
-										</fileSet>
-									</fileSets>
-									<destFile>${project.build.directory}/coverage-reports/merged.exec</destFile>
-								</configuration>
-							</execution>
-							<execution>
-								<id>post-integration-test</id>
-								<phase>post-integration-test</phase>
-								<goals>
-									<goal>report</goal>
-								</goals>
-								<configuration>
-									<dataFile>${project.build.directory}/coverage-reports/merged.exec</dataFile>
-									<outputDirectory>${project.reporting.outputDirectory}/merged</outputDirectory>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>${maven.jacoco.plugin.version}</version>
+                        <configuration>
+                            <excludes>
+                                <exclude>**org.drools*</exclude>
+                            </excludes>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>pre-unit-test</id>
+                                <phase>test-compile</phase>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                                <configuration>
+                                    <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+                                    <propertyName>surefireArgLine</propertyName>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>pre-integration-test</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                                <configuration>
+                                    <destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
+                                    <propertyName>failsafeArgLine</propertyName>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>merge-execs</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>merge</goal>
+                                </goals>
+                                <configuration>
+                                    <fileSets>
+                                        <fileSet>
+                                            <directory>${project.build.directory}/coverage-reports/</directory>
+                                            <includes>
+                                                <include>*.exec</include>
+                                            </includes>
+                                        </fileSet>
+                                    </fileSets>
+                                    <destFile>${project.build.directory}/coverage-reports/merged.exec</destFile>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>post-integration-test</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                                <configuration>
+                                    <dataFile>${project.build.directory}/coverage-reports/merged.exec</dataFile>
+                                    <outputDirectory>${project.reporting.outputDirectory}/merged</outputDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <version>${maven.failsafe.plugin.version}</version>
                         <executions>
-							<execution>
-								<id>functional-tests</id>
-								<phase>integration-test</phase>
-								<goals>
-									<goal>integration-test</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>verify</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>verify</goal>
-								</goals>
-							</execution>
+                            <execution>
+                                <id>functional-tests</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>verify</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
                         </executions>
                         <configuration>
-							<!--argLine>${failsafeArgLine}</argLine-->
-							<argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m ${failsafeArgLine}</argLine>
+                            <!--argLine>${failsafeArgLine}</argLine-->
+                            <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m ${failsafeArgLine}</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <groups>com.nemesis.platform.util.test.IntegrationTest</groups>
@@ -840,9 +829,9 @@
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
                             <systemPropertyVariables>
-								<spring.profiles.active>test</spring.profiles.active>
-								<org.springframework.restdocs.outputDir>${basedir}/src/site/asciidoc/generated</org.springframework.restdocs.outputDir>
-							</systemPropertyVariables>
+                                <spring.profiles.active>test</spring.profiles.active>
+                                <org.springframework.restdocs.outputDir>${basedir}/src/site/asciidoc/generated</org.springframework.restdocs.outputDir>
+                            </systemPropertyVariables>
                         </configuration>
                     </plugin>
                 </plugins>
