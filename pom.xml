@@ -150,6 +150,7 @@
 		<jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.3</jqueryui.webjars.version>
 		<jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
+        <jquerymobile.spinbox.webjars.version>1.4.4</jquerymobile.spinbox.webjars.version>
 		<fontawesome.webjars.version>4.3.0</fontawesome.webjars.version>
 		<jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
         <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
