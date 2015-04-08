@@ -116,7 +116,7 @@
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <clover.version>3.3.0</clover.version>
         <codemodel.version>2.6</codemodel.version>
-        <codemirror.webjars.version>4.4</codemirror.webjars.version>
+        <codemirror.webjars.version>5.1</codemirror.webjars.version>
         <commons.collections4.version>4.0</commons.collections4.version>
         <commons.validator.version>1.4.0</commons.validator.version>
         <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
@@ -131,7 +131,7 @@
         <geotools.version>12-beta</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-        <!--hibernate.version>5.0.0.Beta1</hibernate.version-->
+        <hibernate.version>4.3.8.Final</hibernate.version>
         <hazelcast.version>3.4</hazelcast.version>
         <hikaricp.version>2.3.2</hikaricp.version>
         <htmlunit.version>2.15</htmlunit.version>
