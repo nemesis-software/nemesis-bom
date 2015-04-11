@@ -211,6 +211,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.9</reflections.version>
+        <redis.embedded.version>0.5</redis.embedded.version>
         <selenium.version>2.45.0</selenium.version>
         <smartsprites.version>0.2.10</smartsprites.version>
         <slick.webjars.version>1.3.13</slick.webjars.version>
