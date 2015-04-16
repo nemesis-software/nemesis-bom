@@ -131,7 +131,7 @@
         <geotools.version>12-beta</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-        <hibernate.version>4.3.8.Final</hibernate.version>
+        <hibernate.version>4.3.9.Final</hibernate.version>
         <hazelcast.version>3.4</hazelcast.version>
         <hikaricp.version>2.3.2</hikaricp.version>
         <htmlunit.version>2.15</htmlunit.version>
