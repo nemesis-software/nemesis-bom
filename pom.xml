@@ -142,7 +142,7 @@
         <jawr.version>3.7-SNAPSHOT</jawr.version>
         <jasypt.version>1.9.2</jasypt.version>
         <jets3t.version>0.9.0</jets3t.version>
-        <jetty.version>9.2.10.v20150310</jetty.version>
+        <jetty.version>9.3.0.M1</jetty.version>
         <jetty.npn.boot.version>1.1.7.v20140316</jetty.npn.boot.version>
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
         <jgravatar.version>1.0</jgravatar.version>
