@@ -91,19 +91,19 @@
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
-            <url>scp://www.nemesis.bg/var/www/html/docs/${project.version}/</url>
+            <url>scp://www.nemesis.io/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
             <id>nemesis-repository</id>
             <uniqueVersion>true</uniqueVersion>
             <name>nemesis-repository-releases</name>
-            <url>http://repository.nemesis.bg/artifactory/ext-release-local</url>
+            <url>http://repository.nemesis.io/artifactory/ext-release-local</url>
         </repository>
         <snapshotRepository>
             <id>nemesis-repository</id>
             <uniqueVersion>false</uniqueVersion>
             <name>nemesis-repository-snapshots</name>
-            <url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
+            <url>http://repository.nemesis.io/artifactory/ext-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -131,11 +131,12 @@
         <geotools.version>12-beta</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
+        <gridgain.version>6.6.4</gridgain.version>
         <hibernate.version>4.3.9.Final</hibernate.version>
         <hazelcast.version>3.4</hazelcast.version>
         <hikaricp.version>2.3.2</hikaricp.version>
         <htmlunit.version>2.15</htmlunit.version>
-        <infinispan.version>6.0.0.Final</infinispan.version>
+        <infinispan.version>6.0.2.Final</infinispan.version>
         <itextpdf5.version>5.5.2</itextpdf5.version>
         <jadira.usertype.version>3.2.0.GA</jadira.usertype.version>
         <java.version>1.8</java.version>
@@ -214,7 +215,7 @@
         <selenium.version>2.45.0</selenium.version>
         <smartsprites.version>0.2.10</smartsprites.version>
         <slick.webjars.version>1.3.13</slick.webjars.version>
-        <spring-data-elasticsearch.version>1.0.0.BUILD-PATCHED-SNAPSHOT</spring-data-elasticsearch.version>
+        <spring-data-elasticsearch.version>1.3.0.PATCHED-SNAPSHOT</spring-data-elasticsearch.version>
         <spring-data-releasetrain.version>Gosling-BUILD-SNAPSHOT</spring-data-releasetrain.version>
         <spring.payment.version>0.5.0.SNAPSHOT</spring.payment.version>
         <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
@@ -291,7 +292,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nemesis-repository</id>
-            <url>http://repository.nemesis.bg/artifactory/ext-snapshot-local</url>
+            <url>http://repository.nemesis.io/artifactory/ext-snapshot-local</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
