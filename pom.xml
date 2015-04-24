@@ -124,8 +124,8 @@
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
         <drools.version>6.2.0.Final</drools.version>
         <!--ecj.version>4.4</ecj.version-->
-        <ehcache.version>3.0.0.m1</ehcache.version>
-        <!--ehcache.jcache.version>1.0.1</ehcache.jcache.version-->
+        <!--ehcache.version>3.0.0.m1</ehcache.version-->
+        <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.2.0-SNAPSHOT</extjs.webjars.version>
         <!--fastutil.version>5.0.9</fastutil.version-->
         <!--geb.version>0.9.3</geb.version-->
@@ -331,9 +331,19 @@
                 <scope>import</scope>
             </dependency>
 			<dependency>
-				<groupId>org.ehcache</groupId>
-				<artifactId>ehcache</artifactId>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
 				<version>${ehcache.version}</version>
+            </dependency>
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-jcache</artifactId>
+				<version>${ehcache.version}</version>
+            </dependency>
+			<dependency>
+				<groupId>org.ehcache</groupId>
+				<artifactId>jcache</artifactId>
+				<version>${ehcache.jcache.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.geotools</groupId>
