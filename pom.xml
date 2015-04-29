@@ -1052,6 +1052,22 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!--PhantomJS POC-->
+                    <plugin>
+                        <groupId>com.github.klieber</groupId>
+                        <artifactId>phantomjs-maven-plugin</artifactId>
+                        <version>0.5</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <version>1.9.8</version>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
@@ -1084,6 +1100,7 @@
                             <systemPropertyVariables>
                                 <spring.profiles.active>test</spring.profiles.active>
                                 <org.springframework.restdocs.outputDir>${basedir}/src/site/asciidoc/generated</org.springframework.restdocs.outputDir>
+                                <phantomjs.binary.path>${phantomjs.binary}</phantomjs.binary.path>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
