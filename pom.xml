@@ -169,6 +169,7 @@
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
         <jsoup.version>1.7.3</jsoup.version>
+        <jetty.version>9.3.0.M1</jetty.version> <!-- REMOVE ONCE MIGRATED TO 2.0 BOM -->
         <!--lucene.version>4.1.0</lucene.version-->
         <maven.archetype.plugin.version>2.3-SNAPSHOT</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
