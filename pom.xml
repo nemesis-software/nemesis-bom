@@ -18,7 +18,7 @@
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
-        <version>2.0.0.BUILD-SNAPSHOT</version>
+        <version>1.1.2.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -170,6 +170,7 @@
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
         <jsoup.version>1.7.3</jsoup.version>
+        <jetty.version>9.3.0.M1</jetty.version> <!-- REMOVE ONCE MIGRATED TO 2.0 BOM -->
         <!--lucene.version>4.1.0</lucene.version-->
         <maven.archetype.plugin.version>2.3-SNAPSHOT</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
@@ -281,7 +282,7 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-		<pluginRepository>
+        <pluginRepository>
             <id>spring-snapshot</id>
             <url>http://repo.spring.io/libs-snapshot</url>
             <snapshots>
@@ -330,11 +331,11 @@
                 <artifactId>commons-jcs-jcache</artifactId>
                 <version>${commons.jcs.version}</version>
             </dependency>
-			<dependency>
-				<groupId>com.googlecode.concurrentlinkedhashmap</groupId>
-				<artifactId>concurrentlinkedhashmap-lru</artifactId>
-				<version>${google.concurrentlinkedhashmap.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>com.googlecode.concurrentlinkedhashmap</groupId>
+                <artifactId>concurrentlinkedhashmap-lru</artifactId>
+                <version>${google.concurrentlinkedhashmap.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.drools</groupId>
@@ -343,20 +344,20 @@
                 <version>${drools.version}</version>
                 <scope>import</scope>
             </dependency>
-			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache-core</artifactId>
-				<version>${ehcache.version}</version>
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-core</artifactId>
+                <version>${ehcache.version}</version>
             </dependency>
-			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache-jcache</artifactId>
-				<version>${ehcache.version}</version>
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-jcache</artifactId>
+                <version>${ehcache.version}</version>
             </dependency>
-			<dependency>
-				<groupId>org.ehcache</groupId>
-				<artifactId>jcache</artifactId>
-				<version>${ehcache.jcache.version}</version>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>jcache</artifactId>
+                <version>${ehcache.jcache.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.geotools</groupId>
@@ -598,31 +599,31 @@
                 <artifactId>super-csv-dozer</artifactId>
                 <version>${supercsv.version}</version>
             </dependency>
-			<dependency>
-            <groupId>com.carrotsearch</groupId>
-            <artifactId>smartsprites</artifactId>
-            <version>${smartsprites.version}</version>
+            <dependency>
+                <groupId>com.carrotsearch</groupId>
+                <artifactId>smartsprites</artifactId>
+                <version>${smartsprites.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.stripe</groupId>
                 <artifactId>stripe-java</artifactId>
                 <version>${stripe.api.version}</version>
             </dependency>
-			<dependency>
-				<groupId>com.github.wuic.extensions</groupId>
-				<artifactId>wuic-spring</artifactId>
-				<version>${wuic.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.wuic</groupId>
-				<artifactId>wuic-tag</artifactId>
-				<version>${wuic.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>xml-apis</groupId>
-				<artifactId>xml-apis</artifactId>
-				<version>${xml.apis.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>com.github.wuic.extensions</groupId>
+                <artifactId>wuic-spring</artifactId>
+                <version>${wuic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.wuic</groupId>
+                <artifactId>wuic-tag</artifactId>
+                <version>${wuic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml.apis.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.google.zxing</groupId>
                 <artifactId>core</artifactId>
@@ -633,11 +634,11 @@
                 <artifactId>javase</artifactId>
                 <version>${zxing.version}</version>
             </dependency>
-			<dependency>
-				<groupId>xalan</groupId>
-				<artifactId>xalan</artifactId>
-				<version>${xalan.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>xalan</groupId>
+                <artifactId>xalan</artifactId>
+                <version>${xalan.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-core</artifactId>
