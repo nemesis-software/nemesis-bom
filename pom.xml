@@ -112,23 +112,17 @@
     <properties>
         <amazon.aws.sdk.version>1.9.32</amazon.aws.sdk.version>
         <asciidoctor.version>1.5.2</asciidoctor.version>
-        <!--asm.version>4.1</asm.version-->
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <codemodel.version>2.6</codemodel.version>
         <codemirror.webjars.version>5.1</codemirror.webjars.version>
         <commons.collections4.version>4.0</commons.collections4.version>
-        <!--commons.validator.version>1.4.0</commons.validator.version-->
         <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
         <commons.vfs2.s3.version>2.3.0</commons.vfs2.s3.version>
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
         <drools.version>6.2.0.Final</drools.version>
-        <!--ecj.version>4.4</ecj.version-->
-        <!--ehcache.version>3.0.0.m1</ehcache.version-->
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.2.0-SNAPSHOT</extjs.webjars.version>
-        <!--fastutil.version>5.0.9</fastutil.version-->
-        <!--geb.version>0.9.3</geb.version-->
         <geotools.version>12-beta</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
@@ -136,17 +130,13 @@
         <hibernate.version>5.0.0.Beta2</hibernate.version>
         <hazelcast.version>3.4.2</hazelcast.version>
         <hikaricp.version>2.3.7</hikaricp.version>
-        <!--htmlunit.version>2.15</htmlunit.version-->
         <infinispan.version>6.0.2.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
         <jawr.version>3.7-SNAPSHOT</jawr.version>
-        <!--jasypt.version>1.9.2</jasypt.version-->
-        <!--jets3t.version>0.9.0</jets3t.version-->
         <jetty.npn.boot.version>1.1.7.v20140316</jetty.npn.boot.version>
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
         <jgravatar.version>1.0</jgravatar.version>
-        <!--joda.time.jsptags.version>1.1.1</joda.time.jsptags.version-->
         <jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.3</jqueryui.webjars.version>
         <jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
@@ -169,8 +159,7 @@
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
         <jsoup.version>1.7.3</jsoup.version>
-        <jetty.version>9.3.0.M1</jetty.version> <!-- REMOVE ONCE MIGRATED TO 2.0 BOM -->
-        <!--lucene.version>4.1.0</lucene.version-->
+        <jetty.version>9.3.0.M1</jetty.version>
         <maven.archetype.plugin.version>2.3-SNAPSHOT</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
         <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
@@ -201,7 +190,6 @@
         <maven.plugin.api.version>3.2.2</maven.plugin.api.version>
         <maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
-        <!--mchange.commons.version>0.2.7</mchange.commons.version-->
         <nemesis.version>0.6-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
@@ -213,9 +201,8 @@
         <selenium.version>2.45.0</selenium.version>
         <smartsprites.version>0.2.10</smartsprites.version>
         <slick.webjars.version>1.3.13</slick.webjars.version>
-        <spring-data-releasetrain.version>Gosling-BUILD-SNAPSHOT</spring-data-releasetrain.version>
-        <!--spring.payment.version>0.5.0.SNAPSHOT</spring.payment.version-->
-        <spring.test.htmlunit.version>1.0.0.M2</spring.test.htmlunit.version>
+        <spring-data-releasetrain.version>Fowler-RELEASE</spring-data-releasetrain.version>
+        <spring.test.htmlunit.version>1.0.0.RC1</spring.test.htmlunit.version>
         <supercsv.version>2.3.1</supercsv.version>
         <stripe.api.version>1.17.0</stripe.api.version>
         <wagon.version>2.8</wagon.version>
