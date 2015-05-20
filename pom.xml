@@ -888,6 +888,20 @@
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
                 <version>${maven.rat.version.plugin}</version>
+                <!-- xerces is already removed in doxia 1.7, so this exclusion may be removed when doxia 1.7 is released. -->
+                <dependencies>
+                  <dependency>
+                    <groupId>org.apache.maven.doxia</groupId>
+                    <artifactId>doxia-core</artifactId>
+                    <version>1.2</version>
+                    <exclusions>
+                      <exclusion>
+                        <groupId>xerces</groupId>
+                        <artifactId>xercesImpl</artifactId>
+                      </exclusion>
+                    </exclusions>
+                  </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>rat-check</id>
