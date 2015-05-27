@@ -203,6 +203,7 @@
         <slick.webjars.version>1.3.13</slick.webjars.version>
         <spring-data-releasetrain.version>Fowler-RELEASE</spring-data-releasetrain.version>
         <spring.test.htmlunit.version>1.0.0.RC1</spring.test.htmlunit.version>
+        <spring-loaded.version>1.2.3.RELEASE</spring-loaded.version>
         <supercsv.version>2.3.1</supercsv.version>
         <stripe.api.version>1.17.0</stripe.api.version>
         <wagon.version>2.8</wagon.version>
