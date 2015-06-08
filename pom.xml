@@ -133,7 +133,7 @@
         <infinispan.version>6.0.2.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
-        <jawr.version>3.7-SNAPSHOT</jawr.version>
+        <jawr.version>3.7</jawr.version>
         <jetty.npn.boot.version>1.1.7.v20140316</jetty.npn.boot.version>
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
         <jgravatar.version>1.0</jgravatar.version>
