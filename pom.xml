@@ -134,6 +134,8 @@
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
         <jawr.version>3.7</jawr.version>
+        <jedis.version>2.7.2</jedis.version>
+        <!-- remove jedis when boot updates -->
         <jetty.npn.boot.version>1.1.7.v20140316</jetty.npn.boot.version>
         <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
         <jgravatar.version>1.0</jgravatar.version>
@@ -201,7 +203,9 @@
         <selenium.version>2.45.0</selenium.version>
         <smartsprites.version>0.2.10</smartsprites.version>
         <slick.webjars.version>1.3.13</slick.webjars.version>
-        <spring-data-releasetrain.version>Fowler-RELEASE</spring-data-releasetrain.version>
+        <!--spring-social.version>1.1.2.RELEASE</spring-social.version--> <!-- Remove when bom upgrades it -->
+        <!--spring-session.version>1.0.1.RELEASE</spring-session.version-->
+        <spring-data-releasetrain.version>Gosling-M1</spring-data-releasetrain.version>
         <spring.test.htmlunit.version>1.0.0.RC1</spring.test.htmlunit.version>
         <spring-loaded.version>1.2.3.RELEASE</spring-loaded.version>
         <supercsv.version>2.3.1</supercsv.version>
