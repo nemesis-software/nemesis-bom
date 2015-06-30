@@ -127,12 +127,13 @@
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.4</gridgain.version>
-        <!--hibernate.version>5.0.0.CR1</hibernate.version--> <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
+        <hibernate.version>5.0.0.CR1</hibernate.version> <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5</hazelcast.version>
         <hikaricp.version>2.3.7</hikaricp.version>
-        <infinispan.version>6.0.2.Final</infinispan.version>
+        <infinispan.version>7.2.1.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
+        <jackson.version>2.6.0-rc3</jackson.version> <!-- Remove once spring-platform-bom updates to it. -->
         <jawr.version>3.7</jawr.version>
         <jedis.version>2.7.2</jedis.version>
         <!-- remove jedis when boot updates -->
@@ -647,6 +648,11 @@
 				<groupId>org.springframework.restdocs</groupId>
 				<artifactId>spring-restdocs</artifactId>
 				<version>${spring-restdocs.version}</version> <!-- remove once restdocs is in the platform -->
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.datatype</groupId>
+				<artifactId>jackson-datatype-hibernate5</artifactId>
+				<version>${jackson.version}</version> <!-- remove once spring platform upgrades it. -->
 			</dependency>
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
