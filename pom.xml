@@ -110,7 +110,7 @@
     </distributionManagement>
 
     <properties>
-        <amazon.aws.sdk.version>1.10.3</amazon.aws.sdk.version>
+        <amazon.aws.sdk.version>1.9.23</amazon.aws.sdk.version>
         <asciidoctor.version>1.5.2</asciidoctor.version>
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
@@ -127,13 +127,15 @@
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.4</gridgain.version>
-        <hibernate.version>5.0.0.CR2</hibernate.version> <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
+        <hibernate.version>5.0.0.CR2</hibernate.version>
+        <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5</hazelcast.version>
         <hikaricp.version>2.3.7</hikaricp.version>
         <infinispan.version>7.2.1.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
-        <jackson.version>2.6.0-rc3</jackson.version> <!-- Remove once spring-platform-bom updates to it. -->
+        <jackson.version>2.6.0-rc3</jackson.version>
+        <!-- Remove once spring-platform-bom updates to it. -->
         <jawr.version>3.7</jawr.version>
         <jedis.version>2.7.2</jedis.version>
         <!-- remove jedis when boot updates -->
@@ -208,7 +210,8 @@
         <smartsprites.version>0.2.10</smartsprites.version>
         <slick.webjars.version>1.3.13</slick.webjars.version>
         <spring-hateoas.version>0.17.0.RELEASE</spring-hateoas.version>
-        <spring-social.version>1.1.2.RELEASE</spring-social.version> <!-- Remove when bom upgrades it -->
+        <spring-social.version>1.1.2.RELEASE</spring-social.version>
+        <!-- Remove when bom upgrades it -->
         <!--spring-session.version>1.0.1.RELEASE</spring-session.version-->
         <spring-data-releasetrain.version>Gosling-M1</spring-data-releasetrain.version>
         <spring.test.htmlunit.version>1.0.0.RC1</spring.test.htmlunit.version>
@@ -267,14 +270,15 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
-		<repository>
-			<id>vfs-s3.repository</id>
-			<name>vfs-s3 project repository</name>
-			<url>http://dl.bintray.com/content/abashev/vfs-s3</url> <!-- Needed for vfs-s3 --> 
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
+        <repository>
+            <id>vfs-s3.repository</id>
+            <name>vfs-s3 project repository</name>
+            <url>http://dl.bintray.com/content/abashev/vfs-s3</url>
+            <!-- Needed for vfs-s3 -->
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -301,11 +305,11 @@
 
     <dependencyManagement>
         <dependencies>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-web</artifactId>
-				<version>${log4j2.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-web</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.amazonaws</groupId>
                 <artifactId>aws-java-sdk</artifactId>
@@ -615,10 +619,10 @@
                 <artifactId>super-csv-dozer</artifactId>
                 <version>${supercsv.version}</version>
             </dependency>
-			<dependency>
-				<groupId>com.codeborne</groupId>
-				<artifactId>phantomjsdriver</artifactId>
-				<version>${phantomjs.driver.version}</version>
+            <dependency>
+                <groupId>com.codeborne</groupId>
+                <artifactId>phantomjsdriver</artifactId>
+                <version>${phantomjs.driver.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.carrotsearch</groupId>
@@ -660,16 +664,18 @@
                 <artifactId>xalan</artifactId>
                 <version>${xalan.version}</version>
             </dependency>
-			<dependency>
-				<groupId>org.springframework.restdocs</groupId>
-				<artifactId>spring-restdocs</artifactId>
-				<version>${spring-restdocs.version}</version> <!-- remove once restdocs is in the platform -->
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-hibernate5</artifactId>
-				<version>${jackson.version}</version> <!-- remove once spring platform upgrades it. -->
-			</dependency>
+            <dependency>
+                <groupId>org.springframework.restdocs</groupId>
+                <artifactId>spring-restdocs</artifactId>
+                <version>${spring-restdocs.version}</version>
+                <!-- remove once restdocs is in the platform -->
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-hibernate5</artifactId>
+                <version>${jackson.version}</version>
+                <!-- remove once spring platform upgrades it. -->
+            </dependency>
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-core</artifactId>
@@ -927,17 +933,17 @@
                 <version>${maven.rat.version.plugin}</version>
                 <!-- xerces is already removed in doxia 1.7, so this exclusion may be removed when doxia 1.7 is released. -->
                 <dependencies>
-                  <dependency>
-                    <groupId>org.apache.maven.doxia</groupId>
-                    <artifactId>doxia-core</artifactId>
-                    <version>1.2</version>
-                    <exclusions>
-                      <exclusion>
-                        <groupId>xerces</groupId>
-                        <artifactId>xercesImpl</artifactId>
-                      </exclusion>
-                    </exclusions>
-                  </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-core</artifactId>
+                        <version>1.2</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>xerces</groupId>
+                                <artifactId>xercesImpl</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
                 </dependencies>
                 <executions>
                     <execution>
