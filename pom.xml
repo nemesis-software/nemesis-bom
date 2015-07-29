@@ -211,6 +211,7 @@
         <selenium.version>2.45.0</selenium.version>
         <smartsprites.version>0.2.10</smartsprites.version>
         <slick.webjars.version>1.3.13</slick.webjars.version>
+        <sockjsclient.webjars.version>0.3.4</sockjsclient.webjars.version>
         <spring-hateoas.version>0.17.0.RELEASE</spring-hateoas.version>
         <spring-social.version>1.1.2.RELEASE</spring-social.version>
         <!-- Remove when bom upgrades it -->
@@ -221,6 +222,7 @@
         <spring-restdocs.version>1.0.0.M1</spring-restdocs.version>
         <supercsv.version>2.3.1</supercsv.version>
         <stripe.api.version>1.17.0</stripe.api.version>
+        <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <wagon.version>2.8</wagon.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <xml.apis.version>1.4.01</xml.apis.version>
@@ -555,6 +557,16 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>flowplayer-html5</artifactId>
                 <version>${jqueryflowplayer.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>sockjs-client</artifactId>
+                <version>${sockjsclient.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>stomp-websocket</artifactId>
+                <version>${stompwebsocket.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jsoup</groupId>
