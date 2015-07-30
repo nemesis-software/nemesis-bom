@@ -163,6 +163,7 @@
         <jqueryeasyzoom.webjars.version>2.2.0</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
+        <jsitemapgenerator.version>2.0</jsitemapgenerator.version>
         <jsoup.version>1.7.3</jsoup.version>
         <jetty.version>9.3.0.v20150612</jetty.version>
         <!-- Remove log4j2.version once spring-platform-bom updates to it. -->
@@ -673,6 +674,11 @@
                 <artifactId>javase</artifactId>
                 <version>${zxing.version}</version>
             </dependency>
+			<dependency>
+				<groupId>cz.jiripinkas</groupId>
+				<artifactId>jsitemapgenerator</artifactId>
+				<version>${jsitemapgenerator.version}</version>
+			</dependency>
             <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
