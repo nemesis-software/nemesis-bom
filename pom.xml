@@ -1076,7 +1076,7 @@
             </properties>
             <build>
                 <plugins>
-                    <plugin>
+                    <!--plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
                         <version>${maven.jacoco.plugin.version}</version>
@@ -1138,7 +1138,7 @@
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
@@ -1161,7 +1161,7 @@
                         </executions>
                         <configuration>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx1024m ${failsafeArgLine}</argLine>
+                            <argLine>-Xms512m -Xmx1024m</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <groups>com.nemesis.platform.util.test.IntegrationTest</groups>
