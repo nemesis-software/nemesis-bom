@@ -219,7 +219,8 @@
         <!--spring-session.version>1.0.1.RELEASE</spring-session.version-->
         <spring-data-releasetrain.version>Gosling-RC1</spring-data-releasetrain.version>
         <spring.test.htmlunit.version>1.0.0.RC1</spring.test.htmlunit.version>
-        <spring-loaded.version>1.2.3.RELEASE</spring-loaded.version>
+        <!-- Remove when bom upgrades it -->
+        <spring-loaded.version>1.2.4.RELEASE</spring-loaded.version>
         <spring-restdocs.version>1.0.0.M1</spring-restdocs.version>
         <supercsv.version>2.3.1</supercsv.version>
         <stripe.api.version>1.17.0</stripe.api.version>
