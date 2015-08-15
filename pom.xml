@@ -168,7 +168,7 @@
         <jetty.version>9.3.0.v20150612</jetty.version>
         <!-- Remove log4j2.version once spring-platform-bom updates to it. -->
         <log4j2.version>2.3</log4j2.version>
-        <maven.archetype.plugin.version>2.3-SNAPSHOT</maven.archetype.plugin.version>
+        <maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
         <maven.surefire.plugin.version>2.18</maven.surefire.plugin.version>
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
