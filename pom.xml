@@ -33,12 +33,12 @@
     <inceptionYear>2010</inceptionYear>
     <organization>
         <name>Nemesis Software, Ltd.</name>
-        <url>http://nemesis.bg/</url>
+        <url>http://www.nemesis.io/</url>
     </organization>
     <licenses>
         <license>
             <name>Nemesis Platform Commercial License</name>
-            <url>http://nemesis.com/license</url>
+            <url>http://www.nemesis.io/legal/license</url>
             <distribution>repo</distribution>
             <comments>This platform is proprietary software.</comments>
         </license>
@@ -48,9 +48,9 @@
         <developer>
             <id>tahchiev</id>
             <name>Petar Tahchiev</name>
-            <email>tahchiev@nemesis.bg</email>
+            <email>ptahchiev@nemesis.io</email>
             <organization>Nemesis Software, Ltd.</organization>
-            <organizationUrl>http://www.nemesis.bg</organizationUrl>
+            <organizationUrl>http://www.nemesis.io/</organizationUrl>
             <roles>
                 <role>Project lead</role>
             </roles>
@@ -59,9 +59,9 @@
         <developer>
             <id>gochev</id>
             <name>Nayden Gochev</name>
-            <email>gochev@nemesis.bg</email>
+            <email>ngochev@nemesis.io</email>
             <organization>Nemesis Software, Ltd.</organization>
-            <organizationUrl>http://www.nemesis.bg</organizationUrl>
+            <organizationUrl>http://www.nemesis.io/</organizationUrl>
             <roles>
                 <role>Committer</role>
             </roles>
@@ -85,7 +85,7 @@
             <notifier>
                 <type>mail</type>
                 <configuration>
-                    <address>notifications@nemesis.bg</address>
+                    <address>notifications@nemesis.io</address>
                 </configuration>
             </notifier>
         </notifiers>
