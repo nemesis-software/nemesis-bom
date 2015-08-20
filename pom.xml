@@ -136,6 +136,7 @@
         <java.version>1.8</java.version>
         <jackson.version>2.6.0-rc3</jackson.version>
         <!-- Remove once spring-platform-bom updates to it. -->
+        <javaparser.version>2.2.1</javaparser.version>
         <jawr.version>3.7</jawr.version>
         <jedis.version>2.7.2</jedis.version>
         <!-- remove jedis when boot updates -->
@@ -470,6 +471,11 @@
                 <artifactId>xmlworker</artifactId>
                 <version>${itextpdf5.version}</version>
             </dependency>
+			<dependency>
+				<groupId>com.github.javaparser</groupId>
+				<artifactId>javaparser-core</artifactId>
+				<version>${javaparser.version}</version>
+			</dependency>
             <dependency>
                 <groupId>net.jawr</groupId>
                 <artifactId>jawr-core</artifactId>
