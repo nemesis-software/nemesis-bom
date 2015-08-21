@@ -201,7 +201,7 @@
         <nemesis.version>0.6-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
-        <phantomjs.version>1.9.8</phantomjs.version>
+        <phantomjs.version>1.9.1</phantomjs.version>
         <phantomjs.maven.plugin.version>0.7</phantomjs.maven.plugin.version>
         <phantomjs.driver.version>1.2.1</phantomjs.driver.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
