@@ -111,7 +111,7 @@
 
     <properties>
         <amazon.aws.sdk.version>1.9.23</amazon.aws.sdk.version>
-        <asciidoctor.version>1.5.2</asciidoctor.version>
+        <asciidoctor.version>1.5.3-SNAPSHOT</asciidoctor.version>
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <codemodel.version>2.6</codemodel.version>
@@ -127,7 +127,7 @@
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.4</gridgain.version>
-        <hibernate.version>5.0.0.CR4</hibernate.version>
+        <hibernate.version>5.0.0.Final</hibernate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5</hazelcast.version>
         <hikaricp.version>2.3.7</hikaricp.version>
