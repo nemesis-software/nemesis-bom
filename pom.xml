@@ -110,15 +110,15 @@
     </distributionManagement>
 
     <properties>
-        <amazon.aws.sdk.version>1.9.23</amazon.aws.sdk.version>
+        <amazon.aws.sdk.version>1.10.15</amazon.aws.sdk.version>
         <asciidoctor.version>1.5.3-SNAPSHOT</asciidoctor.version>
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <codemodel.version>2.6</codemodel.version>
         <codemirror.webjars.version>5.1</codemirror.webjars.version>
         <commons.collections4.version>4.0</commons.collections4.version>
-        <commons.vfs2.version>2.1.1660580.1</commons.vfs2.version>
-        <commons.vfs2.s3.version>2.3.2</commons.vfs2.s3.version>
+        <commons.vfs2.version>2.1.1660580.2</commons.vfs2.version>
+        <commons.vfs2.s3.version>2.3.3</commons.vfs2.s3.version>
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
         <drools.version>6.2.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
@@ -137,12 +137,11 @@
         <jackson.version>2.6.1</jackson.version>
         <!-- Remove once spring-platform-bom updates to it. -->
         <javaparser.version>2.2.1</javaparser.version>
-        <jawr.version>3.7</jawr.version>
+        <jawr.version>3.8</jawr.version>
         <jedis.version>2.7.2</jedis.version>
         <!-- remove jedis when boot updates -->
-        <jetty.npn.boot.version>1.1.7.v20140316</jetty.npn.boot.version>
-        <jetty.npn.api.version>1.1.0.v20120525</jetty.npn.api.version>
         <jgravatar.version>1.0</jgravatar.version>
+        <joda-time.version>2.8.2</joda-time.version>
         <jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.3</jqueryui.webjars.version>
         <jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
@@ -166,7 +165,7 @@
         <jqueryflowplayer.webjars.version>5.4.6</jqueryflowplayer.webjars.version>
         <jsitemapgenerator.version>2.0</jsitemapgenerator.version>
         <jsoup.version>1.7.3</jsoup.version>
-        <jetty.version>9.3.0.v20150612</jetty.version>
+        <jetty.version>9.3.3.v20150827</jetty.version>
         <!-- Remove log4j2.version once spring-platform-bom updates to it. -->
         <log4j2.version>2.3</log4j2.version>
         <maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
@@ -232,6 +231,7 @@
         <stripe.api.version>1.17.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <wagon.version>2.8</wagon.version>
+        <webjars-locator.version>0.27</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <xml.apis.version>1.4.01</xml.apis.version>
         <xalan.version>2.7.2</xalan.version>
@@ -485,11 +485,38 @@
                 <groupId>net.jawr</groupId>
                 <artifactId>jawr-core</artifactId>
                 <version>${jawr.version}</version>
+                <!-- TODO remove when update to 3.9 https://java.net/jira/browse/JAWR-355 -->
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>net.jawr.extensions</groupId>
                 <artifactId>jawr-spring-extension</artifactId>
                 <version>${jawr.version}</version>
+                <!-- TODO remove when update to 3.9 https://java.net/jira/browse/JAWR-355 -->
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>webjars-locator-core</artifactId>
+                <version>${webjars-locator.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.timgroup</groupId>
@@ -993,6 +1020,7 @@
 					</includes>
 					<excludes>
 						<exclude>**/target/**/*</exclude>
+						<exclude>**/.idea/**/*</exclude>
 						<exclude>**/.settings/**</exclude>
 						<exclude>**/.svn/**/*</exclude>
 						<exclude>**/.git/**/*</exclude>
