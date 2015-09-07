@@ -173,6 +173,7 @@
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
         <maven.surefire.plugin.version>2.18</maven.surefire.plugin.version>
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
+		<maven.checkstyle.plugin.skip>false</maven.checkstyle.plugin.skip>
         <maven.checkstyle.plugin.version>2.15</maven.checkstyle.plugin.version>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.coveralls.plugin.version>3.1.0</maven.coveralls.plugin.version>
@@ -187,8 +188,11 @@
         <maven.project.info.reports.plugin>2.7</maven.project.info.reports.plugin>
         <maven.appassembler.plugin.version>1.8</maven.appassembler.plugin.version>
         <maven.changes.plugin.version>2.9</maven.changes.plugin.version>
+        <maven.findbugs.plugin.skip>false</maven.findbugs.plugin.skip>
         <maven.findbugs.plugin.version>3.0.1</maven.findbugs.plugin.version>
         <maven.pmd.plugin.version>3.4</maven.pmd.plugin.version>
+        <maven.pmd.plugin.skip>false</maven.pmd.plugin.skip>
+        <maven.rat.plugin.skip>false</maven.rat.plugin.skip>
         <maven.rat.version.plugin>0.10</maven.rat.version.plugin>
         <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
         <maven.cargo.plugin>1.4.3</maven.cargo.plugin>
@@ -201,8 +205,9 @@
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
         <nemesis.version>0.6-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
-        <orika.version>1.4.6-SNAPSHOT</orika.version>
+        <orika.version>1.5.0-SNAPSHOT</orika.version>
         <phantomjs.version>1.9.1</phantomjs.version>
+        <phantonjs.maven.plugin.skip>false</phantonjs.maven.plugin.skip>
         <phantomjs.maven.plugin.version>0.7</phantomjs.maven.plugin.version>
         <phantomjs.driver.version>1.2.1</phantomjs.driver.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -822,6 +827,7 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${maven.checkstyle.plugin.version}</version>
                     <configuration>
+						<skip>${maven.checkstyle.plugin.skip}</skip>
                         <configLocation>src/main/resources/nemesis-checkstyle.xml</configLocation>
                         <headerLocation>src/main/resources/nemesis-header.txt</headerLocation>
                         <sourceDirectory>src/main/java</sourceDirectory>
@@ -843,7 +849,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
 				<configuration>
-					<skipTests>false</skipTests>
+					<skip>${maven.surefire.plugin.skip}</skip>
 					<argLine>${surefireArgLine}</argLine>
 					<environmentVariables>
 						<env>dev</env>
@@ -865,6 +871,161 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven.checkstyle.plugin.version}</version>
+				<executions>
+					<execution>
+						<id>checkstyle-check</id>
+						<phase>install</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>${maven.pmd.plugin.version}</version>
+				<configuration>
+					<skip>${maven.pmd.plugin.skip}</skip>
+					<targetJdk>${maven.compiler.source}</targetJdk>
+					<printFailingErrors>true</printFailingErrors>
+					<rulesets>
+						<ruleset>rulesets/maven.xml</ruleset>
+					</rulesets>
+					<excludeRoots>
+						<excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
+						<excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
+					</excludeRoots>
+				</configuration>
+				<executions>
+					<execution>
+						<id>check</id>
+						<phase>install</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>${maven.findbugs.plugin.version}</version>
+				<configuration>
+					<skip>${maven.findbugs.plugin.skip}</skip>
+				</configuration>
+				<executions>
+					<execution>
+						<id>findbugs-check</id>
+						<phase>install</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>${maven.enforcer.plugin.version}</version>
+				<executions>
+					<execution>
+						<id>enforce-bytecode-version</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.0.0-alpha-1</version>
+								</requireMavenVersion>
+							</rules>
+							<fail>true</fail>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>extra-enforcer-rules</artifactId>
+						<version>${maven.extraenforcer.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.rat</groupId>
+				<artifactId>apache-rat-plugin</artifactId>
+				<version>${maven.rat.version.plugin}</version>
+				<!-- xerces is already removed in doxia 1.7, so this exclusion may be removed when doxia 1.7 is released. -->
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.doxia</groupId>
+						<artifactId>doxia-core</artifactId>
+						<version>1.2</version>
+						<exclusions>
+							<exclusion>
+								<groupId>xerces</groupId>
+								<artifactId>xercesImpl</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>rat-check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<skip>${maven.rat.plugin.skip}</skip>
+					<excludeSubProjects>false</excludeSubProjects>
+					<includes>
+						<include>**/*.java</include>
+						<include>**/*.xml</include>
+						<include>**/*.properties</include>
+					</includes>
+					<excludes>
+						<exclude>**/target/**/*</exclude>
+						<exclude>**/.settings/**</exclude>
+						<exclude>**/.svn/**/*</exclude>
+						<exclude>**/.git/**/*</exclude>
+						<exclude>**/sitemap.xml</exclude>
+						<exclude>**/*.properties</exclude>
+					</excludes>
+					<licenses>
+						<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
+							<licenseFamilyCategory>AL2</licenseFamilyCategory>
+							<licenseFamilyName>Apache License 2.0</licenseFamilyName>
+							<notes/>
+							<patterns>
+								<pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
+							</patterns>
+						</license>
+						<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
+							<licenseFamilyCategory>NPCL</licenseFamilyCategory>
+							<licenseFamilyName>Nemesis Platform Commercial License 1.0</licenseFamilyName>
+							<notes></notes>
+							<patterns>
+								<pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
+							</patterns>
+						</license>
+					</licenses>
+					<licenseFamilies>
+						<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
+							<familyName>Apache License 2.0</familyName>
+						</licenseFamily>
+						<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
+							<familyName>Nemesis Platform Commercial License 1.0</familyName>
+						</licenseFamily>
+					</licenseFamilies>
+				</configuration>
 			</plugin>
         </plugins>
     </build>
@@ -907,17 +1068,13 @@
     <profiles>
 		<profile>
 			<id>quick</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<skipTests>true</skipTests>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
+			<properties>
+				<maven.checkstyle.plugin.skip>true</maven.checkstyle.plugin.skip>
+				<maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
+				<maven.pmd.plugin.skip>true</maven.pmd.plugin.skip>
+				<maven.findbugs.plugin.skip>true</maven.findbugs.plugin.skip>
+				<maven.rat.plugin.skip>true</maven.rat.plugin.skip>
+			</properties>
 		</profile>
         <profile>
             <id>dev</id>
@@ -927,177 +1084,12 @@
             <properties>
                 <env>dev</env>
             </properties>
-			<build>
-                <plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-checkstyle-plugin</artifactId>
-						<version>${maven.checkstyle.plugin.version}</version>
-						<executions>
-							<execution>
-								<id>checkstyle-check</id>
-								<phase>install</phase>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-pmd-plugin</artifactId>
-						<version>${maven.pmd.plugin.version}</version>
-						<configuration>
-							<targetJdk>${maven.compiler.source}</targetJdk>
-							<printFailingErrors>true</printFailingErrors>
-							<rulesets>
-								<ruleset>rulesets/maven.xml</ruleset>
-							</rulesets>
-							<excludeRoots>
-								<excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
-								<excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
-							</excludeRoots>
-						</configuration>
-						<executions>
-							<execution>
-								<id>check</id>
-								<phase>install</phase>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>findbugs-maven-plugin</artifactId>
-						<version>${maven.findbugs.plugin.version}</version>
-						<executions>
-							<execution>
-								<id>findbugs-check</id>
-								<phase>install</phase>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-enforcer-plugin</artifactId>
-						<version>${maven.enforcer.plugin.version}</version>
-						<executions>
-							<execution>
-								<id>enforce-bytecode-version</id>
-								<goals>
-									<goal>enforce</goal>
-								</goals>
-								<configuration>
-									<rules>
-										<requireMavenVersion>
-											<version>3.0.0-alpha-1</version>
-										</requireMavenVersion>
-										<!--enforceBytecodeVersion>
-											<maxJdkVersion>${maven.compiler.target}</maxJdkVersion>
-										</enforceBytecodeVersion-->
-										<!--banDuplicateClasses>
-											<findAllDuplicates>true</findAllDuplicates>
-											<ignoreClasses>
-												<ignoreClass>javax.servlet.*</ignoreClass>
-												<ignoreClass>javax.persistence.*</ignoreClass>
-												<ignoreClass>org.codehaus.plexus.util.*</ignoreClass>
-												<ignoreClass>org.bouncycastle.*</ignoreClass>
-											</ignoreClasses>
-										</banDuplicateClasses-->
-									</rules>
-									<fail>true</fail>
-								</configuration>
-							</execution>
-						</executions>
-						<dependencies>
-							<dependency>
-								<groupId>org.codehaus.mojo</groupId>
-								<artifactId>extra-enforcer-rules</artifactId>
-								<version>${maven.extraenforcer.version}</version>
-							</dependency>
-						</dependencies>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.rat</groupId>
-						<artifactId>apache-rat-plugin</artifactId>
-						<version>${maven.rat.version.plugin}</version>
-						<!-- xerces is already removed in doxia 1.7, so this exclusion may be removed when doxia 1.7 is released. -->
-						<dependencies>
-							<dependency>
-								<groupId>org.apache.maven.doxia</groupId>
-								<artifactId>doxia-core</artifactId>
-								<version>1.2</version>
-								<exclusions>
-									<exclusion>
-										<groupId>xerces</groupId>
-										<artifactId>xercesImpl</artifactId>
-									</exclusion>
-								</exclusions>
-							</dependency>
-						</dependencies>
-						<executions>
-							<execution>
-								<id>rat-check</id>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<excludeSubProjects>false</excludeSubProjects>
-							<includes>
-								<include>**/*.java</include>
-								<include>**/*.xml</include>
-								<include>**/*.properties</include>
-							</includes>
-							<excludes>
-								<exclude>**/target/**/*</exclude>
-								<exclude>**/.settings/**</exclude>
-								<exclude>**/.svn/**/*</exclude>
-								<exclude>**/.git/**/*</exclude>
-								<exclude>**/sitemap.xml</exclude>
-								<exclude>**/*.properties</exclude>
-							</excludes>
-							<licenses>
-								<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
-									<licenseFamilyCategory>AL2</licenseFamilyCategory>
-									<licenseFamilyName>Apache License 2.0</licenseFamilyName>
-									<notes/>
-									<patterns>
-										<pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
-									</patterns>
-								</license>
-								<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
-									<licenseFamilyCategory>NPCL</licenseFamilyCategory>
-									<licenseFamilyName>Nemesis Platform Commercial License 1.0</licenseFamilyName>
-									<notes></notes>
-									<patterns>
-										<pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
-									</patterns>
-								</license>
-							</licenses>
-							<licenseFamilies>
-								<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
-									<familyName>Apache License 2.0</familyName>
-								</licenseFamily>
-								<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
-									<familyName>Nemesis Platform Commercial License 1.0</familyName>
-								</licenseFamily>
-							</licenseFamilies>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
         </profile>
         <profile>
             <id>test</id>
             <properties>
                 <env>test</env>
+                <selenium.driver>phantomjs</selenium.driver>
             </properties>
             <build>
                 <plugins>
@@ -1194,7 +1186,7 @@
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
                             <systemPropertyVariables>
-                                <spring.profiles.active>test</spring.profiles.active>
+                                <spring.profiles.active>test,${selenium.driver}</spring.profiles.active>
                                 <org.springframework.restdocs.outputDir>${basedir}/src/site/asciidoc/generated</org.springframework.restdocs.outputDir>
                                 <phantomjs.binary.path>${phantomjs.binary}</phantomjs.binary.path>
                             </systemPropertyVariables>
@@ -1202,6 +1194,13 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+			<id>firefox</id>
+            <properties>
+				<phantonjs.maven.plugin.skip>true</phantonjs.maven.plugin.skip>
+                <selenium.driver>firefox</selenium.driver>
+            </properties>
         </profile>
     </profiles>
 </project>
