@@ -204,7 +204,7 @@
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
         <nemesis.version>0.6-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
-        <orika.version>1.5.0-SNAPSHOT</orika.version>
+        <orika.version>1.4.6-SNAPSHOT</orika.version>
         <phantomjs.version>1.9.1</phantomjs.version>
         <phantonjs.maven.plugin.skip>false</phantonjs.maven.plugin.skip>
         <phantomjs.maven.plugin.version>0.7</phantomjs.maven.plugin.version>
