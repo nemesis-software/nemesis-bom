@@ -189,7 +189,7 @@
         <maven.changes.plugin.version>2.9</maven.changes.plugin.version>
         <maven.findbugs.plugin.skip>false</maven.findbugs.plugin.skip>
         <maven.findbugs.plugin.version>3.0.1</maven.findbugs.plugin.version>
-        <maven.pmd.plugin.version>3.4</maven.pmd.plugin.version>
+        <maven.pmd.plugin.version>3.5</maven.pmd.plugin.version>
         <maven.pmd.plugin.skip>false</maven.pmd.plugin.skip>
         <maven.rat.plugin.skip>false</maven.rat.plugin.skip>
         <maven.rat.version.plugin>0.10</maven.rat.version.plugin>
