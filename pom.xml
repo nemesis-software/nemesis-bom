@@ -67,6 +67,17 @@
             </roles>
             <timezone>+2</timezone>
         </developer>
+		<developer>
+            <id>tsachev</id>
+            <name>Vladimir Tsanev</name>
+            <email>tsachev@nemesis.io</email>
+            <organization>Nemesis Software, Ltd.</organization>
+            <organizationUrl>http://www.nemesis.io/</organizationUrl>
+            <roles>
+                <role>Committer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
     </developers>
 
     <scm>
