@@ -29,7 +29,7 @@
 
     <name>Nemesis BOM</name>
     <description>BOM module for the Nemesis platform.</description>
-    <url>http://wiki.nemesis.com/bom/</url>
+    <url>http://docs.nemesis.io/bom/</url>
     <inceptionYear>2010</inceptionYear>
     <organization>
         <name>Nemesis Software, Ltd.</name>
@@ -104,7 +104,7 @@
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
-            <url>scp://www.nemesis.io/var/www/html/docs/${project.version}/</url>
+            <url>scp://docs.nemesis.io/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
             <id>nemesis-repository</id>
@@ -141,7 +141,7 @@
         <hibernate.version>5.0.0.Final</hibernate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5</hazelcast.version>
-        <hikaricp.version>2.4.1</hikaricp.version>
+        <hikaricp.version>2.3.7</hikaricp.version>
         <infinispan.version>7.2.1.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
