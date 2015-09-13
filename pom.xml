@@ -104,7 +104,7 @@
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
-            <url>scp://docs.nemesis.io/var/www/html/docs/${project.version}/</url>
+            <url>scp://95.85.47.238/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
             <id>nemesis-repository</id>
