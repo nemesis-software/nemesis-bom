@@ -242,6 +242,7 @@
         <supercsv.version>2.3.1</supercsv.version>
         <stripe.api.version>1.17.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
+        <thymeleaf-jawr.version>1.1.1</thymeleaf-jawr.version>
         <wagon.version>2.8</wagon.version>
         <webjars-locator.version>0.27</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
@@ -530,6 +531,11 @@
                         <artifactId>log4j</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.github.dtrunk90</groupId>
+                <artifactId>thymeleaf-jawr-extension</artifactId>
+                <version>${thymeleaf-jawr.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
