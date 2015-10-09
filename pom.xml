@@ -1233,7 +1233,7 @@
                         </executions>
                         <configuration>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=128m</argLine>
+                            <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <groups>com.nemesis.platform.util.test.IntegrationTest</groups>
