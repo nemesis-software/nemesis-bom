@@ -838,6 +838,11 @@
                             <artifactId>wagon-ssh</artifactId>
                             <version>${wagon.version}</version>
                         </dependency>
+						<dependency>
+                            <groupId>org.apache.maven.wagon</groupId>
+                            <artifactId>wagon-ssh-common</artifactId>
+                            <version>${wagon.version}</version>
+                        </dependency>
                     </dependencies>
                 </plugin>
                 <!--plugin>
