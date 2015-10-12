@@ -213,7 +213,7 @@
         <maven.plugin.api.version>3.2.2</maven.plugin.api.version>
         <maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
-        <nemesis.version>0.6-SNAPSHOT</nemesis.version>
+        <nemesis.version>0.7-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
         <proguard.version>5.2.1</proguard.version>
