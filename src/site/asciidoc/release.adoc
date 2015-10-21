@@ -85,3 +85,7 @@ Release the nemesis-consoles project with the above commands.
 
 == Make sure the CI build is green again.
 Final step is to make sure the link:http://circleci.com/[CircleCI] build is stable again.
+
+== Update your IDE
+Make sure your IDE has the right `since` attribute. You should bump the version so that every new class that you create will have the correct version on it.
+For IntellijIDEA you can do that in  `File` -> `Settings` -> `Editor` -> `File and code templates` and click on the `Includes` tab .
