@@ -316,7 +316,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nemesis-repository</id>
-            <url>http://repository.nemesis.io/artifactory/ext-snapshot-local</url>
+            <url>https://repository.nemesis.io/artifactory/ext-snapshot-local</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
