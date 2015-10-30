@@ -217,6 +217,7 @@
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
         <nemesis.version>0.7-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
+        <olingo-odata2.version>2.0.5</olingo-odata2.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
         <proguard.version>5.2.1</proguard.version>
         <proguard.maven.plugin.version>2.0.11</proguard.maven.plugin.version>
@@ -227,6 +228,7 @@
         <phantomjs.driver.version>1.2.1</phantomjs.driver.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <querydsl.version>3.6.8</querydsl.version>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
@@ -789,6 +791,21 @@
 				<artifactId>jest</artifactId>
 				<version>${jest.version}</version>
 			</dependency>
+            <dependency>
+                <groupId>org.apache.olingo</groupId>
+                <artifactId>olingo-odata2-core</artifactId>
+                <version>${olingo-odata2.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.ws.rs</groupId>
+                        <artifactId>javax.ws.rs-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.google.code.gson</groupId>
+                        <artifactId>gson</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
