@@ -89,3 +89,7 @@ Final step is to make sure the link:http://circleci.com/[CircleCI] build is stab
 == Update your IDE
 Make sure your IDE has the right `since` attribute. You should bump the version so that every new class that you create will have the correct version on it.
 For IntellijIDEA you can do that in  `File` -> `Settings` -> `Editor` -> `File and code templates` and click on the `Includes` tab .
+
+== Make new alias on the documentation website
+You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `0.6-SNAPSHOT` version to be the just `0.6` 
+as there will be no more deployments in that version.

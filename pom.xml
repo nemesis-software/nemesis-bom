@@ -109,13 +109,13 @@
             <id>nemesis-repository</id>
             <uniqueVersion>true</uniqueVersion>
             <name>nemesis-repository-releases</name>
-            <url>http://repository.nemesis.io/artifactory/ext-release-local</url>
+            <url>https://repository.nemesis.io/artifactory/ext-release-local</url>
         </repository>
         <snapshotRepository>
             <id>nemesis-repository</id>
             <uniqueVersion>false</uniqueVersion>
             <name>nemesis-repository-snapshots</name>
-            <url>http://repository.nemesis.io/artifactory/ext-snapshot-local</url>
+            <url>https://repository.nemesis.io/artifactory/ext-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -147,6 +147,7 @@
         <jackson.version>2.6.1</jackson.version>
         <!-- Remove once spring-platform-bom updates to it. -->
         <javaparser.version>2.2.1</javaparser.version>
+        <jansi.version>1.11</jansi.version>
         <jawr.version>3.8</jawr.version>
         <jedis.version>2.7.3</jedis.version>
         <jest.version>0.1.7</jest.version>
@@ -329,6 +330,16 @@
             </snapshots>
             <releases>
                 <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+		<pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
             </releases>
         </pluginRepository>
     </pluginRepositories>
