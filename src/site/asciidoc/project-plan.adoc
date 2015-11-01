@@ -20,14 +20,14 @@ Make sure you work together with the client and their designer to understand how
 In the beginning you need to define how many developers will be needed on the project. Our recommendation is, depending on the complexity of the project, a team of three senior java developers and project manager. A very good understanding of link:https://spring.io[Spring framework^] is needed, as well as link:https://cloud.spring.io/[cloud deployments^].
 
 === Onboarding
-Setup a source-control system and a continous integration system to execute your tests. Make sure you all follow the same code formatting style to make development easier. We provide our code-formatting guidelines in the link:/current/platform/getting-started.html[onboarding guideliness^] but you can easily use ones of your own. Also make sure to follow the link:getting-started.html[getting-started guide^].
+Setup a source-control system and a continous integration system to execute your tests. Make sure you all follow the same code formatting style to make development easier. We provide our code-formatting guidelines in the link:/current/platform/getting-started.html[onboarding guideliness^] but you can easily use ones of your own. Also make sure to follow the link:/current/platform/getting-started.html[getting-started guide^].
 
 === Initial project setup
 You can use the link:https://start.nemesis.io/[nemesis initializer^] (documentation is link:/current/b2c/getting-started.html[here^]) to create a sample project. The project will be generated in less than 5 minutes and will setup 3 stores for you - a sample CMS website (named nemesis), a sample B2C website (named solarapparel) and a sample B2B website (named polarapparel). Ones the project is setup you can commit it to the git source control to be used by all other developers in the team.
 
 == Development
 === Import client's data
-Whether you are creating a new project from scratch or you are migrating an existing website to the Nemesis Platform you will need to import client's data. You first need to delete the sample data that comes with the platform, and then ask the client to provide their data in csv files following our link:html.html[csv documentation^]. 
+Whether you are creating a new project from scratch or you are migrating an existing website to the Nemesis Platform you will need to import client's data. You first need to delete the sample data that comes with the platform, and then ask the client to provide their data in csv files following our link:/current/platform/csv.html[csv documentation^]. 
 
 === Implementation of changes
 Once you have gathered all the requirements from the client, make sure you pin-point the differences from the out-of-the-box platform behaviour. All the changes need to be implemented.
