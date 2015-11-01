@@ -183,7 +183,7 @@
         <log4j2.version>2.4.1</log4j2.version>
         <maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
-        <maven.surefire.plugin.version>2.18</maven.surefire.plugin.version>
+        <maven.surefire.plugin.version>2.19</maven.surefire.plugin.version>
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
 		<maven.checkstyle.plugin.skip>false</maven.checkstyle.plugin.skip>
         <maven.checkstyle.plugin.version>2.15</maven.checkstyle.plugin.version>
@@ -192,7 +192,7 @@
         <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
         <maven.jacoco.plugin.version>0.7.2.201409121644</maven.jacoco.plugin.version>
         <maven.site.plugin.version>3.4</maven.site.plugin.version>
-        <maven.failsafe.plugin.version>2.18</maven.failsafe.plugin.version>
+        <maven.failsafe.plugin.version>2.19</maven.failsafe.plugin.version>
         <maven.enforcer.plugin.version>1.3.1</maven.enforcer.plugin.version>
         <maven.release.plugin.version>2.5.1</maven.release.plugin.version>
         <maven.plugin.log4j.version>1.0.1</maven.plugin.log4j.version>
@@ -948,7 +948,10 @@
 					<environmentVariables>
 						<env>dev</env>
 					</environmentVariables>
-					<excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups>
+					<excludes>
+						<exclude>**/*IntegrationTest.java</exclude>
+					</excludes>
+					<!--excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups-->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -1276,7 +1279,6 @@
                             <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
-                            <groups>com.nemesis.platform.util.test.IntegrationTest</groups>
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
