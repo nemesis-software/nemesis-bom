@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>0.7-SNAPSHOT</version>
+    <version>0.7</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -82,7 +82,7 @@
         <connection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</connection>
         <developerConnection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</developerConnection>
         <url>https://github.com/nemesis-software/nemesis-bom.git</url>
-      <tag>HEAD</tag>
+      <tag>0.7</tag>
   </scm>
     <issueManagement>
         <system>Github</system>
