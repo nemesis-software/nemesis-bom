@@ -20,7 +20,7 @@ Here are the steps to follow if you want to release the platform BOM
 [source,bash]
 ----
  mvn release:clean
- mvn release:prepare -Dtag=0.6 -DreleaseVersion=0.6 -DdevelopmentVersion=0.7-SNAPSHOT
+ mvn release:prepare -Dtag=0.7 -DreleaseVersion=0.7 -DdevelopmentVersion=0.8-SNAPSHOT
  mvn release:perform
 ----
  * Deploy the bom with the new snapshot version to the maven repository so that we can use it.
@@ -34,26 +34,41 @@ To release the nemesis-platform issue the same commands as above:
 [source,bash]
 ----
 mvn release:clean
-mvn release:prepare -Dtag=0.6 -DreleaseVersion=0.6 -DdevelopmentVersion=0.7-SNAPSHOT
+mvn release:prepare -Dtag=0.7 -DreleaseVersion=0.7 -DdevelopmentVersion=0.8-SNAPSHOT
 ----
+This will create a tag with the name specified in the github repository. You will be asked several times for your github username and password. To avoid the repetitive work of filling you username and password define the following server in your settings.xml:
+[source,xml]
+----
+<server>
+   <id>githhub</id>
+   <username>YOUR_USERNAME</username>
+   <password>YOUR_PASSWORD</password>
+</server>
+----
+
 You will need to resolve the parent bom - resolve it to just released version and set the development version - the one you just specified)
 [source,bash]
 ----
 mvn release:perform -Dmaven.javadoc.skip=true
 ----
-This command might take some time as it tries to clone the whole git repository again.
+The release perform will actually clone the created tag, make a jar and install it in the link:https://repository.nemesis.io/artifactory/ext-release-local/[official nemesis release repository^].
+
+NOTE: This command might take some time as it tries to clone the tag that it created from the git repository and the platform project is quite big. 
+
+Finally you need to issue:
 [source,bash]
 ----
-mvn deploy to deploy the jars to the reposotory and rebuild without cache the circleci
+mvn deploy
 ----
+to deploy the jars to the reposotory and rebuild without cache the circleci
 
 == Release the tools
 To release the tools follow the same commands as above. Also after the release don't forget to upload the jars to the maven repository because the nemesis archetype is 
-dependant on it.
+depending on it.
 
 == Release the themes
 To release the themes follow the same commands as above. Also after the release don't forget to upload the jars to the maven repository because the nemesis archetype is 
-dependant on them.
+depending on them.
 
 == Release the archetype
 The nemesis-archetype can be released with the above commands. It will take some time to resolve all the module versions so be patient. At the end, when you
@@ -61,7 +76,7 @@ issue the `mvn release:perform` command maven will try to upload the war file to
 so you can cancel the upload and simply issue `mvn release:clean` to clean the release. After that you have to do the following:
 [source,bash]
 ----
-git checkout tags/0.6
+git checkout tags/0.7
 ----
 This will checkout the released tag version.
 [source,bash]
@@ -78,7 +93,7 @@ This will create archetype from the given project.
 ----
 mvn package deploy -f target/generated-sources/archetype/ -s src/main/resources/settings.xml
 ----
-This will build and deploy the archetype with version 0.6 to the nemesis-repository so that orther clients can create projects from it.
+This will build and deploy the archetype with version 0.7 to the nemesis-repository so that orther clients can create projects from it.
 
 == Release the consoles
 Release the nemesis-consoles project with the above commands. 
@@ -91,5 +106,4 @@ Make sure your IDE has the right `since` attribute. You should bump the version 
 For IntellijIDEA you can do that in  `File` -> `Settings` -> `Editor` -> `File and code templates` and click on the `Includes` tab .
 
 == Make new alias on the documentation website
-You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `0.6-SNAPSHOT` version to be the just `0.6` 
-as there will be no more deployments in that version.
+You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `0.8-SNAPSHOT` version to be the just `0.8` as there will be no more deployments in that version.
