@@ -246,7 +246,7 @@
         <!-- Remove when bom upgrades it -->
         <!--spring-loaded.version>1.2.4.RELEASE</spring-loaded.version-->
         <spring-restdocs.version>1.0.0.M1</spring-restdocs.version>
-        <supercsv.version>2.3.1</supercsv.version>
+        <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.37.1</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <tomcat.version>8.0.28</tomcat.version>
