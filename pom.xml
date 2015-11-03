@@ -137,7 +137,7 @@
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.8</gridgain.version>
-        <hibernate.version>5.0.2.Final</hibernate.version>
+        <hibernate.version>5.0.3.Final</hibernate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5.3</hazelcast.version>
         <hikaricp.version>2.4.1</hikaricp.version>
