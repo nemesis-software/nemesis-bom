@@ -233,8 +233,6 @@
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <spring-hateoas.version>0.19.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version>
-        <spring.test.htmlunit.version>1.0.0.RC1</spring.test.htmlunit.version><!-- test-htmlunit was merged into spring-core 4.2 -->
-        <spring-restdocs.version>1.0.0.M1</spring-restdocs.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.37.1</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
@@ -481,11 +479,6 @@
                 <artifactId>hazelcast-jca</artifactId>
                 <version>${hazelcast.version}</version>
             </dependency>
-            <!--dependency>
-        <groupId>com.zaxxer</groupId>
-        <artifactId>HikariCP</artifactId>
-        <version>${hikaricp.version}</version>
-    </dependency-->
 			<dependency>
 				<groupId>org.infinispan</groupId>
 				<artifactId>infinispan-embedded</artifactId>
@@ -728,16 +721,6 @@
                 <artifactId>stripe-java</artifactId>
                 <version>${stripe.api.version}</version>
             </dependency>
-            <!--dependency>
-                <groupId>com.github.wuic.extensions</groupId>
-                <artifactId>wuic-spring</artifactId>
-                <version>${wuic.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.wuic</groupId>
-                <artifactId>wuic-tag</artifactId>
-                <version>${wuic.version}</version>
-            </dependency-->
             <dependency>
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
@@ -762,12 +745,6 @@
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
                 <version>${xalan.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.restdocs</groupId>
-                <artifactId>spring-restdocs</artifactId>
-                <version>${spring-restdocs.version}</version>
-                <!-- remove once restdocs is in the platform -->
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
