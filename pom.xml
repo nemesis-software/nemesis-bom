@@ -232,8 +232,7 @@
         <slick.webjars.version>1.5.0</slick.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
-        <spring-hateoas.version>0.19.0.RELEASE</spring-hateoas.version>
-        <spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version>
+        <!--spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version-->
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.37.1</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
