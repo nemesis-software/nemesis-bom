@@ -820,6 +820,7 @@
                         <source>${java.version}</source>
                         <target>${java.version}</target>
                         <compilerArgument>-Xlint:unchecked</compilerArgument>
+                        <useIncrementalCompilation>false</useIncrementalCompilation>
                     </configuration>
                 </plugin>
                 <plugin>
