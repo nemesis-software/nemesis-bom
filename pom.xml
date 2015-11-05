@@ -181,7 +181,7 @@
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
 		<maven.checkstyle.plugin.skip>false</maven.checkstyle.plugin.skip>
         <maven.checkstyle.plugin.version>2.15</maven.checkstyle.plugin.version>
-        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
         <maven.coveralls.plugin.version>3.1.0</maven.coveralls.plugin.version>
         <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
         <maven.jacoco.plugin.version>0.7.2.201409121644</maven.jacoco.plugin.version>
@@ -231,6 +231,7 @@
         <smartsprites.version>0.2.11</smartsprites.version>
         <slick.webjars.version>1.5.0</slick.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
+        <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
         <spring-hateoas.version>0.19.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version>
         <supercsv.version>2.4.0</supercsv.version>
@@ -391,7 +392,13 @@
                 <artifactId>concurrentlinkedhashmap-lru</artifactId>
                 <version>${google.concurrentlinkedhashmap.version}</version>
             </dependency>
-
+			<!--dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-parent</artifactId>
+				<version>${spring.cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency-->
             <dependency>
                 <groupId>org.drools</groupId>
                 <artifactId>drools-bom</artifactId>
@@ -809,10 +816,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <compilerArgument>-proc:none</compilerArgument>
                         <compilerArgument>-Xlint:unchecked</compilerArgument>
                     </configuration>
                 </plugin>
