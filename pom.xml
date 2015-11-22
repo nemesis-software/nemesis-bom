@@ -303,7 +303,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nemesis-repository</id>
-            <url>https://repository.nemesis.io/artifactory/ext-snapshot-local</url>
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -321,7 +321,7 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-		<pluginRepository>
+		    <pluginRepository>
             <id>spring-milestones</id>
             <url>http://repo.spring.io/libs-milestone</url>
             <snapshots>
