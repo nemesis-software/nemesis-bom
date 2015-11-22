@@ -109,13 +109,13 @@
             <id>nemesis-repository</id>
             <uniqueVersion>true</uniqueVersion>
             <name>nemesis-repository-releases</name>
-            <url>https://repository.nemesis.io/artifactory/libs-release-local</url>
+            <url>https://repository.nemesis.io/artifactory/libs-release</url>
         </repository>
         <snapshotRepository>
             <id>nemesis-repository</id>
             <uniqueVersion>false</uniqueVersion>
             <name>nemesis-repository-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/libs-snapshot-local</url>
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 
