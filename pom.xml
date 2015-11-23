@@ -325,18 +325,6 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-<<<<<<< 61986d4f5cd6b97f3615c2502f42736940d1682c
-            <id>nemesis-repository-releases</id>
-            <name>nemesis-repository-releases</name>
-            <url>https://repository.nemesis.io/artifactory/libs-release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </pluginRepository>
-        <pluginRepository>
             <id>nemesis-repository-snapshots</id>
             <name>nemesis-repository-snapshots</name>
             <url>https://repository.nemesis.io/artifactory/plugins-snapshot</url> 
