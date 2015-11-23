@@ -339,7 +339,7 @@
         <pluginRepository>
             <id>nemesis-repository-snapshots</id>
             <name>nemesis-repository-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/plugins-snapshot</url>
+            <url>https://repository.nemesis.io/artifactory/plugins-snapshot</url> 
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
