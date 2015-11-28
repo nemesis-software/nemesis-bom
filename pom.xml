@@ -84,7 +84,7 @@
         <developerConnection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</developerConnection>
         <url>https://github.com/nemesis-software/nemesis-bom.git</url>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
     <issueManagement>
         <system>Github</system>
         <url>https://github.com/nemesis-software/nemesis-bom/issues</url>
@@ -325,14 +325,36 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>nemesis-repository-snapshots</id>
-            <name>nemesis-repository-snapshots</name>
+            <id>nemesis-plugin-snapshots</id>
+            <name>nemesis-plugin-snapshots</name>
             <url>https://repository.nemesis.io/artifactory/plugins-snapshot</url> 
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
             <releases>
                 <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+		<pluginRepository>
+            <id>nemesis-repository-snapshots</id>
+            <name>nemesis-repository-snapshots</name>
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot</url> 
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+		<pluginRepository>
+            <id>nemesis-repository-release</id>
+            <name>nemesis-repository-release</name>
+            <url>https://repository.nemesis.io/artifactory/libs-release</url> 
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
             </releases>
         </pluginRepository>
         <pluginRepository>
