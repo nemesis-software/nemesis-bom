@@ -260,7 +260,7 @@
             </releases>
         </repository>
         <repository>
-            <id>nemesis-repository-releases</id>
+            <id>nemesis-repository</id>
             <name>nemesis-repository-releases</name>
             <url>https://repository.nemesis.io/artifactory/libs-release</url>
             <snapshots>
@@ -271,7 +271,7 @@
             </releases>
         </repository>
         <repository>
-            <id>nemesis-repository-snapshots</id>
+            <id>nemesis-repository</id>
             <name>nemesis-repository-snapshots</name>
             <url>https://repository.nemesis.io/artifactory/libs-snapshot</url>
             <snapshots>
@@ -325,9 +325,9 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>nemesis-plugin-snapshots</id>
+            <id>nemesis-repository</id>
             <name>nemesis-plugin-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/plugins-snapshot</url> 
+            <url>https://repository.nemesis.io/artifactory/plugins-snapshot/</url> 
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -336,9 +336,9 @@
             </releases>
         </pluginRepository>
 		<pluginRepository>
-            <id>nemesis-repository-snapshots</id>
+            <id>nemesis-repository</id>
             <name>nemesis-repository-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/libs-snapshot</url> 
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url> 
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -347,9 +347,9 @@
             </releases>
         </pluginRepository>
 		<pluginRepository>
-            <id>nemesis-repository-release</id>
+            <id>nemesis-repository</id>
             <name>nemesis-repository-release</name>
-            <url>https://repository.nemesis.io/artifactory/libs-release</url> 
+            <url>https://repository.nemesis.io/artifactory/libs-release/</url> 
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
