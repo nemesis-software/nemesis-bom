@@ -99,7 +99,10 @@ This will build and deploy the archetype with version 0.7 to the nemesis-reposit
 Release the nemesis-consoles project with the above commands. 
 
 == Make sure the CI build is green again.
-Final step is to make sure the link:http://circleci.com/[CircleCI] build is stable again.
+Next step is to make sure the link:http://circleci.com/[CircleCI] build is stable again.
+
+== Generate a changelog	
+Go though each module and generate a changelog for what was changed in this version. We use the link:https://skywinder.github.io/github-changelog-generator/[github_changelog_generator] tool for generating the changelog.
 
 == Update your IDE
 Make sure your IDE has the right `since` attribute. You should bump the version so that every new class that you create will have the correct version on it.
