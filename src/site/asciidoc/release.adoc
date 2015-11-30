@@ -20,7 +20,7 @@ Here are the steps to follow if you want to release the platform BOM
 [source,bash]
 ----
  mvn release:clean
- mvn release:prepare -Dtag=0.7 -DreleaseVersion=0.7 -DdevelopmentVersion=0.8-SNAPSHOT
+ mvn release:prepare -Dtag=0.8 -DreleaseVersion=0.8 -DdevelopmentVersion=0.9-SNAPSHOT
  mvn release:perform
 ----
  * Deploy the bom with the new snapshot version to the maven repository so that we can use it.
@@ -34,7 +34,7 @@ To release the nemesis-platform issue the same commands as above:
 [source,bash]
 ----
 mvn release:clean
-mvn release:prepare -Dtag=0.7 -DreleaseVersion=0.7 -DdevelopmentVersion=0.8-SNAPSHOT
+mvn release:prepare -Dtag=0.8 -DreleaseVersion=0.8 -DdevelopmentVersion=0.9-SNAPSHOT
 ----
 This will create a tag with the name specified in the github repository. You will be asked several times for your github username and password. To avoid the repetitive work of filling you username and password define the following server in your settings.xml:
 [source,xml]
