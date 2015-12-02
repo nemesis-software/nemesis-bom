@@ -209,7 +209,7 @@
         <maven.plugin.api.version>3.2.2</maven.plugin.api.version>
         <maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
-        <nemesis.version>0.8</nemesis.version>
+        <nemesis.version>0.9-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
