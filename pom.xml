@@ -987,7 +987,10 @@
 							<goal>test-jar</goal>
 						</goals>
 						<configuration>
-							<skipIfEmpty>true</skipIfEmpty>
+                            <skipIfEmpty>true</skipIfEmpty>
+                            <excludes>
+                                <exclude>**/model/**</exclude>
+                            </excludes>
 						</configuration>
 					</execution>
 				</executions>
