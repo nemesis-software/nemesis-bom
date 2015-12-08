@@ -199,7 +199,6 @@
         <maven.pmd.plugin.version>3.5</maven.pmd.plugin.version>
         <maven.pmd.plugin.skip>false</maven.pmd.plugin.skip>
         <maven.rat.plugin.skip>false</maven.rat.plugin.skip>
-        <maven.compiler.anotationl.processor.skip>false</maven.compiler.anotationl.processor.skip>
         <maven.compiler.test.compile.skip>false</maven.compiler.test.compile.skip>
         <maven.rat.version.plugin>0.11</maven.rat.version.plugin>
         <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
