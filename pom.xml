@@ -1002,7 +1002,7 @@
 						<configuration>
                             <skipIfEmpty>true</skipIfEmpty>
                             <excludes>
-                                <exclude>**/model/**</exclude>
+                                <exclude>**/entity/**</exclude>
                             </excludes>
 						</configuration>
 					</execution>
