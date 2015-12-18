@@ -143,6 +143,7 @@
         <infinispan.version>7.2.1.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
+        <javamoney.version>1.0</javamoney.version>
         <javaparser.version>2.2.1</javaparser.version>
         <jansi.version>1.11</jansi.version>
         <jawr.version>3.8</jawr.version>
@@ -380,6 +381,11 @@
 
     <dependencyManagement>
         <dependencies>
+			<dependency>
+				<groupId>org.javamoney</groupId>
+				<artifactId>moneta</artifactId>
+				<version>${javamoney.version}</version>
+			</dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-web</artifactId>
