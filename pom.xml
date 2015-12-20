@@ -121,7 +121,8 @@
 
     <properties>
         <amazon.aws.sdk.version>1.10.27</amazon.aws.sdk.version>
-        <asciidoctor.version>1.5.3-SNAPSHOT</asciidoctor.version>
+        <asciidoctor.version>1.5.3</asciidoctor.version>
+        <asciidoctorj.diagram.version>1.3.1</asciidoctorj.diagram.version>
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <codemodel.version>2.6</codemodel.version>
@@ -902,9 +903,20 @@
                             <generated>${basedir}/target/asciidoc/generated</generated>
                         </attributes>
                         <asciidoc>
-                          <requires>
-                            <require>asciidoctor-diagram</require>
-                          </requires>
+							<requires>
+								<require>asciidoctor-diagram</require>
+								<require>base64</require>
+								<require>time</require>
+							</requires>
+							<attributes>
+								<doctype>book</doctype>
+								<sectanchors></sectanchors>
+								<sectlinks></sectlinks>
+								<icons>font</icons>
+								<source-highlighter>coderay</source-highlighter>
+								<coderay-css>style</coderay-css>
+								<toclevels>2</toclevels>
+							</attributes>
                         </asciidoc>
                     </configuration>
                     <dependencies>
@@ -916,7 +928,7 @@
                         <dependency>
                             <groupId>org.asciidoctor</groupId>
                             <artifactId>asciidoctorj-diagram</artifactId>
-                            <version>1.3.1</version>
+                            <version>${asciidoctorj.diagram.version}</version>
                         </dependency>
                         <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
