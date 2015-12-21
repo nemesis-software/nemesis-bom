@@ -229,7 +229,7 @@
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
-        <selenium.version>2.45.0</selenium.version>
+        <selenium.version>2.48.0</selenium.version>
         <smartsprites.version>0.2.11</smartsprites.version>
         <slick.webjars.version>1.5.0</slick.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
