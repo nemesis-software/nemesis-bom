@@ -230,7 +230,9 @@
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
-        <selenium.version>2.48.0</selenium.version>
+        <selenium.version>2.47.0</selenium.version>
+        <!-- spring-io platform uses this property for selenium version -->
+        <selenium-htmlunit-driver.version>${selenium.version}</selenium-htmlunit-driver.version>
         <smartsprites.version>0.2.11</smartsprites.version>
         <slick.webjars.version>1.5.0</slick.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
