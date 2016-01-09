@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>0.9</version>
+    <version>0.9-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
