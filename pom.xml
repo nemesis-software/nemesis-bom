@@ -79,8 +79,8 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</connection>
-        <developerConnection>scm:git:https://github.com/nemesis-software/nemesis-bom.git</developerConnection>
+        <connection>scm:git@github.com:nemesis-software/nemesis-bom.git</connection>
+        <developerConnection>scm:git@github.com:nemesis-software/nemesis-bom.git</developerConnection>
         <url>https://github.com/nemesis-software/nemesis-bom.git</url>
       <tag>0.9</tag>
     </scm>
