@@ -103,6 +103,11 @@ Next step is to make sure the link:http://circleci.com/[CircleCI] build is stabl
 
 == Generate a changelog	
 Go though each module and generate a changelog for what was changed in this version. We use the link:https://skywinder.github.io/github-changelog-generator/[github_changelog_generator] tool for generating the changelog.
+Simply run the following command in each of the released modules and then push the new changelog:
+[source,bash]
+----
+github_changelog_generator
+----
 
 == Update your IDE
 Make sure your IDE has the right `since` attribute. You should bump the version so that every new class that you create will have the correct version on it.
@@ -110,3 +115,10 @@ For IntellijIDEA you can do that in  `File` -> `Settings` -> `Editor` -> `File a
 
 == Make new alias on the documentation website
 You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `0.8-SNAPSHOT` version to be the just `0.8` as there will be no more deployments in that version.
+[source,bash]
+----
+unlink current
+unlink current-snapshot
+ln -s 0.9 current
+ln -s 1.0-SNAPSHOT current-snapshot
+----

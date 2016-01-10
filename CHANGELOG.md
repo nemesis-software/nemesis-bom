@@ -1,8 +1,19 @@
 # Change Log
 
-## [Unreleased](https://github.com/nemesis-software/nemesis-bom/tree/HEAD)
+## [0.9](https://github.com/nemesis-software/nemesis-bom/tree/0.9) (2016-01-09)
+[Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/0.8...0.9)
 
-[Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/0.7...HEAD)
+**Implemented enhancements:**
+
+- Upgrade to asciidoctor-maven-plugin 1.5.3 [\#14](https://github.com/nemesis-software/nemesis-bom/issues/14)
+- Update to spring-platform bom version 2.0.1 [\#13](https://github.com/nemesis-software/nemesis-bom/issues/13)
+- Add java money reference implementation dependency. [\#12](https://github.com/nemesis-software/nemesis-bom/issues/12)
+- Remove hikaricp.version [\#11](https://github.com/nemesis-software/nemesis-bom/issues/11)
+- Upgrade to hibernate 5.0.6 [\#10](https://github.com/nemesis-software/nemesis-bom/issues/10)
+- Upgrade Hibernate version to 5.0.5 [\#9](https://github.com/nemesis-software/nemesis-bom/issues/9)
+
+## [0.8](https://github.com/nemesis-software/nemesis-bom/tree/0.8) (2015-12-01)
+[Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/0.7...0.8)
 
 **Implemented enhancements:**
 
