@@ -913,9 +913,9 @@
 							</requires>
 							<attributes>
 								<doctype>book</doctype>
-								<sectanchors />
-								<sectlinks />
 								<icons>font</icons>
+								<language>asciidoc</language>
+								<imagesdir>images</imagesdir>
 								<source-highlighter>coderay</source-highlighter>
 								<coderay-css>style</coderay-css>
 								<toclevels>2</toclevels>
@@ -938,7 +938,7 @@
                             <artifactId>wagon-ssh</artifactId>
                             <version>${wagon.version}</version>
                         </dependency>
-						            <dependency>
+						<dependency>
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-ssh-common</artifactId>
                             <version>${wagon.version}</version>
