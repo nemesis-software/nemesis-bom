@@ -914,6 +914,7 @@
 							<attributes>
 								<doctype>book</doctype>
 								<icons>font</icons>
+								<sectanchors></sectanchors>
 								<language>asciidoc</language>
 								<imagesdir>images</imagesdir>
 								<source-highlighter>coderay</source-highlighter>
