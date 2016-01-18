@@ -141,7 +141,7 @@
         <hibernate.version>5.0.6.Final</hibernate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5.3</hazelcast.version>
-        <infinispan.version>7.2.1.Final</infinispan.version>
+        <infinispan.version>8.1.0.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
         <javamoney.version>1.0</javamoney.version>
