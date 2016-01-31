@@ -151,7 +151,6 @@
         <jawr.version>3.8</jawr.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.0</jgravatar.version>
-        <joda-time.version>2.8.2</joda-time.version>
         <jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.4</jqueryui.webjars.version>
         <jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
@@ -240,7 +239,7 @@
         <!--spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version-->
         <spring-session.version>1.1.0.M1</spring-session.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe.api.version>1.37.1</stripe.api.version>
+        <stripe.api.version>1.43.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <thymeleaf-jawr.version>1.1.1</thymeleaf-jawr.version>
         <wagon.version>2.9</wagon.version>
@@ -818,11 +817,17 @@
                 <artifactId>nemesis-platform-core</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
-			<dependency>
-				<groupId>io.searchbox</groupId>
-				<artifactId>jest</artifactId>
-				<version>${jest.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-core</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>io.searchbox</groupId>
+                <artifactId>jest</artifactId>
+                <version>${jest.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.olingo</groupId>
                 <artifactId>olingo-odata2-core</artifactId>
