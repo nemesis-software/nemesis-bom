@@ -331,7 +331,7 @@
         <pluginRepository>
             <id>nemesis-repository-plugins</id>
             <name>nemesis-plugin-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/plugins-snapshot/</url> 
+            <url>https://repository.nemesis.io/artifactory/plugins-snapshot/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -342,7 +342,7 @@
 		    <pluginRepository>
             <id>nemesis-repository-snapshots</id>
             <name>nemesis-repository-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url> 
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -353,7 +353,7 @@
 		    <pluginRepository>
             <id>nemesis-repository-releases</id>
             <name>nemesis-repository-release</name>
-            <url>https://repository.nemesis.io/artifactory/libs-release/</url> 
+            <url>https://repository.nemesis.io/artifactory/libs-release/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -813,17 +813,6 @@
 				<version>${jackson-datatype-money.version}</version>
 			</dependency>
             <dependency>
-                <groupId>com.nemesis.platform</groupId>
-                <artifactId>nemesis-platform-core</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.platform</groupId>
-                <artifactId>nemesis-platform-core</artifactId>
-                <version>${nemesis.version}</version>
-                <type>test-jar</type>
-            </dependency>
-            <dependency>
                 <groupId>io.searchbox</groupId>
                 <artifactId>jest</artifactId>
                 <version>${jest.version}</version>
@@ -843,6 +832,298 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+			<!-- Nemesis -->
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-util</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-core</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-facade</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.cache</groupId>
+                <artifactId>nemesis-module-ehcache</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-personalization</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.storage</groupId>
+                <artifactId>nemesis-module-s3</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.avatar</groupId>
+                <artifactId>nemesis-module-gravatar</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-blog</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.comment</groupId>
+                <artifactId>nemesis-module-disqus</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.captcha</groupId>
+                <artifactId>nemesis-module-commoncaptcha</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.captcha</groupId>
+                <artifactId>nemesis-module-recaptcha</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-cms</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-cms</artifactId>
+                <version>${nemesis.version}</version>
+			    <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-customerreview</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-social</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-voucher</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-ruleservices</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-promotion</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-wishlist</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-restservices</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-guarantee</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-barcode</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.geolocation</groupId>
+                <artifactId>nemesis-module-commongeolocation</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.geolocation</groupId>
+                <artifactId>nemesis-module-freegeoiplocation</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-storelocator</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-sitemap</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-deeplink</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.search</groupId>
+                <artifactId>nemesis-module-commonsearch</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.search</groupId>
+                <artifactId>nemesis-module-elasticsearch</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.search</groupId>
+                <artifactId>nemesis-module-solrsearch</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.cms</groupId>
+                <artifactId>nemesis-module-opencmis</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-classification</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-commerce</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.payment</groupId>
+                <artifactId>nemesis-module-paypal</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.payment</groupId>
+                <artifactId>nemesis-module-stripe</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-invoice</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.currency</groupId>
+                <artifactId>nemesis-module-openexchangerates</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-common</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-link</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-banner</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-carousel</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-chat</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-footer</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-navigation</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-paragraph</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-wishlist</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-minicart</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-cookiepolicy</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-categorylister</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-productreferences</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-googlemap</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-social</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-selector</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-stackexchangequestions</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-video</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.themes</groupId>
+                <artifactId>nemesis-theme-polarapparel</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.themes</groupId>
+                <artifactId>nemesis-theme-solarapparel</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
+           <dependency>
+                <groupId>com.nemesis.themes</groupId>
+                <artifactId>nemesis-theme-sagan</artifactId>
+                <version>${nemesis.version}</version>
+           </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
