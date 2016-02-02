@@ -973,11 +973,11 @@
                 <artifactId>nemesis-module-elasticsearch</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
-            <!--dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.search</groupId>
                 <artifactId>nemesis-module-solrsearch</artifactId>
                 <version>${nemesis.version}</version>
-            </dependency-->
+            </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.cms</groupId>
                 <artifactId>nemesis-module-opencmis</artifactId>
