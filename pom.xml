@@ -385,10 +385,10 @@
 
     <dependencyManagement>
         <dependencies>
-			<dependency>
-				<groupId>org.javamoney</groupId>
-				<artifactId>moneta</artifactId>
-				<version>${javamoney.version}</version>
+            <dependency>
+                <groupId>org.javamoney</groupId>
+                <artifactId>moneta</artifactId>
+                <version>${javamoney.version}</version>
 			</dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
@@ -973,11 +973,11 @@
                 <artifactId>nemesis-module-elasticsearch</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>com.nemesis.platform.module.search</groupId>
                 <artifactId>nemesis-module-solrsearch</artifactId>
                 <version>${nemesis.version}</version>
-            </dependency>
+            </dependency-->
             <dependency>
                 <groupId>com.nemesis.platform.module.cms</groupId>
                 <artifactId>nemesis-module-opencmis</artifactId>
@@ -1067,57 +1067,140 @@
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-cookiepolicy</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-categorylister</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-productreferences</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-googlemap</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-social</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-selector</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-stackexchangequestions</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-video</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.themes</groupId>
                 <artifactId>nemesis-theme-polarapparel</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.themes</groupId>
                 <artifactId>nemesis-theme-solarapparel</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
-           <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.themes</groupId>
                 <artifactId>nemesis-theme-sagan</artifactId>
                 <version>${nemesis.version}</version>
-           </dependency>
+            </dependency>
+            <!-- Test dependencies -->
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-core</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform</groupId>
+                <artifactId>nemesis-platform-facade</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.geolocation</groupId>
+                <artifactId>nemesis-module-commongeolocation</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-ruleservices</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-cms</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-commerce</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.search</groupId>
+                <artifactId>nemesis-module-commonsearch</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-common</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-link</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-banner</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-navigation</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-paragraph</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
