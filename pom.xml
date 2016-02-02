@@ -895,12 +895,6 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
-                <artifactId>nemesis-module-cms</artifactId>
-                <version>${nemesis.version}</version>
-			    <type>test-jar</type>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-customerreview</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
