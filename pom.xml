@@ -179,6 +179,7 @@
         <maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
         <maven.surefire.plugin.version>2.19</maven.surefire.plugin.version>
+        <maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
         <maven.checkstyle.plugin.skip>false</maven.checkstyle.plugin.skip>
         <maven.checkstyle.plugin.version>2.15</maven.checkstyle.plugin.version>
@@ -1459,6 +1460,17 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-javadoc-plugin</artifactId>
+			    <version>${maven.javadoc.plugin.version}</version>
+			    <configuration>
+			         <fixTags>author,since,param,return,throws,link</fixTags>
+			         <fixFieldComment>false</fixFieldComment>
+			         <defaultAuthor>Petar Tahchiev</defaultAuthor>
+			         <defaultSince>0.6</defaultSince>
+			    </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
