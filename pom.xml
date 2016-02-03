@@ -1376,6 +1376,7 @@
 				<configuration>
 					<skip>${maven.surefire.plugin.skip}</skip>
 					<argLine>${surefireArgLine}</argLine>
+					<trimStackTrace>false</trimStackTrace>
 					<environmentVariables>
 						<env>dev</env>
 					</environmentVariables>
@@ -1726,6 +1727,7 @@
                             <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
+                            <trimStackTrace>false</trimStackTrace>
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
