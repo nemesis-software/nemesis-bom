@@ -1471,6 +1471,7 @@
 			         <fixFieldComment>false</fixFieldComment>
 			         <defaultAuthor>Petar Tahchiev</defaultAuthor>
 			         <defaultSince>0.6</defaultSince>
+			         <excludes>**/*Impl.java,**/Default**.java,**/**Config.java</excludes>
 			    </configuration>
 			</plugin>
 			<plugin>
