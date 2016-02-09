@@ -127,7 +127,7 @@
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <codemodel.version>2.6</codemodel.version>
         <codemirror.webjars.version>5.1</codemirror.webjars.version>
-        <commons.collections4.version>4.0</commons.collections4.version>
+        <commons.collections4.version>4.1</commons.collections4.version>
         <commons.vfs2.version>2.1.1660580.2</commons.vfs2.version>
         <commons.vfs2.s3.version>2.3.3</commons.vfs2.s3.version>
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
