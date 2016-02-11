@@ -131,6 +131,7 @@
         <commons.vfs2.version>2.1.1660580.2</commons.vfs2.version>
         <commons.vfs2.s3.version>2.3.3</commons.vfs2.s3.version>
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
+        <compile-testing.version>0.8</compile-testing.version>
         <drools.version>6.3.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
@@ -832,6 +833,11 @@
                         <artifactId>gson</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.google.testing.compile</groupId>
+                <artifactId>compile-testing</artifactId>
+                <version>${compile-testing.version}</version>
             </dependency>
 			<!-- Nemesis -->
             <dependency>
