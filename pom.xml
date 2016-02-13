@@ -139,7 +139,7 @@
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.8</gridgain.version>
-        <hibernate.version>5.0.7.Final</hibernate.version>
+        <hibernate.version>5.1.0.Final</hibernate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.5.3</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
@@ -238,7 +238,7 @@
         <slick.webjars.version>1.5.0</slick.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
-        <!--spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version-->
+        <!--spring-data-releasetrain.version>Hopper-M1</spring-data-releasetrain.version-->
         <spring-session.version>1.1.0.M1</spring-session.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.43.0</stripe.api.version>
