@@ -241,7 +241,7 @@
         <!--spring-data-releasetrain.version>Hopper-M1</spring-data-releasetrain.version-->
         <spring-session.version>1.1.0.M1</spring-session.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe.api.version>1.43.0</stripe.api.version>
+        <stripe.api.version>1.45.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <thymeleaf-jawr.version>1.1.1</thymeleaf-jawr.version>
         <wagon.version>2.9</wagon.version>
