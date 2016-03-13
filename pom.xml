@@ -142,7 +142,7 @@
         <gridgain.version>6.6.8</gridgain.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
-        <hazelcast.version>3.5.3</hazelcast.version>
+        <hazelcast.version>3.6.1</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
         <java.version>1.8</java.version>
@@ -922,6 +922,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-reports</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-promotion</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -998,6 +1003,16 @@
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-commerce</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.commerce</groupId>
+                <artifactId>nemesis-module-b2b</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.commerce</groupId>
+                <artifactId>nemesis-module-b2c</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
