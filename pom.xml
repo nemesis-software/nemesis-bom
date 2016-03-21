@@ -244,6 +244,7 @@
         <stripe.api.version>1.45.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <thymeleaf-jawr.version>1.1.1</thymeleaf-jawr.version>
+        <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
         <webjars-locator.version>0.28</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
@@ -790,6 +791,11 @@
                 <version>${stripe.api.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.twilio.sdk</groupId>
+                <artifactId>twilio-java-sdk</artifactId>
+                <version>${twilio.sdk.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
                 <version>${xml.apis.version}</version>
@@ -1038,6 +1044,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.currency</groupId>
                 <artifactId>nemesis-module-openexchangerates</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.voice</groupId>
+                <artifactId>nemesis-module-twilio</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
