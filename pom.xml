@@ -149,6 +149,7 @@
         <javamoney.version>1.0</javamoney.version>
         <jackson-datatype-money.version>0.7.0-SNAPSHOT</jackson-datatype-money.version>
         <javaparser.version>2.2.1</javaparser.version>
+        <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.11</jansi.version>
         <jawr.version>3.8</jawr.version>
         <jest.version>0.1.7</jest.version>
@@ -573,6 +574,12 @@
 				<artifactId>javaparser-core</artifactId>
 				<version>${javaparser.version}</version>
 			</dependency>
+            <dependency>
+                <groupId>net.florianschoppmann.java</groupId>
+                <artifactId>java-types</artifactId>
+                <version>${java-types.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>net.jawr</groupId>
                 <artifactId>jawr-core</artifactId>
