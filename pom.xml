@@ -1027,6 +1027,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.nemesis.platform.module.email</groupId>
+                <artifactId>nemesis-module-sendgrid</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.payment</groupId>
                 <artifactId>nemesis-module-paypal</artifactId>
                 <version>${nemesis.version}</version>
