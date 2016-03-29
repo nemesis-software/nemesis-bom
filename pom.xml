@@ -141,6 +141,7 @@
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.8</gridgain.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
+        <hibernate.hydrate.version>2.2</hibernate.hydrate.version>
         <!-- Upgrade once jackson-datatype-hibernate5 is out and also hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.6.1</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
@@ -528,6 +529,11 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-hikaricp</artifactId>
                 <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.javaetmoi.core</groupId>
+                <artifactId>javaetmoi-hibernate5-hydrate</artifactId>
+                <version>${hibernate.hydrate.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.hazelcast</groupId>
