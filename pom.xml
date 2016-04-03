@@ -234,6 +234,7 @@
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
+        <riskified.version>1.0.1.7</riskified.version>
         <selenium.version>2.47.0</selenium.version>
         <!-- spring-io platform uses this property for selenium version -->
         <smartsprites.version>0.2.11</smartsprites.version>
@@ -501,6 +502,11 @@
                 <version>${google.geocoder.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.riskified</groupId>
+                <artifactId>riskified-sdk</artifactId>
+                <version>${riskified.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.gridgain</groupId>
                 <artifactId>gridgain-core</artifactId>
                 <version>${gridgain.version}</version>
@@ -585,7 +591,6 @@
                 <artifactId>java-types</artifactId>
                 <version>${java-types.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>net.jawr</groupId>
                 <artifactId>jawr-core</artifactId>
@@ -956,6 +961,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-targeting</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-wishlist</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -1027,6 +1037,16 @@
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-commerce</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.fraud</groupId>
+                <artifactId>nemesis-module-riskified</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.fraud</groupId>
+                <artifactId>nemesis-module-signifyd</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
