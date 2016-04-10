@@ -130,6 +130,7 @@
         <commons.collections4.version>4.1</commons.collections4.version>
         <commons.vfs2.version>2.1.1660580.2</commons.vfs2.version>
         <commons.vfs2.s3.version>2.3.3</commons.vfs2.s3.version>
+        <commons.vfs2.azure.version>1.2.patched</commons.vfs2.azure.version>
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
         <compile-testing.version>0.8</compile-testing.version>
         <docker.maven.plugin.version>0.4.0</docker.maven.plugin.version>
@@ -449,6 +450,11 @@
                 <groupId>com.intridea.io</groupId>
                 <artifactId>vfs-s3</artifactId>
                 <version>${commons.vfs2.s3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sludev.commons</groupId>
+                <artifactId>vfs-azure</artifactId>
+                <version>${commons.vfs2.azure.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -903,6 +909,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.storage</groupId>
                 <artifactId>nemesis-module-s3</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.storage</groupId>
+                <artifactId>nemesis-module-azure</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
