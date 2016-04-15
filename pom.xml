@@ -192,7 +192,7 @@
         <maven.coveralls.plugin.version>3.1.0</maven.coveralls.plugin.version>
         <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
         <maven.jacoco.plugin.version>0.7.5.201505241946</maven.jacoco.plugin.version>
-        <maven.site.plugin.version>3.4</maven.site.plugin.version>
+        <maven.site.plugin.version>3.5</maven.site.plugin.version>
         <maven.failsafe.plugin.version>2.19</maven.failsafe.plugin.version>
         <maven.enforcer.plugin.version>1.3.1</maven.enforcer.plugin.version>
         <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
@@ -247,7 +247,7 @@
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.45.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
-        <thymeleaf-jawr.version>1.1.1</thymeleaf-jawr.version>
+        <thymeleaf-jawr.version>1.2.0</thymeleaf-jawr.version>
         <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
         <webjars-locator.version>0.28</webjars-locator.version>
@@ -1178,6 +1178,16 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-productscompare</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-popup</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-googlemap</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -1357,7 +1367,7 @@
                     <version>${maven.site.plugin.version}</version>
                     <configuration>
                         <generateReports>false</generateReports>
-                        <generateSitemap>true</generateSitemap>
+                        <generateSitemap>false</generateSitemap>
                         <relativizeDecorationLinks>false</relativizeDecorationLinks>
                         <locales>en</locales>
                         <chmod>true</chmod>
@@ -1404,6 +1414,16 @@
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-ssh-common</artifactId>
                             <version>${wagon.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-core</artifactId>
+                            <version>1.7</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.json</groupId>
+                            <artifactId>json</artifactId>
+                            <version>20160212</version>
                         </dependency>
                     </dependencies>
                 </plugin>
