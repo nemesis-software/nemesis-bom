@@ -2,7 +2,7 @@
 <!--
   ~ nemesis Platform - NExt-generation Multichannel E-commerce SYStem
   ~
-  ~ Copyright (c) 2010 - 2013 nemesis
+  ~ Copyright (c) 2010 - 2016 nemesis
   ~ All rights reserved.
   ~
   ~ This software is the confidential and proprietary information of nemesis
@@ -147,6 +147,8 @@
         <hazelcast.version>3.6.1</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
         <itextpdf5.version>5.5.5</itextpdf5.version>
+        <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
+        <flyway.version>4.0</flyway.version>
         <java.version>1.8</java.version>
         <javamoney.version>1.0</javamoney.version>
         <jackson-datatype-money.version>0.7.0-SNAPSHOT</jackson-datatype-money.version>
