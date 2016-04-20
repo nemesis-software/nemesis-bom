@@ -1388,7 +1388,8 @@
 							<attributes>
 								<doctype>book</doctype>
 								<icons>font</icons>
-								<sectanchors></sectanchors>
+								<sectanchors>true</sectanchors>
+								<last-update-label>false</last-update-label>
 								<language>asciidoc</language>
 								<imagesdir>images</imagesdir>
 								<source-highlighter>coderay</source-highlighter>
