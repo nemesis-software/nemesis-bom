@@ -248,7 +248,7 @@
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
         <!--spring-data-releasetrain.version>Hopper-M1</spring-data-releasetrain.version-->
         <spring-session.version>1.1.0.M1</spring-session.version>
-        <spring-social-twitter.version>1.1.3.PATCHED</spring-social-twitter.version>
+        <spring-social-twitter.version>1.1.3.PATCHED-2</spring-social-twitter.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.45.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
