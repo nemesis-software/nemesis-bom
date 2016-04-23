@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
         <version>2.0.3.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -65,7 +66,7 @@
             </roles>
             <timezone>+2</timezone>
         </developer>
-		<developer>
+        <developer>
             <id>tsachev</id>
             <name>Vladimir Tsanev</name>
             <email>tsachev@nemesis.io</email>
@@ -82,7 +83,7 @@
         <connection>scm:git:git@github.com:nemesis-software/nemesis-bom.git</connection>
         <developerConnection>scm:git:git@github.com:nemesis-software/nemesis-bom.git</developerConnection>
         <url>https://github.com/nemesis-software/nemesis-bom.git</url>
-      <tag>0.9</tag>
+        <tag>0.9</tag>
     </scm>
     <issueManagement>
         <system>Github</system>
@@ -252,6 +253,7 @@
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.45.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
+        <tika.parser.version>1.12</tika.parser.version>
         <thymeleaf-jawr.version>1.2.0</thymeleaf-jawr.version>
         <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
@@ -352,7 +354,7 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-		    <pluginRepository>
+        <pluginRepository>
             <id>nemesis-repository-snapshots</id>
             <name>nemesis-repository-snapshots</name>
             <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
@@ -363,7 +365,7 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-		    <pluginRepository>
+        <pluginRepository>
             <id>nemesis-repository-releases</id>
             <name>nemesis-repository-release</name>
             <url>https://repository.nemesis.io/artifactory/libs-release/</url>
@@ -384,7 +386,7 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-		    <pluginRepository>
+        <pluginRepository>
             <id>spring-milestones</id>
             <url>http://repo.spring.io/libs-milestone</url>
             <snapshots>
@@ -414,7 +416,7 @@
                 <groupId>org.javamoney</groupId>
                 <artifactId>moneta</artifactId>
                 <version>${javamoney.version}</version>
-			</dependency>
+            </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-web</artifactId>
@@ -431,11 +433,11 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-			<dependency>
-				<groupId>org.fusesource.jansi</groupId>
-				<artifactId>jansi</artifactId>
-				<version>${jansi.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.fusesource.jansi</groupId>
+                <artifactId>jansi</artifactId>
+                <version>${jansi.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.atmosphere</groupId>
                 <artifactId>atmosphere-runtime</artifactId>
@@ -476,13 +478,13 @@
                 <artifactId>concurrentlinkedhashmap-lru</artifactId>
                 <version>${google.concurrentlinkedhashmap.version}</version>
             </dependency>
-			<!--dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-parent</artifactId>
-				<version>${spring.cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency-->
+            <!--dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency-->
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
@@ -497,6 +499,11 @@
                 <groupId>org.ehcache</groupId>
                 <artifactId>jcache</artifactId>
                 <version>${ehcache.jcache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parsers</artifactId>
+                <version>${tika.parser.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.geotools</groupId>
@@ -533,11 +540,11 @@
                 <artifactId>hibernate-ehcache</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-java8</artifactId>
-				<version>${hibernate.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-java8</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-infinispan</artifactId>
@@ -573,11 +580,11 @@
                 <artifactId>hazelcast-jca</artifactId>
                 <version>${hazelcast.version}</version>
             </dependency>
-			<dependency>
-				<groupId>org.infinispan</groupId>
-				<artifactId>infinispan-embedded</artifactId>
-				<version>${infinispan.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.infinispan</groupId>
+                <artifactId>infinispan-embedded</artifactId>
+                <version>${infinispan.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.infinispan</groupId>
                 <artifactId>infinispan-jcache</artifactId>
@@ -593,11 +600,11 @@
                 <artifactId>xmlworker</artifactId>
                 <version>${itextpdf5.version}</version>
             </dependency>
-			<dependency>
-				<groupId>com.github.javaparser</groupId>
-				<artifactId>javaparser-core</artifactId>
-				<version>${javaparser.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>com.github.javaparser</groupId>
+                <artifactId>javaparser-core</artifactId>
+                <version>${javaparser.version}</version>
+            </dependency>
             <dependency>
                 <groupId>net.florianschoppmann.java</groupId>
                 <artifactId>java-types</artifactId>
@@ -840,21 +847,21 @@
                 <artifactId>javase</artifactId>
                 <version>${zxing.version}</version>
             </dependency>
-			<dependency>
-				<groupId>cz.jiripinkas</groupId>
-				<artifactId>jsitemapgenerator</artifactId>
-				<version>${jsitemapgenerator.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>cz.jiripinkas</groupId>
+                <artifactId>jsitemapgenerator</artifactId>
+                <version>${jsitemapgenerator.version}</version>
+            </dependency>
             <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
                 <version>${xalan.version}</version>
             </dependency>
-			<dependency>
-				<groupId>org.zalando</groupId>
-				<artifactId>jackson-datatype-money</artifactId>
-				<version>${jackson-datatype-money.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>jackson-datatype-money</artifactId>
+                <version>${jackson-datatype-money.version}</version>
+            </dependency>
             <dependency>
                 <groupId>io.searchbox</groupId>
                 <artifactId>jest</artifactId>
@@ -885,7 +892,7 @@
                 <artifactId>yubico-validation-client2</artifactId>
                 <version>${yubico.version}</version>
             </dependency>
-			<!-- Nemesis -->
+            <!-- Nemesis -->
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-util</artifactId>
@@ -1382,22 +1389,22 @@
                             <generated>${basedir}/target/asciidoc/generated</generated>
                         </attributes>
                         <asciidoc>
-							<requires>
-								<require>asciidoctor-diagram</require>
-								<require>base64</require>
-								<require>time</require>
-							</requires>
-							<attributes>
-								<doctype>book</doctype>
-								<icons>font</icons>
-								<sectanchors>true</sectanchors>
-								<last-update-label>false</last-update-label>
-								<language>asciidoc</language>
-								<imagesdir>images</imagesdir>
-								<source-highlighter>coderay</source-highlighter>
-								<coderay-css>style</coderay-css>
-								<toclevels>2</toclevels>
-							</attributes>
+                            <requires>
+                                <require>asciidoctor-diagram</require>
+                                <require>base64</require>
+                                <require>time</require>
+                            </requires>
+                            <attributes>
+                                <doctype>book</doctype>
+                                <icons>font</icons>
+                                <sectanchors>true</sectanchors>
+                                <last-update-label>false</last-update-label>
+                                <language>asciidoc</language>
+                                <imagesdir>images</imagesdir>
+                                <source-highlighter>coderay</source-highlighter>
+                                <coderay-css>style</coderay-css>
+                                <toclevels>2</toclevels>
+                            </attributes>
                         </asciidoc>
                     </configuration>
                     <dependencies>
@@ -1416,7 +1423,7 @@
                             <artifactId>wagon-ssh</artifactId>
                             <version>${wagon.version}</version>
                         </dependency>
-						<dependency>
+                        <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-ssh-common</artifactId>
                             <version>${wagon.version}</version>
@@ -1475,7 +1482,7 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${maven.checkstyle.plugin.version}</version>
                     <configuration>
-						<skip>${maven.checkstyle.plugin.skip}</skip>
+                        <skip>${maven.checkstyle.plugin.skip}</skip>
                         <configLocation>src/main/resources/nemesis-checkstyle.xml</configLocation>
                         <headerLocation>src/main/resources/nemesis-header.txt</headerLocation>
                         <sourceDirectory>src/main/java</sourceDirectory>
@@ -1492,210 +1499,210 @@
             </plugins>
         </pluginManagement>
         <plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${maven.surefire.plugin.version}</version>
-				<configuration>
-					<skip>${maven.surefire.plugin.skip}</skip>
-					<argLine>${surefireArgLine}</argLine>
-					<trimStackTrace>false</trimStackTrace>
-					<environmentVariables>
-						<env>dev</env>
-					</environmentVariables>
-					<excludes>
-						<exclude>**/*IntegrationTest.java</exclude>
-					</excludes>
-					<!--excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups-->
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>${maven.jar.plugin.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>test-jar</goal>
-						</goals>
-						<configuration>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <skip>${maven.surefire.plugin.skip}</skip>
+                    <argLine>${surefireArgLine}</argLine>
+                    <trimStackTrace>false</trimStackTrace>
+                    <environmentVariables>
+                        <env>dev</env>
+                    </environmentVariables>
+                    <excludes>
+                        <exclude>**/*IntegrationTest.java</exclude>
+                    </excludes>
+                    <!--excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven.jar.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                        <configuration>
                             <skipIfEmpty>true</skipIfEmpty>
                             <excludes>
                                 <exclude>**/entity/**</exclude>
                             </excludes>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>${maven.checkstyle.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>checkstyle-check</id>
-						<phase>install</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>${maven.pmd.plugin.version}</version>
-				<configuration>
-					<skip>${maven.pmd.plugin.skip}</skip>
-					<targetJdk>${maven.compiler.source}</targetJdk>
-					<printFailingErrors>true</printFailingErrors>
-					<rulesets>
-						<ruleset>rulesets/maven.xml</ruleset>
-					</rulesets>
-					<excludeRoots>
-						<excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
-						<excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
-            <excludeRoot>${project.build.directory}/generated-sources/annotations</excludeRoot>
-					</excludeRoots>
-				</configuration>
-				<executions>
-					<execution>
-						<id>check</id>
-						<phase>install</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>${maven.findbugs.plugin.version}</version>
-				<configuration>
-					<skip>${maven.findbugs.plugin.skip}</skip>
-				</configuration>
-				<executions>
-					<execution>
-						<id>findbugs-check</id>
-						<phase>install</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-javadoc-plugin</artifactId>
-			    <version>${maven.javadoc.plugin.version}</version>
-			    <configuration>
-			         <fixTags>author,since,param,return,throws,link</fixTags>
-			         <fixFieldComment>false</fixFieldComment>
-			         <defaultAuthor>Petar Tahchiev</defaultAuthor>
-			         <defaultSince>0.6</defaultSince>
-			         <excludes>**/*Impl.java,**/Default**.java,**/**Config.java,**/**Data.java</excludes>
-			    </configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>${maven.enforcer.plugin.version}</version>
-				<executions>
-					<execution>
-						<id>enforce-bytecode-version</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireMavenVersion>
-									<version>3.2.0</version>
-								</requireMavenVersion>
-							</rules>
-							<fail>true</fail>
-						</configuration>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>extra-enforcer-rules</artifactId>
-						<version>${maven.extraenforcer.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.rat</groupId>
-				<artifactId>apache-rat-plugin</artifactId>
-				<version>${maven.rat.version.plugin}</version>
-				<!-- xerces is already removed in doxia 1.7, so this exclusion may be removed when doxia 1.7 is released. -->
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.doxia</groupId>
-						<artifactId>doxia-core</artifactId>
-						<version>1.2</version>
-						<exclusions>
-							<exclusion>
-								<groupId>xerces</groupId>
-								<artifactId>xercesImpl</artifactId>
-							</exclusion>
-						</exclusions>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<id>rat-check</id>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<skip>${maven.rat.plugin.skip}</skip>
-					<excludeSubProjects>false</excludeSubProjects>
-					<includes>
-						<include>**/*.java</include>
-						<include>**/*.xml</include>
-						<include>**/*.properties</include>
-					</includes>
-					<excludes>
-						<exclude>**/target/**/*</exclude>
-						<exclude>**/.idea/**/*</exclude>
-						<exclude>**/.settings/**</exclude>
-						<exclude>**/.svn/**/*</exclude>
-						<exclude>**/.git/**/*</exclude>
-						<exclude>**/sitemap.xml</exclude>
-						<exclude>**/*.properties</exclude>
-					</excludes>
-					<licenses>
-						<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
-							<licenseFamilyCategory>AL2</licenseFamilyCategory>
-							<licenseFamilyName>Apache License 2.0</licenseFamilyName>
-							<notes />
-							<patterns>
-								<pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
-							</patterns>
-						</license>
-						<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
-							<licenseFamilyCategory>NPCL</licenseFamilyCategory>
-							<licenseFamilyName>Nemesis Platform Commercial License 1.0</licenseFamilyName>
-							<notes />
-							<patterns>
-								<pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
-							</patterns>
-						</license>
-					</licenses>
-					<licenseFamilies>
-						<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
-							<familyName>Apache License 2.0</familyName>
-						</licenseFamily>
-						<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
-							<familyName>Nemesis Platform Commercial License 1.0</familyName>
-						</licenseFamily>
-					</licenseFamilies>
-				</configuration>
-			</plugin>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven.checkstyle.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>checkstyle-check</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${maven.pmd.plugin.version}</version>
+                <configuration>
+                    <skip>${maven.pmd.plugin.skip}</skip>
+                    <targetJdk>${maven.compiler.source}</targetJdk>
+                    <printFailingErrors>true</printFailingErrors>
+                    <rulesets>
+                        <ruleset>rulesets/maven.xml</ruleset>
+                    </rulesets>
+                    <excludeRoots>
+                        <excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
+                        <excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
+                        <excludeRoot>${project.build.directory}/generated-sources/annotations</excludeRoot>
+                    </excludeRoots>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${maven.findbugs.plugin.version}</version>
+                <configuration>
+                    <skip>${maven.findbugs.plugin.skip}</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>findbugs-check</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <configuration>
+                    <fixTags>author,since,param,return,throws,link</fixTags>
+                    <fixFieldComment>false</fixFieldComment>
+                    <defaultAuthor>Petar Tahchiev</defaultAuthor>
+                    <defaultSince>0.6</defaultSince>
+                    <excludes>**/*Impl.java,**/Default**.java,**/**Config.java,**/**Data.java</excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${maven.enforcer.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>enforce-bytecode-version</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>3.2.0</version>
+                                </requireMavenVersion>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>extra-enforcer-rules</artifactId>
+                        <version>${maven.extraenforcer.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.rat</groupId>
+                <artifactId>apache-rat-plugin</artifactId>
+                <version>${maven.rat.version.plugin}</version>
+                <!-- xerces is already removed in doxia 1.7, so this exclusion may be removed when doxia 1.7 is released. -->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-core</artifactId>
+                        <version>1.2</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>xerces</groupId>
+                                <artifactId>xercesImpl</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>rat-check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <skip>${maven.rat.plugin.skip}</skip>
+                    <excludeSubProjects>false</excludeSubProjects>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/target/**/*</exclude>
+                        <exclude>**/.idea/**/*</exclude>
+                        <exclude>**/.settings/**</exclude>
+                        <exclude>**/.svn/**/*</exclude>
+                        <exclude>**/.git/**/*</exclude>
+                        <exclude>**/sitemap.xml</exclude>
+                        <exclude>**/*.properties</exclude>
+                    </excludes>
+                    <licenses>
+                        <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
+                            <licenseFamilyCategory>AL2</licenseFamilyCategory>
+                            <licenseFamilyName>Apache License 2.0</licenseFamilyName>
+                            <notes/>
+                            <patterns>
+                                <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
+                            </patterns>
+                        </license>
+                        <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
+                            <licenseFamilyCategory>NPCL</licenseFamilyCategory>
+                            <licenseFamilyName>Nemesis Platform Commercial License 1.0</licenseFamilyName>
+                            <notes/>
+                            <patterns>
+                                <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
+                            </patterns>
+                        </license>
+                    </licenses>
+                    <licenseFamilies>
+                        <licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
+                            <familyName>Apache License 2.0</familyName>
+                        </licenseFamily>
+                        <licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
+                            <familyName>Nemesis Platform Commercial License 1.0</familyName>
+                        </licenseFamily>
+                    </licenseFamilies>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -1735,17 +1742,17 @@
     </reporting>
 
     <profiles>
-		<profile>
-			<id>quick</id>
-			<properties>
-				<maven.checkstyle.plugin.skip>true</maven.checkstyle.plugin.skip>
-				<maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
-				<maven.pmd.plugin.skip>true</maven.pmd.plugin.skip>
-				<maven.findbugs.plugin.skip>true</maven.findbugs.plugin.skip>
-				<maven.rat.plugin.skip>true</maven.rat.plugin.skip>
-				<maven.compiler.test.compile.skip>true</maven.compiler.test.compile.skip>
-			</properties>
-		</profile>
+        <profile>
+            <id>quick</id>
+            <properties>
+                <maven.checkstyle.plugin.skip>true</maven.checkstyle.plugin.skip>
+                <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
+                <maven.pmd.plugin.skip>true</maven.pmd.plugin.skip>
+                <maven.findbugs.plugin.skip>true</maven.findbugs.plugin.skip>
+                <maven.rat.plugin.skip>true</maven.rat.plugin.skip>
+                <maven.compiler.test.compile.skip>true</maven.compiler.test.compile.skip>
+            </properties>
+        </profile>
         <profile>
             <id>dev</id>
             <activation>
@@ -1865,9 +1872,9 @@
             </build>
         </profile>
         <profile>
-			<id>firefox</id>
+            <id>firefox</id>
             <properties>
-				<phantonjs.maven.plugin.skip>true</phantonjs.maven.plugin.skip>
+                <phantonjs.maven.plugin.skip>true</phantonjs.maven.plugin.skip>
                 <selenium.driver>firefox</selenium.driver>
             </properties>
         </profile>
