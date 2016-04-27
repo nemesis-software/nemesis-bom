@@ -230,7 +230,7 @@
         <phantomjs.version>1.9.1</phantomjs.version>
         <phantonjs.maven.plugin.skip>false</phantonjs.maven.plugin.skip>
         <phantomjs.maven.plugin.version>0.7</phantomjs.maven.plugin.version>
-        <phantomjs.driver.version>1.2.1</phantomjs.driver.version>
+        <phantomjs.driver.version>1.3.0</phantomjs.driver.version>
         <project.scm.id>github</project.scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
