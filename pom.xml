@@ -241,7 +241,7 @@
         <riskified.version>1.0.1.7</riskified.version>
         <selenium.version>2.47.0</selenium.version>
         <!-- spring-io platform uses this property for selenium version -->
-        <smartsprites.version>0.2.11</smartsprites.version>
+        <smartsprites.version>0.2.12</smartsprites.version>
         <slick.webjars.version>1.5.0</slick.webjars.version>
         <pace.webjars.version>1.0.2</pace.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
