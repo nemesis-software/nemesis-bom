@@ -111,9 +111,12 @@ Revert the nemesis.version property to `$nextVersion`, then commit, push and dep
 == Make sure the CI build is green again.
 Next step is to make sure the link:http://circleci.com/[CircleCI] build is stable again.
 
+== Close milestones
+Go through all the github projects and close the milestone that we have just released. If necessary create new milestones for future releases.
+
 == Generate a changelog	
-Go though each module and generate a changelog for what was changed in this version. We use the link:https://skywinder.github.io/github-changelog-generator/[github_changelog_generator] tool for generating the changelog.
-Simply run the following command in each of the released modules and then push the new changelog:
+Go though each project and generate a changelog for what was changed in this version. We use the link:https://skywinder.github.io/github-changelog-generator/[github_changelog_generator] tool for generating the changelog.
+Simply run the following command in each of the released projects and then push the new changelog:
 [source,bash]
 ----
 github_changelog_generator
