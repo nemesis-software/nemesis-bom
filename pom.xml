@@ -147,7 +147,7 @@
         <!-- Upgrade once hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.6.2</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
-        <itextpdf5.version>5.5.5</itextpdf5.version>
+        <itextpdf5.version>5.5.9</itextpdf5.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0</flyway.version>
         <java.version>1.8</java.version>
