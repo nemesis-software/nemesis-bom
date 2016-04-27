@@ -153,7 +153,7 @@
         <flyway.version>4.0</flyway.version>
         <java.version>1.8</java.version>
         <javamoney.version>1.0</javamoney.version>
-        <jackson-datatype-money.version>0.7.0-SNAPSHOT</jackson-datatype-money.version>
+        <jackson-datatype-money.version>0.7.0</jackson-datatype-money.version>
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.11</jansi.version>
@@ -221,7 +221,7 @@
         <maven.plugin.api.version>3.2.2</maven.plugin.api.version>
         <maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
-        <nemesis.version>1.0</nemesis.version>
+        <nemesis.version>1.0-SNAPSHOT</nemesis.version>
         <opencmis.version>0.13.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
