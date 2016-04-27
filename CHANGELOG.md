@@ -1,5 +1,28 @@
 # Change Log
 
+## [1.0](https://github.com/nemesis-software/nemesis-bom/tree/1.0) (2016-04-27)
+[Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/0.9...1.0)
+
+**Implemented enhancements:**
+
+- Upgrade to flyway:4.0 [\#31](https://github.com/nemesis-software/nemesis-bom/issues/31)
+- Upgrade hikariCP version 2.4.4 [\#33](https://github.com/nemesis-software/nemesis-bom/issues/33)
+- Upgrade to spring-platform-bom 2.0.3.RELEASE [\#32](https://github.com/nemesis-software/nemesis-bom/issues/32)
+- Upgrade to spring-platform-bom 2.0.2 [\#30](https://github.com/nemesis-software/nemesis-bom/issues/30)
+- Upgrade org.webjars:flowplayer-html5 to version 6.0.4 [\#28](https://github.com/nemesis-software/nemesis-bom/issues/28)
+- Upgrade selenium-htmlunit-driver 2.49.1 [\#27](https://github.com/nemesis-software/nemesis-bom/issues/27)
+- Upgrade geotools to 15-beta [\#26](https://github.com/nemesis-software/nemesis-bom/issues/26)
+- Upgrade drools to version 6.4.0.Beta1 [\#25](https://github.com/nemesis-software/nemesis-bom/issues/25)
+- Upgrade org.apache.logging.log4j:log4j-api to 2.5 [\#24](https://github.com/nemesis-software/nemesis-bom/issues/24)
+- Upgrade org.apache.commons:commons-collections4 to 4.1 [\#23](https://github.com/nemesis-software/nemesis-bom/issues/23)
+- Upgrade stripe payment to 1.45.0 [\#22](https://github.com/nemesis-software/nemesis-bom/issues/22)
+- Upgrade querydsl to 3.7.0 [\#21](https://github.com/nemesis-software/nemesis-bom/issues/21)
+- Upgrade hazelcast to 3.6.1 [\#20](https://github.com/nemesis-software/nemesis-bom/issues/20)
+- Upgrade hibernate to 5.0.7.Final [\#19](https://github.com/nemesis-software/nemesis-bom/issues/19)
+- Upgrade redis.clients:jedis to 2.8.0 [\#18](https://github.com/nemesis-software/nemesis-bom/issues/18)
+- Upgrade xmlunit:xmlunit to 1.6 [\#17](https://github.com/nemesis-software/nemesis-bom/issues/17)
+- Upgrade hibernate to 5.0.7 [\#16](https://github.com/nemesis-software/nemesis-bom/issues/16)
+
 ## [0.9](https://github.com/nemesis-software/nemesis-bom/tree/0.9) (2016-01-09)
 [Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/0.8...0.9)
 
