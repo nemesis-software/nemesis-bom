@@ -234,7 +234,7 @@
         <project.scm.id>github</project.scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <querydsl.version>3.7.0</querydsl.version>
+        <querydsl.version>3.7.2</querydsl.version>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
