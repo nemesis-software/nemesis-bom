@@ -1376,6 +1376,14 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>${maven.site.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-descriptor</id>
+                            <goals>
+                                <goal>attach-descriptor</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                     <configuration>
                         <generateReports>false</generateReports>
                         <generateSitemap>false</generateSitemap>
@@ -1439,33 +1447,6 @@
                         </dependency>
                     </dependencies>
                 </plugin>
-                <!--plugin>
-                    <groupId>org.asciidoctor</groupId>
-                    <artifactId>asciidoctor-maven-plugin</artifactId>
-                    <version>${asciidoctor.version}</version>
-                    <executions>
-                        <execution>
-                            <id>html</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>process-asciidoc</goal>
-                            </goals>
-                            <configuration>
-                                <backend>html5</backend>
-                                <sourceDirectory>${basdir}/src/site/asciidoc/</sourceDirectory>
-                                <outputDirectory>${basedir}/target/site/reference/html</outputDirectory>
-                                <sectids>false</sectids>
-                                <sourceHighlighter>prettify</sourceHighlighter>
-                                <attributes>
-                                    <linkcss>true</linkcss>
-                                    <icons>font</icons>
-                                    <sectanchors>true</sectanchors>
-                                    <stylesheet>spring.css</stylesheet>
-                                </attributes>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
@@ -1474,6 +1455,7 @@
                         <releaseProfiles>apache-release</releaseProfiles>
                         <useReleaseProfile>false</useReleaseProfile>
                         <goals>deploy</goals>
+                        <scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
                     </configuration>
                 </plugin>
                 <plugin>

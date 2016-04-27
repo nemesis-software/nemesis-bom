@@ -1,12 +1,13 @@
 = Performing a release
 Petar Tahchiev
-:doctype: book
-:sectanchors:
-:sectlinks:
-:toclevels: 4
-:source-highlighter: coderay
-:icons: font
-:last-update-label!:
+
+#set($releaseVersion = $StringUtils.substring($project.version,0,$project.version.indexOf("-SNAPSHOT")))
+#set($nextVersionNum = $math.add($releaseVersion, 0.1))
+#set($nextVersion="$number.format($nextVersionNum)-SNAPSHOT")
+#set($oldVersionNum = $math.sub($releaseVersion, 0.1))
+#set($oldSnapshotVersion="$number.format($oldVersionNum)-SNAPSHOT")
+
+
 
 To perform a release of the different Nemesis projects follow the steps below.
 
@@ -20,7 +21,7 @@ Here are the steps to follow if you want to release the platform BOM
 [source,bash]
 ----
  mvn release:clean
- mvn release:prepare -Dtag=0.8 -DreleaseVersion=0.8 -DdevelopmentVersion=0.9-SNAPSHOT
+ mvn release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
  mvn release:perform
 ----
  * Deploy the bom with the new snapshot version to the maven repository so that we can use it.
@@ -34,7 +35,7 @@ To release the nemesis-platform issue the same commands as above:
 [source,bash]
 ----
 mvn release:clean
-mvn release:prepare -Dtag=0.8 -DreleaseVersion=0.8 -DdevelopmentVersion=0.9-SNAPSHOT
+mvn release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
 ----
 This will create a tag with the name specified in the github repository. You will be asked several times for your github username and password. To avoid the repetitive work of filling you username and password define the following server in your settings.xml:
 [source,xml]
@@ -60,7 +61,13 @@ Finally you need to issue:
 ----
 mvn deploy
 ----
-to deploy the jars to the reposotory and rebuild without cache the circleci
+to deploy the SNAPSHOT jars to the repository and rebuild. Next thing you need to rebuild the circleci without cache and also deploy the documentation:
+
+[source,bash]
+----
+git checkout tags/$releaseVersion
+mvn clean site site:deploy
+----
 
 == Release the tools
 To release the tools follow the same commands as above. Also after the release don't forget to upload the jars to the maven repository because the nemesis archetype is 
@@ -76,7 +83,7 @@ issue the `mvn release:perform` command maven will try to upload the war file to
 so you can cancel the upload and simply issue `mvn release:clean` to clean the release. After that you have to do the following:
 [source,bash]
 ----
-git checkout tags/0.7
+git checkout tags/$releaseVersion
 ----
 This will checkout the released tag version.
 [source,bash]
@@ -93,7 +100,7 @@ This will create archetype from the given project.
 ----
 mvn package deploy -f target/generated-sources/archetype/ -s src/main/resources/settings.xml
 ----
-This will build and deploy the archetype with version 0.7 to the nemesis-repository so that orther clients can create projects from it.
+This will build and deploy the archetype with version $releaseVersion to the nemesis-repository so that orther clients can create projects from it.
 
 == Release the consoles
 Release the nemesis-consoles project with the above commands. 
@@ -117,11 +124,11 @@ For IntellijIDEA you can do that in  `File` -> `Settings` -> `Editor` -> `File a
 You will need to update the versions in the `nemesis-start` project to reflect the newly released version.
 
 == Make new alias on the documentation website
-You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `0.8-SNAPSHOT` version to be the just `0.8` as there will be no more deployments in that version.
+You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `$oldSnapshotVersion` version to be the just `$releaseVersion` as there will be no more deployments in that version.
 [source,bash]
 ----
 unlink current
 unlink current-snapshot
-ln -s 0.9 current
-ln -s 1.0-SNAPSHOT current-snapshot
+ln -s $releaseVersion current
+ln -s $nextVersion current-snapshot
 ----
