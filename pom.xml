@@ -143,7 +143,7 @@
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.8</gridgain.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
-        <hibernate.hydrate.version>2.2</hibernate.hydrate.version>
+        <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Upgrade once hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
         <hazelcast.version>3.6.2</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
