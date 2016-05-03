@@ -16,7 +16,6 @@ WARNING: Make sure the CI build is green and you have no snapshot dependencies
 == Release the Platform BOM
 Here are the steps to follow if you want to release the platform BOM
 
- * Before release change the value of the `nemesis.version` property in the `pom.xml` to `$releaseVersion`.
  * The commands for the release are the following
 [source,bash]
 ----
@@ -104,9 +103,6 @@ This will build and deploy the archetype with version $releaseVersion to the nem
 
 == Release the consoles
 Release the nemesis-consoles project with the above commands.
-
-== Revert the nemesis.version property
-Revert the nemesis.version property to `$nextVersion`, then commit, push and deploy.
 
 == Make sure the CI build is green again.
 Next step is to make sure the link:http://circleci.com/[CircleCI] build is stable again.
