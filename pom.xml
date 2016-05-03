@@ -1668,7 +1668,6 @@
                         <exclude>**/.svn/**/*</exclude>
                         <exclude>**/.git/**/*</exclude>
                         <exclude>**/sitemap.xml</exclude>
-                        <exclude>**/*.properties</exclude>
                     </excludes>
                     <licenses>
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
