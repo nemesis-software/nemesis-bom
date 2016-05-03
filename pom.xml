@@ -1662,6 +1662,7 @@
                     </includes>
                     <excludes>
                         <exclude>**/target/**/*</exclude>
+						<exclude>**/node_modules/**/*</exclude>
                         <exclude>**/.idea/**/*</exclude>
                         <exclude>**/.settings/**</exclude>
                         <exclude>**/.svn/**/*</exclude>
