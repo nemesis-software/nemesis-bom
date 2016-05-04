@@ -1,19 +1,27 @@
 = Introduction
-Petar Tahchiev
-:doctype: book
-:sectanchors:
-:sectlinks:
-:toclevels: 4
-:source-highlighter: coderay
-:icons: font
-:last-update-label!:
+Petar Tahchiev <https://github.com/ptahchiev[@ptahchiev]>;
 
 The nemesis platform bom (Bill Of Materials) specifies all the dependencies for the platform. It inherits the link:http://docs.spring.io/platform/docs/2.0.2.RELEASE/reference/htmlsingle/[spring platform bom version 2.0.2.RELEASE] and includes
 also the  link:http://repo1.maven.org/maven2/org/drools/drools-bom/[drools maven bom]. On top of that it includes some more third party dependencies, which are not part of the other boms. The version of the dependencies is extracted as a property for easy management, and the dependencies themselves are specified as managed dependencies
 so that the end-user can declare them without version.
 
-== List of dependencies
-For a complete list of dependencies please have a look inside the `pom.xml`.
-
 == Release cycle
-A new version of the platform bom is released with each new version of the nemesis platform. Thus we make sure that the dependencies are compatible with each other.
+A new version of the platform bom is released with each new version of the nemesis platform. Thus we make sure that the dependencies are compatible with each other. If you want to know more on how we perform a 
+release please read our link:release.html[release guide].
+
+== Versioning
+Each Nemesis project follows the Spring Project versioning. You can read more about it link:https://github.com/spring-projects/spring-build-gradle/wiki/Spring-project-versioning[here].
+
+== Project Plan
+We have constructed a documentation on the things to be aware of when implementing a project with the Nemesis Platform. You can find it link:project-plan.html[here].
+
+== Dependency versions
+For a complete list of dependencies please have a look inside the `pom.xml`. Below you can find the properties that are defined in the BOM:
+
+[cols="<,>"]
+|===
+|**Key**|**Value**
+#foreach($prop in $project.properties.propertyNames())
+|$prop|$project.properties.getProperty($prop)
+#end
+|===

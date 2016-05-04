@@ -1,12 +1,5 @@
 = Project plan for a sample nemesis project
-Petar Tahchiev
-:doctype: book
-:sectanchors:
-:sectlinks:
-:toclevels: 4
-:source-highlighter: highlight.js
-:icons: font
-:last-update-label!:
+Petar Tahchiev <https://github.com/ptahchiev[@ptahchiev]>;
 
 This is a short guide to help you structure and estimate your project. It gives a sample project plan with some guidelines on what to look when implementing a new project using the Nemesis Platform.
 

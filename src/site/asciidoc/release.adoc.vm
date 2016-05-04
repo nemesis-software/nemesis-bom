@@ -1,5 +1,5 @@
 = Performing a release
-Petar Tahchiev
+Petar Tahchiev <https://github.com/ptahchiev[@ptahchiev]>;
 
 #set($releaseVersion = $StringUtils.substring($project.version,0,$project.version.indexOf("-SNAPSHOT")))
 #set($nextVersionNum = $math.add($releaseVersion, 0.1))
