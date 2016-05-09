@@ -1,13 +1,17 @@
 = Performing a release
 Petar Tahchiev <https://github.com/ptahchiev[@ptahchiev]>;
 
-#set($releaseVersion = $StringUtils.substring($project.version,0,$project.version.indexOf("-SNAPSHOT")))
-#set($nextVersionNum = $math.add($releaseVersion, 0.1))
-#set($nextVersion="$number.format($nextVersionNum)-SNAPSHOT")
-#set($oldVersionNum = $math.sub($releaseVersion, 0.1))
-#set($oldSnapshotVersion="$number.format($oldVersionNum)-SNAPSHOT")
+#set($releaseVersionNum = $number.format($StringUtils.substring($project.version,0,$project.version.indexOf(".BUILD-SNAPSHOT"))))
+#set($releaseVersion = "$releaseVersionNum.0.RELEASE")
+#set($nextVersionNum = $number.format($math.add($releaseVersionNum, 0.1)))
+#set($nextVersion="$nextVersionNum.0.BUILD-SNAPSHOT")
+#set($oldVersionNum = $math.sub($releaseVersionNum, 0.1))
+#set($oldSnapshotVersion="$number.format($oldVersionNum).BUILD-SNAPSHOT")
 
-
+$releaseVersionNum
+$releaseVersion
+$nextVersionNum
+$nextVersion
 
 To perform a release of the different Nemesis projects follow the steps below.
 
