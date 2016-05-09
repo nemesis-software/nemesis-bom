@@ -253,8 +253,8 @@
         <stripe.api.version>1.45.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <tika.parser.version>1.12</tika.parser.version>
-        <thymeleaf.version>3.0.0.BETA03</thymeleaf.version>
-        <thymeleaf-extras-springsecurity4.version>3.0.0.BETA03</thymeleaf-extras-springsecurity4.version>
+        <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+        <thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-jawr.version>2.0.0.BETA02</thymeleaf-jawr.version>
         <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
