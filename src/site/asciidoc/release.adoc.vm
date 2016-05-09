@@ -8,11 +8,6 @@ Petar Tahchiev <https://github.com/ptahchiev[@ptahchiev]>;
 #set($oldVersionNum = $math.sub($releaseVersionNum, 0.1))
 #set($oldSnapshotVersion="$number.format($oldVersionNum).BUILD-SNAPSHOT")
 
-$releaseVersionNum
-$releaseVersion
-$nextVersionNum
-$nextVersion
-
 To perform a release of the different Nemesis projects follow the steps below.
 
 WARNING: Make sure the CI build is green and you have no snapshot dependencies
