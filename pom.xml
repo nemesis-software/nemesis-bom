@@ -133,7 +133,7 @@
         <commons.vfs2.s3.version>2.3.3</commons.vfs2.s3.version>
         <commons.vfs2.azure.version>1.2.patched</commons.vfs2.azure.version>
         <commons.jcs.version>2.0-beta-1</commons.jcs.version>
-        <compile-testing.version>0.8</compile-testing.version>
+        <compile-testing.version>0.9</compile-testing.version>
         <cybersource.version>6.1.0</cybersource.version>
         <docker.maven.plugin.version>0.4.0</docker.maven.plugin.version>
         <drools.version>6.4.0.Final</drools.version>
@@ -144,6 +144,7 @@
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.9</gridgain.version>
+        <guava.version>19.0</guava.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Upgrade once hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
