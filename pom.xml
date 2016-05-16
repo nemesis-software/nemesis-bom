@@ -1421,6 +1421,7 @@
                                 <last-update-label>false</last-update-label>
                                 <language>asciidoc</language>
                                 <imagesdir>images</imagesdir>
+                                <imagesoutdir>${basedir}/target/site/images/</imagesoutdir>
                                 <source-highlighter>coderay</source-highlighter>
                                 <coderay-css>style</coderay-css>
                                 <toclevels>2</toclevels>
