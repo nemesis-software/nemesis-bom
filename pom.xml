@@ -1098,13 +1098,8 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.nemesis.platform.module.commerce</groupId>
-                <artifactId>nemesis-module-b2b</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.platform.module.commerce</groupId>
-                <artifactId>nemesis-module-b2c</artifactId>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-business</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
