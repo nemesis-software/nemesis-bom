@@ -10,19 +10,20 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
         <version>2.0.5.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>1.2.0.RELEASE</version>
+    <version>1.1.0.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -82,7 +83,7 @@
         <connection>scm:git:git@github.com:nemesis-software/nemesis-bom.git</connection>
         <developerConnection>scm:git:git@github.com:nemesis-software/nemesis-bom.git</developerConnection>
         <url>https://github.com/nemesis-software/nemesis-bom.git</url>
-        <tag>1.2.0.RELEASE</tag>
+        <tag>0.9</tag>
     </scm>
     <issueManagement>
         <system>Github</system>
@@ -1670,7 +1671,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -1678,7 +1679,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NPCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Platform Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
