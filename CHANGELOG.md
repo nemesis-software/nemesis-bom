@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.1.0.RELEASE](https://github.com/nemesis-software/nemesis-bom/tree/1.1.0.RELEASE) (2016-06-08)
+[Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/1.0...1.1.0.RELEASE)
+
 ## [1.0](https://github.com/nemesis-software/nemesis-bom/tree/1.0) (2016-04-27)
 [Full Changelog](https://github.com/nemesis-software/nemesis-bom/compare/0.9...1.0)
 
