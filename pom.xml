@@ -138,8 +138,10 @@
         <drools.version>6.4.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
-        <flyway.version>4.0</flyway.version>
-        <geotools.version>15-beta</geotools.version>
+        <fontawesome.webjars.version>4.4.0</fontawesome.webjars.version>
+        <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
+        <flyway.version>4.0.1</flyway.version>
+        <geotools.version>15.0</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.9</gridgain.version>
@@ -147,17 +149,15 @@
         <hibernate.version>5.1.0.Final</hibernate.version>
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Upgrade once hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
-        <hazelcast.version>3.6.2</hazelcast.version>
+        <hazelcast.version>3.7-EA</hazelcast.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
         <itextpdf5.version>5.5.9</itextpdf5.version>
-        <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
-        <flyway.version>4.0</flyway.version>
         <java.version>1.8</java.version>
-        <javamoney.version>1.0</javamoney.version>
+        <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>0.7.0</jackson-datatype-money.version>
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
-        <jansi.version>1.11</jansi.version>
+        <jansi.version>1.12</jansi.version>
         <jawr.version>3.8</jawr.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.0</jgravatar.version>
@@ -167,13 +167,12 @@
         <jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
         <jquerymobile.spinbox.webjars.version>1.4.4</jquerymobile.spinbox.webjars.version>
         <jquerymobile.autocomplete.webjars.version>1.5.2-1</jquerymobile.autocomplete.webjars.version>
-        <fontawesome.webjars.version>4.4.0</fontawesome.webjars.version>
         <jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
         <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.51</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
         <jquerycookie.version>1.4.0</jquerycookie.version>
-        <jquerycolorbox.webjars.version>1.6.3</jquerycolorbox.webjars.version>
+        <jquerycolorbox.webjars.version>1.6.4</jquerycolorbox.webjars.version>
         <jquerypassy.webjars.version>1.0</jquerypassy.webjars.version>
         <jquerypayment.webjars.version>1.1.4</jquerypayment.webjars.version>
         <jqueryjcarousel.webjars.version>0.3.1</jqueryjcarousel.webjars.version>
@@ -225,7 +224,7 @@
         <maven.resource.plugin.version>2.7</maven.resource.plugin.version>
         <maven.plugin.annotations.version>3.3</maven.plugin.annotations.version>
         <nemesis.version>1.2.0.BUILD-SNAPSHOT</nemesis.version>
-        <opencmis.version>0.13.0</opencmis.version>
+        <opencmis.version>0.14.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
         <orika.version>1.4.6-SNAPSHOT</orika.version>
         <paypal.sdk.version>2.14.117</paypal.sdk.version>
@@ -260,7 +259,7 @@
         <thymeleaf-jawr.version>1.2.0</thymeleaf-jawr.version>
         <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
-        <webjars-locator.version>0.28</webjars-locator.version>
+        <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <xml.apis.version>1.4.01</xml.apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
