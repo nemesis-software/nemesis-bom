@@ -1545,6 +1545,7 @@
                 <configuration>
                     <skip>${maven.pmd.plugin.skip}</skip>
                     <targetJdk>${maven.compiler.source}</targetJdk>
+                    <linkXRef>false</linkXRef>
                     <printFailingErrors>true</printFailingErrors>
                     <rulesets>
                         <ruleset>rulesets/maven.xml</ruleset>
