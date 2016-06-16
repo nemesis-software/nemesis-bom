@@ -1485,6 +1485,9 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>findbugs-maven-plugin</artifactId>
                     <version>${maven.findbugs.plugin.version}</version>
+                    <configuration>
+                        <omitVisitors>SerializableIdiom</omitVisitors>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
