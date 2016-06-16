@@ -1513,6 +1513,7 @@
                             <skipIfEmpty>true</skipIfEmpty>
                             <excludes>
                                 <exclude>**/entity/**</exclude>
+                                <exclude>**/facade/**/data/**</exclude>
                             </excludes>
                         </configuration>
                     </execution>
