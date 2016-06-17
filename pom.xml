@@ -148,8 +148,8 @@
         <guava.version>19.0</guava.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
-        <!-- Upgrade once hazelcast supports hibernate5-->  <!-- Remove once boot updates -->
-        <hazelcast.version>3.6.2</hazelcast.version>
+        <!-- Remove once boot updates -->
+        <hazelcast.hibernate.version>1.0</hazelcast.hibernate.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
         <itextpdf5.version>5.5.9</itextpdf5.version>
         <java.version>1.8</java.version>
@@ -562,25 +562,25 @@
                 <artifactId>javaetmoi-hibernate5-hydrate</artifactId>
                 <version>${hibernate.hydrate.version}</version>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast</artifactId>
-                <version>${hazelcast.version}</version>
+                <version>${hazelcast.hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-spring</artifactId>
                 <version>${hazelcast.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.hazelcast</groupId>
-                <artifactId>hazelcast-hibernate4</artifactId>
-                <version>${hazelcast.version}</version>
-            </dependency>
-            <dependency>
+			<dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-jca</artifactId>
                 <version>${hazelcast.version}</version>
+            </dependency-->
+            <dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast-hibernate5</artifactId>
+                <version>${hazelcast.hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.infinispan</groupId>
@@ -923,6 +923,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.cache</groupId>
                 <artifactId>nemesis-module-ehcache</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+			<dependency>
+                <groupId>com.nemesis.platform.module.cache</groupId>
+                <artifactId>nemesis-module-hazelcast</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
