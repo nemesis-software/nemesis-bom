@@ -149,6 +149,7 @@
         <hibernate.version>5.1.0.Final</hibernate.version>
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Remove once boot updates -->
+        <hazelcast.version>3.7-EA</hazelcast.version>
         <hazelcast.hibernate.version>1.0</hazelcast.hibernate.version>
         <infinispan.version>8.1.0.Final</infinispan.version>
         <itextpdf5.version>5.5.9</itextpdf5.version>
@@ -562,21 +563,6 @@
                 <artifactId>javaetmoi-hibernate5-hydrate</artifactId>
                 <version>${hibernate.hydrate.version}</version>
             </dependency>
-            <!--dependency>
-                <groupId>com.hazelcast</groupId>
-                <artifactId>hazelcast</artifactId>
-                <version>${hazelcast.hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hazelcast</groupId>
-                <artifactId>hazelcast-spring</artifactId>
-                <version>${hazelcast.version}</version>
-            </dependency>
-			<dependency>
-                <groupId>com.hazelcast</groupId>
-                <artifactId>hazelcast-jca</artifactId>
-                <version>${hazelcast.version}</version>
-            </dependency-->
             <dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-hibernate5</artifactId>
