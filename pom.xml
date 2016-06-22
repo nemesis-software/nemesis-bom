@@ -160,6 +160,7 @@
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.12</jansi.version>
         <jawr.version>3.8</jawr.version>
+        <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.0</jgravatar.version>
         <jmeter.maven.plugin.version>1.10.1</jmeter.maven.plugin.version>
@@ -1237,6 +1238,12 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <!-- Test dependencies -->
+            <dependency>
+                <groupId>net.jcip</groupId>
+                <artifactId>jcip-annotations</artifactId>
+                <version>${jcip.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-core</artifactId>
