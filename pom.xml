@@ -1491,6 +1491,8 @@
                     <skip>${maven.surefire.plugin.skip}</skip>
                     <argLine>${surefireArgLine}</argLine>
                     <trimStackTrace>false</trimStackTrace>
+                    <!--parallel>classes</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads-->
                     <environmentVariables>
                         <env>dev</env>
                     </environmentVariables>
@@ -1845,6 +1847,8 @@
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <trimStackTrace>false</trimStackTrace>
+                            <!--parallel>classes</parallel>
+                            <useUnlimitedThreads>true</useUnlimitedThreads-->
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
