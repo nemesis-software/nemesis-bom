@@ -155,7 +155,7 @@
         <itextpdf5.version>5.5.9</itextpdf5.version>
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
-        <jackson-datatype-money.version>0.7.0</jackson-datatype-money.version>
+        <jackson-datatype-money.version>0.8.0</jackson-datatype-money.version>
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.12</jansi.version>
