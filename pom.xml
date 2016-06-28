@@ -1861,7 +1861,7 @@
                             <systemPropertyVariables>
                                 <spring.profiles.active>test</spring.profiles.active>
                                 <browser>${browser}</browser>
-                                <screenshotDirectory>${project.build.directory}/screenshots/</screenshotDirectory>
+                                <screenshotDirectory>${project.build.directory}/surefire-reports/</screenshotDirectory>
                                 <htmlSourceDirectory>${project.build.directory}/html-source/</htmlSourceDirectory>
                                 <remoteDriver>${remote}</remoteDriver>
                                 <gridURL>${seleniumGridURL}</gridURL>
