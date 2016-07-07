@@ -595,11 +595,6 @@
                 <version>${javaparser.version}</version>
             </dependency>
             <dependency>
-                <groupId>net.florianschoppmann.java</groupId>
-                <artifactId>java-types</artifactId>
-                <version>${java-types.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>net.jawr</groupId>
                 <artifactId>jawr-core</artifactId>
                 <version>${jawr.version}</version>
