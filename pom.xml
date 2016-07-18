@@ -1143,6 +1143,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-bundle</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-common</artifactId>
                 <version>${nemesis.version}</version>
