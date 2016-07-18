@@ -1093,6 +1093,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-bundle</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.fraud</groupId>
                 <artifactId>nemesis-module-riskified</artifactId>
                 <version>${nemesis.version}</version>
