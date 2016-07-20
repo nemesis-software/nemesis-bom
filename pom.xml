@@ -287,17 +287,6 @@
             </releases>
         </repository>
         <repository>
-            <id>maven.oracle.com</id>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>https://maven.oracle.com</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
             <id>nemesis-repository-releases</id>
             <name>nemesis-repository-releases</name>
             <url>https://repository.nemesis.io/artifactory/libs-release</url>
@@ -1150,11 +1139,6 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.voice</groupId>
                 <artifactId>nemesis-module-twilio</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.platform.module</groupId>
-                <artifactId>nemesis-module-bundle</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
