@@ -261,7 +261,7 @@
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.48.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
-        <tika.parser.version>1.12</tika.parser.version>
+        <tika.parsers.version>1.13</tika.parsers.version>
         <thymeleaf-jawr.version>1.2.0</thymeleaf-jawr.version>
         <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
@@ -511,7 +511,7 @@
             <dependency>
                 <groupId>org.apache.tika</groupId>
                 <artifactId>tika-parsers</artifactId>
-                <version>${tika.parser.version}</version>
+                <version>${tika.parsers.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.geotools</groupId>
