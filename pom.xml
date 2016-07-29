@@ -232,7 +232,7 @@
         <opencmis.version>0.14.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
         <oracle.version>12.1.0.2</oracle.version>
-        <orika.version>1.4.6-SNAPSHOT</orika.version>
+        <orika.version>1.5.0-SNAPSHOT</orika.version>
         <paypal.sdk.version>2.14.117</paypal.sdk.version>
         <proguard.version>5.2.1</proguard.version>
         <proguard.maven.plugin.version>2.0.11</proguard.maven.plugin.version>
