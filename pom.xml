@@ -16,8 +16,8 @@
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
-        <version>2.0.8.RELEASE</version>
-        <relativePath />
+        <version>Athens-RC1</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -167,6 +167,7 @@
         <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.0</jgravatar.version>
+        <jadira.usertype.version>5.0.1.GA-SNAPSHOT</jadira.usertype.version>
         <jmeter.maven.plugin.version>1.10.1</jmeter.maven.plugin.version>
         <jquery.webjars.version>1.11.2</jquery.webjars.version>
         <jqueryui.webjars.version>1.11.4</jqueryui.webjars.version>
@@ -193,6 +194,7 @@
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
         <jsoup.version>1.8.3</jsoup.version>
         <jetty.version>9.3.6.v20151106</jetty.version>
+        <jedis.version>2.9.0</jedis.version>
         <maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
         <maven.filtering.version>1.3</maven.filtering.version>
         <maven.war.plugin.version>2.4</maven.war.plugin.version>
@@ -247,7 +249,6 @@
         <project.scm.id>github</project.scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <querydsl.version>3.7.2</querydsl.version>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
@@ -264,8 +265,9 @@
         <pace.webjars.version>1.0.2</pace.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
-        <!--spring-data-releasetrain.version>Hopper-M1</spring-data-releasetrain.version-->
-        <spring-session.version>1.1.1.RELEASE</spring-session.version>
+        <spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
+        <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version>
+        <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
         <spring-social-twitter.version>1.1.3.PATCHED-2</spring-social-twitter.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe.api.version>1.48.0</stripe.api.version>
@@ -833,6 +835,16 @@
                 <artifactId>super-csv-dozer</artifactId>
                 <version>${supercsv.version}</version>
             </dependency>
+            <dependency>
+            <groupId>org.jadira.usertype</groupId>
+            <artifactId>usertype.core</artifactId>
+            <version>${jadira.usertype.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jadira.usertype</groupId>
+            <artifactId>usertype.extended</artifactId>
+            <version>${jadira.usertype.version}</version>
+        </dependency>
             <dependency>
                 <groupId>com.codeborne</groupId>
                 <artifactId>phantomjsdriver</artifactId>
