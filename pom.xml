@@ -252,6 +252,8 @@
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
         <slick.webjars.version>1.5.0</slick.webjars.version>
+        <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
+        <bootstrap-select.webjars.version>1.10.0</bootstrap-select.webjars.version>
         <pace.webjars.version>1.0.2</pace.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
@@ -799,6 +801,16 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>slick</artifactId>
                 <version>${slick.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>${bootstrap.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>bootstrap-select</artifactId>
+                <version>${bootstrap-select.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
