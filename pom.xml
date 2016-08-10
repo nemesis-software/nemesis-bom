@@ -141,7 +141,7 @@
         <drools.version>6.4.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
-        <fontawesome.webjars.version>4.4.0</fontawesome.webjars.version>
+        <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.1</flyway.version>
         <geotools.version>15.0</geotools.version>
@@ -251,9 +251,10 @@
         <riskified.version>1.0.1.7</riskified.version>
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
-        <slick.webjars.version>1.5.0</slick.webjars.version>
+        <slick.webjars.version>1.6.0</slick.webjars.version>
         <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
         <bootstrap-select.webjars.version>1.10.0</bootstrap-select.webjars.version>
+        <bootstrap-datepicker.webjars.version>1.6.1</bootstrap-datepicker.webjars.version>
         <pace.webjars.version>1.0.2</pace.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
@@ -811,6 +812,11 @@
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>bootstrap-select</artifactId>
                 <version>${bootstrap-select.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>bootstrap-datepicker</artifactId>
+                <version>${bootstrap-datepicker.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
