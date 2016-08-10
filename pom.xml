@@ -16,7 +16,7 @@
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
-        <version>Athens-RC1</version>
+        <version>Athens-BUILD-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
@@ -568,6 +568,11 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jcache</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
             <dependency>
