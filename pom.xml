@@ -1807,7 +1807,7 @@
                 <maven.pmd.plugin.skip>true</maven.pmd.plugin.skip>
                 <maven.findbugs.plugin.skip>true</maven.findbugs.plugin.skip>
                 <maven.rat.plugin.skip>true</maven.rat.plugin.skip>
-                <maven.compiler.test.compile.skip>true</maven.compiler.test.compile.skip>
+                <!--maven.compiler.test.compile.skip>true</maven.compiler.test.compile.skip-->
             </properties>
         </profile>
         <profile>
