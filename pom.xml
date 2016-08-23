@@ -36,10 +36,10 @@
     </organization>
     <licenses>
         <license>
-            <name>Nemesis Platform Commercial License</name>
+            <name>Nemesis Software Commercial License</name>
             <url>http://www.nemesis.io/legal/license</url>
             <distribution>repo</distribution>
-            <comments>This platform is proprietary software.</comments>
+            <comments>This software is proprietary software.</comments>
         </license>
     </licenses>
 
@@ -206,6 +206,7 @@
         <maven.site.plugin.version>3.5.1</maven.site.plugin.version>
         <maven.failsafe.plugin.version>2.19</maven.failsafe.plugin.version>
         <maven.enforcer.plugin.version>1.3.1</maven.enforcer.plugin.version>
+        <maven.remote.resources.plugin.version>1.4</maven.remote.resources.plugin.version>
         <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
         <maven.plugin.log4j.version>1.0.1</maven.plugin.log4j.version>
         <maven.plugin.plugin.version>3.4</maven.plugin.plugin.version>
@@ -1529,6 +1530,29 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-remote-resources-plugin</artifactId>
+                <version>${maven.remote.resources.plugin.version}</version>
+                <configuration>
+                    <skip>${maven.remote.resources.plugin.skip}</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-remote-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                        <configuration>
+                            <resourceBundles>
+                                <!-- Will generate META-INF/DEPENDENCIES META-INF/LICENSE META-INF/NOTICE -->
+                                <resourceBundle>com.nemesis:nemesis-jar-resource-bundle:1.2.0.RELEASE</resourceBundle>
+                            </resourceBundles>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
@@ -1717,8 +1741,8 @@
                             </patterns>
                         </license>
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
-                            <licenseFamilyCategory>NPCL</licenseFamilyCategory>
-                            <licenseFamilyName>Nemesis Platform Commercial License 1.0</licenseFamilyName>
+                            <licenseFamilyCategory>NSCL</licenseFamilyCategory>
+                            <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
                             <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
@@ -1730,7 +1754,7 @@
                             <familyName>Apache License 2.0</familyName>
                         </licenseFamily>
                         <licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
-                            <familyName>Nemesis Platform Commercial License 1.0</familyName>
+                            <familyName>Nemesis Software Commercial License 1.0</familyName>
                         </licenseFamily>
                     </licenseFamilies>
                 </configuration>
@@ -1778,6 +1802,7 @@
             <id>quick</id>
             <properties>
                 <maven.checkstyle.plugin.skip>true</maven.checkstyle.plugin.skip>
+                <maven.remote.resources.plugin.skip>true</maven.remote.resources.plugin.skip>
                 <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
                 <maven.pmd.plugin.skip>true</maven.pmd.plugin.skip>
                 <maven.findbugs.plugin.skip>true</maven.findbugs.plugin.skip>
