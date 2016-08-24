@@ -17,7 +17,7 @@
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>2.0.7.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -162,7 +162,7 @@
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.12</jansi.version>
-        <jawr.version>3.8</jawr.version>
+        <jawr.version>3.10-PATCHED-SNAPSHOT</jawr.version>
         <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.0</jgravatar.version>
