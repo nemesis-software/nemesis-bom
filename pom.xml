@@ -253,9 +253,11 @@
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
         <slick.webjars.version>1.6.0</slick.webjars.version>
+        <tablesaw.webjars.version>2.0.3</tablesaw.webjars.version>
         <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
         <bootstrap-select.webjars.version>1.10.0</bootstrap-select.webjars.version>
         <bootstrap-datepicker.webjars.version>1.6.1</bootstrap-datepicker.webjars.version>
+        <bootstrap-slider.webjars.version>7.1.0</bootstrap-slider.webjars.version>
         <pace.webjars.version>1.0.2</pace.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Brixton.M2</spring.cloud.version-->
@@ -805,6 +807,11 @@
                 <version>${slick.webjars.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>tablesaw</artifactId>
+                <version>${tablesaw.webjars.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>bootstrap</artifactId>
                 <version>${bootstrap.webjars.version}</version>
@@ -818,6 +825,11 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>bootstrap-datepicker</artifactId>
                 <version>${bootstrap-datepicker.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>bootstrap-slider</artifactId>
+                <version>${bootstrap-slider.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
