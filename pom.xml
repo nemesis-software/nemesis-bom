@@ -618,33 +618,11 @@
                 <groupId>net.jawr</groupId>
                 <artifactId>jawr-core</artifactId>
                 <version>${jawr.version}</version>
-                <!-- TODO remove when update to 3.9 https://java.net/jira/browse/JAWR-355 -->
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>net.jawr.extensions</groupId>
                 <artifactId>jawr-spring-extension</artifactId>
                 <version>${jawr.version}</version>
-                <!-- TODO remove when update to 3.9 https://java.net/jira/browse/JAWR-355 -->
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.github.dtrunk90</groupId>
