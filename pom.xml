@@ -1356,14 +1356,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>${commons.collections4.version}</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <resources>
             <resource>
@@ -1665,6 +1657,13 @@
                                 <requireMavenVersion>
                                     <version>3.2.0</version>
                                 </requireMavenVersion>
+                                <bannedDependencies>
+                                    <excludes>
+                                        <!--exclude>commons-lang:commons-lang</exclude-->
+                                        <exclude>commons-logging:commons-logging</exclude>
+                                        <!--exclude>commons-collections:commons-collections</exclude-->
+                                    </excludes>
+                                </bannedDependencies>
                             </rules>
                             <fail>true</fail>
                         </configuration>
