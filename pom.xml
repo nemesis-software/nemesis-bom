@@ -253,6 +253,7 @@
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
         <slick.webjars.version>1.6.0</slick.webjars.version>
+        <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
         <tablesaw.webjars.version>2.0.3</tablesaw.webjars.version>
         <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
         <bootstrap-select.webjars.version>1.10.0</bootstrap-select.webjars.version>
@@ -1661,6 +1662,7 @@
                                     <excludes>
                                         <!--exclude>commons-lang:commons-lang</exclude-->
                                         <exclude>commons-logging:commons-logging</exclude>
+                                        <!--exclude>com.google.guava:guava</exclude-->
                                         <!--exclude>com.google.code.gson:gson</exclude>
                                         <exclude>org.codehaus.jackson</exclude-->
                                         <!--exclude>commons-collections:commons-collections</exclude-->
