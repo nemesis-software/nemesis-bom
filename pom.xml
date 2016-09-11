@@ -141,8 +141,8 @@
         <drools.version>6.4.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
-        <failsafe.parallel>classes</failsafe.parallel>
-        <failsafe.useUnlimitedThreads>true</failsafe.useUnlimitedThreads>
+        <failsafe.parallel></failsafe.parallel>
+        <failsafe.useUnlimitedThreads></failsafe.useUnlimitedThreads>
         <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.1</flyway.version>
