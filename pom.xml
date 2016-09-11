@@ -141,6 +141,8 @@
         <drools.version>6.4.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
+        <failsafe.parallel>classes</failsafe.parallel>
+        <failsafe.useUnlimitedThreads>true</failsafe.useUnlimitedThreads>
         <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.1</flyway.version>
@@ -1542,8 +1544,8 @@
                     <skip>${maven.surefire.plugin.skip}</skip>
                     <argLine>${surefireArgLine}</argLine>
                     <trimStackTrace>false</trimStackTrace>
-                    <!--parallel>classes</parallel>
-                    <useUnlimitedThreads>true</useUnlimitedThreads-->
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
                     <environmentVariables>
                         <env>dev</env>
                     </environmentVariables>
@@ -1908,8 +1910,8 @@
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <trimStackTrace>false</trimStackTrace>
-                            <!--parallel>classes</parallel>
-                            <useUnlimitedThreads>true</useUnlimitedThreads-->
+                            <parallel>${failsafe.parallel}</parallel>
+                            <useUnlimitedThreads>${failsafe.useUnlimitedThreads}</useUnlimitedThreads>
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
