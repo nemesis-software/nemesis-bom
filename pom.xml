@@ -189,6 +189,7 @@
         <jqueryeasyzoom.webjars.version>2.2.0</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>6.0.4</jqueryflowplayer.webjars.version>
+        <github-com-gregra81-jqzoom.webjars.version>1.0.1</github-com-gregra81-jqzoom.webjars.version>
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
         <jsoup.version>1.8.3</jsoup.version>
@@ -271,6 +272,7 @@
         <stripe.api.version>1.48.0</stripe.api.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <tika.parsers.version>1.13</tika.parsers.version>
+        <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
         <thymeleaf-jawr.version>1.2.1</thymeleaf-jawr.version>
         <twilio.sdk.version>6.3.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
@@ -628,6 +630,11 @@
                 <version>${jawr.version}</version>
             </dependency>
             <dependency>
+                <groupId>nz.net.ultraq.thymeleaf</groupId>
+                <artifactId>thymeleaf-layout-dialect</artifactId>
+                <version>${thymeleaf-layout-dialect.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.github.dtrunk90</groupId>
                 <artifactId>thymeleaf-jawr-extension</artifactId>
                 <version>${thymeleaf-jawr.version}</version>
@@ -721,6 +728,11 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>flowplayer-html5</artifactId>
                 <version>${jqueryflowplayer.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>github-com-gregra81-jqzoom</artifactId>
+                <version>${github-com-gregra81-jqzoom.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
