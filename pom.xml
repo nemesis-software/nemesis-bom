@@ -1922,8 +1922,8 @@
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <trimStackTrace>false</trimStackTrace>
-                            <parallel>${failsafe.parallel}</parallel>
-                            <useUnlimitedThreads>${failsafe.useUnlimitedThreads}</useUnlimitedThreads>
+                            <!--parallel>${failsafe.parallel}</parallel>
+                            <useUnlimitedThreads>${failsafe.useUnlimitedThreads}</useUnlimitedThreads-->
                             <includes>
                                 <include>**/*IntegrationTest.java</include>
                             </includes>
