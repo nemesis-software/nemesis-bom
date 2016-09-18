@@ -1497,6 +1497,8 @@
                         <useReleaseProfile>false</useReleaseProfile>
                         <goals>deploy</goals>
                         <scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
+                        <localCheckout>true</localCheckout>
+                        <pushChanges>false</pushChanges>
                     </configuration>
                 </plugin>
                 <plugin>
