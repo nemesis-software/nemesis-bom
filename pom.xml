@@ -16,7 +16,7 @@
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
-        <version>2.0.7.RELEASE</version>
+        <version>2.0.8.RELEASE</version>
         <relativePath />
     </parent>
 
@@ -150,7 +150,7 @@
         <google.geocoder.version>0.16</google.geocoder.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>19.0</guava.version>
-        <hibernate.version>5.1.0.Final</hibernate.version>
+        <hibernate.version>5.1.2.Final</hibernate.version>
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Remove once boot updates -->
         <hazelcast.version>3.7-EA</hazelcast.version>
