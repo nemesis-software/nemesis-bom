@@ -88,6 +88,7 @@ This will delete all the schema .sql files from the storefront.
 mvn package deploy -f target/generated-sources/archetype/ -s src/main/resources/settings.xml
 ----
 This will build and deploy the archetype with version $releaseVersion to the nemesis-repository so that orther clients can create projects from it.
+
 == Release the consoles
 
 == Revert the nemesis.version property
