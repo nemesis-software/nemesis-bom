@@ -11,6 +11,7 @@
 
 **Implemented enhancements:**
 
+- Upgrade to flyway:4.0 [\#31](https://github.com/nemesis-software/nemesis-bom/issues/31)
 - Upgrade hikariCP version 2.4.4 [\#33](https://github.com/nemesis-software/nemesis-bom/issues/33)
 - Upgrade to spring-platform-bom 2.0.3.RELEASE [\#32](https://github.com/nemesis-software/nemesis-bom/issues/32)
 - Upgrade to spring-platform-bom 2.0.2 [\#30](https://github.com/nemesis-software/nemesis-bom/issues/30)
