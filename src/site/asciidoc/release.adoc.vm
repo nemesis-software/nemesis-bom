@@ -12,31 +12,25 @@ To perform a release of the different Nemesis projects follow the steps below.
 
 WARNING: Make sure the CI build is green and you have no snapshot dependencies
 
-== Release the Platform BOM
-Here are the steps to follow if you want to release the platform BOM
+== Preparation
+Before you begin the release process, please change the `nemesis.version` property like this:
+[source,xml]
+----
+<nemesis.version>$releaseVersion</nemesis.version>
+----
 
- * Before release change the value of the `nemesis.version` property in the `pom.xml` to `$releaseVersion`.
- * The commands for the release are the following
+then build the bom, commit and push your changes:
+
 [source,bash]
 ----
- mvn release:clean
- mvn release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
- mvn release:perform
+mvn clean install
+git commit -am "Update nemesis.version before release."
+git push origin master
 ----
- * Deploy the bom with the new snapshot version to the maven repository so that we can use it.
-[source,bash]
-----
-mvn deploy
-----
- 
-== Release the platform project
-To release the nemesis-platform issue the same commands as above:
-[source,bash]
-----
-mvn release:clean
-mvn release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
-----
-This will create a tag with the name specified in the github repository. You will be asked several times for your github username and password. To avoid the repetitive work of filling you username and password define the following server in your settings.xml:
+
+so that in the local repository you have the new version.
+
+You might also want to include this in your `settings.xml` so that you don't get asked for your github username/password every time.
 [source,xml]
 ----
 <server>
@@ -46,40 +40,29 @@ This will create a tag with the name specified in the github repository. You wil
 </server>
 ----
 
-You will need to resolve the parent bom - resolve it to just released version and set the development version - the one you just specified)
+== Release process
+The release process contains the following ordered steps:
 [source,bash]
 ----
-mvn release:perform -Dmaven.javadoc.skip=true
-----
-The release perform will actually clone the created tag, make a jar and install it in the link:https://repository.nemesis.io/artifactory/ext-release-local/[official nemesis release repository^].
-
-NOTE: This command might take some time as it tries to clone the tag that it created from the git repository and the platform project is quite big. 
-
-Finally you need to issue:
-[source,bash]
-----
-mvn deploy
-----
-to deploy the SNAPSHOT jars to the repository and rebuild. Next thing you need to rebuild the circleci without cache and also deploy the documentation:
-
-[source,bash]
-----
+mvn release:clean release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
+mvn release:perform
+mvn clean install site site:deploy -Pquick
 git checkout tags/$releaseVersion
-mvn clean site site:deploy
+mvn clean install site site:deploy -Pquick
+git checkout master
 ----
+
+and these steps need to be executed for every of the nemesis projects in order.
+
+== Release the Platform BOM
+
+== Release the platform project
+You will need to resolve the parent bom - resolve it to just released version and set the development version - $releaseVersion)
 
 == Release the tools
-To release the tools follow the same commands as above. Also after the release don't forget to upload the jars to the maven repository because the nemesis archetype is 
-depending on it.
-
-== Release the themes
-To release the themes follow the same commands as above. Also after the release don't forget to upload the jars to the maven repository because the nemesis archetype is 
-depending on them.
 
 == Release the archetype
-The nemesis-archetype can be released with the above commands. It will take some time to resolve all the module versions so be patient. At the end, when you
-issue the `mvn release:perform` command maven will try to upload the war file to the nemesis-repository. We don't need that war file there (as it is too big)
-so you can cancel the upload and simply issue `mvn release:clean` to clean the release. After that you have to do the following:
+The nemesis archetype is released with the above commands, but after the release you also need to prepare the archetype itself:
 [source,bash]
 ----
 git checkout tags/$releaseVersion
@@ -97,18 +80,21 @@ mvn archetype:create-from-project -Darchetype.properties=src/main/resources/arch
 This will create archetype from the given project.
 [source,bash]
 ----
+find target/generated-sources/archetype/ -type d -regex ".*/db/migration/.*" -exec rm -r {} +
+----
+This will delete all the schema .sql files from the storefront.
+[source,bash]
+----
 mvn package deploy -f target/generated-sources/archetype/ -s src/main/resources/settings.xml
 ----
 This will build and deploy the archetype with version $releaseVersion to the nemesis-repository so that orther clients can create projects from it.
-
 == Release the consoles
-Release the nemesis-consoles project with the above commands.
 
 == Revert the nemesis.version property
 Revert the nemesis.version property to `$nextVersion`, then commit, push and deploy.
 
 == Make sure the CI build is green again.
-Next step is to make sure the link:http://circleci.com/[CircleCI] build is stable again.
+Next step is to make sure the link:http://circleci.com/dashboard[CircleCI] build is stable again.
 
 == Close milestones
 Go through all the github projects and close the milestone that we have just released. If necessary create new milestones for future releases.
@@ -117,7 +103,8 @@ Go through all the github projects and close the milestone that we have just rel
 For every project open the release url and create a new link:https://github.com/nemesis-software/nemesis-bom/releases[Github Release].
 
 == Generate a changelog	
-Go though each project and generate a changelog for what was changed in this version. We use the link:https://skywinder.github.io/github-changelog-generator/[github_changelog_generator] tool for generating the changelog.
+After you have finished releasing every nemesis project go though each project and generate a changelog for what was changed in this version. 
+We use the link:https://skywinder.github.io/github-changelog-generator/[github_changelog_generator] tool for generating the changelog.
 Simply run the following command in each of the released projects and then push the new changelog:
 [source,bash]
 ----
