@@ -277,7 +277,7 @@
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
         <thymeleaf-jawr.version>1.2.1</thymeleaf-jawr.version>
-        <twilio.sdk.version>6.3.0</twilio.sdk.version>
+        <twilio.sdk.version>7.1.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
@@ -884,7 +884,7 @@
             </dependency>
             <dependency>
                 <groupId>com.twilio.sdk</groupId>
-                <artifactId>twilio-java-sdk</artifactId>
+                <artifactId>twilio</artifactId>
                 <version>${twilio.sdk.version}</version>
             </dependency>
             <dependency>
@@ -1166,6 +1166,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.payment</groupId>
                 <artifactId>nemesis-module-paypal</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.payment</groupId>
+                <artifactId>nemesis-module-klarna</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
