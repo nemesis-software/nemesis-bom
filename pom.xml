@@ -159,6 +159,9 @@
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>0.10.0</jackson-datatype-money.version>
+        <money-validation.version>1.2.0</money-validation.version>
+        <javauom.version>1.0</javauom.version>
+        <javauom-ri.version>1.0</javauom-ri.version>
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.12</jansi.version>
@@ -433,11 +436,6 @@
                 <groupId>com.helger</groupId>
                 <artifactId>jcodemodel</artifactId>
                 <version>${codemodel.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.javamoney</groupId>
-                <artifactId>moneta</artifactId>
-                <version>${javamoney.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
@@ -913,9 +911,29 @@
                 <version>${xalan.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.javamoney</groupId>
+                <artifactId>moneta</artifactId>
+                <version>${javamoney.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.zalando</groupId>
                 <artifactId>jackson-datatype-money</artifactId>
                 <version>${jackson-datatype-money.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>money-validation</artifactId>
+                <version>${money-validation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.measure</groupId>
+                <artifactId>unit-api</artifactId>
+                <version>${javauom.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tec.units</groupId>
+	            <artifactId>unit-ri</artifactId>
+	            <version>${javauom-ri.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.searchbox</groupId>
