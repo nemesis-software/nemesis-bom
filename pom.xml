@@ -144,6 +144,7 @@
         <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
+        <findbugs.version>3.0.1</findbugs.version>
         <geotools.version>15.0</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
@@ -425,6 +426,11 @@
 
     <dependencyManagement>
         <dependencies>
+		    <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>findbugs-annotations</artifactId>
+                <version>${findbugs.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.drools</groupId>
                 <artifactId>drools-bom</artifactId>
