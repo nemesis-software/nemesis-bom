@@ -205,6 +205,7 @@
         <maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
         <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
         <maven.checkstyle.plugin.skip>false</maven.checkstyle.plugin.skip>
+        <maven.failsafe.plugin.skip>false</maven.failsafe.plugin.skip>
         <maven.checkstyle.plugin.version>2.15</maven.checkstyle.plugin.version>
         <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
         <maven.coveralls.plugin.version>3.1.0</maven.coveralls.plugin.version>
@@ -1986,6 +1987,7 @@
                             </execution>
                         </executions>
                         <configuration>
+							<skip>${maven.failsafe.plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
                             <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m -Dfile.encoding=UTF-8</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
