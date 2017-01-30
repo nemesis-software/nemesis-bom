@@ -192,6 +192,7 @@
         <jqueryeasyzoom.webjars.version>2.2.0</jqueryeasyzoom.webjars.version>
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>6.0.4</jqueryflowplayer.webjars.version>
+        <magicsuggest.webjars.version>2.1.4</magicsuggest.webjars.version>
         <github-com-gregra81-jqzoom.webjars.version>1.0.1</github-com-gregra81-jqzoom.webjars.version>
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
@@ -742,6 +743,11 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>flowplayer-html5</artifactId>
                 <version>${jqueryflowplayer.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>magicsuggest</artifactId>
+                <version>${magicsuggest.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
