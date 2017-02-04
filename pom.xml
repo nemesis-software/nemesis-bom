@@ -1656,7 +1656,7 @@
                             <skipIfEmpty>true</skipIfEmpty>
                             <excludes>
                                 <exclude>**/entity/**</exclude>
-                                <exclude>**/facade/**/data/**</exclude>
+                                <exclude>**/facade/**/dto/**</exclude>
                             </excludes>
                         </configuration>
                     </execution>
@@ -1730,7 +1730,7 @@
                     <fixFieldComment>false</fixFieldComment>
                     <defaultAuthor>Petar Tahchiev</defaultAuthor>
                     <defaultSince>0.6</defaultSince>
-                    <excludes>**/*Impl.java,**/Default**.java,**/**Config.java,**/**Data.java</excludes>
+                    <excludes>**/*Impl.java,**/Default**.java,**/**Config.java,**/**Dto.java</excludes>
                 </configuration>
             </plugin>
             <plugin>
