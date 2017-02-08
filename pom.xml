@@ -274,10 +274,10 @@
         <klarna.sdk.version>2.2.0</klarna.sdk.version>
         <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
         <tika.parsers.version>1.13</tika.parsers.version>
-        <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
+        <thymeleaf-layout-dialect.version>2.1.2</thymeleaf-layout-dialect.version>
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
-        <thymeleaf-jawr.version>1.2.1</thymeleaf-jawr.version>
+        <thymeleaf-jawr.version>2.0.1</thymeleaf-jawr.version>
         <twilio.sdk.version>7.1.0</twilio.sdk.version>
         <wagon.version>2.9</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
