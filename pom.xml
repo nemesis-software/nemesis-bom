@@ -1592,6 +1592,14 @@
                         <omitVisitors>SerializableIdiom</omitVisitors>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>${maven-archetype-plugin.version}</version>
+                    <configuration>
+                        <archetypePostPhase>install</archetypePostPhase>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
