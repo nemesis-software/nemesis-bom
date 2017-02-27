@@ -1997,7 +1997,7 @@
                         <configuration>
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m -Dfile.encoding=UTF-8</argLine>
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/vasil.babanov/</argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <trimStackTrace>false</trimStackTrace>
