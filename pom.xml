@@ -198,6 +198,8 @@
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
         <jsoup.version>1.8.3</jsoup.version>
+        <jstree.version>3.3.3</jstree.version>
+        <jstree.bootstrap.theme.version>1.0.1</jstree.bootstrap.theme.version>
         <jetty.version>9.3.6.v20151106</jetty.version>
         <jedis.version>2.9.0</jedis.version>
         <maven-archetype-plugin.version>2.4</maven-archetype-plugin.version>
@@ -917,6 +919,16 @@
                 <groupId>cz.jiripinkas</groupId>
                 <artifactId>jsitemapgenerator</artifactId>
                 <version>${jsitemapgenerator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>jstree</artifactId>
+                <version>${jstree.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>jstree-bootstrap-theme</artifactId>
+                <version>${jstree.bootstrap.theme.version}</version>
             </dependency>
             <dependency>
                 <groupId>xalan</groupId>
