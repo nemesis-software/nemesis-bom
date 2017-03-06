@@ -149,6 +149,7 @@
         <geotools.version>15.0</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
+        <google-maps-services.version>0.1.17</google-maps-services.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>19.0</guava.version>
         <hibernate.version>5.1.3.Final</hibernate.version>
@@ -544,6 +545,11 @@
                 <groupId>com.google.code.geocoder-java</groupId>
                 <artifactId>geocoder-java</artifactId>
                 <version>${google.geocoder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.maps</groupId>
+                <artifactId>google-maps-services</artifactId>
+                <version>${google-maps-services.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.riskified</groupId>
@@ -2009,7 +2015,9 @@
                         <configuration>
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError</argLine>
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
+                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
+                            </argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <trimStackTrace>false</trimStackTrace>
