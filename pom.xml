@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>1.5.1.BUILD-SNAPSHOT</version>
+    <version>1.5.0.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -167,7 +167,7 @@
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.12</jansi.version>
-        <jawr.version>3.10.NEMESIS-VERSION</jawr.version>
+        <jawr.version>3.10.NEMESIS-RELEASE</jawr.version>
         <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
