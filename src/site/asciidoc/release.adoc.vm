@@ -46,9 +46,9 @@ The release process contains the following ordered steps:
 ----
 mvn release:clean release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
 mvn release:perform
-mvn clean install site site:deploy -Pquick
+mvn clean install javadoc:javadoc site site:deploy -Pquick
 git checkout tags/$releaseVersion
-mvn clean install site site:deploy -Pquick
+mvn clean install javadoc:javadoc site site:deploy -Pquick
 git checkout master
 ----
 

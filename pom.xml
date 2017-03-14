@@ -121,7 +121,7 @@
 
     <properties>
         <amazon.aws.sdk.version>1.11.9</amazon.aws.sdk.version>
-        <asciidoctor.version>1.5.3</asciidoctor.version>
+        <asciidoctor.version>1.5.4-NEMESIS-RELEASE</asciidoctor.version>
         <asciidoctorj.diagram.version>1.3.1</asciidoctorj.diagram.version>
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
@@ -148,6 +148,7 @@
         <geotools.version>15.0</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
+        <google-maps-services.version>0.1.17</google-maps-services.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>19.0</guava.version>
         <hibernate.version>5.1.3.Final</hibernate.version>
@@ -165,7 +166,7 @@
         <javaparser.version>2.2.1</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <jansi.version>1.12</jansi.version>
-        <jawr.version>3.10-PATCHED-SNAPSHOT</jawr.version>
+        <jawr.version>3.10.NEMESIS-RELEASE</jawr.version>
         <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
@@ -196,9 +197,11 @@
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
         <jsoup.version>1.8.3</jsoup.version>
+        <jstree.version>3.3.3</jstree.version>
+        <jstree.bootstrap.theme.version>1.0.1</jstree.bootstrap.theme.version>
         <jetty.version>9.3.6.v20151106</jetty.version>
         <jedis.version>2.9.0</jedis.version>
-        <maven-archetype-plugin.version>2.4</maven-archetype-plugin.version>
+        <maven-archetype-plugin.version>3.0.1-NEMESIS-RELEASE</maven-archetype-plugin.version>
         <maven.filtering.version>1.3</maven.filtering.version>
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <maven-war-plugin.version>2.4</maven-war-plugin.version>
@@ -218,6 +221,7 @@
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
         <maven-findbugs-plugin.version>3.0.1</maven-findbugs-plugin.version>
         <maven-findbugs-plugin.skip>false</maven-findbugs-plugin.skip>
+        <maven-findbugs-plugin.skip>false</maven-findbugs-plugin.skip>
         <maven-pmd-plugin.version>3.6</maven-pmd-plugin.version>
         <maven-pmd-plugin.skip>false</maven-pmd-plugin.skip>
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
@@ -231,9 +235,10 @@
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
         <maven-plugin-api.version>3.2.2</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
+        <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <opencmis.version>1.0.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
-        <oracle.version>12.1.0.2</oracle.version>
+        <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.0</orika.version>
         <paypal.sdk.version>2.15.121</paypal.sdk.version>
         <proguard.version>5.2.1</proguard.version>
@@ -422,7 +427,7 @@
 
     <dependencyManagement>
         <dependencies>
-		    <dependency>
+            <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>findbugs-annotations</artifactId>
                 <version>${findbugs.version}</version>
@@ -543,6 +548,11 @@
                 <version>${google.geocoder.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.google.maps</groupId>
+                <artifactId>google-maps-services</artifactId>
+                <version>${google-maps-services.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.riskified</groupId>
                 <artifactId>riskified-sdk</artifactId>
                 <version>${riskified.version}</version>
@@ -559,7 +569,7 @@
             </dependency>
             <dependency>
                 <groupId>com.oracle.jdbc</groupId>
-                <artifactId>ojdbc7</artifactId>
+                <artifactId>ojdbc8</artifactId>
                 <version>${oracle.version}</version>
             </dependency>
             <dependency>
@@ -918,6 +928,16 @@
                 <version>${jsitemapgenerator.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>jstree</artifactId>
+                <version>${jstree.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>jstree-bootstrap-theme</artifactId>
+                <version>${jstree.bootstrap.theme.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
                 <version>${xalan.version}</version>
@@ -939,8 +959,8 @@
             </dependency>
             <dependency>
                 <groupId>tec.units</groupId>
-	            <artifactId>unit-ri</artifactId>
-	            <version>${javauom-ri.version}</version>
+                <artifactId>unit-ri</artifactId>
+                <version>${javauom-ri.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.searchbox</groupId>
@@ -1512,7 +1532,7 @@
                                 <last-update-label>false</last-update-label>
                                 <language>asciidoc</language>
                                 <imagesdir>images</imagesdir>
-                                <imagesoutdir>${basedir}/target/site/images/</imagesoutdir>
+                                <imagesoutdir>${project.build.directory}/site/images/</imagesoutdir>
                                 <source-highlighter>coderay</source-highlighter>
                                 <coderay-css>style</coderay-css>
                                 <toclevels>2</toclevels>
@@ -1562,6 +1582,7 @@
                         <goals>deploy</goals>
                         <scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
                         <localCheckout>true</localCheckout>
+                        <tagNameFormat>v@{project.version}</tagNameFormat>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -1584,6 +1605,14 @@
                     <version>${maven.findbugs.plugin.version}</version>
                     <configuration>
                         <omitVisitors>SerializableIdiom</omitVisitors>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>${maven-archetype-plugin.version}</version>
+                    <configuration>
+                        <archetypePostPhase>install</archetypePostPhase>
                     </configuration>
                 </plugin>
             </plugins>
@@ -1714,6 +1743,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
+                    <skip>${maven-javadoc-plugin.skip}</skip>
                     <fixTags>author,since,param,return,throws,link</fixTags>
                     <fixFieldComment>false</fixFieldComment>
                     <defaultAuthor>Petar Tahchiev</defaultAuthor>
@@ -1981,9 +2011,11 @@
                             </execution>
                         </executions>
                         <configuration>
-							<skip>${maven-failsafe-plugin.skip}</skip>
+                            <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx1024m -XX:MaxMetaspaceSize=256m -Dfile.encoding=UTF-8</argLine>
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
+                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
+                            </argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
                             <trimStackTrace>false</trimStackTrace>
