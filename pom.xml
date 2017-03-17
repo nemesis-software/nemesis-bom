@@ -1000,6 +1000,11 @@
             </dependency>
             <!-- Nemesis -->
             <dependency>
+                <groupId>com.nemesis.tools</groupId>
+                <artifactId>nemesis-license-tools</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-util</artifactId>
                 <version>${nemesis.version}</version>
