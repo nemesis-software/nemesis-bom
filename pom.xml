@@ -10,7 +10,8 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -139,8 +140,8 @@
         <drools.version>6.4.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
@@ -151,7 +152,7 @@
         <google-maps-services.version>0.1.17</google-maps-services.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>19.0</guava.version>
-        <hibernate.version>5.1.3.Final</hibernate.version>
+        <!--hibernate.version>5.1.3.Final</hibernate.version-->
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Remove once boot updates -->
         <hazelcast.version>3.7.2</hazelcast.version>
@@ -170,7 +171,7 @@
         <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
-        <jadira.usertype.version>5.0.0.GA</jadira.usertype.version>
+        <jadira.usertype.version>6.0.1.GA</jadira.usertype.version>
         <jmeter.maven.plugin.version>1.10.1</jmeter.maven.plugin.version>
         <jquery.webjars.version>1.12.1</jquery.webjars.version>
         <jqueryui.webjars.version>1.12.1</jqueryui.webjars.version>
@@ -867,11 +868,6 @@
             <dependency>
                 <groupId>org.jadira.usertype</groupId>
                 <artifactId>usertype.core</artifactId>
-                <version>${jadira.usertype.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jadira.usertype</groupId>
-                <artifactId>usertype.extended</artifactId>
                 <version>${jadira.usertype.version}</version>
             </dependency>
             <dependency>
@@ -1863,7 +1859,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -1871,7 +1867,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
