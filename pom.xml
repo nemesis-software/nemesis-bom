@@ -257,6 +257,7 @@
         <reflections.version>0.9.10</reflections.version>
         <redis.embedded.version>0.6</redis.embedded.version>
         <redis.hibernate.version>2.3.2</redis.hibernate.version>
+        <redis.quartz.version>1.1.8</redis.quartz.version>
         <riskified.version>1.0.2.1</riskified.version>
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
@@ -822,6 +823,11 @@
                 <groupId>com.github.debop</groupId>
                 <artifactId>hibernate-redis</artifactId>
                 <version>${redis.hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.joelinn</groupId>
+                <artifactId>quartz-redis-jobstore</artifactId>
+                <version>${redis.quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
