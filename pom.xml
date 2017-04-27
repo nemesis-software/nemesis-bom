@@ -195,6 +195,7 @@
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>6.0.4</jqueryflowplayer.webjars.version>
         <magicsuggest.webjars.version>2.1.4</magicsuggest.webjars.version>
+        <materializecss.webjars.version>0.98.1</materializecss.webjars.version>
         <github-com-gregra81-jqzoom.webjars.version>1.0.1</github-com-gregra81-jqzoom.webjars.version>
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
@@ -270,7 +271,9 @@
         <bootstrap-datepicker.webjars.version>1.6.1</bootstrap-datepicker.webjars.version>
         <bootstrap-slider.webjars.version>7.1.0</bootstrap-slider.webjars.version>
         <pace.webjars.version>1.0.2</pace.webjars.version>
+        <select2.webjars.version>4.0.3</select2.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
+        <stacktable.webjars.version>1.0.1</stacktable.webjars.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version-->
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version>
@@ -756,14 +759,29 @@
                 <version>${magicsuggest.webjars.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>materializecss</artifactId>
+                <version>${materializecss.webjars.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>github-com-gregra81-jqzoom</artifactId>
                 <version>${github-com-gregra81-jqzoom.webjars.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>select2</artifactId>
+                <version>${select2.webjars.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>sockjs-client</artifactId>
                 <version>${sockjsclient.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>stacktable</artifactId>
+                <version>${stacktable.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
