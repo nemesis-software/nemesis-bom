@@ -180,6 +180,7 @@
         <jquerymobile.spinbox.webjars.version>1.4.4</jquerymobile.spinbox.webjars.version>
         <jquerymobile.autocomplete.webjars.version>1.5.2-1</jquerymobile.autocomplete.webjars.version>
         <jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
+        <jqueryflipclock.webjars.version>0.7.7</jqueryflipclock.webjars.version>
         <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.51</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
@@ -713,6 +714,11 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>malsup-cycle2</artifactId>
                 <version>${jquerycycle2.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>FlipClock</artifactId>
+                <version>${jqueryflipclock.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
