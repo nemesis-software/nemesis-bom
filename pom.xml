@@ -121,7 +121,7 @@
     </distributionManagement>
 
     <properties>
-        <!--amazon.aws.sdk.version>1.11.9</amazon.aws.sdk.version-->
+        <amazon.aws.sdk.version>1.11.98</amazon.aws.sdk.version>
         <asciidoctor.version>1.5.4-NEMESIS-RELEASE</asciidoctor.version>
         <asciidoctorj.diagram.version>1.3.1</asciidoctorj.diagram.version>
         <atmosphere.version>2.2.6</atmosphere.version>
@@ -215,7 +215,7 @@
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
         <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
-        <maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
+        <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
@@ -276,7 +276,7 @@
         <stacktable.webjars.version>1.0.1</stacktable.webjars.version>
         <spring.cloud.version>Dalston.RELEASE</spring.cloud.version>
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version-->
-        <!--spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
+        <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version>
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
         <spring-social-twitter.version>1.1.3.PATCHED-2</spring-social-twitter.version>
         <supercsv.version>2.4.0</supercsv.version>
@@ -456,6 +456,22 @@
                 <version>${log4j2.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${amazon.aws.sdk.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-cloudfront</artifactId>
+                <version>${amazon.aws.sdk.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
                 <version>${jansi.version}</version>
@@ -500,13 +516,14 @@
                 <artifactId>concurrentlinkedhashmap-lru</artifactId>
                 <version>${google.concurrentlinkedhashmap.version}</version>
             </dependency>
-            <dependency>
+            <!-- WARNING: BE VERY CAREFUL WHEN YOU ADD THE SPRING-CLOUD AS IT BRINGS IT'S OWN SPRING-DATA AND SPRING-BOOT-->
+            <!--dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-parent</artifactId>
                 <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
+            </dependency-->
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
@@ -1811,26 +1828,29 @@
                         <goals>
                             <goal>enforce</goal>
                         </goals>
-                        <configuration>
-                            <rules>
-                                <requireMavenVersion>
-                                    <version>3.2.0</version>
-                                </requireMavenVersion>
-                                <bannedDependencies>
-                                    <excludes>
-                                        <!--exclude>commons-lang:commons-lang</exclude-->
-                                        <exclude>commons-logging:commons-logging</exclude>
-                                        <!--exclude>com.google.guava:guava</exclude-->
-                                        <!--exclude>com.google.code.gson:gson</exclude-->
-                                        <!--exclude>org.codehaus.jackson</exclude-->
-                                        <!--exclude>commons-collections:commons-collections</exclude-->
-                                    </excludes>
-                                </bannedDependencies>
-                            </rules>
-                            <fail>true</fail>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <rules>
+                        <!--dependencyConvergence>
+                            <uniqueVersions>true</uniqueVersions> 
+                        </dependencyConvergence-->
+                        <requireMavenVersion>
+                            <version>3.2.0</version>
+                        </requireMavenVersion>
+                        <bannedDependencies>
+                            <excludes>
+                                <!--exclude>commons-lang:commons-lang</exclude-->
+                                <exclude>commons-logging:commons-logging</exclude>
+                                <!--exclude>com.google.guava:guava</exclude-->
+                                <!--exclude>com.google.code.gson:gson</exclude-->
+                                <!--exclude>org.codehaus.jackson</exclude-->
+                                <!--exclude>commons-collections:commons-collections</exclude-->
+                            </excludes>
+                        </bannedDependencies>
+                    </rules>
+                    <fail>true</fail>
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.mojo</groupId>
@@ -1914,6 +1934,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jarsigner-plugin</artifactId>
             </plugin-->
+
         </plugins>
     </build>
 
