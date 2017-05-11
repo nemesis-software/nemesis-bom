@@ -121,7 +121,7 @@
     </distributionManagement>
 
     <properties>
-        <amazon.aws.sdk.version>1.11.9</amazon.aws.sdk.version>
+        <amazon.aws.sdk.version>1.11.98</amazon.aws.sdk.version>
         <asciidoctor.version>1.5.4-NEMESIS-RELEASE</asciidoctor.version>
         <asciidoctorj.diagram.version>1.3.1</asciidoctorj.diagram.version>
         <atmosphere.version>2.2.6</atmosphere.version>
@@ -137,7 +137,7 @@
         <compile-testing.version>0.9</compile-testing.version>
         <cybersource.version>6.1.0</cybersource.version>
         <docker.maven.plugin.version>0.4.13</docker.maven.plugin.version>
-        <drools.version>6.4.0.Final</drools.version>
+        <drools.version>6.5.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
         <failsafe.parallel/>
@@ -179,6 +179,7 @@
         <jquerymobile.spinbox.webjars.version>1.4.4</jquerymobile.spinbox.webjars.version>
         <jquerymobile.autocomplete.webjars.version>1.5.2-1</jquerymobile.autocomplete.webjars.version>
         <jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
+        <jqueryflipclock.webjars.version>0.7.7</jqueryflipclock.webjars.version>
         <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
         <jqueryform.webjars.version>3.51</jqueryform.webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
@@ -194,6 +195,7 @@
         <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
         <jqueryflowplayer.webjars.version>6.0.4</jqueryflowplayer.webjars.version>
         <magicsuggest.webjars.version>2.1.4</magicsuggest.webjars.version>
+        <materializecss.webjars.version>0.98.1</materializecss.webjars.version>
         <github-com-gregra81-jqzoom.webjars.version>1.0.1</github-com-gregra81-jqzoom.webjars.version>
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
@@ -214,7 +216,7 @@
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
         <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
-        <maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
+        <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
@@ -270,6 +272,7 @@
         <bootstrap-datepicker.webjars.version>1.6.1</bootstrap-datepicker.webjars.version>
         <bootstrap-slider.webjars.version>7.1.0</bootstrap-slider.webjars.version>
         <pace.webjars.version>1.0.2</pace.webjars.version>
+        <select2.webjars.version>4.0.3</select2.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
@@ -466,6 +469,11 @@
                 </exclusions>
             </dependency>
             <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-cloudfront</artifactId>
+                <version>${amazon.aws.sdk.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
                 <version>${jansi.version}</version>
@@ -510,6 +518,7 @@
                 <artifactId>concurrentlinkedhashmap-lru</artifactId>
                 <version>${google.concurrentlinkedhashmap.version}</version>
             </dependency>
+            <!-- WARNING: BE VERY CAREFUL WHEN YOU ADD THE SPRING-CLOUD AS IT BRINGS IT'S OWN SPRING-DATA AND SPRING-BOOT-->
             <!--dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-parent</artifactId>
@@ -708,6 +717,11 @@
                 <version>${jquerycycle2.webjars.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>FlipClock</artifactId>
+                <version>${jqueryflipclock.webjars.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-atmosphere</artifactId>
                 <version>${jqueryatmosphere.webjars.version}</version>
@@ -758,14 +772,29 @@
                 <version>${magicsuggest.webjars.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>materializecss</artifactId>
+                <version>${materializecss.webjars.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>github-com-gregra81-jqzoom</artifactId>
                 <version>${github-com-gregra81-jqzoom.webjars.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>select2</artifactId>
+                <version>${select2.webjars.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>sockjs-client</artifactId>
                 <version>${sockjsclient.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.bower</groupId>
+                <artifactId>stacktable</artifactId>
+                <version>${stacktable.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
@@ -1796,26 +1825,29 @@
                         <goals>
                             <goal>enforce</goal>
                         </goals>
-                        <configuration>
-                            <rules>
-                                <requireMavenVersion>
-                                    <version>3.2.0</version>
-                                </requireMavenVersion>
-                                <bannedDependencies>
-                                    <excludes>
-                                        <!--exclude>commons-lang:commons-lang</exclude-->
-                                        <exclude>commons-logging:commons-logging</exclude>
-                                        <!--exclude>com.google.guava:guava</exclude-->
-                                        <!--exclude>com.google.code.gson:gson</exclude-->
-                                        <!--exclude>org.codehaus.jackson</exclude-->
-                                        <!--exclude>commons-collections:commons-collections</exclude-->
-                                    </excludes>
-                                </bannedDependencies>
-                            </rules>
-                            <fail>true</fail>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <rules>
+                        <!--dependencyConvergence>
+                            <uniqueVersions>true</uniqueVersions> 
+                        </dependencyConvergence-->
+                        <requireMavenVersion>
+                            <version>3.2.0</version>
+                        </requireMavenVersion>
+                        <bannedDependencies>
+                            <excludes>
+                                <!--exclude>commons-lang:commons-lang</exclude-->
+                                <exclude>commons-logging:commons-logging</exclude>
+                                <!--exclude>com.google.guava:guava</exclude-->
+                                <!--exclude>com.google.code.gson:gson</exclude-->
+                                <!--exclude>org.codehaus.jackson</exclude-->
+                                <!--exclude>commons-collections:commons-collections</exclude-->
+                            </excludes>
+                        </bannedDependencies>
+                    </rules>
+                    <fail>true</fail>
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.mojo</groupId>
@@ -1899,6 +1931,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jarsigner-plugin</artifactId>
             </plugin-->
+
         </plugins>
     </build>
 
