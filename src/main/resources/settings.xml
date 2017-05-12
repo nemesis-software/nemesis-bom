@@ -46,6 +46,11 @@
 			<password>${env.NEMESIS_REPOSITORY_HTTP_PASSWORD}</password>
 		</server>
 		<server>
+			<id>githhub</id>
+			<username>nemesis-jenkins</username>
+			<password>${env.NEMESIS_JENKINS_GITHUB_PASSWORD}</password>
+		</server>
+		<server>
 			<id>docker-hub</id>
 			<username>nemesissoftware</username>
 			<password>${env.NEMESIS_DOCKER_HTTP_PASSWORD}</password>
