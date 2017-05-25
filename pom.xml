@@ -140,8 +140,8 @@
         <drools.version>6.5.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
-        <failsafe.parallel/>
-        <failsafe.useUnlimitedThreads/>
+        <failsafe.parallel />
+        <failsafe.useUnlimitedThreads />
         <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
@@ -162,6 +162,7 @@
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>0.10.0</jackson-datatype-money.version>
+        <money-validation.version>1.2.0</money-validation.version>
         <javauom.version>1.0</javauom.version>
         <javauom-ri.version>1.0</javauom-ri.version>
         <javaparser.version>2.2.1</javaparser.version>
@@ -274,6 +275,7 @@
         <pace.webjars.version>1.0.2</pace.webjars.version>
         <select2.webjars.version>4.0.3</select2.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
+        <stacktable.webjars.version>1.0.1</stacktable.webjars.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
@@ -907,6 +909,11 @@
                 <version>${jadira.usertype.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.jadira.usertype</groupId>
+                <artifactId>usertype.extended</artifactId>
+                <version>${jadira.usertype.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.codeborne</groupId>
                 <artifactId>phantomjsdriver</artifactId>
                 <version>${phantomjs.driver.version}</version>
@@ -985,6 +992,11 @@
                 <groupId>org.zalando</groupId>
                 <artifactId>jackson-datatype-money</artifactId>
                 <version>${jackson-datatype-money.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>money-validation</artifactId>
+                <version>${money-validation.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.measure</groupId>
@@ -1315,6 +1327,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-chat</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-faq</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
@@ -1903,7 +1920,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes/>
+                            <notes />
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -1911,7 +1928,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes/>
+                            <notes />
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
