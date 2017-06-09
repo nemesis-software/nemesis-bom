@@ -1840,6 +1840,7 @@
                         </requireMavenVersion>
                         <bannedDependencies>
                             <excludes>
+                                <!-- We can add commons-lang to the list once DATAES-283 is resolved -->
                                 <!--exclude>commons-lang:commons-lang</exclude-->
                                 <exclude>commons-logging:commons-logging</exclude>
                                 <!--exclude>com.google.guava:guava</exclude-->
