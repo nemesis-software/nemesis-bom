@@ -301,7 +301,7 @@
         <xml.apis.version>1.4.01</xml.apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
         <yubico.version>3.0.1</yubico.version>
-        <zxing.version>3.2.1</zxing.version>
+        <zxing.version>3.3.0</zxing.version>
         <w3c-nu-validator.version>15.6.29</w3c-nu-validator.version>
     </properties>
 
@@ -1412,20 +1412,10 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.nemesis.themes</groupId>
-                <artifactId>nemesis-theme-polarapparel</artifactId>
+                <groupId>com.nemesis.rules</groupId>
+                <artifactId>nemesis-rules-targeting</artifactId>
                 <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.themes</groupId>
-                <artifactId>nemesis-theme-solarapparel</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.themes</groupId>
-                <artifactId>nemesis-theme-sagan</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
+			</dependency>
             <!-- Test dependencies -->
             <dependency>
                 <groupId>net.jcip</groupId>
@@ -1856,6 +1846,7 @@
                         </requireMavenVersion>
                         <bannedDependencies>
                             <excludes>
+                                <!-- We can add commons-lang to the list once DATAES-283 is resolved -->
                                 <!--exclude>commons-lang:commons-lang</exclude-->
                                 <exclude>commons-logging:commons-logging</exclude>
                                 <!--exclude>com.google.guava:guava</exclude-->

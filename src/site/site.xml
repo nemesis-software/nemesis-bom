@@ -24,10 +24,25 @@
         <title>The Official Documentation</title>
         <href>https://docs.nemesis.io/${project.version}</href>
     </bannerRight>
+	<body>
+		<menu name="Nemesis">
+			<item name="BOM" href="bom.html">
+				<item name="About" href="bom.html"/>
+				<item name="Project Plan" href="project-plan.html"/>
+				<item name="Release Procedure" href="release.html"/>
+			</item>
+			<item name="Platform" href="/platform/" />
+			<item name="Modules" href="/platform/modules/" />
+			<item name="Maven Plugin" href="/platform/nemesis-maven-plugin/" />
+			<item name="Samplestore" href="/samplestore/" />
+			<item name="Backend Console" href="/console/" />
+			<item name="SampleApp" href="/sampleapp/" />
+		</menu>
+	</body>
 
     <skin>
         <groupId>com.nemesis.tools</groupId>
         <artifactId>nemesis-maven-skin</artifactId>
-        <version>1.4.2.RELEASE</version>
+        <version>1.4.3.BUILD-SNAPSHOT</version>
     </skin>
 </project>

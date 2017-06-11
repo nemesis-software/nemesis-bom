@@ -1,0 +1,85 @@
+++++
+<div class="home">
+	<div class="features-grid">
+		<div class="item blue">
+			<div class="media">
+				<a href="platform/"><img src="./img/icon-core.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="platform/">Platform</a></h2>
+				<p>Place for your JPA entities and spring-data-jpa repositories here</p>
+			</div>
+		</div>
+
+		<!--div class="item green">
+			<div class="media">
+				<a href="./inner.html"><img src="./img/icon-facade.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="./inner.html">Facade</a></h2>
+				<p>Here you put your Dto-s, your MapperFactoryConfigurers, and your Facades</p>
+			</div>
+		</div-->
+
+		<div class="item grey">
+			<div class="media">
+				<a href="platform/modules/"><img src="./img/icon-modules.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="platform/modules/">Modules</a></h2>
+				<p>You create custom modules for the Nemesis Platform and place them here. </p>
+			</div>
+		</div>
+
+		<div class="item yellow">
+			<div class="media">
+				<a href="platform/nemesis-maven-plugin/"><img src="./img/icon-facade.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="platform/nemesis-maven-plugin/">Maven Plugin</a></h2>
+				<p>The nemesis maven plugin.</p>
+			</div>
+		</div>
+
+		<div class="item red">
+			<div class="media">
+				<a href="samplestore/"><img src="./img/icon-storefront.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="samplestore">Samplestore</a></h2>
+				<p>This is the place where everything related to the view layer resides - JSPs, Controllers, </p>
+			</div>
+		</div>
+
+		<!--div class="item yellow">
+			<div class="media">
+				<a href="./inner.html"><img src="./img/icon-other.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="./inner.html">Other</a></h2>
+				<p>This is the place where everything related to the view layer resides - JSPs, Controllers, </p>
+			</div>
+		</div-->
+
+		<div class="item blue">
+			<div class="media">
+				<a href="console/"><img src="./img/icon-backend-console.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="console/">Backend Console</a></h2>
+				<p>The Backend console to administer your website. </p>
+			</div>
+		</div>
+
+		<div class="item green">
+			<div class="media">
+				<a href="sampleapp/"><img src="./img/icon-android.png" /></a>
+			</div>
+			<div class="content">
+				<h2><a href="sampleapp/">Android SampleApp</a></h2>
+				<p>The SampleApp android application.</p>
+			</div>
+		</div>
+	</div>
+</div>
+++++
