@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
         <version>Brussels-BUILD-SNAPSHOT</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -139,8 +140,8 @@
         <drools.version>6.5.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
@@ -211,6 +212,7 @@
         <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
         <maven-checkstyle-plugin.skip>false</maven-checkstyle-plugin.skip>
         <maven-failsafe-plugin.skip>false</maven-failsafe-plugin.skip>
+        <maven-failsafe-plugin.version>2.20</maven-failsafe-plugin.version>
         <maven-coveralls-plugin.version>3.1.0</maven-coveralls-plugin.version>
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
@@ -433,6 +435,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.nemesis.tools</groupId>
+                <artifactId>nemesis-junit-listener</artifactId>
+                <version>${nemesis.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>findbugs-annotations</artifactId>
@@ -1409,7 +1417,7 @@
                 <groupId>com.nemesis.rules</groupId>
                 <artifactId>nemesis-rules-targeting</artifactId>
                 <version>${nemesis.version}</version>
-			</dependency>
+            </dependency>
             <!-- Test dependencies -->
             <dependency>
                 <groupId>net.jcip</groupId>
@@ -1907,7 +1915,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -1915,7 +1923,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
@@ -1975,6 +1983,18 @@
     </reporting>
 
     <profiles>
+        <profile>
+            <id>fast</id>
+            <properties>
+                <maven-checkstyle-plugin.skip>true</maven-checkstyle-plugin.skip>
+                <maven.remote.resources.plugin.skip>true</maven.remote.resources.plugin.skip>
+                <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
+                <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
+                <maven-findbugs-plugin.skip>true</maven-findbugs-plugin.skip>
+                <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
+                <!--maven-compiler-test-compile.skip>true</maven-compiler-test-compile.skip-->
+            </properties>
+        </profile>
         <profile>
             <id>quick</id>
             <properties>
@@ -2113,6 +2133,12 @@
                                 <proxyHost>${proxyHost}</proxyHost>
                                 <proxyPort>${proxyPort}</proxyPort>
                             </systemPropertyVariables>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>com.nemesis.tools.junitlistener.NemesisJunitRunListener</value>
+                                </property>
+                            </properties>
                         </configuration>
                     </plugin>
                 </plugins>
