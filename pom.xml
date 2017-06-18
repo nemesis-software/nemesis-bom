@@ -1588,6 +1588,7 @@
                                 <sectanchors>true</sectanchors>
                                 <last-update-label>false</last-update-label>
                                 <language>asciidoc</language>
+                                <imagesdir>images</imagesdir>
                                 <imagesoutdir>${project.build.directory}/site/images/</imagesoutdir>
                                 <source-highlighter>coderay</source-highlighter>
                                 <coderay-css>style</coderay-css>
