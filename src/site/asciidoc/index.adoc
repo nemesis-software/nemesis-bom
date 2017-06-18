@@ -23,10 +23,10 @@
 
 		<div class="item grey">
 			<div class="media">
-				<a href="platform/modules/"><img src="./img/icon-modules.png" /></a>
+				<a href="platform/module/"><img src="./img/icon-modules.png" /></a>
 			</div>
 			<div class="content">
-				<h2><a href="platform/modules/">Modules</a></h2>
+				<h2><a href="platform/module/">Modules</a></h2>
 				<p>You create custom modules for the Nemesis Platform and place them here. </p>
 			</div>
 		</div>
