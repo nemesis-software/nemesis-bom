@@ -1060,11 +1060,6 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.nemesis.platform</groupId>
-                <artifactId>nemesis-platform-facade</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.nemesis.platform.module.cache</groupId>
                 <artifactId>nemesis-module-ehcache</artifactId>
                 <version>${nemesis.version}</version>
@@ -1429,12 +1424,6 @@
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-core</artifactId>
-                <version>${nemesis.version}</version>
-                <type>test-jar</type>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.platform</groupId>
-                <artifactId>nemesis-platform-facade</artifactId>
                 <version>${nemesis.version}</version>
                 <type>test-jar</type>
             </dependency>
