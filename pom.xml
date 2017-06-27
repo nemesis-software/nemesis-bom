@@ -2119,7 +2119,7 @@
                             <properties>
                                 <property>
                                     <name>listener</name>
-                                    <value>com.nemesis.platform.core.listener.NemesisJunitRunListener</value>
+                                    <value>com.nemesis.tools.junitlistener.NemesisJunitRunListener</value>
                                 </property>
                             </properties>
                         </configuration>
