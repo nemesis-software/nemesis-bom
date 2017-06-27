@@ -152,7 +152,7 @@
         <google-maps-services.version>0.1.17</google-maps-services.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>19.0</guava.version>
-        <hibernate.version>5.1.5.Final</hibernate.version>
+        <hibernate.version>5.1.8.Final</hibernate.version>
         <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
