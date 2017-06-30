@@ -58,6 +58,8 @@ and these steps need to be executed for every of the nemesis projects in order.
 
 == Release the tools
 
+== Release the nemesis-rules
+
 == Release the platform project
 You will need to resolve the parent bom - resolve it to just released version and set the development version - $releaseVersion)
 
