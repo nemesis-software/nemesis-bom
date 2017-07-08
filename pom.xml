@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>1.5.2.1.BUILD-SNAPSHOT</version>
+    <version>1.5.3.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -241,7 +241,7 @@
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
         <maven-plugin-api.version>3.2.2</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
-        <nemesis.version>1.5.2.1.BUILD-SNAPSHOT</nemesis.version>
+        <nemesis.version>1.5.3.BUILD-SNAPSHOT</nemesis.version>
         <opencmis.version>1.0.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
         <openpdf.version>1.0.2</openpdf.version>
