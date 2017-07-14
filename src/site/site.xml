@@ -32,7 +32,7 @@
 				<item name="Release Procedure" href="release.html"/>
 			</item>
 			<item name="Platform" href="/platform/" />
-			<item name="Modules" href="/platform/modules/" />
+			<item name="Modules" href="/platform/module/" />
 			<item name="Maven Plugin" href="/platform/nemesis-maven-plugin/" />
 			<item name="Samplestore" href="/samplestore/" />
 			<item name="Backend Console" href="/console/" />
