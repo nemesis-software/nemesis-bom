@@ -270,6 +270,7 @@
         <slick.webjars.version>1.6.0</slick.webjars.version>
         <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
         <tablesaw.webjars.version>2.0.3</tablesaw.webjars.version>
+        <tooltipster.webjars.version>4.2.5</tooltipster.webjars.version>
         <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
         <bootstrap-select.webjars.version>1.10.0</bootstrap-select.webjars.version>
         <bootstrap-datepicker.webjars.version>1.6.1</bootstrap-datepicker.webjars.version>
@@ -883,6 +884,11 @@
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>tablesaw</artifactId>
                 <version>${tablesaw.webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>tooltipster</artifactId>
+                <version>${tooltipster.webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
