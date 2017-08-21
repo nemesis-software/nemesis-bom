@@ -1388,6 +1388,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-bloglister</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-productreferences</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
