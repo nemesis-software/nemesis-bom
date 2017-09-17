@@ -201,7 +201,6 @@
         <jqueryflowplayer.webjars.version>6.0.4</jqueryflowplayer.webjars.version>
         <magicsuggest.webjars.version>2.1.4</magicsuggest.webjars.version>
         <materializecss.webjars.version>0.98.1</materializecss.webjars.version>
-        <micrometer.version>0.9.2.RELEASE</micrometer.version>
         <github-com-gregra81-jqzoom.webjars.version>1.0.1</github-com-gregra81-jqzoom.webjars.version>
         <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
@@ -484,16 +483,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <dependency>
-                <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-spring-legacy</artifactId>
-                <version>${micrometer.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-prometheus-starter</artifactId>
-                <version>${micrometer.version}</version>
-           </dependency>
             <dependency>
                 <groupId>com.amazonaws</groupId>
                 <artifactId>aws-java-sdk-cloudfront</artifactId>
@@ -1881,6 +1870,8 @@
                                 <!-- We can add commons-lang to the list once DATAES-283 is resolved -->
                                 <!--exclude>commons-lang:commons-lang</exclude-->
                                 <exclude>commons-logging:commons-logging</exclude>
+                                <exclude>c3p0:c3p0</exclude>
+                                <exclude>com.mchange:*</exclude>
                                 <!--exclude>com.google.guava:guava</exclude-->
                                 <!--exclude>com.google.code.gson:gson</exclude-->
                                 <!--exclude>org.codehaus.jackson</exclude-->
