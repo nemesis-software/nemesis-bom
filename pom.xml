@@ -1870,8 +1870,6 @@
                                 <!-- We can add commons-lang to the list once DATAES-283 is resolved -->
                                 <!--exclude>commons-lang:commons-lang</exclude-->
                                 <exclude>commons-logging:commons-logging</exclude>
-                                <exclude>c3p0:c3p0</exclude>
-                                <exclude>com.mchange:*</exclude>
                                 <!--exclude>com.google.guava:guava</exclude-->
                                 <!--exclude>com.google.code.gson:gson</exclude-->
                                 <!--exclude>org.codehaus.jackson</exclude-->
