@@ -141,8 +141,6 @@
         <doxia.version>1.7</doxia.version>
         <drools.version>6.5.0.Final</drools.version>
         <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
-        <!-- Remove when spring-boot upgrades to Elasticsearch 5.4.0 -->
-        <elasticsearch.version>5.4.0</elasticsearch.version>
         <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
         <failsafe.parallel/>
         <failsafe.useUnlimitedThreads/>
