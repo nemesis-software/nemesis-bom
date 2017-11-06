@@ -148,7 +148,7 @@
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
         <flying-saucer.version>9.1.6</flying-saucer.version>
-        <findbugs.version>3.0.1</findbugs.version>
+        <spotbugs.version>3.1.0-RC7</spotbugs.version>
         <geotools.version>15.0</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
         <google.geocoder.version>0.16</google.geocoder.version>
@@ -229,9 +229,8 @@
         <maven-project-info-reports.plugin>2.7</maven-project-info-reports.plugin>
         <maven-appassembler-plugin.version>1.8</maven-appassembler-plugin.version>
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
-        <maven-findbugs-plugin.version>3.0.1</maven-findbugs-plugin.version>
-        <maven-findbugs-plugin.skip>false</maven-findbugs-plugin.skip>
-        <maven-findbugs-plugin.skip>false</maven-findbugs-plugin.skip>
+        <maven-spotbugs-plugin.version>3.1.0-RC7</maven-spotbugs-plugin.version>
+        <maven-spotbugs-plugin.skip>false</maven-spotbugs-plugin.skip>
         <maven-pmd-plugin.version>3.6</maven-pmd-plugin.version>
         <maven-pmd-plugin.skip>false</maven-pmd-plugin.skip>
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
@@ -450,9 +449,9 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>com.google.code.findbugs</groupId>
-                <artifactId>findbugs-annotations</artifactId>
-                <version>${findbugs.version}</version>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-annotations</artifactId>
+                <version>${spotbugs.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.drools</groupId>
@@ -1678,9 +1677,9 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>findbugs-maven-plugin</artifactId>
-                    <version>${maven.findbugs.plugin.version}</version>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${maven.spotbugs.plugin.version}</version>
                     <configuration>
                         <omitVisitors>SerializableIdiom</omitVisitors>
                     </configuration>
@@ -1820,11 +1819,11 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>${maven-findbugs-plugin.version}</version>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${maven-spotbugs-plugin.version}</version>
                 <configuration>
-                    <skip>${maven-findbugs-plugin.skip}</skip>
+                    <skip>${maven-spotbugs-plugin.skip}</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -2008,7 +2007,7 @@
                 <maven.remote.resources.plugin.skip>true</maven.remote.resources.plugin.skip>
                 <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
                 <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
-                <maven-findbugs-plugin.skip>true</maven-findbugs-plugin.skip>
+                <maven-spotbugs-plugin.skip>true</maven-spotbugs-plugin.skip>
                 <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
                 <!--maven-compiler-test-compile.skip>true</maven-compiler-test-compile.skip-->
             </properties>
@@ -2020,7 +2019,7 @@
                 <maven.remote.resources.plugin.skip>true</maven.remote.resources.plugin.skip>
                 <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
                 <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
-                <maven-findbugs-plugin.skip>true</maven-findbugs-plugin.skip>
+                <maven-spotbugs-plugin.skip>true</maven-spotbugs-plugin.skip>
                 <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
                 <!--maven-compiler-test-compile.skip>true</maven-compiler-test-compile.skip-->
             </properties>

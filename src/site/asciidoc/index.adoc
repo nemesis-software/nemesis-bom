@@ -7,7 +7,7 @@
 			</div>
 			<div class="content">
 				<h2><a href="platform/">Platform</a></h2>
-				<p>Place for your JPA entities and spring-data-jpa repositories here</p>
+				<p>Place for your JPA entities and Spring Data JPA repositories here</p>
 			</div>
 		</div>
 
@@ -17,7 +17,7 @@
 			</div>
 			<div class="content">
 				<h2><a href="./inner.html">Facade</a></h2>
-				<p>Here you put your Dto-s, your MapperFactoryConfigurers, and your Facades</p>
+				<p>Here you put your Dto-s, your MapperFactoryConfigurers, and your facades</p>
 			</div>
 		</div-->
 
@@ -27,7 +27,7 @@
 			</div>
 			<div class="content">
 				<h2><a href="platform/module/">Modules</a></h2>
-				<p>You create custom modules for the Nemesis Platform and place them here. </p>
+				<p>You create custom modules for the Nemesis Platform and place them here </p>
 			</div>
 		</div>
 
@@ -37,7 +37,7 @@
 			</div>
 			<div class="content">
 				<h2><a href="platform/nemesis-maven-plugin/">Maven Plugin</a></h2>
-				<p>The nemesis maven plugin.</p>
+				<p>The Nemesis Maven Plugin</p>
 			</div>
 		</div>
 
@@ -46,8 +46,8 @@
 				<a href="samplestore/"><img src="./img/icon-storefront.png" /></a>
 			</div>
 			<div class="content">
-				<h2><a href="samplestore">Samplestore</a></h2>
-				<p>This is the place where everything related to the view layer resides - JSPs, Controllers, </p>
+				<h2><a href="samplestore">SampleStore</a></h2>
+				<p>This is the place where everything related to the view layer resides</p>
 			</div>
 		</div>
 
@@ -67,7 +67,7 @@
 			</div>
 			<div class="content">
 				<h2><a href="console/">Backend Console</a></h2>
-				<p>The Backend console to administer your website. </p>
+				<p>The Backend Console to administer your website </p>
 			</div>
 		</div>
 
@@ -77,7 +77,7 @@
 			</div>
 			<div class="content">
 				<h2><a href="sampleapp/">Android SampleApp</a></h2>
-				<p>The SampleApp android application.</p>
+				<p>The SampleApp Android application</p>
 			</div>
 		</div>
 	</div>
