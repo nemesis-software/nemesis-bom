@@ -300,7 +300,7 @@
         <thymeleaf-jawr.version>2.0.2.NEMESIS-RELEASE</thymeleaf-jawr.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
         <twilio.sdk.version>7.1.0</twilio.sdk.version>
-        <wagon.version>2.9</wagon.version>
+        <wagon.version>3.0.0</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <xml.apis.version>1.4.01</xml.apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
