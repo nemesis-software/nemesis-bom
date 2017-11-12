@@ -283,6 +283,7 @@
         <select2.webjars.version>4.0.3</select2.webjars.version>
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <stacktable.webjars.version>1.0.1</stacktable.webjars.version>
+        <spring.version>5.0.2.BUILD-SNAPSHOT</spring.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
