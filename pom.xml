@@ -270,7 +270,7 @@
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
         <slick.webjars.version>1.6.0</slick.webjars.version>
-        <!--spring.version>5.0.2.BUILD-SNAPSHOT</spring.version-->
+        <spring.version>5.0.2.BUILD-SNAPSHOT</spring.version>
         <spring-mobile.version>2.0.0.M1</spring-mobile.version>
         <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
         <tablesaw.webjars.version>2.0.3</tablesaw.webjars.version>
