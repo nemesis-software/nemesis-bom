@@ -270,9 +270,6 @@
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
         <slick.webjars.version>1.6.0</slick.webjars.version>
-        <spring.version>5.0.2.BUILD-SNAPSHOT</spring.version>
-        <spring-mobile.version>2.0.0.M1</spring-mobile.version>
-        <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
         <tablesaw.webjars.version>2.0.3</tablesaw.webjars.version>
         <tooltipster.webjars.version>4.2.5</tooltipster.webjars.version>
         <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
@@ -284,6 +281,8 @@
         <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
         <stacktable.webjars.version>1.0.1</stacktable.webjars.version>
         <spring.version>5.0.2.BUILD-SNAPSHOT</spring.version>
+        <spring-mobile.version>2.0.0.M2</spring-mobile.version>
+        <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
@@ -547,6 +546,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency-->
+            <dependency>
+                <groupId>org.springframework.mobile</groupId>
+                <artifactId>spring-mobile-starter</artifactId>
+                <version>${spring-mobile.version}</version>
+            </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
