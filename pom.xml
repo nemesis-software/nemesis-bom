@@ -151,6 +151,7 @@
         <spotbugs.version>3.1.0-RC7</spotbugs.version>
         <geotools.version>15.0</geotools.version>
         <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
+        <google-cloud-storage.version>1.0.0</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <google-maps-services.version>0.1.17</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
@@ -522,6 +523,11 @@
                 <groupId>com.sludev.commons</groupId>
                 <artifactId>vfs-azure</artifactId>
                 <version>${commons-vfs2-azure.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.celarli.commons</groupId>
+                <artifactId>vfs-gcs</artifactId>
+                <version>${google-cloud-storage.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -1125,6 +1131,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.storage</groupId>
                 <artifactId>nemesis-module-azure</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.storage</groupId>
+                <artifactId>nemesis-module-gcs</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
