@@ -121,14 +121,14 @@
     </distributionManagement>
 
     <properties>
-        <amazon.aws.sdk.version>1.11.98</amazon.aws.sdk.version>
+        <amazon-aws-sdk.version>1.11.98</amazon-aws-sdk.version>
         <asciidoctor.version>1.5.4-NEMESIS-RELEASE</asciidoctor.version>
-        <asciidoctorj.diagram.version>1.3.1</asciidoctorj.diagram.version>
+        <asciidoctorj-diagram.version>1.3.1</asciidoctorj-diagram.version>
         <atmosphere.version>2.2.6</atmosphere.version>
-        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
-        </checkstyle.violation.ignore>
+        <checkstyle-violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
+        </checkstyle-violation.ignore>
         <codemodel.version>2.8.6</codemodel.version>
-        <codemirror.webjars.version>5.1</codemirror.webjars.version>
+        <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <commons-vfs2.version>2.1.1660580.2</commons-vfs2.version>
         <commons-vfs2-s3.version>2.4.1</commons-vfs2-s3.version>
@@ -137,20 +137,20 @@
         <commons-text.version>1.1</commons-text.version>
         <compile-testing.version>0.9</compile-testing.version>
         <cybersource.version>6.1.0</cybersource.version>
-        <docker.maven.plugin.version>0.4.13</docker.maven.plugin.version>
+        <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
         <drools.version>6.5.0.Final</drools.version>
-        <ehcache.jcache.version>1.0.1</ehcache.jcache.version>
-        <extjs.webjars.version>5.1.1-light</extjs.webjars.version>
+        <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
+        <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <failsafe.parallel/>
         <failsafe.useUnlimitedThreads/>
-        <fontawesome.webjars.version>4.6.3</fontawesome.webjars.version>
+        <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
         <flying-saucer.version>9.1.6</flying-saucer.version>
         <spotbugs.version>3.1.0-RC7</spotbugs.version>
         <geotools.version>15.0</geotools.version>
-        <google.concurrentlinkedhashmap.version>1.4.2</google.concurrentlinkedhashmap.version>
+        <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.0</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <google-maps-services.version>0.1.17</google-maps-services.version>
@@ -158,10 +158,10 @@
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>23.0</guava.version>
         <!--hibernate.version>5.1.8.Final</hibernate.version-->
-        <hibernate.hydrate.version>2.3</hibernate.hydrate.version>
+        <hibernate-hydrate.version>2.3</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
-        <hazelcast.hibernate.version>1.2</hazelcast.hibernate.version>
+        <hazelcast-hibernate.version>1.2</hazelcast-hibernate.version>
         <!--infinispan.version>8.1.0.Final</infinispan.version-->
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
@@ -176,41 +176,41 @@
         <jcip.version>1.0</jcip.version>
         <jest.version>0.1.7</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
-        <jadira.usertype.version>6.0.1.GA</jadira.usertype.version>
-        <jmeter.maven.plugin.version>1.10.1</jmeter.maven.plugin.version>
-        <jquery.webjars.version>1.12.1</jquery.webjars.version>
-        <jqueryui.webjars.version>1.12.1</jqueryui.webjars.version>
-        <jquerymobile.webjars.version>1.4.5</jquerymobile.webjars.version>
-        <jquerymobile.spinbox.webjars.version>1.4.4</jquerymobile.spinbox.webjars.version>
-        <jquerymobile.autocomplete.webjars.version>1.5.2-1</jquerymobile.autocomplete.webjars.version>
-        <jquerycycle2.webjars.version>2.1.0</jquerycycle2.webjars.version>
-        <jqueryflipclock.webjars.version>0.7.7</jqueryflipclock.webjars.version>
-        <jqueryatmosphere.webjars.version>2.2.3</jqueryatmosphere.webjars.version>
-        <jqueryform.webjars.version>3.51</jqueryform.webjars.version>
+        <jadira-usertype.version>6.0.1.GA</jadira-usertype.version>
+        <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
+        <jquery-webjars.version>1.12.1</jquery-webjars.version>
+        <jqueryui-webjars.version>1.12.1</jqueryui-webjars.version>
+        <jquerymobile-webjars.version>1.4.5</jquerymobile-webjars.version>
+        <jquerymobile-spinbox-webjars.version>1.4.4</jquerymobile-spinbox-webjars.version>
+        <jquerymobile-autocomplete-webjars.version>1.5.2-1</jquerymobile-autocomplete-webjars.version>
+        <jquerycycle2-webjars.version>2.1.0</jquerycycle2-webjars.version>
+        <jqueryflipclock-webjars.version>0.7.7</jqueryflipclock-webjars.version>
+        <jqueryatmosphere-webjars.version>2.2.3</jqueryatmosphere-webjars.version>
+        <jqueryform-webjars.version>3.51</jqueryform-webjars.version>
         <jquerycookiecuttr.version>4dc24d9628</jquerycookiecuttr.version>
         <jquerycookie.version>1.4.0</jquerycookie.version>
-        <jquerycolorbox.webjars.version>1.6.4</jquerycolorbox.webjars.version>
-        <jquerypassy.webjars.version>1.0</jquerypassy.webjars.version>
-        <jquerypayment.webjars.version>1.1.4</jquerypayment.webjars.version>
-        <jqueryjcarousel.webjars.version>0.3.1</jqueryjcarousel.webjars.version>
-        <jqueryraty.webjars.version>2.5.2</jqueryraty.webjars.version>
-        <jquerychosen.webjars.version>1.3.0</jquerychosen.webjars.version>
-        <jqueryeasing.webjars.version>1.3</jqueryeasing.webjars.version>
-        <jqueryeasyzoom.webjars.version>2.2.0</jqueryeasyzoom.webjars.version>
-        <jquerysoundmanager2.webjars.version>2.97a.20131201</jquerysoundmanager2.webjars.version>
-        <jqueryflowplayer.webjars.version>6.0.4</jqueryflowplayer.webjars.version>
-        <magicsuggest.webjars.version>2.1.4</magicsuggest.webjars.version>
-        <materializecss.webjars.version>0.98.1</materializecss.webjars.version>
-        <github-com-gregra81-jqzoom.webjars.version>1.0.1</github-com-gregra81-jqzoom.webjars.version>
-        <handlebars.webjars.version>4.0.2</handlebars.webjars.version>
+        <jquerycolorbox-webjars.version>1.6.4</jquerycolorbox-webjars.version>
+        <jquerypassy-webjars.version>1.0</jquerypassy-webjars.version>
+        <jquerypayment-webjars.version>1.1.4</jquerypayment-webjars.version>
+        <jqueryjcarousel-webjars.version>0.3.1</jqueryjcarousel-webjars.version>
+        <jqueryraty-webjars.version>2.5.2</jqueryraty-webjars.version>
+        <jquerychosen-webjars.version>1.3.0</jquerychosen-webjars.version>
+        <jqueryeasing-webjars.version>1.3</jqueryeasing-webjars.version>
+        <jqueryeasyzoom-webjars.version>2.2.0</jqueryeasyzoom-webjars.version>
+        <jquerysoundmanager2-webjars.version>2.97a.20131201</jquerysoundmanager2-webjars.version>
+        <jqueryflowplayer-webjars.version>6.0.4</jqueryflowplayer-webjars.version>
+        <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
+        <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
+        <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
+        <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
         <jsoup.version>1.8.3</jsoup.version>
         <jstree.version>3.3.3</jstree.version>
-        <jstree.bootstrap.theme.version>1.0.1</jstree.bootstrap.theme.version>
+        <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <jetty.version>9.3.6.v20151106</jetty.version>
         <jedis.version>2.9.0</jedis.version>
         <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
-        <maven.filtering.version>3.1.1</maven.filtering.version>
+        <maven-filtering.version>3.1.1</maven-filtering.version>
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
         <maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
@@ -238,8 +238,8 @@
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
         <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
-        <maven.cargo.plugin>1.4.3</maven.cargo.plugin>
-        <maven.tomcat7.plugin>2.2</maven.tomcat7.plugin>
+        <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
+        <maven-tomcat7.plugin>2.2</maven-tomcat7.plugin>
         <maven-build-helper-plugin.version>1.8</maven-build-helper-plugin.version>
         <maven-plexus-plugin.version>1.5.5</maven-plexus-plugin.version>
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
@@ -251,36 +251,36 @@
         <openpdf.version>1.0.2</openpdf.version>
         <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.0</orika.version>
-        <paypal.sdk.version>2.15.121</paypal.sdk.version>
+        <paypal-sdk.version>2.15.121</paypal-sdk.version>
         <proguard.version>5.2.1</proguard.version>
-        <proguard.maven.plugin.version>2.0.11</proguard.maven.plugin.version>
-        <proguard.maven.plugin.skip>true</proguard.maven.plugin.skip>
+        <proguard-maven-plugin.version>2.0.11</proguard-maven-plugin.version>
+        <proguard-maven-plugin.skip>true</proguard-maven-plugin.skip>
         <phantomjs.version>1.9.1</phantomjs.version>
-        <phantonjs.maven.plugin.skip>false</phantonjs.maven.plugin.skip>
-        <phantomjs.maven.plugin.version>0.7</phantomjs.maven.plugin.version>
-        <phantomjs.driver.version>1.3.0</phantomjs.driver.version>
-        <project.scm.id>github</project.scm.id>
+        <phantonjs-maven-plugin.skip>false</phantonjs-maven-plugin.skip>
+        <phantomjs-maven-plugin.version>0.7</phantomjs-maven-plugin.version>
+        <phantomjs-driver.version>1.3.0</phantomjs-driver.version>
+        <project-scm.id>github</project-scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
-        <redis.embedded.version>0.6</redis.embedded.version>
-        <redis.hibernate.version>2.3.2</redis.hibernate.version>
-        <redis.quartz.version>1.1.8</redis.quartz.version>
+        <redis-embedded.version>0.6</redis-embedded.version>
+        <redis-hibernate.version>2.3.2</redis-hibernate.version>
+        <redis-quartz.version>1.1.8</redis-quartz.version>
         <riskified.version>1.0.2.1</riskified.version>
         <selenium.version>2.47.0</selenium.version>
         <smartsprites.version>0.2.12</smartsprites.version>
-        <slick.webjars.version>1.6.0</slick.webjars.version>
-        <tablesaw.webjars.version>2.0.3</tablesaw.webjars.version>
-        <tooltipster.webjars.version>4.2.5</tooltipster.webjars.version>
-        <bootstrap.webjars.version>3.3.6</bootstrap.webjars.version>
-        <bootstrap-select.webjars.version>1.10.0</bootstrap-select.webjars.version>
-        <bootstrap-datepicker.webjars.version>1.6.1</bootstrap-datepicker.webjars.version>
-        <bootstrap-slider.webjars.version>7.1.0</bootstrap-slider.webjars.version>
-        <pace.webjars.version>1.0.2</pace.webjars.version>
-        <select2.webjars.version>4.0.3</select2.webjars.version>
-        <sockjsclient.webjars.version>1.0.3</sockjsclient.webjars.version>
-        <stacktable.webjars.version>1.0.1</stacktable.webjars.version>
+        <slick-webjars.version>1.6.0</slick-webjars.version>
+        <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
+        <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
+        <bootstrap-webjars.version>3.3.6</bootstrap-webjars.version>
+        <bootstrap-select-webjars.version>1.10.0</bootstrap-select-webjars.version>
+        <bootstrap-datepicker-webjars.version>1.6.1</bootstrap-datepicker-webjars.version>
+        <bootstrap-slider-webjars.version>7.1.0</bootstrap-slider-webjars.version>
+        <pace-webjars.version>1.0.2</pace-webjars.version>
+        <select2-webjars.version>4.0.3</select2-webjars.version>
+        <sockjsclient-webjars.version>1.0.3</sockjsclient-webjars.version>
+        <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
         <spring.version>5.0.2.BUILD-SNAPSHOT</spring.version>
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
@@ -291,20 +291,20 @@
         <spring-social-twitter.version>1.1.3.PATCHED-2</spring-social-twitter.version>
         <spring-restdocs.version>1.2.0.BUILD-SNAPSHOT</spring-restdocs.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe.api.version>2.10.0</stripe.api.version>
-        <klarna.sdk.version>2.2.0</klarna.sdk.version>
-        <stompwebsocket.webjars.version>2.3.4</stompwebsocket.webjars.version>
-        <tika.parsers.version>1.13</tika.parsers.version>
+        <stripe-api.version>2.10.0</stripe-api.version>
+        <klarna-sdk.version>2.2.0</klarna-sdk.version>
+        <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
+        <tika-parsers.version>1.13</tika-parsers.version>
         <thymeleaf-layout-dialect.version>2.2.1</thymeleaf-layout-dialect.version>
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
         <thymeleaf-jawr.version>2.0.2.NEMESIS-RELEASE</thymeleaf-jawr.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
-        <twilio.sdk.version>7.1.0</twilio.sdk.version>
+        <twilio-sdk.version>7.1.0</twilio-sdk.version>
         <wagon.version>3.0.0</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
-        <xml.apis.version>1.4.01</xml.apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
+        <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
         <yubico.version>3.0.1</yubico.version>
         <zxing.version>3.3.0</zxing.version>
@@ -476,7 +476,7 @@
             <dependency>
                 <groupId>com.amazonaws</groupId>
                 <artifactId>aws-java-sdk-s3</artifactId>
-                <version>${amazon.aws.sdk.version}</version>
+                <version>${amazon-aws-sdk.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>commons-logging</groupId>
@@ -487,7 +487,7 @@
             <dependency>
                 <groupId>com.amazonaws</groupId>
                 <artifactId>aws-java-sdk-cloudfront</artifactId>
-                <version>${amazon.aws.sdk.version}</version>
+                <version>${amazon-aws-sdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.fusesource.jansi</groupId>
@@ -542,7 +542,7 @@
             <dependency>
                 <groupId>com.googlecode.concurrentlinkedhashmap</groupId>
                 <artifactId>concurrentlinkedhashmap-lru</artifactId>
-                <version>${google.concurrentlinkedhashmap.version}</version>
+                <version>${google-concurrentlinkedhashmap.version}</version>
             </dependency>
             <!-- WARNING: BE VERY CAREFUL WHEN YOU ADD THE SPRING-CLOUD AS IT BRINGS IT'S OWN SPRING-DATA AND SPRING-BOOT-->
             <!--dependency>
@@ -570,12 +570,12 @@
             <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>jcache</artifactId>
-                <version>${ehcache.jcache.version}</version>
+                <version>${ehcache-jcache.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tika</groupId>
                 <artifactId>tika-parsers</artifactId>
-                <version>${tika.parsers.version}</version>
+                <version>${tika-parsers.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.geotools</groupId>
@@ -655,12 +655,12 @@
             <dependency>
                 <groupId>com.javaetmoi.core</groupId>
                 <artifactId>javaetmoi-hibernate5-hydrate</artifactId>
-                <version>${hibernate.hydrate.version}</version>
+                <version>${hibernate-hydrate.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-hibernate5</artifactId>
-                <version>${hazelcast.hibernate.version}</version>
+                <version>${hazelcast-hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.infinispan</groupId>
@@ -720,52 +720,52 @@
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery</artifactId>
-                <version>${jquery.webjars.version}</version>
+                <version>${jquery-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-ui</artifactId>
-                <version>${jqueryui.webjars.version}</version>
+                <version>${jqueryui-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-mobile</artifactId>
-                <version>${jquerymobile.webjars.version}</version>
+                <version>${jquerymobile-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-mobile-spinbox</artifactId>
-                <version>${jquerymobile.spinbox.webjars.version}</version>
+                <version>${jquerymobile-spinbox-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jqm-autocomplete</artifactId>
-                <version>${jquerymobile.autocomplete.webjars.version}</version>
+                <version>${jquerymobile-autocomplete-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>font-awesome</artifactId>
-                <version>${fontawesome.webjars.version}</version>
+                <version>${fontawesome-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>malsup-cycle2</artifactId>
-                <version>${jquerycycle2.webjars.version}</version>
+                <version>${jquerycycle2-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>FlipClock</artifactId>
-                <version>${jqueryflipclock.webjars.version}</version>
+                <version>${jqueryflipclock-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-atmosphere</artifactId>
-                <version>${jqueryatmosphere.webjars.version}</version>
+                <version>${jqueryatmosphere-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-form</artifactId>
-                <version>${jqueryform.webjars.version}</version>
+                <version>${jqueryform-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
@@ -775,67 +775,67 @@
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-colorbox</artifactId>
-                <version>${jquerycolorbox.webjars.version}</version>
+                <version>${jquerycolorbox-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-raty</artifactId>
-                <version>${jqueryraty.webjars.version}</version>
+                <version>${jqueryraty-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>chosen</artifactId>
-                <version>${jquerychosen.webjars.version}</version>
+                <version>${jquerychosen-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-easing</artifactId>
-                <version>${jqueryeasing.webjars.version}</version>
+                <version>${jqueryeasing-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-easyzoom</artifactId>
-                <version>${jqueryeasyzoom.webjars.version}</version>
+                <version>${jqueryeasyzoom-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>flowplayer-html5</artifactId>
-                <version>${jqueryflowplayer.webjars.version}</version>
+                <version>${jqueryflowplayer-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>magicsuggest</artifactId>
-                <version>${magicsuggest.webjars.version}</version>
+                <version>${magicsuggest-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>materializecss</artifactId>
-                <version>${materializecss.webjars.version}</version>
+                <version>${materializecss-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>github-com-gregra81-jqzoom</artifactId>
-                <version>${github-com-gregra81-jqzoom.webjars.version}</version>
+                <version>${github-com-gregra81-jqzoom-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>select2</artifactId>
-                <version>${select2.webjars.version}</version>
+                <version>${select2-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>sockjs-client</artifactId>
-                <version>${sockjsclient.webjars.version}</version>
+                <version>${sockjsclient-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>stacktable</artifactId>
-                <version>${stacktable.webjars.version}</version>
+                <version>${stacktable-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>stomp-websocket</artifactId>
-                <version>${stompwebsocket.webjars.version}</version>
+                <version>${stompwebsocket-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jsoup</groupId>
@@ -890,52 +890,52 @@
             <dependency>
                 <groupId>com.github.kstyrc</groupId>
                 <artifactId>embedded-redis</artifactId>
-                <version>${redis.embedded.version}</version>
+                <version>${redis-embedded.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.debop</groupId>
                 <artifactId>hibernate-redis</artifactId>
-                <version>${redis.hibernate.version}</version>
+                <version>${redis-hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.joelinn</groupId>
                 <artifactId>quartz-redis-jobstore</artifactId>
-                <version>${redis.quartz.version}</version>
+                <version>${redis-quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>slick</artifactId>
-                <version>${slick.webjars.version}</version>
+                <version>${slick-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>tablesaw</artifactId>
-                <version>${tablesaw.webjars.version}</version>
+                <version>${tablesaw-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>tooltipster</artifactId>
-                <version>${tooltipster.webjars.version}</version>
+                <version>${tooltipster-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>bootstrap</artifactId>
-                <version>${bootstrap.webjars.version}</version>
+                <version>${bootstrap-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>bootstrap-select</artifactId>
-                <version>${bootstrap-select.webjars.version}</version>
+                <version>${bootstrap-select-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>bootstrap-datepicker</artifactId>
-                <version>${bootstrap-datepicker.webjars.version}</version>
+                <version>${bootstrap-datepicker-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>bootstrap-slider</artifactId>
-                <version>${bootstrap-slider.webjars.version}</version>
+                <version>${bootstrap-slider-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
@@ -950,17 +950,17 @@
             <dependency>
                 <groupId>org.jadira.usertype</groupId>
                 <artifactId>usertype.core</artifactId>
-                <version>${jadira.usertype.version}</version>
+                <version>${jadira-usertype.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jadira.usertype</groupId>
                 <artifactId>usertype.extended</artifactId>
-                <version>${jadira.usertype.version}</version>
+                <version>${jadira-usertype.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.codeborne</groupId>
                 <artifactId>phantomjsdriver</artifactId>
-                <version>${phantomjs.driver.version}</version>
+                <version>${phantomjs-driver.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.carrotsearch</groupId>
@@ -970,17 +970,17 @@
             <dependency>
                 <groupId>com.stripe</groupId>
                 <artifactId>stripe-java</artifactId>
-                <version>${stripe.api.version}</version>
+                <version>${stripe-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.klarna</groupId>
                 <artifactId>kco-rest</artifactId>
-                <version>${klarna.sdk.version}</version>
+                <version>${klarna-sdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.paypal.sdk</groupId>
                 <artifactId>merchantsdk</artifactId>
-                <version>${paypal.sdk.version}</version>
+                <version>${paypal-sdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cybersource</groupId>
@@ -990,12 +990,12 @@
             <dependency>
                 <groupId>com.twilio.sdk</groupId>
                 <artifactId>twilio</artifactId>
-                <version>${twilio.sdk.version}</version>
+                <version>${twilio-sdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
-                <version>${xml.apis.version}</version>
+                <version>${xml-apis.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.zxing</groupId>
@@ -1020,7 +1020,7 @@
             <dependency>
                 <groupId>org.webjars.bower</groupId>
                 <artifactId>jstree-bootstrap-theme</artifactId>
-                <version>${jstree.bootstrap.theme.version}</version>
+                <version>${jstree-bootstrap-theme.version}</version>
             </dependency>
             <dependency>
                 <groupId>xalan</groupId>
@@ -1648,7 +1648,7 @@
                         <dependency>
                             <groupId>org.asciidoctor</groupId>
                             <artifactId>asciidoctorj-diagram</artifactId>
-                            <version>${asciidoctorj.diagram.version}</version>
+                            <version>${asciidoctorj-diagram.version}</version>
                         </dependency>
                         <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
