@@ -150,6 +150,7 @@
         <flying-saucer.version>9.1.6</flying-saucer.version>
         <spotbugs.version>3.1.0-RC7</spotbugs.version>
         <geotools.version>15.0</geotools.version>
+        <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.0</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
@@ -157,6 +158,7 @@
         <gsap-js.version>1.13.1</gsap-js.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>23.0</guava.version>
+        <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <!--hibernate.version>5.1.8.Final</hibernate.version-->
         <hibernate-hydrate.version>2.3</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
@@ -166,7 +168,6 @@
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>1.0.0</jackson-datatype-money.version>
-        <money-validation.version>1.2.0</money-validation.version>
         <javauom.version>1.0</javauom.version>
         <javauom-ri.version>1.0</javauom-ri.version>
         <javaparser.version>2.2.1</javaparser.version>
@@ -199,21 +200,21 @@
         <jqueryeasyzoom-webjars.version>2.2.0</jqueryeasyzoom-webjars.version>
         <jquerysoundmanager2-webjars.version>2.97a.20131201</jquerysoundmanager2-webjars.version>
         <jqueryflowplayer-webjars.version>6.0.4</jqueryflowplayer-webjars.version>
-        <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
-        <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
-        <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
-        <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
         <jsoup.version>1.8.3</jsoup.version>
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <jetty.version>9.3.6.v20151106</jetty.version>
         <jedis.version>2.9.0</jedis.version>
+        <license-maven-plugin>1.13</license-maven-plugin>
+        <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
+        <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
         <maven-filtering.version>3.1.1</maven-filtering.version>
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
         <maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
+        <maven-jaxb2-plugin>0.13.1</maven-jaxb2-plugin>
         <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
         <maven-checkstyle-plugin.skip>false</maven-checkstyle-plugin.skip>
         <maven-failsafe-plugin.skip>false</maven-failsafe-plugin.skip>
@@ -245,6 +246,7 @@
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
+        <money-validation.version>1.2.0</money-validation.version>
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <opencmis.version>1.0.0</opencmis.version>
         <olingo-odata2.version>2.0.5</olingo-odata2.version>
@@ -252,6 +254,7 @@
         <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.0</orika.version>
         <paypal-sdk.version>2.15.121</paypal-sdk.version>
+        <paypal-rest-sdk.version>1.14.0</paypal-rest-sdk.version>
         <proguard.version>5.2.1</proguard.version>
         <proguard-maven-plugin.version>2.0.11</proguard-maven-plugin.version>
         <proguard-maven-plugin.skip>true</proguard-maven-plugin.skip>
@@ -981,6 +984,11 @@
                 <groupId>com.paypal.sdk</groupId>
                 <artifactId>merchantsdk</artifactId>
                 <version>${paypal-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.paypal.sdk</groupId>
+                <artifactId>rest-api-sdk</artifactId>
+                <version>${paypal-rest-sdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cybersource</groupId>
@@ -1734,6 +1742,21 @@
                     <configuration>
                         <archetypePostPhase>install</archetypePostPhase>
                     </configuration>
+                </plugin>
+                <plugin>
+                   <groupId>com.github.wvengen</groupId>
+                   <artifactId>proguard-maven-plugin</artifactId>
+                   <version>${proguard-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                   <groupId>org.codehaus.mojo</groupId>
+                   <artifactId>license-maven-plugin</artifactId>
+                   <version>${license-maven-plugin}</version>
+                </plugin>
+                <plugin>
+                   <groupId>org.jvnet.jaxb2.maven2</groupId>
+                   <artifactId>maven-jaxb2-plugin</artifactId>
+                   <version>0.13.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>
