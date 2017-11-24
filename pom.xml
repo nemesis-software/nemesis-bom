@@ -663,7 +663,7 @@
             </dependency>
             <dependency>
                 <groupId>com.hazelcast</groupId>
-                <artifactId>hazelcast-hibernate5</artifactId>
+                <artifactId>hazelcast-hibernate52</artifactId>
                 <version>${hazelcast-hibernate.version}</version>
             </dependency>
             <dependency>
@@ -1130,6 +1130,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.cache</groupId>
                 <artifactId>nemesis-module-ehcache</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.cache</groupId>
+                <artifactId>nemesis-module-jcs</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
