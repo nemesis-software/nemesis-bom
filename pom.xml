@@ -121,25 +121,25 @@
     </distributionManagement>
 
     <properties>
-        <amazon-aws-sdk.version>1.11.98</amazon-aws-sdk.version>
+        <amazon-aws-sdk.version>1.11.235</amazon-aws-sdk.version>
         <asciidoctor.version>1.5.4-NEMESIS-RELEASE</asciidoctor.version>
         <asciidoctorj-diagram.version>1.3.1</asciidoctorj-diagram.version>
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
         </checkstyle.violation.ignore>
-        <codemodel.version>2.8.6</codemodel.version>
+        <codemodel.version>3.0.1</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <commons-vfs2.version>2.1.1660580.2</commons-vfs2.version>
-        <commons-vfs2-s3.version>2.4.1</commons-vfs2-s3.version>
+        <commons-vfs2-s3.version>2.4.2</commons-vfs2-s3.version>
         <commons-vfs2-azure.version>1.2.patched</commons-vfs2-azure.version>
-        <commons-jcs.version>2.0-beta-1</commons-jcs.version>
+        <commons-jcs.version>2.2</commons-jcs.version>
         <commons-text.version>1.1</commons-text.version>
-        <compile-testing.version>0.9</compile-testing.version>
-        <cybersource.version>6.1.0</cybersource.version>
+        <compile-testing.version>0.13</compile-testing.version>
+        <cybersource.version>6.2.5</cybersource.version>
         <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
-        <drools.version>6.5.0.Final</drools.version>
+        <drools.version>7.2.0.Final</drools.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <failsafe.parallel/>
@@ -148,8 +148,8 @@
         <!-- Remove when https://github.com/spring-projects/spring-boot/issues/5296 is done -->
         <flyway.version>4.0.3</flyway.version>
         <flying-saucer.version>9.1.6</flying-saucer.version>
-        <spotbugs.version>3.1.0-RC7</spotbugs.version>
-        <geotools.version>15.0</geotools.version>
+        <spotbugs.version>3.1.0</spotbugs.version>
+        <geotools.version>18.1</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.0</google-cloud-storage.version>
@@ -160,22 +160,22 @@
         <guava.version>23.0</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <!--hibernate.version>5.1.8.Final</hibernate.version-->
-        <hibernate-hydrate.version>2.3</hibernate-hydrate.version>
+        <hibernate-hydrate.version>5.2.0</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
-        <hazelcast-hibernate.version>1.2</hazelcast-hibernate.version>
+        <hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version>
         <!--infinispan.version>8.1.0.Final</infinispan.version-->
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>1.0.0</jackson-datatype-money.version>
         <javauom.version>1.0</javauom.version>
-        <javauom-ri.version>1.0</javauom-ri.version>
-        <javaparser.version>2.2.1</javaparser.version>
+        <javauom-ri.version>1.0.3</javauom-ri.version>
+        <javaparser.version>3.5.4</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
-        <jansi.version>1.12</jansi.version>
+        <jansi.version>1.16</jansi.version>
         <jawr.version>3.11.NEMESIS-RELEASE</jawr.version>
         <jcip.version>1.0</jcip.version>
-        <jest.version>0.1.7</jest.version>
+        <jest.version>5.3.3</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
         <jadira-usertype.version>6.0.1.GA</jadira-usertype.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
@@ -200,8 +200,8 @@
         <jqueryeasyzoom-webjars.version>2.2.0</jqueryeasyzoom-webjars.version>
         <jquerysoundmanager2-webjars.version>2.97a.20131201</jquerysoundmanager2-webjars.version>
         <jqueryflowplayer-webjars.version>6.0.4</jqueryflowplayer-webjars.version>
-        <jsitemapgenerator.version>2.1</jsitemapgenerator.version>
-        <jsoup.version>1.8.3</jsoup.version>
+        <jsitemapgenerator.version>2.2</jsitemapgenerator.version>
+        <jsoup.version>1.11.2</jsoup.version>
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <jetty.version>9.3.6.v20151106</jetty.version>
@@ -214,7 +214,6 @@
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
         <maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
-        <maven-jaxb2-plugin>0.13.1</maven-jaxb2-plugin>
         <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
         <maven-checkstyle-plugin.skip>false</maven-checkstyle-plugin.skip>
         <maven-failsafe-plugin.skip>false</maven-failsafe-plugin.skip>
@@ -223,6 +222,7 @@
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
         <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
+        <maven-jaxb2-plugin.version>0.13.1</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
@@ -238,7 +238,7 @@
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
-        <maven.extraenforcer.version>1.0-beta-2</maven.extraenforcer.version>
+        <maven-extraenforcer.version>1.0-beta-2</maven-extraenforcer.version>
         <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
         <maven-tomcat7.plugin>2.2</maven-tomcat7.plugin>
         <maven-build-helper-plugin.version>1.8</maven-build-helper-plugin.version>
@@ -246,14 +246,14 @@
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
-        <money-validation.version>1.2.0</money-validation.version>
+        <money-validation.version>2.0.0</money-validation.version>
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
-        <opencmis.version>1.0.0</opencmis.version>
-        <olingo-odata2.version>2.0.5</olingo-odata2.version>
-        <openpdf.version>1.0.2</openpdf.version>
+        <opencmis.version>1.1.0</opencmis.version>
+        <olingo-odata2.version>2.0.9</olingo-odata2.version>
+        <openpdf.version>1.0.5</openpdf.version>
         <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.0</orika.version>
-        <paypal-sdk.version>2.15.121</paypal-sdk.version>
+        <paypal-sdk.version>2.15.122</paypal-sdk.version>
         <paypal-rest-sdk.version>1.14.0</paypal-rest-sdk.version>
         <proguard.version>5.2.1</proguard.version>
         <proguard-maven-plugin.version>2.0.11</proguard-maven-plugin.version>
@@ -261,18 +261,19 @@
         <phantomjs.version>1.9.1</phantomjs.version>
         <phantonjs-maven-plugin.skip>false</phantonjs-maven-plugin.skip>
         <phantomjs-maven-plugin.version>0.7</phantomjs-maven-plugin.version>
-        <phantomjs-driver.version>1.3.0</phantomjs-driver.version>
+        <phantomjs-driver.version>1.4.3</phantomjs-driver.version>
         <project-scm.id>github</project-scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.10</reflections.version>
         <redis-embedded.version>0.6</redis-embedded.version>
-        <redis-hibernate.version>2.3.2</redis-hibernate.version>
-        <redis-quartz.version>1.1.8</redis-quartz.version>
-        <riskified.version>1.0.2.1</riskified.version>
-        <selenium.version>2.47.0</selenium.version>
-        <smartsprites.version>0.2.12</smartsprites.version>
+        <redis-hibernate.version>2.4.0</redis-hibernate.version>
+        <redis-quartz.version>1.1.9</redis-quartz.version>
+        <riskified.version>1.0.7</riskified.version>
+        <selenium.version>3.7.1</selenium.version>
+        <selenium-htmlunit.version>2.28.1</selenium-htmlunit.version>
+        <smartsprites.version>0.2.13</smartsprites.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
         <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
         <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
@@ -294,24 +295,24 @@
         <spring-social-twitter.version>1.1.3.PATCHED-2</spring-social-twitter.version>
         <spring-restdocs.version>1.2.0.BUILD-SNAPSHOT</spring-restdocs.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe-api.version>2.10.0</stripe-api.version>
-        <klarna-sdk.version>2.2.0</klarna-sdk.version>
+        <stripe-api.version>5.23.1</stripe-api.version>
+        <klarna-sdk.version>2.2.1</klarna-sdk.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
         <tika-parsers.version>1.13</tika-parsers.version>
-        <thymeleaf-layout-dialect.version>2.2.1</thymeleaf-layout-dialect.version>
+        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
         <thymeleaf-jawr.version>2.0.2.NEMESIS-RELEASE</thymeleaf-jawr.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
-        <twilio-sdk.version>7.1.0</twilio-sdk.version>
+        <twilio-sdk.version>7.16.0</twilio-sdk.version>
         <wagon.version>3.0.0</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
+        <w3c-nu-validator.version>15.6.29</w3c-nu-validator.version>
         <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
         <yubico.version>3.0.1</yubico.version>
-        <zxing.version>3.3.0</zxing.version>
-        <w3c-nu-validator.version>15.6.29</w3c-nu-validator.version>
+        <zxing.version>3.3.1</zxing.version>
     </properties>
 
     <repositories>
@@ -739,6 +740,26 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-mobile-spinbox</artifactId>
                 <version>${jquerymobile-spinbox-webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery-passy</artifactId>
+                <version>${jquerypassy-webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery-payment</artifactId>
+                <version>${jquerypayment-webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>handlebars</artifactId>
+                <version>${handlebars-webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>pace</artifactId>
+                <version>${pace-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
@@ -1433,6 +1454,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-productshowcase</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-productreferences</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -1481,6 +1507,23 @@
                 <groupId>net.jcip</groupId>
                 <artifactId>jcip-annotations</artifactId>
                 <version>${jcip.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>nu.validator</groupId>
+                <artifactId>validator</artifactId>
+                <version>${w3c-nu-validator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>htmlunit-driver</artifactId>
+                <version>${selenium-htmlunit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -1710,7 +1753,7 @@
                 <plugin>
                     <groupId>com.github.spotbugs</groupId>
                     <artifactId>spotbugs-maven-plugin</artifactId>
-                    <version>${maven.spotbugs.plugin.version}</version>
+                    <version>${maven-spotbugs-plugin.version}</version>
                     <configuration>
                         <omitVisitors>SerializableIdiom</omitVisitors>
                     </configuration>
@@ -1756,7 +1799,22 @@
                 <plugin>
                    <groupId>org.jvnet.jaxb2.maven2</groupId>
                    <artifactId>maven-jaxb2-plugin</artifactId>
-                   <version>0.13.1</version>
+                   <version>${maven-jaxb2-plugin.version}</version>
+                </plugin>
+                <plugin>
+                   <groupId>com.spotify</groupId>
+                   <artifactId>docker-maven-plugin</artifactId>
+                   <version>${docker-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                   <groupId>com.lazerycode.jmeter</groupId>
+                   <artifactId>jmeter-maven-plugin</artifactId>
+                   <version>${jmeter-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                   <groupId>com.nemesis</groupId>
+                   <artifactId>nemesis-maven-plugin</artifactId>
+                   <version>${nemesis.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -1766,7 +1824,7 @@
                 <artifactId>maven-remote-resources-plugin</artifactId>
                 <version>${maven-remote-resources-plugin.version}</version>
                 <configuration>
-                    <skip>${maven.remote.resources.plugin.skip}</skip>
+                    <skip>${maven-remote-resources-plugin.skip}</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -1789,7 +1847,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <skip>${maven.surefire.plugin.skip}</skip>
+                    <skip>${maven-surefire-plugin.skip}</skip>
                     <argLine>${surefireArgLine}</argLine>
                     <trimStackTrace>false</trimStackTrace>
                     <parallel>methods</parallel>
@@ -1934,7 +1992,7 @@
                     <dependency>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>extra-enforcer-rules</artifactId>
-                        <version>${maven.extraenforcer.version}</version>
+                        <version>${maven-extraenforcer.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -2050,8 +2108,8 @@
             <id>fast</id>
             <properties>
                 <maven-checkstyle-plugin.skip>true</maven-checkstyle-plugin.skip>
-                <maven.remote.resources.plugin.skip>true</maven.remote.resources.plugin.skip>
-                <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
+                <maven-remote-resources-plugin.skip>true</maven-remote-resources-plugin.skip>
+                <maven-surefire-plugin.skip>true</maven-surefire-plugin.skip>
                 <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
                 <maven-spotbugs-plugin.skip>true</maven-spotbugs-plugin.skip>
                 <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
@@ -2062,8 +2120,8 @@
             <id>quick</id>
             <properties>
                 <maven-checkstyle-plugin.skip>true</maven-checkstyle-plugin.skip>
-                <maven.remote.resources.plugin.skip>true</maven.remote.resources.plugin.skip>
-                <maven.surefire.plugin.skip>true</maven.surefire.plugin.skip>
+                <maven-remote-resources-plugin.skip>true</maven-remote-resources-plugin.skip>
+                <maven-surefire-plugin.skip>true</maven-surefire-plugin.skip>
                 <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
                 <maven-spotbugs-plugin.skip>true</maven-spotbugs-plugin.skip>
                 <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
