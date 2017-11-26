@@ -212,6 +212,7 @@
         <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
         <maven-filtering.version>3.1.1</maven-filtering.version>
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
+        <maven-artifact-manager.version>2.2.1</maven-artifact-manager.version>
         <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
         <maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
         <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
