@@ -293,7 +293,9 @@
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
-        <spring-social-twitter.version>1.1.3.PATCHED-2</spring-social-twitter.version>
+        <spring-social.version>2.0.0.BUILD-SNAPSHOT</spring-social.version>
+        <spring-social-twitter.version>2.0.0.BUILD-SNAPSHOT</spring-social-twitter.version>
+        <spring-social-facebook.version>3.0.0.BUILD-SNAPSHOT</spring-social-facebook.version>
         <spring-restdocs.version>1.2.0.BUILD-SNAPSHOT</spring-restdocs.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe-api.version>5.23.1</stripe-api.version>
@@ -561,6 +563,31 @@
                 <groupId>org.springframework.mobile</groupId>
                 <artifactId>spring-mobile-starter</artifactId>
                 <version>${spring-mobile.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-autoconfigure</artifactId>
+                <version>${spring-social.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-facebook</artifactId>
+                <version>${spring-social-facebook.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-facebook-autoconfigure</artifactId>
+                <version>${spring-social-facebook.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-twitter-autoconfigure</artifactId>
+                <version>${spring-social-twitter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-facebook-web</artifactId>
+                <version>${spring-social-facebook.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
