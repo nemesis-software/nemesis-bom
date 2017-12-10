@@ -253,7 +253,7 @@
         <olingo-odata2.version>2.0.9</olingo-odata2.version>
         <openpdf.version>1.0.5</openpdf.version>
         <oracle.version>12.2.0.1</oracle.version>
-        <orika.version>1.5.0</orika.version>
+        <orika.version>1.5.0-nemesis</orika.version>
         <paypal-sdk.version>2.15.122</paypal-sdk.version>
         <paypal-rest-sdk.version>1.14.0</paypal-rest-sdk.version>
         <proguard.version>5.2.1</proguard.version>
