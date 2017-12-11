@@ -925,6 +925,11 @@
                 <version>${orika.version}</version>
             </dependency>
             <dependency>
+                <groupId>ma.glasnost.orika</groupId>
+                <artifactId>orika-eclipse-tools</artifactId>
+                <version>${orika.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>net.tanesha.recaptcha4j</groupId>
                 <artifactId>recaptcha4j</artifactId>
                 <version>${recaptcha4j.version}</version>
@@ -2260,6 +2265,11 @@
                             <!--argLine>${failsafeArgLine}</argLine-->
                             <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
                                 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
+<!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
+                                -Dma.glasnost.orika.writeSourceFiles=true
+                                -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
+                                -Dma.glasnost.orika.writeClassFiles=true
+                                -Dma.glasnost.orika.writeClassFilesToPath=/home/petar/orikaGenerated/bin/   -->
                             </argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
