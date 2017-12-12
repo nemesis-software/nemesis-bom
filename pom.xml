@@ -159,6 +159,7 @@
         <guava.version>23.0</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <!--hibernate.version>5.1.8.Final</hibernate.version-->
+        <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.0</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
@@ -475,6 +476,13 @@
                 <artifactId>jbpm-bom</artifactId>
                 <type>pom</type>
                 <version>${kie.version}</version>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.ogm</groupId>
+                <artifactId>hibernate-ogm-bom</artifactId>
+                <type>pom</type>
+                <version>${hibernate.ogm.version}</version>
                 <scope>import</scope>
             </dependency>
             <dependency>
