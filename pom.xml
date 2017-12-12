@@ -139,7 +139,6 @@
         <cybersource.version>6.2.5</cybersource.version>
         <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
-        <drools.version>7.2.0.Final</drools.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <failsafe.parallel/>
@@ -207,6 +206,7 @@
         <jetty.version>9.3.6.v20151106</jetty.version>
         <jedis.version>2.9.0</jedis.version>
         <license-maven-plugin>1.13</license-maven-plugin>
+        <kie.version>7.2.0.Final</kie.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
@@ -467,7 +467,14 @@
                 <groupId>org.drools</groupId>
                 <artifactId>drools-bom</artifactId>
                 <type>pom</type>
-                <version>${drools.version}</version>
+                <version>${kie.version}</version>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jbpm</groupId>
+                <artifactId>jbpm-bom</artifactId>
+                <type>pom</type>
+                <version>${kie.version}</version>
                 <scope>import</scope>
             </dependency>
             <dependency>
@@ -700,14 +707,14 @@
                 <version>${infinispan.version}</version>
             </dependency>
             <dependency>
-               <groupId>com.github.librepdf</groupId>
-               <artifactId>openpdf</artifactId>
-               <version>${openpdf.version}</version>
+                <groupId>com.github.librepdf</groupId>
+                <artifactId>openpdf</artifactId>
+                <version>${openpdf.version}</version>
             </dependency>
             <dependency>
-               <groupId>org.xhtmlrenderer</groupId>
-               <artifactId>flying-saucer-pdf</artifactId>
-               <version>${flying-saucer.version}</version>
+                <groupId>org.xhtmlrenderer</groupId>
+                <artifactId>flying-saucer-pdf</artifactId>
+                <version>${flying-saucer.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.javaparser</groupId>
@@ -1820,34 +1827,34 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                   <groupId>com.github.wvengen</groupId>
-                   <artifactId>proguard-maven-plugin</artifactId>
-                   <version>${proguard-maven-plugin.version}</version>
+                    <groupId>com.github.wvengen</groupId>
+                    <artifactId>proguard-maven-plugin</artifactId>
+                    <version>${proguard-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
-                   <groupId>org.codehaus.mojo</groupId>
-                   <artifactId>license-maven-plugin</artifactId>
-                   <version>${license-maven-plugin}</version>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>${license-maven-plugin}</version>
                 </plugin>
                 <plugin>
-                   <groupId>org.jvnet.jaxb2.maven2</groupId>
-                   <artifactId>maven-jaxb2-plugin</artifactId>
-                   <version>${maven-jaxb2-plugin.version}</version>
+                    <groupId>org.jvnet.jaxb2.maven2</groupId>
+                    <artifactId>maven-jaxb2-plugin</artifactId>
+                    <version>${maven-jaxb2-plugin.version}</version>
                 </plugin>
                 <plugin>
-                   <groupId>com.spotify</groupId>
-                   <artifactId>docker-maven-plugin</artifactId>
-                   <version>${docker-maven-plugin.version}</version>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
-                   <groupId>com.lazerycode.jmeter</groupId>
-                   <artifactId>jmeter-maven-plugin</artifactId>
-                   <version>${jmeter-maven-plugin.version}</version>
+                    <groupId>com.lazerycode.jmeter</groupId>
+                    <artifactId>jmeter-maven-plugin</artifactId>
+                    <version>${jmeter-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
-                   <groupId>com.nemesis</groupId>
-                   <artifactId>nemesis-maven-plugin</artifactId>
-                   <version>${nemesis.version}</version>
+                    <groupId>com.nemesis</groupId>
+                    <artifactId>nemesis-maven-plugin</artifactId>
+                    <version>${nemesis.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -2265,11 +2272,11 @@
                             <!--argLine>${failsafeArgLine}</argLine-->
                             <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
                                 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
-<!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
-                                -Dma.glasnost.orika.writeSourceFiles=true
-                                -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
-                                -Dma.glasnost.orika.writeClassFiles=true
-                                -Dma.glasnost.orika.writeClassFilesToPath=/home/petar/orikaGenerated/bin/   -->
+                                <!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
+                                                                -Dma.glasnost.orika.writeSourceFiles=true
+                                                                -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
+                                                                -Dma.glasnost.orika.writeClassFiles=true
+                                                                -Dma.glasnost.orika.writeClassFilesToPath=/home/petar/orikaGenerated/bin/   -->
                             </argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
