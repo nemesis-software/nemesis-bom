@@ -478,13 +478,13 @@
                 <version>${kie.version}</version>
                 <scope>import</scope>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>org.hibernate.ogm</groupId>
                 <artifactId>hibernate-ogm-bom</artifactId>
                 <type>pom</type>
                 <version>${hibernate.ogm.version}</version>
                 <scope>import</scope>
-            </dependency>
+            </dependency-->
             <dependency>
                 <groupId>com.helger</groupId>
                 <artifactId>jcodemodel</artifactId>
