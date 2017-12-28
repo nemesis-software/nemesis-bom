@@ -1372,6 +1372,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-taxonomy</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-bundle</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -1604,6 +1609,13 @@
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-commerce</artifactId>
+                <version>${nemesis.version}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-taxonomy</artifactId>
                 <version>${nemesis.version}</version>
                 <type>test-jar</type>
                 <scope>test</scope>
