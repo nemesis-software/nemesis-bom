@@ -204,7 +204,7 @@
         <jsoup.version>1.11.2</jsoup.version>
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
-        <jetty.version>9.3.6.v20151106</jetty.version>
+        <!--jetty.version>9.3.6.v20151106</jetty.version-->
         <jedis.version>2.9.0</jedis.version>
         <license-maven-plugin>1.13</license-maven-plugin>
         <kie.version>7.2.0.Final</kie.version>
