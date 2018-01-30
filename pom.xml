@@ -1361,11 +1361,6 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
-                <artifactId>nemesis-module-classification</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-commerce</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
