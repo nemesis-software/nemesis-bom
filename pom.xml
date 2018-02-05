@@ -297,6 +297,7 @@
         <spring-social-twitter.version>2.0.0.BUILD-SNAPSHOT</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.BUILD-SNAPSHOT</spring-social-facebook.version>
         <spring-restdocs.version>1.2.0.BUILD-SNAPSHOT</spring-restdocs.version>
+        <junit-vintage-engine.version>5.1.0-M2</junit-vintage-engine.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe-api.version>5.23.1</stripe-api.version>
         <klarna-sdk.version>2.2.1</klarna-sdk.version>
@@ -1900,6 +1901,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.0.3</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.junit.vintage</groupId>
+                        <artifactId>junit-vintage-engine</artifactId>
+                        <version>${junit-vintage-engine.version}</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <skip>${maven-surefire-plugin.skip}</skip>
                     <argLine>${surefireArgLine}</argLine>
