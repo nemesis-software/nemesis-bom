@@ -137,6 +137,10 @@
         <commons-text.version>1.1</commons-text.version>
         <compile-testing.version>0.13</compile-testing.version>
         <cybersource.version>6.2.5</cybersource.version>
+        <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
+        <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
+        <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
+        <cxf.xjc.jvmArgs></cxf.xjc.jvmArgs>
         <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
@@ -223,13 +227,13 @@
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
         <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
-        <maven-jaxb2-plugin.version>0.13.1</maven-jaxb2-plugin.version>
+        <maven-jaxb2-plugin.version>0.13.4-SNAPSHOT</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
         <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
-        <maven-project-info-reports.plugin>2.7</maven-project-info-reports.plugin>
+        <maven-project-info-reports.plugin>2.9</maven-project-info-reports.plugin>
         <maven-appassembler-plugin.version>1.8</maven-appassembler-plugin.version>
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
         <maven-spotbugs-plugin.version>3.1.0-RC7</maven-spotbugs-plugin.version>
@@ -238,6 +242,8 @@
         <maven-pmd-plugin.skip>false</maven-pmd-plugin.skip>
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
+        <maven-surefire-plugin.skip>false</maven-surefire-plugin.skip>
+        <maven-remote-resources-plugin.skip>false</maven-remote-resources-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
         <maven-extraenforcer.version>1.0-beta-2</maven-extraenforcer.version>
         <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
@@ -288,6 +294,7 @@
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
+        <spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
@@ -1856,8 +1863,23 @@
                 </plugin>
                 <plugin>
                     <groupId>org.jvnet.jaxb2.maven2</groupId>
-                    <artifactId>maven-jaxb2-plugin</artifactId>
+                    <artifactId>maven-jaxb22-plugin</artifactId>
                     <version>${maven-jaxb2-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>jaxb2-maven-plugin</artifactId>
+                    <version>2.3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-xjc-plugin</artifactId>
+                    <version>${cxf-xjc-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-codegen-plugin</artifactId>
+                    <version>${cxf-codegen-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>com.spotify</groupId>
@@ -1968,6 +1990,7 @@
                         <excludeRoot>${project.build.directory}/generated-sources/modello</excludeRoot>
                         <excludeRoot>${project.build.directory}/generated-sources/plugin</excludeRoot>
                         <excludeRoot>${project.build.directory}/generated-sources/annotations</excludeRoot>
+                        <excludeRoot>${project.build.directory}/generated-sources/cxf</excludeRoot>
                     </excludeRoots>
                 </configuration>
                 <executions>
