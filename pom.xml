@@ -289,6 +289,7 @@
         <spring.version>5.0.2.BUILD-SNAPSHOT</spring.version>
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
+        <spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version>
         <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version>
         <spring-data-releasetrain.version>Ingalls-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
