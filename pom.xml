@@ -239,7 +239,7 @@
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
-        <maven-extraenforcer.version>1.0-beta-2</maven-extraenforcer.version>
+        <maven-extraenforcer.version>1.0-beta-8-SNAPSHOT</maven-extraenforcer.version>
         <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
         <maven-tomcat7.plugin>2.2</maven-tomcat7.plugin>
         <maven-build-helper-plugin.version>1.8</maven-build-helper-plugin.version>
@@ -1187,6 +1187,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.cache</groupId>
+                <artifactId>nemesis-module-gemfire</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.cache</groupId>
                 <artifactId>nemesis-module-infinispan</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -2025,7 +2030,7 @@
                 <version>${maven-enforcer-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>enforce-bytecode-version</id>
+                        <id>enforce-stuff</id>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
@@ -2034,22 +2039,23 @@
                 <configuration>
                     <rules>
                         <!--dependencyConvergence>
-                            <uniqueVersions>true</uniqueVersions> 
+                            <uniqueVersions>true</uniqueVersions>
                         </dependencyConvergence-->
                         <requireMavenVersion>
                             <version>3.2.0</version>
                         </requireMavenVersion>
                         <bannedDependencies>
                             <excludes>
-                                <!-- We can add commons-lang to the list once DATAES-283 is resolved -->
+                                <!-- We can add commons-lang to the list once DATAES-283 and GEODE-4706 is resolved -->
                                 <!--exclude>commons-lang:commons-lang</exclude-->
                                 <exclude>commons-logging:commons-logging</exclude>
                                 <exclude>com.mchange:*</exclude>
                                 <exclude>c3p0:*</exclude>
                                 <!--exclude>com.google.guava:guava</exclude-->
                                 <!--exclude>com.google.code.gson:gson</exclude-->
+                                <!-- Waiting on: https://issues.jboss.org/browse/JBPM-6850 -->
                                 <!--exclude>org.codehaus.jackson</exclude-->
-                                <!--exclude>commons-collections:commons-collections</exclude-->
+                                <exclude>commons-collections:commons-collections</exclude>
                             </excludes>
                         </bannedDependencies>
                     </rules>
