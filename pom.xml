@@ -2055,7 +2055,8 @@
                                 <!--exclude>com.google.code.gson:gson</exclude-->
                                 <!-- Waiting on: https://issues.jboss.org/browse/JBPM-6850 -->
                                 <!--exclude>org.codehaus.jackson</exclude-->
-                                <exclude>commons-collections:commons-collections</exclude>
+                                <!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-507 -->
+                                <!--exclude>commons-collections:commons-collections</exclude-->
                             </excludes>
                         </bannedDependencies>
                     </rules>
