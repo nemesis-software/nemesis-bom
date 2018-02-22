@@ -239,7 +239,7 @@
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
-        <maven-extraenforcer.version>1.0-beta-8-SNAPSHOT</maven-extraenforcer.version>
+        <maven-extraenforcer.version>1.0-beta-7</maven-extraenforcer.version>
         <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
         <maven-tomcat7.plugin>2.2</maven-tomcat7.plugin>
         <maven-build-helper-plugin.version>1.8</maven-build-helper-plugin.version>
