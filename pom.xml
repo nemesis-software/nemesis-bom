@@ -158,7 +158,7 @@
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>23.0</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
-        <!--hibernate.version>5.1.8.Final</hibernate.version-->
+        <hibernate.version>5.2.13.Final</hibernate.version>
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.0</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
@@ -297,7 +297,8 @@
         <spring-social-twitter.version>2.0.0.BUILD-SNAPSHOT</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.BUILD-SNAPSHOT</spring-social-facebook.version>
         <spring-restdocs.version>1.2.0.BUILD-SNAPSHOT</spring-restdocs.version>
-        <junit-vintage-engine.version>5.1.0-M2</junit-vintage-engine.version>
+        <junit-vintage-engine.version>5.1.0</junit-vintage-engine.version>
+        <junit-surefire-provider.version>1.1.0</junit-surefire-provider.version>
         <supercsv.version>2.4.0</supercsv.version>
         <stripe-api.version>5.23.1</stripe-api.version>
         <klarna-sdk.version>2.2.1</klarna-sdk.version>
@@ -457,6 +458,12 @@
                 <groupId>com.nemesis.tools</groupId>
                 <artifactId>nemesis-junit-listener</artifactId>
                 <version>${nemesis.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
+                <version>${junit-vintage-engine.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -1906,18 +1913,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.0.3</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.junit.vintage</groupId>
-                        <artifactId>junit-vintage-engine</artifactId>
-                        <version>${junit-vintage-engine.version}</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <skip>${maven-surefire-plugin.skip}</skip>
                     <argLine>${surefireArgLine}</argLine>
