@@ -1574,6 +1574,22 @@
                 <artifactId>nemesis-rules-targeting</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.bpm</groupId>
+                <artifactId>nemesis-module-activiti</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.bpm</groupId>
+                <artifactId>nemesis-module-camunda</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.bpm</groupId>
+                <artifactId>nemesis-module-commonbpmn</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            
             <!-- Test dependencies -->
             <dependency>
                 <groupId>net.jcip</groupId>
