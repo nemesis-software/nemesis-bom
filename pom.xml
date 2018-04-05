@@ -258,6 +258,7 @@
         <nemesis.version>2.0.0.BUILD-SNAPSHOT</nemesis.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.9</olingo-odata2.version>
+        <olingo-odata4.version>4.4.0</olingo-odata4.version>
         <openpdf.version>1.0.5</openpdf.version>
         <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.3-nemesis</orika.version>
@@ -1162,6 +1163,16 @@
                         <artifactId>gson</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.olingo</groupId>
+                <artifactId>odata-server-api</artifactId>
+                <version>${olingo-odata4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.olingo</groupId>
+                <artifactId>odata-server-core</artifactId>
+                <version>${olingo-odata4.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.testing.compile</groupId>
