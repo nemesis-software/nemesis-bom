@@ -144,6 +144,7 @@
         <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
+        <elasticsearch-client-webjars.version>20180410-bee0850</elasticsearch-client-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <failsafe.parallel/>
         <failsafe.useUnlimitedThreads/>
@@ -1023,6 +1024,11 @@
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>bootstrap-slider</artifactId>
                 <version>${bootstrap-slider-webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>elasticsearch-client</artifactId>
+                <version>${elasticsearch-client-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
