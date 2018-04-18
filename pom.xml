@@ -333,7 +333,8 @@
         <wagon.version>3.0.0</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
-        <w3c-nu-validator.version>18.3.0</w3c-nu-validator.version>
+        <!-- the 18.xx version requires Java9 -->
+        <w3c-nu-validator.version>15.6.29</w3c-nu-validator.version>
         <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
         <xstream.version>1.4.10</xstream.version>
