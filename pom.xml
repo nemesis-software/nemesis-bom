@@ -144,7 +144,7 @@
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.xjc.jvmArgs></cxf.xjc.jvmArgs>
-        <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
+        <docker-maven-plugin.version>1.0.0</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
