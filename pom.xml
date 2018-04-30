@@ -237,7 +237,7 @@
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
         <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
-        <maven-jaxb2-plugin.version>0.13.4-SNAPSHOT</maven-jaxb2-plugin.version>
+        <maven-jaxb2-plugin.version>0.13.3</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
