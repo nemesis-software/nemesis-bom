@@ -155,7 +155,7 @@
         <flying-saucer.version>9.1.12</flying-saucer.version>
         <guava.version>20.0</guava.version>
         <gemfire.version>9.3.0</gemfire.version>
-        <geotools.version>18.1</geotools.version>
+        <geotools.version>19.0</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.1</google-cloud-storage.version>
@@ -178,7 +178,11 @@
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>1.0.1</jackson-datatype-money.version>
         <javauom.version>1.0</javauom.version>
-        <javauom-ri.version>1.0.3</javauom-ri.version>
+        <javauom-ri.version>1.2</javauom-ri.version>
+        <javauom-si.version>0.8</javauom-si.version>
+        <javauom-se.version>1.0.8</javauom-se.version>
+        <javauom-systems.version>0.7.2</javauom-systems.version>
+        <javauom-jackson-module.version>1.3.5.NEMESIS-RELEASE</javauom-jackson-module.version>
         <javaparser.version>3.5.4</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <javax-inject.version>1</javax-inject.version>
@@ -190,7 +194,7 @@
         <jcip.version>1.0</jcip.version>
         <jest.version>5.3.3</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
-        <jadira-usertype.version>6.0.1.GA</jadira-usertype.version>
+        <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
         <jquery-webjars.version>1.12.1</jquery-webjars.version>
         <jqueryui-webjars.version>1.12.1</jqueryui-webjars.version>
@@ -309,12 +313,13 @@
         <spotbugs.version>3.1.2</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
+        <spring.version>5.1.0.BUILD-SNAPSHOT</spring.version>
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-restdocs.version>1.1.2.RELEASE</spring-restdocs.version>
         <!--spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version-->
-        <!--spring.cloud.version>Camden.SR3</spring.cloud.version-->
+        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
         <!--spring-hateoas.version>0.21.0.RELEASE</spring-hateoas.version-->
-        <!--spring-data-releasetrain.version>Kay-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
+        <spring-data-releasetrain.version>Kay-BUILD-SNAPSHOT</spring-data-releasetrain.version>
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
         <spring-social.version>2.0.0.BUILD-SNAPSHOT</spring-social.version>
         <spring-social-twitter.version>2.0.0.BUILD-SNAPSHOT</spring-social-twitter.version>
@@ -625,8 +630,8 @@
             <!-- WARNING: BE VERY CAREFUL WHEN YOU ADD THE SPRING-CLOUD AS IT BRINGS IT'S OWN SPRING-DATA AND SPRING-BOOT-->
             <!--dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-parent</artifactId>
-                <version>${spring.cloud.version}</version>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency-->
@@ -1353,9 +1358,39 @@
                 <version>${javauom.version}</version>
             </dependency>
             <dependency>
-                <groupId>tec.units</groupId>
-                <artifactId>unit-ri</artifactId>
+                <groupId>tech.units</groupId>
+                <artifactId>indriya</artifactId>
                 <version>${javauom-ri.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>systems.uom</groupId>
+                <artifactId>systems-common-java8</artifactId>
+                <version>${javauom-systems.version}</version>
+            </dependency>
+            <dependency>
+	            <groupId>systems.uom</groupId>
+	            <artifactId>systems-unicode-java8</artifactId>
+	            <version>${javauom-systems.version}</version>
+            </dependency>
+            <dependency>
+	            <groupId>systems.uom</groupId>
+	            <artifactId>systems-quantity</artifactId>
+	            <version>${javauom-systems.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>si.uom</groupId>
+                <artifactId>si-units-java8</artifactId>
+                <version>${javauom-si.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tec.uom</groupId>
+                <artifactId>uom-se</artifactId>
+                <version>${javauom-se.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.opower.unitsofmeasure</groupId>
+                <artifactId>jackson-module-unitsofmeasure</artifactId>
+                <version>${javauom-jackson-module.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.searchbox</groupId>
