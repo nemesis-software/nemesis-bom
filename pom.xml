@@ -127,6 +127,7 @@
         <atmosphere.version>2.2.6</atmosphere.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
         </checkstyle.violation.ignore>
+        <classindex.version>3.4</classindex.version>
         <codemodel.version>3.0.2</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
@@ -1126,6 +1127,11 @@
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>
                 <version>${reflections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.atteo.classindex</groupId>
+                <artifactId>classindex</artifactId>
+                <version>${classindex.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.kstyrc</groupId>
