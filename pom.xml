@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.2.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -143,14 +144,14 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.0.0</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.12</flying-saucer.version>
         <guava.version>20.0</guava.version>
@@ -239,7 +240,7 @@
         <maven-coveralls-plugin.version>3.1.0</maven-coveralls-plugin.version>
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
-        <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
+        <maven-javadoc-plugin.skip>true</maven-javadoc-plugin.skip>
         <maven-jaxb2-plugin.version>0.13.3</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
@@ -2222,7 +2223,6 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <skip>${maven-surefire-plugin.skip}</skip>
-                    <argLine>${surefireArgLine}</argLine>
                     <trimStackTrace>false</trimStackTrace>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
@@ -2320,12 +2320,21 @@
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <skip>${maven-javadoc-plugin.skip}</skip>
+                    <attach>!${maven-javadoc-plugin.skip}</attach>
                     <fixTags>author,since,param,return,throws,link</fixTags>
                     <fixFieldComment>false</fixFieldComment>
                     <defaultAuthor>Petar Tahchiev</defaultAuthor>
                     <defaultSince>0.6</defaultSince>
                     <excludes>**/*Impl.java,**/Default**.java,**/**Configuration.java,**/**Dto.java</excludes>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -2415,7 +2424,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2423,7 +2432,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
@@ -2500,6 +2509,29 @@
             <activation>
                 <jdk>9</jdk>
             </activation>
+        </profile>
+        <profile>
+            <id>ci</id>
+            <properties>
+                <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven-source-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
         <profile>
             <id>fast</id>
