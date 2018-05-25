@@ -1,0 +1,176 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This job will build nemesis bom.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>mvn</name>
+          <description></description>
+          <defaultValue>/opt/bitnami/apache-maven-3.5.0/bin/mvn</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>JAVA_HOME</name>
+          <description></description>
+          <defaultValue>/opt/java/jdk1.8.0_131</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.PasswordParameterDefinition>
+          <name>NEMESIS_DOCS_SSH_NEMESIS_PASSWORD</name>
+          <description></description>
+          <defaultValue>{AQAAABAAAAAg9Gjx/mWq/EzeI4H95asmYgK1fnvZNwadCdKUgkzt3Hqk17YjB2Jmgo3GTUHJ3DeL}</defaultValue>
+        </hudson.model.PasswordParameterDefinition>
+        <hudson.model.PasswordParameterDefinition>
+          <name>NEMESIS_REPOSITORY_HTTP_PASSWORD</name>
+          <description></description>
+          <defaultValue>{AQAAABAAAAAwlevrwGENPof0jBKMg/yJ867A9l2VORo8U/Dv5KBEPLpUabIJy38edIjAdFJjlMXAo4cQ5anNGru0RpXOl5LsXg==}</defaultValue>
+        </hudson.model.PasswordParameterDefinition>
+        <hudson.model.PasswordParameterDefinition>
+          <name>NEMESIS_JENKINS_GITHUB_PASSWORD</name>
+          <description></description>
+          <defaultValue>{AQAAABAAAAAwllfVox3/0kwrQOSLanBZ6i4yPezJK5xRsyBna0Ut4j1VucDKfexxuWyBjWft1adovYX4yH6DRoELUB8p2dp7Gg==}</defaultValue>
+        </hudson.model.PasswordParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>git@github.com:nemesis-software/nemesis-bom.git</url>
+        <credentialsId>b6bba7ff-fda8-42fa-a023-cc7ff3656c8e</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.LocalBranch>
+        <localBranch>master</localBranch>
+      </hudson.plugins.git.extensions.impl.LocalBranch>
+    </extensions>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec>H/30 * * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Kill spring boot
+NEMESIS_PID=`ps -A -o pid,cmd|grep -i nemesis | grep -v grep |head -n 1 | awk &apos;{print $1}&apos;`
+if [ $NEMESIS_PID &gt; 0 ]; then kill -9 $NEMESIS_PID; fi
+
+# Kill redis
+REDIS_PID=`ps -A -o pid,cmd|grep -i redis | grep -v grep |head -n 1 | awk &apos;{print $1}&apos;`
+if [ $REDIS_PID &gt; 0 ]; then kill -9 $REDIS_PID; fi
+
+printenv
+#java -version
+#$mvn clean package dependency:go-offline -U -Pquick -DskipTests -e -s src/main/resources/settings.xml
+ssh-keyscan -t rsa 178.62.150.204 &gt;&gt; ~/.ssh/known_hosts
+$mvn clean deploy javadoc:javadoc site:site site:deploy -Ptest -s src/main/resources/settings.xml</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <org.jenkinsci.plugins.discardbuild.DiscardBuildPublisher plugin="discard-old-build@1.05">
+      <daysToKeep>-1</daysToKeep>
+      <numToKeep>10</numToKeep>
+      <resultsToDiscard/>
+      <minLogFileSize>-1</minLogFileSize>
+      <maxLogFileSize>-1</maxLogFileSize>
+      <intervalDaysToKeep>-1</intervalDaysToKeep>
+      <intervalNumToKeep>-1</intervalNumToKeep>
+      <regexp></regexp>
+    </org.jenkinsci.plugins.discardbuild.DiscardBuildPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.5.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+    <hudson.plugins.release.ReleaseWrapper plugin="release@2.10.1">
+      <releaseVersionTemplate>Release: ${releaseVersion} </releaseVersionTemplate>
+      <doNotKeepLog>false</doNotKeepLog>
+      <overrideBuildParameters>false</overrideBuildParameters>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>releaseVersion</name>
+          <description>Specify the release version.</description>
+          <defaultValue></defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>developmentVersion</name>
+          <description>Specify the next development version after this release.</description>
+          <defaultValue></defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>dryRun</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+      <preBuildSteps>
+        <hudson.tasks.Maven>
+          <targets>release:clean release:prepare -B -DdryRun=${dryRun} -Dtag=${releaseVersion} -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -Dnemesis.version=${releaseVersion} -s src/main/resources/settings.xml</targets>
+          <mavenName>maven</mavenName>
+          <usePrivateRepository>false</usePrivateRepository>
+          <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+          <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+          <injectBuildVariables>false</injectBuildVariables>
+        </hudson.tasks.Maven>
+        <hudson.tasks.Maven>
+          <targets>release:perform -DdryRun=${dryRun} -s src/main/resources/settings.xml</targets>
+          <mavenName>maven</mavenName>
+          <usePrivateRepository>false</usePrivateRepository>
+          <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+          <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+          <injectBuildVariables>false</injectBuildVariables>
+        </hudson.tasks.Maven>
+        <hudson.tasks.Maven>
+          <targets>clean install javadoc:javadoc site site:deploy -Pquick -s src/main/resources/settings.xml</targets>
+          <mavenName>maven</mavenName>
+          <usePrivateRepository>false</usePrivateRepository>
+          <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+          <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+          <injectBuildVariables>false</injectBuildVariables>
+        </hudson.tasks.Maven>
+        <hudson.tasks.Shell>
+          <command>git checkout tags/${releaseVersion}</command>
+        </hudson.tasks.Shell>
+        <hudson.tasks.Maven>
+          <targets>clean install javadoc:javadoc site site:deploy -Pquick -s src/main/resources/settings.xml</targets>
+          <mavenName>maven</mavenName>
+          <usePrivateRepository>false</usePrivateRepository>
+          <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+          <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+          <injectBuildVariables>false</injectBuildVariables>
+        </hudson.tasks.Maven>
+        <hudson.tasks.Shell>
+          <command>git checkout master</command>
+        </hudson.tasks.Shell>
+      </preBuildSteps>
+      <postBuildSteps/>
+      <postSuccessfulBuildSteps/>
+      <postFailedBuildSteps/>
+      <preMatrixBuildSteps/>
+      <postSuccessfulMatrixBuildSteps/>
+      <postFailedMatrixBuildSteps/>
+      <postMatrixBuildSteps/>
+    </hudson.plugins.release.ReleaseWrapper>
+  </buildWrappers>
+</project>
