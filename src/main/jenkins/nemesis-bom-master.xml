@@ -1,15 +1,15 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version='1.1' encoding='UTF-8'?>
 <!--
-  ~ nemesis Platform - NExt-generation Multichannel E-commerce SYStem
-  ~
-  ~ Copyright (c) 2010 - 2018 nemesis
-  ~ All rights reserved.
-  ~
-  ~ This software is the confidential and proprietary information of nemesis
-  ~ ("Confidential Information"). You shall not disclose such Confidential
-  ~ Information and shall use it only in accordance with the terms of the
-  ~ license agreement you entered into with nemesis.
-  -->
+~ nemesis Platform - NExt-generation Multichannel E-commerce SYStem
+~
+~ Copyright (c) 2010 - 2013 nemesis
+~ All rights reserved.
+~
+~ This software is the confidential and proprietary information of nemesis
+~ ("Confidential Information"). You shall not disclose such Confidential
+~ Information and shall use it only in accordance with the terms of the
+~ license agreement you entered into with nemesis.
+-->
 <project>
   <actions/>
   <description>This job will build nemesis bom.</description>
@@ -152,14 +152,9 @@ $mvn clean deploy javadoc:javadoc site:site site:deploy -Ptest -s src/main/resou
           <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
           <injectBuildVariables>false</injectBuildVariables>
         </hudson.tasks.Maven>
-        <hudson.tasks.Maven>
-          <targets>clean install javadoc:javadoc site site:deploy -Pquick -s src/main/resources/settings.xml</targets>
-          <mavenName>maven</mavenName>
-          <usePrivateRepository>false</usePrivateRepository>
-          <settings class="jenkins.mvn.DefaultSettingsProvider"/>
-          <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
-          <injectBuildVariables>false</injectBuildVariables>
-        </hudson.tasks.Maven>
+      </preBuildSteps>
+      <postBuildSteps/>
+      <postSuccessfulBuildSteps>
         <hudson.tasks.Shell>
           <command>git checkout tags/${releaseVersion}</command>
         </hudson.tasks.Shell>
@@ -174,9 +169,7 @@ $mvn clean deploy javadoc:javadoc site:site site:deploy -Ptest -s src/main/resou
         <hudson.tasks.Shell>
           <command>git checkout master</command>
         </hudson.tasks.Shell>
-      </preBuildSteps>
-      <postBuildSteps/>
-      <postSuccessfulBuildSteps/>
+      </postSuccessfulBuildSteps>
       <postFailedBuildSteps/>
       <preMatrixBuildSteps/>
       <postSuccessfulMatrixBuildSteps/>
