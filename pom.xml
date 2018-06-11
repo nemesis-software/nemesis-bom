@@ -178,6 +178,7 @@
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>1.0.1</jackson-datatype-money.version>
+        <jackson.version>2.9.6-SNAPSHOT</jackson.version>
         <javauom.version>1.0</javauom.version>
         <javauom-ri.version>1.2</javauom-ri.version>
         <javauom-si.version>0.8</javauom-si.version>
@@ -350,78 +351,15 @@
 
     <repositories>
         <repository>
-            <id>official-m2-repo</id>
+            <id>nemesis-repository</id>
             <name>Official Maven2 Repository</name>
-            <url>http://repo1.maven.org/maven2/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>nemesis-repository-releases</id>
-            <name>nemesis-repository-releases</name>
-            <url>https://repository.nemesis.io/artifactory/libs-release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>nemesis-repository-snapshots</id>
-            <name>nemesis-repository-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/libs-snapshot</url>
+            <url>https://repository.nemesis.io/artifactory/remote-repos/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
             <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>osgeo</id>
-            <name>Open Source Geospatial Foundation Repository</name>
-            <url>http://download.osgeo.org/webdav/geotools/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
                 <enabled>true</enabled>
             </releases>
-        </repository>
-        <repository>
-            <id>spring-snapshot</id>
-            <url>http://repo.spring.io/libs-snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>spring-milestone</id>
-            <name>Spring milestones (We need this for commons-vfs2 and com.intridea)</name>
-            <url>http://repo.spring.io/libs-milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>vfs-s3.repository</id>
-            <name>vfs-s3 project repository</name>
-            <url>http://dl.bintray.com/content/abashev/vfs-s3</url>
-            <!-- Needed for vfs-s3 -->
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </repository>
     </repositories>
     <pluginRepositories>
