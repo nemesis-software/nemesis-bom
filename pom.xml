@@ -107,13 +107,13 @@
             <url>scp://178.62.150.204/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
-            <id>nemesis-repository</id>
+            <id>nemesis-release-repository</id>
             <uniqueVersion>true</uniqueVersion>
             <name>nemesis-repository-releases</name>
             <url>https://repository.nemesis.io/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
-            <id>nemesis-repository</id>
+            <id>nemesis-snapshot-repository</id>
             <uniqueVersion>false</uniqueVersion>
             <name>nemesis-repository-snapshots</name>
             <url>https://repository.nemesis.io/artifactory/libs-snapshot-local</url>
@@ -178,7 +178,7 @@
         <java.version>1.8</java.version>
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>1.0.1</jackson-datatype-money.version>
-        <jackson.version>2.9.6-SNAPSHOT</jackson.version>
+        <!--jackson.version>2.9.6-SNAPSHOT</jackson.version-->
         <javauom.version>1.0</javauom.version>
         <javauom-ri.version>1.2</javauom-ri.version>
         <javauom-si.version>0.8</javauom-si.version>
@@ -351,11 +351,22 @@
 
     <repositories>
         <repository>
-            <id>nemesis-repository</id>
-            <name>Official Maven2 Repository</name>
-            <url>https://repository.nemesis.io/artifactory/remote-repos/</url>
+            <id>nemesis-snapshot-repository</id>
+            <name>Nemesis Snapshot Repository</name>
+            <url>https://repository.nemesis.io/artifactory/snapshot-repos/</url>
             <snapshots>
                 <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>nemesis-release-repository</id>
+            <name>Nemesis Release Repository</name>
+            <url>https://repository.nemesis.io/artifactory/release-repos/</url>
+            <snapshots>
+                <enabled>false</enabled>
             </snapshots>
             <releases>
                 <enabled>true</enabled>
@@ -364,9 +375,9 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>nemesis-repository-plugins</id>
-            <name>nemesis-plugin-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/plugins-snapshot/</url>
+            <id>nemesis-snapshot-repository</id>
+            <name>Nemesis Snapshot Repository</name>
+            <url>https://repository.nemesis.io/artifactory/snapshot-repos/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -375,40 +386,9 @@
             </releases>
         </pluginRepository>
         <pluginRepository>
-            <id>nemesis-repository-snapshots</id>
-            <name>nemesis-repository-snapshots</name>
-            <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
-        <pluginRepository>
-            <id>nemesis-repository-releases</id>
-            <name>nemesis-repository-release</name>
-            <url>https://repository.nemesis.io/artifactory/libs-release/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring-snapshot</id>
-            <url>http://repo.spring.io/libs-snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring-milestones</id>
-            <url>http://repo.spring.io/libs-milestone</url>
+            <id>nemesis-release-repository</id>
+            <name>Nemesis Release Repository</name>
+            <url>https://repository.nemesis.io/artifactory/release-repos/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
