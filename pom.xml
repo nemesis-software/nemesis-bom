@@ -353,7 +353,7 @@
         <repository>
             <id>nemesis-snapshot-repository</id>
             <name>Nemesis Snapshot Repository</name>
-            <url>https://repository.nemesis.io/artifactory/snapshot-repos/</url>
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -364,7 +364,7 @@
         <repository>
             <id>nemesis-release-repository</id>
             <name>Nemesis Release Repository</name>
-            <url>https://repository.nemesis.io/artifactory/release-repos/</url>
+            <url>https://repository.nemesis.io/artifactory/libs-release/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -377,7 +377,7 @@
         <pluginRepository>
             <id>nemesis-snapshot-repository</id>
             <name>Nemesis Snapshot Repository</name>
-            <url>https://repository.nemesis.io/artifactory/snapshot-repos/</url>
+            <url>https://repository.nemesis.io/artifactory/plugins-snapshot/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -388,7 +388,7 @@
         <pluginRepository>
             <id>nemesis-release-repository</id>
             <name>Nemesis Release Repository</name>
-            <url>https://repository.nemesis.io/artifactory/release-repos/</url>
+            <url>https://repository.nemesis.io/artifactory/plugins-release/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
