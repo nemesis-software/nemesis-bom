@@ -351,7 +351,7 @@
 
     <repositories>
         <repository>
-            <id>nemesis-repository-snapshot</id>
+            <id>nemesis-repository-snapshots</id>
             <name>Nemesis Snapshot Repository</name>
             <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
             <snapshots>
