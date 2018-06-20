@@ -161,7 +161,7 @@
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.1</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-        <google-maps-services.version>0.1.17</google-maps-services.version>
+        <google-maps-services.version>0.2.7</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>23.0</guava.version>
