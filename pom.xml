@@ -154,7 +154,6 @@
         <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.12</flying-saucer.version>
-        <guava.version>20.0</guava.version>
         <gemfire.version>9.3.0</gemfire.version>
         <geotools.version>19.0</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
@@ -2289,7 +2288,7 @@
                                 <exclude>c3p0:*</exclude>
                                 <!-- Waiting on https://github.com/aws/aws-sdk-java/issues/1580 and https://jira.spring.io/browse/DATAES-290-->
                                 <!--exclude>joda-time:*</exclude-->
-                                <!--exclude>com.google.guava:guava</exclude-->
+                                <!--exclude>com.google.guava:*</exclude-->
                                 <!--exclude>com.google.code.gson:gson</exclude-->
                                 <!-- Waiting on: https://issues.jboss.org/browse/JBPM-6850 -->
                                 <!--exclude>org.codehaus.jackson</exclude-->
