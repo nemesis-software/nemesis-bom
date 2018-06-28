@@ -166,7 +166,7 @@
         <guava.version>23.0</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <hazelcast-quartz.version>1.0.4</hazelcast-quartz.version>
-        <hibernate.version>5.2.13.Final</hibernate.version>
+        <hibernate.version>5.2.17.Final</hibernate.version>
         <hibernate-validator5.version>5.4.2.Final</hibernate-validator5.version>
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.0</hibernate-hydrate.version>
