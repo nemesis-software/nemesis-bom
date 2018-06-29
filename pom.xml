@@ -193,6 +193,7 @@
         <javax-jsp.version>2.3.2-b02</javax-jsp.version>
         <jansi.version>1.16</jansi.version>
         <jawr.version>3.13.NEMESIS-RELEASE</jawr.version>
+        <jaxb.version>2.3.0.1</jaxb.version>
         <jcip.version>1.0</jcip.version>
         <jest.version>5.3.3</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
