@@ -160,7 +160,7 @@
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.1</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-        <google-maps-services.version>0.2.7</google-maps-services.version>
+        <google-maps-services.version>0.2.9</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>23.0</guava.version>
@@ -243,6 +243,7 @@
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
         <maven-javadoc-plugin.skip>true</maven-javadoc-plugin.skip>
+        <maven-javadoc-plugin.attach>false</maven-javadoc-plugin.attach>
         <maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
@@ -2245,7 +2246,7 @@
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <skip>${maven-javadoc-plugin.skip}</skip>
-                    <attach>!${maven-javadoc-plugin.skip}</attach>
+                    <attach>${maven-javadoc-plugin.attach}</attach>
                     <fixTags>author,since,param,return,throws,link</fixTags>
                     <fixFieldComment>false</fixFieldComment>
                     <defaultAuthor>Petar Tahchiev</defaultAuthor>
@@ -2439,6 +2440,7 @@
             <id>ci</id>
             <properties>
                 <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
+                <maven-javadoc-plugin.attach>true</maven-javadoc-plugin.attach>
             </properties>
             <build>
                 <plugins>
