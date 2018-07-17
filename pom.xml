@@ -176,7 +176,7 @@
         <!--infinispan.version>8.1.0.Final</infinispan.version-->
         <java.version>1.8</java.version>
         <!-- Uprade only after jackson-datatype-money upgrade-->
-        <javamoney.version>1.1</javamoney.version>
+        <javamoney.version>1.3</javamoney.version>
         <jackson-datatype-money.version>1.0.2</jackson-datatype-money.version>
         <jackson.version>2.9.6</jackson.version>
         <javauom.version>1.0</javauom.version>
@@ -1205,8 +1205,23 @@
                 <version>${xalan.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.javamoney</groupId>
-                <artifactId>moneta</artifactId>
+                <groupId>org.javamoney.moneta</groupId>
+                <artifactId>moneta-core</artifactId>
+                <version>${javamoney.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javamoney.moneta</groupId>
+                <artifactId>moneta-convert</artifactId>
+                <version>${javamoney.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javamoney.moneta</groupId>
+                <artifactId>moneta-convert-ecb</artifactId>
+                <version>${javamoney.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javamoney.moneta</groupId>
+                <artifactId>moneta-convert-imf</artifactId>
                 <version>${javamoney.version}</version>
             </dependency>
             <dependency>
