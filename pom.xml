@@ -1531,6 +1531,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.nemesis.platform.module.geolocation</groupId>
+                <artifactId>nemesis-module-nekudo</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-storelocator</artifactId>
                 <version>${nemesis.version}</version>
