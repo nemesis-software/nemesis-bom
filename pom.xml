@@ -483,7 +483,7 @@
             <dependency>
                 <groupId>com.nemesis.tools</groupId>
                 <artifactId>nemesis-junit-listener</artifactId>
-                <version>${nemesis.version}</version>
+                <version>2.0.0.RELEASE</version>
             </dependency>
             <dependency>
                 <groupId>org.junit.vintage</groupId>
