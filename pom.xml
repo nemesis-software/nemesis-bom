@@ -121,6 +121,7 @@
     </distributionManagement>
 
     <properties>
+        <activiti.version>7.0.0-SNAPSHOT</activiti.version>
         <amazon-aws-sdk.version>1.11.313</amazon-aws-sdk.version>
         <asciidoctor.version>1.5.4-NEMESIS-RELEASE</asciidoctor.version>
         <asciidoctorj-diagram.version>1.3.1</asciidoctorj-diagram.version>
@@ -1782,7 +1783,7 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.bpm</groupId>
-                <artifactId>nemesis-module-commonbpmn</artifactId>
+                <artifactId>nemesis-module-commonbpm</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
 
