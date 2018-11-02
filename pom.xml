@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.BUILD-SNAPSHOT</version>
+        <version>2.0.6.BUILD-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
@@ -178,7 +178,6 @@
         <!-- Uprade only after jackson-datatype-money upgrade-->
         <javamoney.version>1.1</javamoney.version>
         <jackson-datatype-money.version>1.0.2</jackson-datatype-money.version>
-        <jackson.version>2.9.6</jackson.version>
         <javauom.version>1.0</javauom.version>
         <javauom-ri.version>1.2</javauom-ri.version>
         <javauom-si.version>0.8</javauom-si.version>
