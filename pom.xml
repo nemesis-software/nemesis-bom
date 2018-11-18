@@ -16,7 +16,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.6.RELEASE</version>
+        <version>2.1.1.BUILD-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -271,7 +271,7 @@
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
         <money-validation.version>2.0.0</money-validation.version>
-        <nemesis.version>2.0.1.RELEASE</nemesis.version>
+        <nemesis.version>2.1.0.BUILD-SNAPSHOT</nemesis.version>
         <nemesis-tools.version>2.0.0.RELEASE</nemesis-tools.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.9</olingo-odata2.version>
