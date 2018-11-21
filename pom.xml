@@ -273,6 +273,7 @@
         <money-validation.version>2.0.0</money-validation.version>
         <nemesis.version>2.1.0.BUILD-SNAPSHOT</nemesis.version>
         <nemesis-tools.version>2.0.0.RELEASE</nemesis-tools.version>
+        <nemesis-rules.version>2.0.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.9</olingo-odata2.version>
         <olingo-odata4.version>4.4.0</olingo-odata4.version>
@@ -1777,7 +1778,7 @@
             <dependency>
                 <groupId>com.nemesis.rules</groupId>
                 <artifactId>nemesis-rules-targeting</artifactId>
-                <version>${nemesis.version}</version>
+                <version>${nemesis-rules.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.bpm</groupId>
