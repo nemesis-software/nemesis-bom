@@ -289,6 +289,7 @@
         <phantonjs-maven-plugin.skip>false</phantonjs-maven-plugin.skip>
         <phantomjs-maven-plugin.version>0.7</phantomjs-maven-plugin.version>
         <phantomjs-driver.version>1.4.4</phantomjs-driver.version>
+        <progressbar.version>0.7.2</progressbar.version>
         <project-scm.id>github</project-scm.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -468,6 +469,11 @@
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
                 <version>${jansi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.tongfei</groupId>
+                <artifactId>progressbar</artifactId>
+                <version>${progressbar.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.atmosphere</groupId>
