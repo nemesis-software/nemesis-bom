@@ -1931,7 +1931,12 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <compilerArgument>-Xlint:unchecked</compilerArgument>
+                        <compilerArgs>
+                            <arg>-Xlint:unchecked</arg>
+                            <arg>-Xlint:deprecation</arg>
+                        </compilerArgs>
+                        <!--failOnWarning>true</failOnWarning-->
+                        <showDeprecation>true</showDeprecation>
                         <useIncrementalCompilation>false</useIncrementalCompilation>
                     </configuration>
                     <executions>
