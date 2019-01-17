@@ -16,7 +16,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.BUILD-SNAPSHOT</version>
+        <version>2.1.2.BUILD-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -170,7 +170,7 @@
         <hibernate-hydrate.version>5.2.0</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
-        <!--hibernate.version>1.2.2</hazelcast-hibernate.version-->
+        <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
         <infinispan.version>9.1.7.Final</infinispan.version>
         <java.version>1.8</java.version>
         <!-- Uprade only after jackson-datatype-money upgrade-->
@@ -321,8 +321,8 @@
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <!--spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version-->
         <spring-cloud.version>Finchley.RC1</spring-cloud.version>
-        <!--spring-hateoas.version>0.25.0.BUILD-SNAPSHOT</spring-hateoas.version>
-        <spring-data-releasetrain.version>Kay-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
+        <!--spring-hateoas.version>0.25.0.BUILD-SNAPSHOT</spring-hateoas.version-->
+        <!--spring-data-releasetrain.version>Moore-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
         <spring-social.version>2.0.0.NEMESIS-RELEASE</spring-social.version>
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
@@ -2304,18 +2304,20 @@
                         </requireMavenVersion>
                         <bannedDependencies>
                             <excludes>
-                                <!-- We can add commons-lang to the list once DATAES-283 and GEODE-4706 is resolved -->
-                                <!--exclude>commons-lang:commons-lang</exclude-->
+                                <!-- We can add commons-lang to the list once GEODE-4706 is resolved -->
+                                <exclude>commons-lang:commons-lang</exclude>
                                 <exclude>commons-logging:commons-logging</exclude>
                                 <exclude>com.mchange:*</exclude>
                                 <exclude>c3p0:*</exclude>
                                 <!-- Waiting on https://github.com/aws/aws-sdk-java/issues/1580 and https://jira.spring.io/browse/DATAES-290-->
                                 <!--exclude>joda-time:*</exclude-->
+                                <!-- waiting for https://github.com/querydsl/querydsl/issues/2324 -->
                                 <!--exclude>com.google.guava:*</exclude-->
+                                <!-- impossible because of google-maps-services https://github.com/googlemaps/google-maps-services-java/issues/533 (Maybe once we have java unified json api JSR 353)-->
                                 <!--exclude>com.google.code.gson:gson</exclude-->
-                                <!-- Waiting on: https://issues.jboss.org/browse/JBPM-6850 -->
+                                <!-- Waiting on: https://issues.apache.org/jira/browse/SOLR-13092 -->
                                 <!--exclude>org.codehaus.jackson</exclude-->
-                                <!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-507 -->
+                                <!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-500 -->
                                 <!--exclude>commons-collections:commons-collections</exclude-->
                             </excludes>
                         </bannedDependencies>
