@@ -277,7 +277,7 @@
         <olingo-odata2.version>2.0.9</olingo-odata2.version>
         <olingo-odata4.version>4.4.0</olingo-odata4.version>
         <openpdf.version>1.2.5</openpdf.version>
-        <oracle.version>18.3.0.0</oracle.version>
+        <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.3-nemesis</orika.version>
         <paypal-sdk.version>2.15.122</paypal-sdk.version>
         <paypal-rest-sdk.version>1.14.0</paypal-rest-sdk.version>
@@ -1596,6 +1596,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-telco</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.fraud</groupId>
                 <artifactId>nemesis-module-riskified</artifactId>
                 <version>${nemesis.version}</version>
@@ -2061,6 +2066,7 @@
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>${maven-spotbugs-plugin.version}</version>
                     <configuration>
+                        <skip>${maven-spotbugs-plugin.skip}</skip>
                         <omitVisitors>${spotbugs.omitvisitors}</omitVisitors>
                     </configuration>
                 </plugin>
