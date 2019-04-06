@@ -319,6 +319,7 @@
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
+        <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
         <!--spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version-->
         <spring-cloud.version>Finchley.RC1</spring-cloud.version>
         <!--spring-hateoas.version>0.25.0.BUILD-SNAPSHOT</spring-hateoas.version-->
@@ -590,7 +591,6 @@
                 <artifactId>spring-social-twitter</artifactId>
                 <version>${spring-social-twitter.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.social</groupId>
                 <artifactId>spring-social-autoconfigure</artifactId>
@@ -616,6 +616,13 @@
                 <artifactId>spring-social-facebook-web</artifactId>
                 <version>${spring-social-facebook.version}</version>
             </dependency>
+            <!-- Spring Webflow -->
+            <dependency>
+                <groupId>org.springframework.webflow</groupId>
+                <artifactId>spring-webflow</artifactId>
+                <version>${spring-webflow.version}</version>
+            </dependency>
+            
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
