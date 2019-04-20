@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.3.BUILD-SNAPSHOT</version>
-        <relativePath />
+        <version>2.1.3.RELEASE</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -143,14 +144,14 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.0.0</docker-maven-plugin.version>
         <doxia.version>1.7</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.16</flying-saucer.version>
         <gemfire.version>9.3.0</gemfire.version>
@@ -173,7 +174,7 @@
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
         <infinispan.version>9.1.7.Final</infinispan.version>
         <java.version>1.8</java.version>
-        <!-- Uprade only after jackson-datatype-money upgrade-->
+        <!-- Upgrade only after jackson-datatype-money upgrade-->
         <javamoney.version>1.3</javamoney.version>
         <jackson-datatype-money.version>1.1.1</jackson-datatype-money.version>
         <jackson-datatype-jts.version>2.4</jackson-datatype-jts.version>
@@ -270,7 +271,7 @@
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
         <money-validation.version>2.0.0</money-validation.version>
-        <nemesis.version>2.1.0.BUILD-SNAPSHOT</nemesis.version>
+        <nemesis.version>2.1.0.RELEASE</nemesis.version>
         <nemesis-tools.version>2.0.0.RELEASE</nemesis-tools.version>
         <nemesis-rules.version>2.0.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
@@ -622,7 +623,7 @@
                 <artifactId>spring-webflow</artifactId>
                 <version>${spring-webflow.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
@@ -2386,7 +2387,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2394,7 +2395,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
