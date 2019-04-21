@@ -5,8 +5,6 @@ Petar Tahchiev <https://github.com/ptahchiev[@ptahchiev]>;
 #set($releaseVersion = "$releaseVersionNum.0.RELEASE")
 #set($nextVersionNum = $number.format($math.add($releaseVersionNum, 0.1)))
 #set($nextVersion="$nextVersionNum.0.BUILD-SNAPSHOT")
-#set($oldVersionNum = $math.sub($releaseVersionNum, 0.1))
-#set($oldSnapshotVersion="$number.format($oldVersionNum).BUILD-SNAPSHOT")
 
 To perform a release of the different Nemesis projects follow the steps below.
 
@@ -46,10 +44,6 @@ The release process contains the following ordered steps:
 ----
 mvn release:clean release:prepare -Dtag=$releaseVersion -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$nextVersion
 mvn release:perform
-mvn clean install javadoc:javadoc site site:deploy -Pquick
-git checkout tags/$releaseVersion
-mvn clean install javadoc:javadoc site site:deploy -Pquick
-git checkout master
 ----
 
 and these steps need to be executed for every of the nemesis projects in order.
@@ -97,7 +91,7 @@ This will build and deploy the archetype with version $releaseVersion to the nem
 Revert the nemesis.version property to `$nextVersion`, then commit, push and deploy.
 
 == Make sure the CI build is green again.
-Next step is to make sure the link:http://circleci.com/dashboard[CircleCI] build is stable again.
+Next step is to make sure the link:http://jenkins.nemesis.io/jenkins/[Jenkins] build is stable again.
 
 == Close milestones
 Go through all the github projects and close the milestone that we have just released. If necessary create new milestones for future releases.
@@ -123,7 +117,7 @@ For IntellijIDEA you can do that in  `File` -> `Settings` -> `Editor` -> `File a
 You will need to update the versions in the `nemesis-start` project to reflect the newly released version.
 
 == Make new alias on the documentation website
-You need to make the alias `current` to point to the latest version that you just released. Also renamed the old `$oldSnapshotVersion` version to be the just `$releaseVersion` as there will be no more deployments in that version.
+You need to make the alias `current` to point to the latest version that you just released. Also make the `current-snapshot` to point `$nextVersion`:
 [source,bash]
 ----
 unlink current
