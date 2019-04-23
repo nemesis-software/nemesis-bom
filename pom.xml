@@ -253,7 +253,7 @@
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
         <maven-spotbugs-plugin.version>3.1.8</maven-spotbugs-plugin.version>
         <maven-spotbugs-plugin.skip>false</maven-spotbugs-plugin.skip>
-        <maven-pmd-plugin.version>3.6</maven-pmd-plugin.version>
+        <maven-pmd-plugin.version>3.12.0</maven-pmd-plugin.version>
         <maven-pmd-plugin.skip>false</maven-pmd-plugin.skip>
         <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
@@ -1990,6 +1990,12 @@
                             <session>${session}</session>
                         </attributes>
                         <asciidoc>
+                            <logHandler>
+                                <outputToConsole>true</outputToConsole>
+                                <failIf>
+                                    <severity>DEBUG</severity>
+                                </failIf>
+                            </logHandler>
                             <requires>
                                 <require>asciidoctor-diagram</require>
                                 <require>base64</require>
