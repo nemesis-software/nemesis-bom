@@ -165,7 +165,7 @@
         <guava.version>23.0</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <hazelcast-quartz.version>1.0.4</hazelcast-quartz.version>
-        <hibernate.version>5.2.17.Final</hibernate.version>
+        <!--hibernate.version>5.2.17.Final</hibernate.version-->
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.1</hibernate-hydrate.version>
         <!-- Remove once boot updates -->
@@ -236,7 +236,7 @@
         <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
         <maven-checkstyle-plugin.skip>false</maven-checkstyle-plugin.skip>
         <maven-failsafe-plugin.skip>false</maven-failsafe-plugin.skip>
-        <maven-failsafe-plugin.version>2.21.0</maven-failsafe-plugin.version>
+        <maven-failsafe-plugin.version>2.22.0</maven-failsafe-plugin.version>
         <maven-coveralls-plugin.version>3.1.0</maven-coveralls-plugin.version>
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
@@ -247,7 +247,7 @@
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
-        <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
+        <maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
         <maven-project-info-reports.plugin>2.9</maven-project-info-reports.plugin>
         <maven-appassembler-plugin.version>1.8</maven-appassembler-plugin.version>
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
@@ -264,7 +264,7 @@
         <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
         <maven-tomcat7.plugin>2.2</maven-tomcat7.plugin>
         <maven-build-helper-plugin.version>1.8</maven-build-helper-plugin.version>
-        <maven-plexus-plugin.version>1.5.5</maven-plexus-plugin.version>
+        <maven-plexus-plugin.version>2.0.0</maven-plexus-plugin.version>
         <maven-pdf-plugin.version>1.4</maven-pdf-plugin.version>
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
@@ -2081,8 +2081,10 @@
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>${maven-spotbugs-plugin.version}</version>
                     <configuration>
+                        <fork>true</fork>
                         <skip>${maven-spotbugs-plugin.skip}</skip>
                         <omitVisitors>${spotbugs.omitvisitors}</omitVisitors>
+                        <jvmArgs>--illegal-access=permit</jvmArgs>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -2199,6 +2201,9 @@
                     <excludes>
                         <exclude>**/*IntegrationTest.java</exclude>
                     </excludes>
+                    <argLine>
+                        --illegal-access=permit
+                    </argLine>
                     <!--excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups-->
                 </configuration>
             </plugin>
@@ -2471,13 +2476,58 @@
 
     <profiles>
         <profile>
+            <id>jdk8-profile</id>
+            <activation>
+                <jdk>,9)</jdk>
+            </activation>
+            <properties>
+                <hibernate.version>5.2.17.Final</hibernate.version>
+            </properties>
+        </profile>
+        <profile>
             <id>jdk9-profile</id>
             <properties>
-                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation</spotbugs.omitvisitors>
+                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindNullDeref</spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
+                <java.version>11</java.version>
             </properties>
             <activation>
-                <jdk>9</jdk>
+                <jdk>[9,</jdk>
             </activation>
+            <build>
+            <pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>${maven-compiler-plugin.version}</version>
+                        <configuration>
+                            <release>${java.version}</release>
+                            <source>${java.version}</source>
+                            <target>${java.version}</target>
+                            <compilerArgs>
+                                <arg>-Xlint:unchecked</arg>
+                                <arg>-Xlint:deprecation</arg>
+                            </compilerArgs>
+                            <!--failOnWarning>true</failOnWarning-->
+                            <showDeprecation>true</showDeprecation>
+                            <useIncrementalCompilation>false</useIncrementalCompilation>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>default-testCompile</id>
+                                <phase>test-compile</phase>
+                                <goals>
+                                    <goal>testCompile</goal>
+                                </goals>
+                                <configuration>
+                                    <skip>${maven-compiler-test-compile.skip}</skip>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </pluginManagement>
+            </build>
         </profile>
         <profile>
             <id>ci</id>
@@ -2578,8 +2628,8 @@
                         <configuration>
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
-                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
+                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError --illegal-access=permit
                                 <!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
                                                                 -Dma.glasnost.orika.writeSourceFiles=true
                                                                 -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
