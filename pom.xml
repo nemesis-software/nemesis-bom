@@ -147,6 +147,7 @@
         <docker-maven-plugin.version>1.0.0</docker-maven-plugin.version>
         <doxia.version>1.8</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
+        <ehcache3.version>3.7.1</ehcache3.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <failsafe.parallel />
@@ -168,6 +169,7 @@
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.1</hibernate-hydrate.version>
+        <httpclient5.version>5.0-beta5</httpclient5.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
@@ -301,8 +303,8 @@
         <redis-quartz.version>1.1.13</redis-quartz.version>
         <riskified.version>1.1.0</riskified.version>
         <rometools.version>1.11.1</rometools.version>
-        <selenium.version>3.8.1</selenium.version>
-        <selenium-htmlunit.version>3.8.1</selenium-htmlunit.version>
+        <selenium.version>3.9.1</selenium.version>
+        <selenium-htmlunit.version>3.9.1</selenium-htmlunit.version>
         <smartsprites.version>0.2.13</smartsprites.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
         <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
@@ -1281,6 +1283,11 @@
                 <groupId>javax.servlet.jsp.jstl</groupId>
                 <artifactId>javax.servlet.jsp.jstl-api</artifactId>
                 <version>${javax-jstl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>${httpclient5.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.inject</groupId>
