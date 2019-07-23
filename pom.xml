@@ -150,6 +150,7 @@
         <ehcache3.version>3.7.1</ehcache3.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
+        <extra.jvmargs></extra.jvmargs>
         <failsafe.parallel />
         <failsafe.useUnlimitedThreads />
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
@@ -2091,7 +2092,7 @@
                         <fork>true</fork>
                         <skip>${maven-spotbugs-plugin.skip}</skip>
                         <omitVisitors>${spotbugs.omitvisitors}</omitVisitors>
-                        <jvmArgs>--illegal-access=permit</jvmArgs>
+                        <jvmArgs>${extra.jvmargs}</jvmArgs>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -2209,7 +2210,7 @@
                         <exclude>**/*IntegrationTest.java</exclude>
                     </excludes>
                     <argLine>
-                        --illegal-access=permit
+                        ${extra.jvmargs}
                     </argLine>
                     <!--excludedGroups>com.nemesis.platform.util.test.IntegrationTest</excludedGroups-->
                 </configuration>
@@ -2496,6 +2497,7 @@
             <properties>
                 <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindNullDeref</spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
                 <java.version>11</java.version>
+                <extra.jvmargs>--illegal-access=permit</extra.jvmargs>
             </properties>
             <activation>
                 <jdk>[9,</jdk>
@@ -2636,7 +2638,7 @@
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
                             <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
-                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError --illegal-access=permit
+                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError ${extra.jvmargs}
                                 <!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
                                                                 -Dma.glasnost.orika.writeSourceFiles=true
                                                                 -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
