@@ -351,7 +351,7 @@
         <w3c-nu-validator.version>15.6.29</w3c-nu-validator.version>
         <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
-        <xstream.version>1.4.10</xstream.version>
+        <xstream.version>1.4.11</xstream.version>
         <yubico.version>3.0.5</yubico.version>
         <zxing.version>3.3.3</zxing.version>
     </properties>
