@@ -249,7 +249,7 @@
         <maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
-        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-release-plugin.version>3.0.0-NEMESIS-RELEASE</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
         <maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
         <maven-project-info-reports.plugin>2.9</maven-project-info-reports.plugin>
