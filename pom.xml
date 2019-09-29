@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.8.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -143,16 +144,16 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
         <doxia.version>1.8</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <extra.jvmargs />
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <extra.jvmargs/>
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.18</flying-saucer.version>
         <gemfire.version>9.3.0</gemfire.version>
@@ -2076,11 +2077,10 @@
                     <configuration>
                         <releaseProfiles>nemesis-release</releaseProfiles>
                         <useReleaseProfile>true</useReleaseProfile>
+                        <goals>deploy site-deploy</goals>
                         <scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
                         <localCheckout>true</localCheckout>
                         <tagNameFormat>v@{project.version}</tagNameFormat>
-                        <preparationGoals>site-deploy</preparationGoals>
-                        <completionGoals>site-deploy</completionGoals>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -2436,7 +2436,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2444,7 +2444,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
@@ -2525,7 +2525,8 @@
         <profile>
             <id>jdk9-profile</id>
             <properties>
-                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindNullDeref</spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
+                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindNullDeref
+                </spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
                 <java.version>11</java.version>
                 <extra.jvmargs>--illegal-access=permit</extra.jvmargs>
             </properties>
@@ -2533,39 +2534,39 @@
                 <jdk>[9,</jdk>
             </activation>
             <build>
-            <pluginManagement>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>${maven-compiler-plugin.version}</version>
-                        <configuration>
-                            <release>${java.version}</release>
-                            <source>${java.version}</source>
-                            <target>${java.version}</target>
-                            <compilerArgs>
-                                <arg>-Xlint:unchecked</arg>
-                                <arg>-Xlint:deprecation</arg>
-                            </compilerArgs>
-                            <!--failOnWarning>true</failOnWarning-->
-                            <showDeprecation>true</showDeprecation>
-                            <useIncrementalCompilation>false</useIncrementalCompilation>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>default-testCompile</id>
-                                <phase>test-compile</phase>
-                                <goals>
-                                    <goal>testCompile</goal>
-                                </goals>
-                                <configuration>
-                                    <skip>${maven-compiler-test-compile.skip}</skip>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </pluginManagement>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <version>${maven-compiler-plugin.version}</version>
+                            <configuration>
+                                <release>${java.version}</release>
+                                <source>${java.version}</source>
+                                <target>${java.version}</target>
+                                <compilerArgs>
+                                    <arg>-Xlint:unchecked</arg>
+                                    <arg>-Xlint:deprecation</arg>
+                                </compilerArgs>
+                                <!--failOnWarning>true</failOnWarning-->
+                                <showDeprecation>true</showDeprecation>
+                                <useIncrementalCompilation>false</useIncrementalCompilation>
+                            </configuration>
+                            <executions>
+                                <execution>
+                                    <id>default-testCompile</id>
+                                    <phase>test-compile</phase>
+                                    <goals>
+                                        <goal>testCompile</goal>
+                                    </goals>
+                                    <configuration>
+                                        <skip>${maven-compiler-test-compile.skip}</skip>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
             </build>
         </profile>
         <profile>
@@ -2655,7 +2656,8 @@
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
                             <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
-                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError ${extra.jvmargs}
+                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
+                                ${extra.jvmargs}
                                 <!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
                                                                 -Dma.glasnost.orika.writeSourceFiles=true
                                                                 -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
