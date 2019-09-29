@@ -2080,7 +2080,7 @@
                         <scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
                         <localCheckout>true</localCheckout>
                         <tagNameFormat>v@{project.version}</tagNameFormat>
-                        <arguments>-Dmaven.javadoc.skip=true -Dmaven.test.skipTests=true -Dmaven.test.skip=true -DargLine="-Xms2G -Xmx3G -Xss128M -XX:MaxMetaspaceSize=512M -XX:+CMSClassUnloadingEnabled -Djdk.tls.client.protocols=TLSv1.2"</arguments>
+                        <arguments>-Pnemesis-release -DskipTests -DargLine="-Xms2G -Xmx3G -Xss128M -XX:MaxMetaspaceSize=512M -XX:+CMSClassUnloadingEnabled -Djdk.tls.client.protocols=TLSv1.2"</arguments>
                     </configuration>
                 </plugin>
                 <plugin>
