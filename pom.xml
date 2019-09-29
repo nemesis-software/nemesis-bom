@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>2.1.16.BUILD-SNAPSHOT</version>
+    <version>2.1.1.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -276,7 +276,7 @@
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
         <money-validation.version>2.0.0</money-validation.version>
-        <nemesis.version>2.1.15.RELEASE</nemesis.version>
+        <nemesis.version>2.1.16.RELEASE</nemesis.version>
         <nemesis-tools.version>2.0.0.RELEASE</nemesis-tools.version>
         <nemesis-rules.version>2.0.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
@@ -2080,7 +2080,7 @@
                         <scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
                         <localCheckout>true</localCheckout>
                         <tagNameFormat>v@{project.version}</tagNameFormat>
-                        <arguments>-Pnemesis-release -DskipTests -DargLine="-Xms1G -Xmx3G -Xss128M -XX:MaxMetaspaceSize=512M -XX:+CMSClassUnloadingEnabled -Djdk.tls.client.protocols=TLSv1.2"</arguments>
+                        <arguments>-DskipTests</arguments>
                     </configuration>
                 </plugin>
                 <plugin>
