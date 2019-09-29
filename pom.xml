@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>2.1.7.BUILD-SNAPSHOT</version>
+    <version>2.1.1.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -2604,15 +2604,16 @@
         <profile>
             <id>nemesis-release</id>
             <properties>
+                <maven-checkstyle-plugin.skip>true</maven-checkstyle-plugin.skip>
+                <maven-remote-resources-plugin.skip>true</maven-remote-resources-plugin.skip>
+                <maven-surefire-plugin.skip>true</maven-surefire-plugin.skip>
+                <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
+                <maven-spotbugs-plugin.skip>true</maven-spotbugs-plugin.skip>
+                <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
                 <maven-javadoc-plugin.skip>false</maven-javadoc-plugin.skip>
                 <maven-javadoc-plugin.attach>true</maven-javadoc-plugin.attach>
                 <maven-source-plugin.skip>false</maven-source-plugin.skip>
                 <maven-source-plugin.attach>true</maven-source-plugin.attach>
-                <maven-checkstyle-plugin.skip>true</maven-checkstyle-plugin.skip>
-                <maven-remote-resources-plugin.skip>true</maven-remote-resources-plugin.skip>
-                <maven-pmd-plugin.skip>true</maven-pmd-plugin.skip>
-                <maven-spotbugs-plugin.skip>true</maven-spotbugs-plugin.skip>
-                <maven-rat-plugin.skip>true</maven-rat-plugin.skip>
             </properties>
         </profile>
         <profile>
