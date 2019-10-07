@@ -2076,7 +2076,7 @@
                     <configuration>
                         <releaseProfiles>nemesis-release</releaseProfiles>
                         <useReleaseProfile>true</useReleaseProfile>
-                        <goals>deploy site-deploy</goals>
+                        <goals>clean deploy javadoc:javadoc site site:deploy</goals>
                         <scmCommentPrefix>[maven-release-plugin][ci-skip]</scmCommentPrefix>
                         <localCheckout>true</localCheckout>
                         <tagNameFormat>v@{project.version}</tagNameFormat>
