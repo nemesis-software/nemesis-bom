@@ -22,7 +22,7 @@
 
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>2.1.53.RELEASE</version>
+    <version>2.1.53.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -103,7 +103,7 @@
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
-            <url>sftp://178.62.150.204/var/www/html/docs/${project.version}/</url>
+            <url>scp://178.62.150.204/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
             <id>nemesis-repository-releases</id>
