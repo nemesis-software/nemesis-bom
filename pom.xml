@@ -103,7 +103,7 @@
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
-            <url>scp://178.62.150.204/var/www/html/docs/${project.version}/</url>
+            <url>sftp://178.62.150.204/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
             <id>nemesis-repository-releases</id>
@@ -346,7 +346,7 @@
         <thymeleaf-jawr.version>2.0.2.NEMESIS-RELEASE</thymeleaf-jawr.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
         <twilio-sdk.version>7.43.0</twilio-sdk.version>
-        <wagon.version>3.3.2</wagon.version>
+        <wagon.version>3.3.3</wagon.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <!-- the 18.xx version requires Java9 -->
