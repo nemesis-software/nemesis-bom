@@ -20,6 +20,7 @@
         <relativePath />
     </parent>
 
+
     <groupId>com.nemesis</groupId>
     <artifactId>bom</artifactId>
     <version>2.1.56.BUILD-SNAPSHOT</version>
