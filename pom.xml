@@ -1973,6 +1973,10 @@
                                 <goal>jar</goal>
                             </goals>
                         </execution>
+                        <execution>
+                            <id>default</id>
+                            <phase>none</phase>
+                        </execution>
                     </executions>
                 </plugin>
                 <plugin>
