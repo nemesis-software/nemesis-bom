@@ -1968,12 +1968,6 @@
                     </configuration>
                     <executions>
                         <execution>
-                            <id>attach-sources</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                        <execution>
                             <id>default</id>
                             <phase>none</phase>
                         </execution>
