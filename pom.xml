@@ -160,6 +160,7 @@
         <gemfire.version>9.3.0</gemfire.version>
         <geotools.version>21.0</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
+        <googleauth.version>1.2.0</googleauth.version>
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.1</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
@@ -555,6 +556,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-jcs-jcache</artifactId>
                 <version>${commons-jcs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.warrenstrange</groupId>
+                <artifactId>googleauth</artifactId>
+                <version>${googleauth.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
@@ -1657,6 +1663,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.security</groupId>
                 <artifactId>nemesis-module-yubico</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.security</groupId>
+                <artifactId>nemesis-module-totp</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
