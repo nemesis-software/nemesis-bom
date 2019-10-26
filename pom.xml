@@ -1687,6 +1687,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.payment</groupId>
+                <artifactId>nemesis-module-paysera</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.payment</groupId>
                 <artifactId>nemesis-module-klarna</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
