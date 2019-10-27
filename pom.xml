@@ -147,7 +147,6 @@
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
-        <doxia.version>1.8</doxia.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
@@ -264,7 +263,7 @@
         <maven-spotbugs-plugin.skip>false</maven-spotbugs-plugin.skip>
         <maven-pmd-plugin.version>3.12.0</maven-pmd-plugin.version>
         <maven-pmd-plugin.skip>false</maven-pmd-plugin.skip>
-        <maven-rat-plugin.version>0.11</maven-rat-plugin.version>
+        <maven-rat-plugin.version>0.13</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
         <maven-surefire-plugin.skip>false</maven-surefire-plugin.skip>
         <maven-remote-resources-plugin.skip>false</maven-remote-resources-plugin.skip>
@@ -2116,11 +2115,6 @@
                             <version>${wagon.version}</version>
                         </dependency>
                         <dependency>
-                            <groupId>org.apache.maven.doxia</groupId>
-                            <artifactId>doxia-core</artifactId>
-                            <version>${doxia.version}</version>
-                        </dependency>
-                        <dependency>
                             <groupId>org.json</groupId>
                             <artifactId>json</artifactId>
                             <version>20171018</version>
@@ -2446,13 +2440,6 @@
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
                 <version>${maven-rat-plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.doxia</groupId>
-                        <artifactId>doxia-core</artifactId>
-                        <version>${doxia.version}</version>
-                    </dependency>
-                </dependencies>
                 <executions>
                     <execution>
                         <id>rat-check</id>
