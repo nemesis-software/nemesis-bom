@@ -246,6 +246,7 @@
         <maven-coveralls-plugin.version>3.1.0</maven-coveralls-plugin.version>
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
+        <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
         <maven-javadoc-plugin.skip>true</maven-javadoc-plugin.skip>
         <maven-javadoc-plugin.attach>false</maven-javadoc-plugin.attach>
         <maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
