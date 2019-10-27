@@ -307,7 +307,7 @@
         <reflections.version>0.9.11</reflections.version>
         <redis-embedded.version>0.6</redis-embedded.version>
         <redis-hibernate.version>2.4.0</redis-hibernate.version>
-        <redis-quartz.version>1.2.0-SNAPSHOT</redis-quartz.version>
+        <redis-quartz.version>1.2.0-NEMESIS-RELEASE</redis-quartz.version>
         <riskified.version>1.2.4</riskified.version>
         <rometools.version>1.12.2</rometools.version>
         <selenium.version>3.9.1</selenium.version>
