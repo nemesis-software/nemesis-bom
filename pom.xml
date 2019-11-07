@@ -128,7 +128,7 @@
         <camunda.version>7.11.0</camunda.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
         </checkstyle.violation.ignore>
-        <classindex.version>3.4</classindex.version>
+        <classindex.version>3-NEMESIS</classindex.version>
         <codemodel.version>3.2.4</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
@@ -234,7 +234,7 @@
         <kie.version>7.27.0.Final</kie.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
-        <maven-archetype-plugin.version>3.1.0</maven-archetype-plugin.version>
+        <maven-archetype-plugin.version>3.1.3-NEMESIS</maven-archetype-plugin.version>
         <maven-filtering.version>3.1.1</maven-filtering.version>
         <maven-artifact-manager.version>2.2.1</maven-artifact-manager.version>
         <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
@@ -242,7 +242,7 @@
         <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
         <maven-checkstyle-plugin.skip>false</maven-checkstyle-plugin.skip>
         <maven-failsafe-plugin.skip>false</maven-failsafe-plugin.skip>
-        <maven-failsafe-plugin.version>2.22.0</maven-failsafe-plugin.version>
+        <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
         <maven-coveralls-plugin.version>3.1.0</maven-coveralls-plugin.version>
         <maven-jacoco-plugin.version>0.7.5.201505241946</maven-jacoco-plugin.version>
         <maven-jarsigner-plugin.version>1.4</maven-jarsigner-plugin.version>
@@ -1668,6 +1668,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.security</groupId>
                 <artifactId>nemesis-module-totp</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.security</groupId>
+                <artifactId>nemesis-module-commonsecurity</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
