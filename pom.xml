@@ -318,7 +318,7 @@
         <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
         <bootstrap-webjars.version>3.3.6</bootstrap-webjars.version>
         <bootstrap-select-webjars.version>1.10.0</bootstrap-select-webjars.version>
-        <bootstrap-datepicker-webjars.version>1.6.1</bootstrap-datepicker-webjars.version>
+        <bootstrap-datepicker-webjars.version>1.9.0</bootstrap-datepicker-webjars.version>
         <bootstrap-slider-webjars.version>7.1.0</bootstrap-slider-webjars.version>
         <pace-webjars.version>1.0.2</pace-webjars.version>
         <select2-webjars.version>4.0.3</select2-webjars.version>
