@@ -204,7 +204,7 @@
         <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
         <jpasskit.version>0.1.1</jpasskit.version>
-        <jquery-webjars.version>1.12.1</jquery-webjars.version>
+        <jquery-webjars.version>1.12.4</jquery-webjars.version>
         <jqueryui-webjars.version>1.12.1</jqueryui-webjars.version>
         <jquerymobile-webjars.version>1.4.5</jquerymobile-webjars.version>
         <jquerymobile-spinbox-webjars.version>1.4.4</jquerymobile-spinbox-webjars.version>
@@ -351,7 +351,6 @@
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
         <twilio-sdk.version>7.43.0</twilio-sdk.version>
         <wagon.version>3.3.3</wagon.version>
-        <webjars-locator.version>0.31</webjars-locator.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <!-- the 18.xx version requires Java9 -->
         <w3c-nu-validator.version>18.11.5</w3c-nu-validator.version>
@@ -872,11 +871,6 @@
                 <groupId>com.github.dtrunk90</groupId>
                 <artifactId>thymeleaf-jawr-extension</artifactId>
                 <version>${thymeleaf-jawr.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.webjars</groupId>
-                <artifactId>webjars-locator-core</artifactId>
-                <version>${webjars-locator.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.timgroup</groupId>
@@ -1503,6 +1497,11 @@
             <dependency>
                 <groupId>com.nemesis.platform.module.captcha</groupId>
                 <artifactId>nemesis-module-recaptcha</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-referral</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
