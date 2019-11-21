@@ -1505,6 +1505,11 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-support</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-cms</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
