@@ -230,10 +230,10 @@
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
         <!--kie.version>7.8.0-SNAPSHOT</kie.version-->
-        <kie.version>7.27.0.Final</kie.version>
+        <kie.version>7.29.0.Final</kie.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
-        <maven-archetype-plugin.version>3.1.31-NEMESIS</maven-archetype-plugin.version>
+        <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
         <maven-filtering.version>3.1.1</maven-filtering.version>
         <maven-artifact-manager.version>2.2.1</maven-artifact-manager.version>
         <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
