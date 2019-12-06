@@ -229,8 +229,7 @@
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
-        <!--kie.version>7.8.0-SNAPSHOT</kie.version-->
-        <kie.version>7.29.0.Final</kie.version>
+        <kie.version>7.30.0.Final</kie.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
@@ -269,6 +268,7 @@
         <maven-remote-resources-plugin.skip>false</maven-remote-resources-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
         <maven-extraenforcer.version>1.2</maven-extraenforcer.version>
+        <maven-manageddepsenforcer.version>1.3</maven-manageddepsenforcer.version>
         <maven-cargo.plugin>1.4.3</maven-cargo.plugin>
         <maven-tomcat7.plugin>2.2</maven-tomcat7.plugin>
         <maven-build-helper-plugin.version>1.8</maven-build-helper-plugin.version>
@@ -2412,14 +2412,19 @@
                         <!--dependencyConvergence>
                             <uniqueVersions>true</uniqueVersions>
                         </dependencyConvergence-->
+                        <!--requireManagedDeps implementation="org.commonjava.maven.enforcer.rule.EnforceManagedDepsRule">
+                            <checkProfiles>true</checkProfiles>
+                            <failOnViolation>true</failOnViolation>
+                        </requireManagedDeps-->
                         <requireMavenVersion>
                             <version>3.5.0</version>
                         </requireMavenVersion>
                         <bannedDependencies>
                             <excludes>
-                                <!-- We can add commons-lang to the list once GEODE-4706 is resolved -->
                                 <exclude>commons-lang:commons-lang</exclude>
                                 <exclude>commons-logging:commons-logging</exclude>
+								<!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-500 -->
+                                <!--exclude>commons-collections:commons-collections</exclude-->
                                 <exclude>com.mchange:*</exclude>
                                 <exclude>c3p0:*</exclude>
                                 <!-- Waiting on https://github.com/aws/aws-sdk-java/issues/1580 and https://jira.spring.io/browse/DATAES-290-->
@@ -2428,10 +2433,7 @@
                                 <!--exclude>com.google.guava:*</exclude-->
                                 <!-- impossible because of google-maps-services https://github.com/googlemaps/google-maps-services-java/issues/533 (Maybe once we have java unified json api JSR 353)-->
                                 <!--exclude>com.google.code.gson:gson</exclude-->
-                                <!-- Waiting on: https://issues.apache.org/jira/browse/SOLR-13092 -->
-                                <!--exclude>org.codehaus.jackson</exclude-->
-                                <!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-500 -->
-                                <!--exclude>commons-collections:commons-collections</exclude-->
+                                <exclude>org.codehaus.jackson</exclude>
                             </excludes>
                         </bannedDependencies>
                     </rules>
@@ -2442,6 +2444,11 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>extra-enforcer-rules</artifactId>
                         <version>${maven-extraenforcer.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.commonjava.maven.enforcer</groupId>
+                        <artifactId>enforce-managed-deps-rule</artifactId>
+                        <version>${maven-manageddepsenforcer.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
