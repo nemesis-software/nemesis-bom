@@ -127,7 +127,7 @@
         <camunda.version>7.11.0</camunda.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
         </checkstyle.violation.ignore>
-        <classindex.version>3-NEMESIS</classindex.version>
+        <classindex.version>3.9</classindex.version> <!-- 3-NEMESIS -->
         <codemodel.version>3.2.4</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
@@ -282,7 +282,7 @@
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
         <money-validation.version>2.0.0</money-validation.version>
         <nemesis.version>${project.version}</nemesis.version>
-        <nemesis-tools.version>2.0.0.RELEASE</nemesis-tools.version>
+        <nemesis-tools.version>2.1.0.BUILD-SNAPSHOT</nemesis-tools.version>
         <nemesis-rules.version>2.0.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.11</olingo-odata2.version>
