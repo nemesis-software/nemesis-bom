@@ -350,7 +350,7 @@
         <stripe-api.version>12.0.0</stripe-api.version>
         <klarna-sdk.version>3.1.1</klarna-sdk.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
-        <tika-parsers.version>1.20</tika-parsers.version>
+        <tika-parsers.version>1.22</tika-parsers.version>
         <uimafit-core.version>3.0.0</uimafit-core.version>
         <metadata-extractor.version>2.12.0</metadata-extractor.version>
         <xmpcore.version>6.1.10</xmpcore.version>
