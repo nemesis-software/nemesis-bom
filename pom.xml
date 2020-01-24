@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.0.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>com.nemesis</groupId>
@@ -127,7 +128,7 @@
         <camunda.version>7.11.0</camunda.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
         </checkstyle.violation.ignore>
-        <classindex.version>3.9</classindex.version> <!-- 3-NEMESIS -->
+        <classindex.version>3.9</classindex.version>
         <codemodel.version>3.2.4</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
@@ -144,15 +145,15 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <extra.jvmargs />
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <extra.jvmargs/>
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.18</flying-saucer.version>
         <gemfire.version>9.3.0</gemfire.version>
@@ -315,7 +316,6 @@
         <selenium.version>3.9.1</selenium.version>
         <byte-buddy-agent.version>1.10.4</byte-buddy-agent.version>
         <byte-buddy.version>1.10.4</byte-buddy.version>
-        <okhttp.version>4.2.2</okhttp.version>
         <selenium-htmlunit.version>3.9.1</selenium-htmlunit.version>
         <smartsprites.version>0.2.13</smartsprites.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
@@ -1949,7 +1949,6 @@
                 <groupId>net.jcip</groupId>
                 <artifactId>jcip-annotations</artifactId>
                 <version>${jcip.version}</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>nu.validator</groupId>
@@ -1965,13 +1964,11 @@
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>htmlunit-driver</artifactId>
                 <version>${selenium-htmlunit.version}</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
                 <version>${selenium.version}</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>net.bytebuddy</groupId>
@@ -1982,15 +1979,7 @@
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy-agent</artifactId>
                 <version>${byte-buddy-agent.version}</version>
-                <scope>test</scope>
             </dependency>
-            <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>${okhttp.version}</version>
-                <scope>test</scope>
-            </dependency>
-
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-core</artifactId>
@@ -2521,7 +2510,7 @@
                             <excludes>
                                 <exclude>commons-lang:commons-lang</exclude>
                                 <exclude>commons-logging:commons-logging</exclude>
-								<!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-500 -->
+                                <!-- Wait for https://issues.apache.org/jira/browse/BEANUTILS-500 -->
                                 <!--exclude>commons-collections:commons-collections</exclude-->
                                 <exclude>com.mchange:*</exclude>
                                 <exclude>c3p0:*</exclude>
@@ -2583,7 +2572,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2591,7 +2580,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
