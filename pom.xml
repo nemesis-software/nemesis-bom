@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -126,7 +126,7 @@
         <asciidoctorj-diagram.version>1.5.16</asciidoctorj-diagram.version>
         <atmosphere.version>2.2.13</atmosphere.version>
         <camunda.version>7.11.0</camunda.version>
-        <checkstyle.violation.ignore>NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
+        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <classindex.version>3.9</classindex.version>
         <codemodel.version>3.2.4</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
@@ -149,6 +149,7 @@
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
+        <!--elasticsearch.version>6.8.4</elasticsearch.version-->
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <extra.jvmargs/>
         <failsafe.parallel/>
@@ -232,7 +233,7 @@
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
-        <kie.version>7.30.0.Final</kie.version>
+        <kie.version>7.32.0-SNAPSHOT</kie.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
@@ -287,7 +288,7 @@
         <nemesis-rules.version>2.0.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.11</olingo-odata2.version>
-        <olingo-odata4.version>4.6.0</olingo-odata4.version>
+        <olingo-odata4.version>4.7.1</olingo-odata4.version>
         <openpdf.version>1.3.11</openpdf.version>
         <oracle.version>12.2.0.1</oracle.version>
         <orika.version>1.5.3-nemesis</orika.version>
@@ -338,7 +339,7 @@
         <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
         <!--spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version-->
         <spring-cloud.version>Finchley.RC1</spring-cloud.version>
-        <!--spring-hateoas.version>0.25.0.BUILD-SNAPSHOT</spring-hateoas.version-->
+        <spring-hateoas.version>1.0.1.RELEASE</spring-hateoas.version>
         <!--spring-data-releasetrain.version>Moore-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
         <spring-social.version>2.0.0.NEMESIS-RELEASE</spring-social.version>
@@ -1450,6 +1451,11 @@
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
+                <artifactId>springfox-spring-webmvc</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
                 <artifactId>springfox-data-rest</artifactId>
                 <version>${springfox.version}</version>
             </dependency>
@@ -1955,6 +1961,11 @@
                 <version>${nemesis-rules.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-kie</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.nemesis.platform.module.bpm</groupId>
                 <artifactId>nemesis-module-activiti</artifactId>
                 <version>${nemesis.version}</version>
@@ -1969,7 +1980,31 @@
                 <artifactId>nemesis-module-commonbpmn</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.nemesis.platform.module.bpm</groupId>
+                <artifactId>nemesis-module-jbpm</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.brm</groupId>
+                <artifactId>nemesis-module-brm-api</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.brm</groupId>
+                <artifactId>nemesis-module-drools</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.dmn</groupId>
+                <artifactId>nemesis-module-dmn-api</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.dmn</groupId>
+                <artifactId>nemesis-module-droolsdmn</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
             <!-- Test dependencies -->
             <dependency>
                 <groupId>net.jcip</groupId>
