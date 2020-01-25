@@ -121,11 +121,13 @@
     </distributionManagement>
 
     <properties>
+        <activiti.version>7-201802-EA</activiti.version>
         <amazon-aws-sdk.version>1.11.538</amazon-aws-sdk.version>
         <asciidoctor.version>1.6.0</asciidoctor.version>
         <asciidoctorj-diagram.version>1.5.16</asciidoctorj-diagram.version>
         <atmosphere.version>2.2.13</atmosphere.version>
         <camunda.version>7.11.0</camunda.version>
+        <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <classindex.version>3.9</classindex.version>
         <codemodel.version>3.2.4</codemodel.version>
@@ -141,6 +143,7 @@
         <commons-text.version>1.8</commons-text.version>
         <compile-testing.version>0.18</compile-testing.version>
         <cybersource.version>6.2.7</cybersource.version>
+        <cxf.version>3.3.4</cxf.version>
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
@@ -148,6 +151,7 @@
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
+        <elasticsearch-emebedded.version>2.10.0</elasticsearch-emebedded.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <!--elasticsearch.version>6.8.4</elasticsearch.version-->
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
@@ -332,8 +336,13 @@
         <spotbugs.version>3.1.8</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
+<<<<<<< HEAD
         <springdoc.version>1.2.33</springdoc.version>
         <springfox.version>2.9.2</springfox.version>
+=======
+        <springdoc.version>1.2.26-SNAPSHOT</springdoc.version>
+        <springfox.version>3.0.0-NEMESIS</springfox.version>
+>>>>>>> Enable requireManagedDeps enforcer rule
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
@@ -352,7 +361,7 @@
         <stripe-api.version>12.0.0</stripe-api.version>
         <klarna-sdk.version>3.1.1</klarna-sdk.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
-        <tika-parsers.version>1.20</tika-parsers.version>
+        <tika-parsers.version>1.23</tika-parsers.version>
         <uimafit-core.version>3.0.0</uimafit-core.version>
         <metadata-extractor.version>2.12.0</metadata-extractor.version>
         <xmpcore.version>6.1.10</xmpcore.version>
@@ -453,13 +462,6 @@
                 <type>pom</type>
                 <version>${kie.version}</version>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.camunda.bpm</groupId>
-                <artifactId>camunda-bom</artifactId>
-                <version>${camunda.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
             </dependency>
             <!--dependency>
                 <groupId>org.hibernate.ogm</groupId>
@@ -886,11 +888,6 @@
                 <groupId>com.github.javaparser</groupId>
                 <artifactId>javaparser-core</artifactId>
                 <version>${javaparser.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.codelibs.elasticsearch.module</groupId>
-                <artifactId>analysis-common</artifactId>
-                <version>${elasticsearch.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.jawr</groupId>
@@ -1434,6 +1431,7 @@
                 <artifactId>jest</artifactId>
                 <version>${jest.version}</version>
             </dependency>
+            <!-- SpringFox -->
             <dependency>
                 <groupId>io.leangen.graphql</groupId>
                 <artifactId>graphql-spqr-spring-boot-starter</artifactId>
@@ -1464,6 +1462,19 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox.version}</version>
             </dependency>
+            <!-- SpringDoc -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <!-- Google  Compile Testing -->
+            <dependency>
+                <groupId>com.google.testing.compile</groupId>
+                <artifactId>compile-testing</artifactId>
+                <version>${compile-testing.version}</version>
+            </dependency>
+            <!-- Olingo -->
             <dependency>
                 <groupId>org.apache.olingo</groupId>
                 <artifactId>olingo-odata2-core</artifactId>
@@ -1489,15 +1500,94 @@
                 <artifactId>odata-server-core</artifactId>
                 <version>${olingo-odata4.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.google.testing.compile</groupId>
-                <artifactId>compile-testing</artifactId>
-                <version>${compile-testing.version}</version>
-            </dependency>
+            <!-- Yubico -->
             <dependency>
                 <groupId>com.yubico</groupId>
                 <artifactId>yubico-validation-client2</artifactId>
                 <version>${yubico.version}</version>
+            </dependency>
+            <!-- SOLR -->
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-dataimporthandler</artifactId>
+                <version>${solr.version}</version>
+            </dependency>
+            <!-- Elasticsearch -->
+            <dependency>
+                <groupId>pl.allegro.tech</groupId>
+                <artifactId>embedded-elasticsearch</artifactId>
+                <version>${elasticsearch-emebedded.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codelibs.elasticsearch.module</groupId>
+                <artifactId>analysis-common</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <!-- Camunda -->
+            <dependency>
+                <groupId>org.camunda.bpm</groupId>
+                <artifactId>camunda-bom</artifactId>
+                <version>${camunda.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter-webapp-core</artifactId>
+                <version>${camunda-spring-boot.version}</version>
+            </dependency>
+            <!-- Activiti -->
+            <dependency>
+                <groupId>org.activiti.cloud</groupId>
+                <artifactId>activiti-cloud-starter-configure</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <!-- CXF -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-core</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <!-- Maven -->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>${maven-plugin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-artifact-manager</artifactId>
+                <version>${maven-artifact-manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-core</artifactId>
+                <version>${maven-plugin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-settings</artifactId>
+                <version>${maven-plugin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${maven-plugin-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-provider-api</artifactId>
+                <version>${wagon.version}</version>
             </dependency>
             <!-- Nemesis -->
             <dependency>
@@ -2560,10 +2650,10 @@
                         <!--dependencyConvergence>
                             <uniqueVersions>true</uniqueVersions>
                         </dependencyConvergence-->
-                        <!--requireManagedDeps implementation="org.commonjava.maven.enforcer.rule.EnforceManagedDepsRule">
+                        <requireManagedDeps implementation="org.commonjava.maven.enforcer.rule.EnforceManagedDepsRule">
                             <checkProfiles>true</checkProfiles>
                             <failOnViolation>true</failOnViolation>
-                        </requireManagedDeps-->
+                        </requireManagedDeps>
                         <requireMavenVersion>
                             <version>3.5.0</version>
                         </requireMavenVersion>
