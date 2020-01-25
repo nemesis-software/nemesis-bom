@@ -202,7 +202,6 @@
         <javax-interceptor.version>3.1</javax-interceptor.version>
         <javax-jsp.version>2.3.3</javax-jsp.version>
         <jansi.version>1.18</jansi.version>
-        <jawr.version>3.13.NEMESIS-RELEASE</jawr.version>
         <jaxb.version>2.3.0.1</jaxb.version>
         <jcip.version>1.0</jcip.version>
         <jest.version>6.3.1</jest.version>
@@ -350,6 +349,7 @@
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.NEMESIS-RELEASE</spring-social-facebook.version>
         <sun-mail-impl.version>1.6.2</sun-mail-impl.version>
+        <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
         <junit-surefire-provider.version>1.1.0</junit-surefire-provider.version>
         <supercsv.version>2.4.0</supercsv.version>
         <dozer.version>6.5.0</dozer.version>
@@ -363,8 +363,7 @@
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
-        <thymeleaf-jawr.version>2.0.2.NEMESIS-RELEASE</thymeleaf-jawr.version>
-        <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
+        <thymeleaf-extras.version>3.0.3.RELEASE</thymeleaf-extras.version>
         <twilio-sdk.version>7.43.0</twilio-sdk.version>
         <wagon.version>3.3.3</wagon.version>
         <wuic.version>0.5.2.RC1</wuic.version>
@@ -742,11 +741,6 @@
                 <version>${riskified.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.webjars</groupId>
-                <artifactId>gsap-js</artifactId>
-                <version>${gsap-js.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.gridgain</groupId>
                 <artifactId>gridgain-core</artifactId>
                 <version>${gridgain.version}</version>
@@ -885,30 +879,21 @@
                 <version>${javaparser.version}</version>
             </dependency>
             <dependency>
-                <groupId>net.jawr</groupId>
-                <artifactId>jawr-core</artifactId>
-                <version>${jawr.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>net.jawr.extensions</groupId>
-                <artifactId>jawr-spring-extension</artifactId>
-                <version>${jawr.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>nz.net.ultraq.thymeleaf</groupId>
                 <artifactId>thymeleaf-layout-dialect</artifactId>
                 <version>${thymeleaf-layout-dialect.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.dtrunk90</groupId>
-                <artifactId>thymeleaf-jawr-extension</artifactId>
-                <version>${thymeleaf-jawr.version}</version>
+                <groupId>org.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-java8time</artifactId>
+                <version>${thymeleaf-extras.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.timgroup</groupId>
                 <artifactId>jgravatar</artifactId>
                 <version>${jgravatar.version}</version>
             </dependency>
+            <!-- Webjars -->
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery</artifactId>
@@ -938,6 +923,16 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>jquery-payment</artifactId>
                 <version>${jquerypayment-webjars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>gsap-js</artifactId>
+                <version>${gsap-js.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>swagger-ui</artifactId>
+                <version>${swagger-ui-webjars.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars</groupId>
