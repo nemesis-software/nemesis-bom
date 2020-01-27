@@ -257,7 +257,7 @@
         <maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
-        <maven-release-plugin.version>3.0.1-NEMESIS-RELEASE</maven-release-plugin.version>
+        <maven-release-plugin.version>3.0.0-M1</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
         <owasp.esapi.version>2.2.0.0</owasp.esapi.version>
         <maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
@@ -335,13 +335,8 @@
         <spotbugs.version>3.1.8</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
-<<<<<<< HEAD
         <springdoc.version>1.2.33</springdoc.version>
         <springfox.version>2.9.2</springfox.version>
-=======
-        <springdoc.version>1.2.26-SNAPSHOT</springdoc.version>
-        <springfox.version>3.0.0-NEMESIS</springfox.version>
->>>>>>> Enable requireManagedDeps enforcer rule
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
@@ -354,6 +349,7 @@
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.NEMESIS-RELEASE</spring-social-facebook.version>
         <sun-mail-impl.version>1.6.2</sun-mail-impl.version>
+        <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
         <junit-surefire-provider.version>1.1.0</junit-surefire-provider.version>
         <supercsv.version>2.4.0</supercsv.version>
@@ -1169,6 +1165,7 @@
                 <artifactId>elasticsearch-head</artifactId>
                 <version>${elasticsearch-head-webjars.version}</version>
             </dependency>
+            <!-- SuperCSV -->
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
                 <artifactId>super-csv</artifactId>
@@ -1190,6 +1187,7 @@
                 <artifactId>dozer-core</artifactId>
                 <version>${dozer.version}</version>
             </dependency>
+            <!-- Jadira -->
             <dependency>
                 <groupId>org.jadira.usertype</groupId>
                 <artifactId>usertype.core</artifactId>
@@ -1436,6 +1434,11 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
+            <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
