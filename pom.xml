@@ -2919,11 +2919,13 @@
                             <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
                                 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError
                                 ${extra.jvmargs}
-                                <!--                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
+                                <!--
+                                -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
                                                                 -Dma.glasnost.orika.writeSourceFiles=true
-                                                                -Dma.glasnost.orika.writeSourceFilesToPath=/home/petar/orikaGenerated/src/
+                                                                -Dma.glasnost.orika.writeSourceFilesToPath=target/generated-sources/
                                                                 -Dma.glasnost.orika.writeClassFiles=true
-                                                                -Dma.glasnost.orika.writeClassFilesToPath=/home/petar/orikaGenerated/bin/   -->
+                                                                -Dma.glasnost.orika.writeClassFilesToPath=target/generated-classes/
+                                                                -->
                             </argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>
