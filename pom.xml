@@ -1435,6 +1435,11 @@
                 <version>${jest.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.leangen.graphql</groupId>
+                <artifactId>graphql-spqr-spring-boot-starter</artifactId>
+                <version>${graphql-spqr.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
