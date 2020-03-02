@@ -165,6 +165,7 @@
         <google.geocoder.version>0.16</google.geocoder.version>
         <google-maps-services.version>0.2.9</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
+        <graphql-spqr.version>0.0.4</graphql-spqr.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>28.1-jre</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
@@ -331,7 +332,7 @@
         <spotbugs.version>3.1.8</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
-        <springdoc.version>1.2.32</springdoc.version>
+        <springdoc.version>1.2.33</springdoc.version>
         <springfox.version>2.9.2</springfox.version>
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
@@ -1647,6 +1648,16 @@
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-restservices</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-openapi</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-graphql</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
