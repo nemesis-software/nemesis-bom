@@ -170,6 +170,7 @@
         <google.geocoder.version>0.16</google.geocoder.version>
         <google-maps-services.version>0.2.9</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
+        <graphql-spqr.version>0.0.4</graphql-spqr.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>28.1-jre</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
@@ -325,7 +326,7 @@
         <slick-webjars.version>1.6.0</slick-webjars.version>
         <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
         <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
-        <bootstrap-webjars.version>4.3.1</bootstrap-webjars.version>
+        <bootstrap-webjars.version>3.3.6</bootstrap-webjars.version>
         <bootstrap-select-webjars.version>1.10.0</bootstrap-select-webjars.version>
         <bootstrap-datepicker-webjars.version>1.9.0</bootstrap-datepicker-webjars.version>
         <bootstrap-slider-webjars.version>7.1.0</bootstrap-slider-webjars.version>
@@ -335,8 +336,8 @@
         <spotbugs.version>3.1.8</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
-        <springdoc.version>1.2.26-SNAPSHOT</springdoc.version>
-        <springfox.version>3.0.0-NEMESIS</springfox.version>
+        <springdoc.version>1.2.33</springdoc.version>
+        <springfox.version>2.9.2</springfox.version>
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
@@ -1431,6 +1432,16 @@
                 <version>${swagger.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.leangen.graphql</groupId>
+                <artifactId>graphql-spqr-spring-boot-starter</artifactId>
+                <version>${graphql-spqr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${springfox.version}</version>
@@ -1736,6 +1747,21 @@
             <dependency>
                 <groupId>com.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-restservices</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-openapi</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-graphql</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.dropship</groupId>
+                <artifactId>nemesis-module-everything5pounds</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
