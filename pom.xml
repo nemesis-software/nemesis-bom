@@ -336,7 +336,6 @@
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
         <springdoc.version>1.2.33</springdoc.version>
-        <springfox.version>2.9.2</springfox.version>
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
@@ -1424,41 +1423,11 @@
                 <artifactId>jest</artifactId>
                 <version>${jest.version}</version>
             </dependency>
-            <!-- SpringFox -->
+            <!-- GraphQL -->
             <dependency>
                 <groupId>io.leangen.graphql</groupId>
                 <artifactId>graphql-spqr-spring-boot-starter</artifactId>
                 <version>${graphql-spqr.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-            <dependency>
-            <groupId>io.swagger</groupId>
-                <artifactId>swagger-models</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-spring-webmvc</artifactId>
-                <version>${springfox.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-data-rest</artifactId>
-                <version>${springfox.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox.version}</version>
             </dependency>
             <!-- SpringDoc -->
             <dependency>
