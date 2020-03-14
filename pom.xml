@@ -236,7 +236,7 @@
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
-        <kie.version>7.34.0-SNAPSHOT</kie.version>
+        <kie.version>7.34.0.Final</kie.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
