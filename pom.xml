@@ -379,6 +379,15 @@
 
     <repositories>
         <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>nemesis-repository-snapshots</id>
             <name>Nemesis Snapshot Repository</name>
             <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
