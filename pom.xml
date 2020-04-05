@@ -148,6 +148,7 @@
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.xjc.jvmArgs />
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
+        <easymock.version>4.0.2</easymock.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-emebedded.version>2.10.0</elasticsearch-emebedded.version>
@@ -206,6 +207,7 @@
         <jest.version>6.3.1</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
         <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
+        <jcaptcha.version>1.0-RC6</jcaptcha.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
         <jpasskit.version>0.1.1</jpasskit.version>
         <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
@@ -309,6 +311,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <protobuf.version>3.10.0</protobuf.version>
         <protobuf-java-format.version>1.4</protobuf-java-format.version>
+        <powermock.version>2.0.5</powermock.version>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.11</reflections.version>
         <redis-embedded.version>0.6</redis-embedded.version>
@@ -330,6 +333,7 @@
         <bootstrap-slider-webjars.version>7.1.0</bootstrap-slider-webjars.version>
         <pace-webjars.version>1.0.2</pace-webjars.version>
         <select2-webjars.version>4.0.3</select2-webjars.version>
+        <simplecaptcha.version>1.2.1</simplecaptcha.version>
         <sockjsclient-webjars.version>1.0.3</sockjsclient-webjars.version>
         <spotbugs.version>3.1.8</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
@@ -385,6 +389,11 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>enonic</id>
+            <name>Enonic Repository</name>
+            <url>https://repo.enonic.com/public/</url>
         </repository>
         <repository>
             <id>nemesis-repository-snapshots</id>
@@ -1103,6 +1112,16 @@
                 <version>${recaptcha4j.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.octo.captcha</groupId>
+                <artifactId>jcaptcha-all</artifactId>
+                <version>${jcaptcha.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>nl.captcha</groupId>
+                <artifactId>simplecaptcha</artifactId>
+                <version>${simplecaptcha.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>
                 <version>${reflections.version}</version>
@@ -1652,7 +1671,17 @@
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform.module.captcha</groupId>
+                <artifactId>nemesis-module-jcaptcha</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.captcha</groupId>
                 <artifactId>nemesis-module-recaptcha</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nemesis.platform.module.captcha</groupId>
+                <artifactId>nemesis-module-simplecaptcha</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
@@ -2105,6 +2134,26 @@
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy-agent</artifactId>
                 <version>${byte-buddy-agent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.easymock</groupId>
+                <artifactId>easymock</artifactId>
+                <version>${easymock.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.nemesis.platform</groupId>
