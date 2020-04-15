@@ -392,11 +392,6 @@
             </snapshots>
         </repository>
         <repository>
-            <id>enonic</id>
-            <name>Enonic Repository</name>
-            <url>https://repo.enonic.com/public/</url>
-        </repository>
-        <repository>
             <id>nemesis-repository-snapshots</id>
             <name>Nemesis Snapshot Repository</name>
             <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
@@ -2140,11 +2135,6 @@
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy-agent</artifactId>
                 <version>${byte-buddy-agent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-module-junit4</artifactId>
-                <version>${powermock.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
