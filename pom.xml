@@ -20,7 +20,7 @@
         <relativePath />
     </parent>
 
-    <groupId>com.nemesis</groupId>
+    <groupId>io.nemesis</groupId>
     <artifactId>bom</artifactId>
     <version>2.2.2.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -123,8 +123,11 @@
         <activiti.version>7-201802-EA</activiti.version>
         <amazon-aws-sdk.version>1.11.538</amazon-aws-sdk.version>
         <asciidoctor.version>1.6.0</asciidoctor.version>
-        <asciidoctorj-diagram.version>1.5.16</asciidoctorj-diagram.version>
+        <asciidoctorj.version>2.2.0</asciidoctorj.version>
+        <asciidoctorj-diagram.version>2.0.1</asciidoctorj-diagram.version>
+        <asciidoctorj-pdf.version>1.5.3</asciidoctorj-pdf.version>
         <atmosphere.version>2.2.13</atmosphere.version>
+        <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
         <camunda.version>7.11.0</camunda.version>
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
@@ -148,6 +151,7 @@
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.xjc.jvmArgs />
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
+        <dozer.version>6.5.0</dozer.version>
         <easymock.version>4.0.2</easymock.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
@@ -160,6 +164,7 @@
         <failsafe.useUnlimitedThreads />
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.18</flying-saucer.version>
+        <gatling.version>3.3.1</gatling.version>
         <gemfire.version>9.3.0</gemfire.version>
         <geotools.version>21.0</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
@@ -181,6 +186,7 @@
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
+        <imgscalr.version>4.2</imgscalr.version>
         <infinispan.version>9.1.7.Final</infinispan.version>
         <java.version>1.8</java.version>
         <!-- Upgrade only after jackson-datatype-money upgrade-->
@@ -204,13 +210,13 @@
         <jansi.version>1.18</jansi.version>
         <jaxb.version>2.3.0.1</jaxb.version>
         <jcip.version>1.0</jcip.version>
+        <jericho.version>3.4</jericho.version>
         <jest.version>6.3.1</jest.version>
         <jgravatar.version>1.1</jgravatar.version>
         <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
         <jcaptcha.version>1.0-RC6</jcaptcha.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
         <jpasskit.version>0.1.1</jpasskit.version>
-        <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
         <jquery-webjars.version>3.4.1</jquery-webjars.version>
         <jqueryui-webjars.version>1.12.1</jqueryui-webjars.version>
         <jquerymobile-webjars.version>1.4.5</jquerymobile-webjars.version>
@@ -234,10 +240,13 @@
         <jqueryflowplayer-webjars.version>6.0.4</jqueryflowplayer-webjars.version>
         <jsitemapgenerator.version>2.2</jsitemapgenerator.version>
         <jsoup.version>1.11.2</jsoup.version>
+        <json.version>20190722</json.version>
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
+        <junit-surefire-provider.version>1.1.0</junit-surefire-provider.version>
         <kie.version>7.34.0.Final</kie.version>
+        <klarna-sdk.version>3.1.1</klarna-sdk.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
@@ -285,10 +294,11 @@
         <maven-jasmine-plugin.version>1.3.1.5</maven-jasmine-plugin.version>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
+        <metadata-extractor.version>2.12.0</metadata-extractor.version>
         <money-validation.version>2.0.0</money-validation.version>
         <mongodb-embedded.version>5.0.5</mongodb-embedded.version>
         <nemesis.version>${project.version}</nemesis.version>
-        <nemesis-tools.version>2.1.0.RELEASE</nemesis-tools.version>
+        <nemesis-tools.version>2.2.0.BUILD-SNAPSHOT</nemesis-tools.version>
         <nemesis-rules.version>2.0.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.11</olingo-odata2.version>
@@ -354,21 +364,17 @@
         <sun-mail-impl.version>1.6.2</sun-mail-impl.version>
         <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
-        <junit-surefire-provider.version>1.1.0</junit-surefire-provider.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <dozer.version>6.5.0</dozer.version>
         <stripe-api.version>12.0.0</stripe-api.version>
-        <klarna-sdk.version>3.1.1</klarna-sdk.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
+        <thumbnailator.version>0.4.9</thumbnailator.version>
         <tika-parsers.version>1.23</tika-parsers.version>
-        <uimafit-core.version>3.0.0</uimafit-core.version>
-        <metadata-extractor.version>2.12.0</metadata-extractor.version>
-        <xmpcore.version>6.1.10</xmpcore.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
         <thymeleaf-extras.version>3.0.3.RELEASE</thymeleaf-extras.version>
         <twilio-sdk.version>7.43.0</twilio-sdk.version>
+        <uimafit-core.version>3.0.0</uimafit-core.version>
         <wagon.version>3.3.3</wagon.version>
         <wuic.version>0.5.2.RC1</wuic.version>
         <!-- the 18.xx version requires Java9 -->
@@ -376,6 +382,7 @@
         <xerces.version>2.12.0</xerces.version>
         <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
+        <xmpcore.version>6.1.10</xmpcore.version>
         <xstream.version>1.4.11</xstream.version>
         <yubico.version>3.0.5</yubico.version>
         <zxing.version>3.4.0</zxing.version>
@@ -442,9 +449,19 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.nemesis.tools</groupId>
+                <groupId>io.nemesis.tools</groupId>
                 <artifactId>nemesis-junit-listener</artifactId>
                 <version>${nemesis-tools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctorj</artifactId>
+                <version>${asciidoctorj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctorj-pdf</artifactId>
+                <version>${asciidoctorj-pdf.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.junit.vintage</groupId>
@@ -455,6 +472,11 @@
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-annotations</artifactId>
                 <version>${spotbugs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.gatling.highcharts</groupId>
+                <artifactId>gatling-charts-highcharts</artifactId>
+                <version>${gatling.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.drools</groupId>
@@ -1192,6 +1214,26 @@
                 <artifactId>elasticsearch-head</artifactId>
                 <version>${elasticsearch-head-webjars.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${json.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.htmlparser.jericho</groupId>
+                <artifactId>jericho-html</artifactId>
+                <version>${jericho.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.imgscalr</groupId>
+                <artifactId>imgscalr-lib</artifactId>
+                <version>${imgscalr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>${thumbnailator.version}</version>
+            </dependency>
             <!-- SuperCSV -->
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
@@ -1586,7 +1628,7 @@
             </dependency>
             <!-- Nemesis -->
             <dependency>
-                <groupId>com.nemesis.tools</groupId>
+                <groupId>io.nemesis.tools</groupId>
                 <artifactId>nemesis-license-tools</artifactId>
                 <version>${nemesis-tools.version}</version>
             </dependency>
@@ -2384,7 +2426,7 @@
                         <dependency>
                             <groupId>org.json</groupId>
                             <artifactId>json</artifactId>
-                            <version>20171018</version>
+                            <version>${json.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -2998,7 +3040,7 @@
                             <properties>
                                 <property>
                                     <name>listener</name>
-                                    <value>com.nemesis.tools.junitlistener.NemesisJunitRunListener</value>
+                                    <value>io.nemesis.tools.junitlistener.NemesisJunitRunListener</value>
                                 </property>
                             </properties>
                         </configuration>
