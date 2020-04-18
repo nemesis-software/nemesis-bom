@@ -2563,7 +2563,7 @@
                         <configuration>
                             <resourceBundles>
                                 <!-- Will generate META-INF/DEPENDENCIES META-INF/LICENSE META-INF/NOTICE -->
-                                <resourceBundle>io.nemesis:nemesis-jar-resource-bundle:1.2.0.RELEASE</resourceBundle>
+                                <resourceBundle>io.nemesis:nemesis-jar-resource-bundle:1.3.0.RELEASE</resourceBundle>
                             </resourceBundles>
                         </configuration>
                     </execution>
