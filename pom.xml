@@ -386,6 +386,7 @@
         <xstream.version>1.4.11</xstream.version>
         <yubico.version>3.0.5</yubico.version>
         <zxing.version>3.4.0</zxing.version>
+        <jasypt-spring-boot-starter.version>3.0.2</jasypt-spring-boot-starter.version>
     </properties>
 
     <repositories>
@@ -2280,6 +2281,11 @@
                 <version>${nemesis.version}</version>
                 <type>test-jar</type>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt-spring-boot-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
