@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
-        <relativePath />
+        <version>2.2.6.RELEASE</version>
+        <relativePath/>
     </parent>
 
     <groupId>io.nemesis</groupId>
@@ -128,15 +129,15 @@
         <asciidoctorj-pdf.version>1.5.3</asciidoctorj-pdf.version>
         <atmosphere.version>2.2.13</atmosphere.version>
         <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
-        <camunda.version>7.11.0</camunda.version>
+        <camunda.version>7.12.0</camunda.version>
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <classindex.version>3.9</classindex.version>
-        <codemodel.version>3.2.4</codemodel.version>
+        <codemodel.version>3.3.0</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-collections4.version>4.4</commons-collections4.version>
-        <commons-fileupload.version>1.3.3</commons-fileupload.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
         <commons-io.version>2.6</commons-io.version>
         <commons-vfs2.version>2.1.1660580.2</commons-vfs2.version>
         <commons-vfs2-s3.version>2.4.2</commons-vfs2-s3.version>
@@ -144,33 +145,33 @@
         <commons-jcs.version>2.2.1</commons-jcs.version>
         <commons-text.version>1.8</commons-text.version>
         <compile-testing.version>0.18</compile-testing.version>
-        <cybersource.version>6.2.7</cybersource.version>
-        <cxf.version>3.3.4</cxf.version>
+        <cybersource.version>6.2.9</cybersource.version>
+        <cxf.version>3.3.6</cxf.version>
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
         <dozer.version>6.5.0</dozer.version>
-        <easymock.version>4.0.2</easymock.version>
+        <easymock.version>4.2</easymock.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-emebedded.version>2.10.0</elasticsearch-emebedded.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
-        <!--elasticsearch.version>6.8.4</elasticsearch.version-->
+        <elasticsearch.version>6.8.6</elasticsearch.version>
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <extra.jvmargs />
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <extra.jvmargs/>
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
-        <flying-saucer.version>9.1.18</flying-saucer.version>
+        <flying-saucer.version>9.1.20</flying-saucer.version>
         <gatling.version>3.3.1</gatling.version>
         <gemfire.version>9.3.0</gemfire.version>
         <geotools.version>21.0</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
-        <googleauth.version>1.2.0</googleauth.version>
+        <googleauth.version>1.5.0</googleauth.version>
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
-        <google-cloud-storage.version>1.0.1</google-cloud-storage.version>
+        <google-cloud-storage.version>1.0.8</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
         <google-maps-services.version>0.2.9</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
@@ -182,7 +183,7 @@
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.1</hibernate-hydrate.version>
-        <httpclient5.version>5.0-beta5</httpclient5.version>
+        <httpclient5.version>5.0</httpclient5.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
@@ -194,15 +195,16 @@
         <jackson-datatype-money.version>1.1.1</jackson-datatype-money.version>
         <jackson-datatype-jts.version>2.4</jackson-datatype-jts.version>
         <jackson-datatype.version>2.10.1</jackson-datatype.version>
-        <javauom.version>1.0</javauom.version>
-        <javauom-ri.version>1.2</javauom-ri.version>
+        <javauom.version>2.0-PRD</javauom.version>
+        <javauom-ri.version>2.0.2</javauom-ri.version>
         <javauom-si.version>1.3.1</javauom-si.version>
         <javauom-se.version>1.0.10</javauom-se.version>
-        <javauom-systems.version>1.0</javauom-systems.version>
+        <javauom-systems.version>1.3</javauom-systems.version>
         <javauom-jackson-module.version>1.3.5.NEMESIS-RELEASE</javauom-jackson-module.version>
-        <javaparser.version>3.8.0</javaparser.version>
+        <javaparser.version>3.15.21</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
         <javax-inject.version>1</javax-inject.version>
+        <javax-jstl.version>1.2.2</javax-jstl.version>
         <javax-activation.version>1.2.0</javax-activation.version>
         <jsr250.version>1.0</jsr250.version>
         <javax-interceptor.version>1.2.2</javax-interceptor.version>
@@ -212,11 +214,11 @@
         <jcip.version>1.0</jcip.version>
         <jericho.version>3.4</jericho.version>
         <jest.version>6.3.1</jest.version>
-        <jgravatar.version>1.1</jgravatar.version>
+        <jgravatar.version>1.2</jgravatar.version>
         <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
         <jcaptcha.version>1.0-RC6</jcaptcha.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
-        <jpasskit.version>0.1.1</jpasskit.version>
+        <jpasskit.version>0.1.2</jpasskit.version>
         <jquery-webjars.version>3.4.1</jquery-webjars.version>
         <jqueryui-webjars.version>1.12.1</jqueryui-webjars.version>
         <jquerymobile-webjars.version>1.4.5</jquerymobile-webjars.version>
@@ -238,15 +240,15 @@
         <jqueryeasyzoom-webjars.version>2.2.0</jqueryeasyzoom-webjars.version>
         <jquerysoundmanager2-webjars.version>2.97a.20131201</jquerysoundmanager2-webjars.version>
         <jqueryflowplayer-webjars.version>6.0.4</jqueryflowplayer-webjars.version>
-        <jsitemapgenerator.version>2.2</jsitemapgenerator.version>
-        <jsoup.version>1.11.2</jsoup.version>
+        <jsitemapgenerator.version>4.4</jsitemapgenerator.version>
+        <jsoup.version>1.13.1</jsoup.version>
         <json.version>20190722</json.version>
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
         <junit-surefire-provider.version>1.1.0</junit-surefire-provider.version>
-        <kie.version>7.34.0.Final</kie.version>
-        <klarna-sdk.version>3.1.1</klarna-sdk.version>
+        <kie.version>7.36.1.Final</kie.version>
+        <klarna-sdk.version>4.0.3</klarna-sdk.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <materializecss-webjars.version>0.98.1</materializecss-webjars.version>
         <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
@@ -303,8 +305,8 @@
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.11</olingo-odata2.version>
         <olingo-odata4.version>4.7.1</olingo-odata4.version>
-        <openpdf.version>1.3.11</openpdf.version>
-        <oracle.version>12.2.0.1</oracle.version>
+        <openpdf.version>1.3.16</openpdf.version>
+        <oracle.version>19.3.0.0</oracle.version>
         <orika.version>1.5.3-nemesis</orika.version>
         <owasp.esapi.version>2.2.0.0</owasp.esapi.version>
         <paypal-sdk.version>2.15.122</paypal-sdk.version>
@@ -322,17 +324,17 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <protobuf.version>3.10.0</protobuf.version>
         <protobuf-java-format.version>1.4</protobuf-java-format.version>
-        <powermock.version>2.0.5</powermock.version>
+        <powermock.version>2.0.7</powermock.version>
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
-        <reflections.version>0.9.11</reflections.version>
+        <reflections.version>0.9.12</reflections.version>
         <redis-embedded.version>0.6</redis-embedded.version>
         <redis-hibernate.version>2.4.0</redis-hibernate.version>
         <redis-quartz.version>1.2.0-NEMESIS-RELEASE</redis-quartz.version>
-        <riskified.version>1.2.4</riskified.version>
+        <riskified.version>1.2.7</riskified.version>
         <rometools.version>1.12.2</rometools.version>
         <selenium.version>3.9.1</selenium.version>
-        <byte-buddy-agent.version>1.10.4</byte-buddy-agent.version>
-        <byte-buddy.version>1.10.4</byte-buddy.version>
+        <byte-buddy-agent.version>1.10.9</byte-buddy-agent.version>
+        <byte-buddy.version>1.10.9</byte-buddy.version>
         <selenium-htmlunit.version>3.9.1</selenium-htmlunit.version>
         <smartsprites.version>0.2.13</smartsprites.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
@@ -346,7 +348,7 @@
         <select2-webjars.version>4.0.3</select2-webjars.version>
         <simplecaptcha.version>1.2.1</simplecaptcha.version>
         <sockjsclient-webjars.version>1.0.3</sockjsclient-webjars.version>
-        <spotbugs.version>3.1.8</spotbugs.version>
+        <spotbugs.version>4.0.2</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
         <springdoc.version>1.2.33</springdoc.version>
@@ -365,26 +367,25 @@
         <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe-api.version>12.0.0</stripe-api.version>
+        <stripe-api.version>19.4.0</stripe-api.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
-        <thumbnailator.version>0.4.9</thumbnailator.version>
-        <tika-parsers.version>1.23</tika-parsers.version>
+        <thumbnailator.version>0.4.11</thumbnailator.version>
+        <tika-parsers.version>1.24.1</tika-parsers.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
-        <thymeleaf-extras.version>3.0.3.RELEASE</thymeleaf-extras.version>
-        <twilio-sdk.version>7.43.0</twilio-sdk.version>
+        <thymeleaf-extras.version>3.0.4.RELEASE</thymeleaf-extras.version>
+        <twilio-sdk.version>7.49.1</twilio-sdk.version>
         <uimafit-core.version>3.0.0</uimafit-core.version>
-        <wagon.version>3.3.3</wagon.version>
+        <wagon.version>3.3.4</wagon.version>
         <wuic.version>0.5.2.RC1</wuic.version>
-        <!-- the 18.xx version requires Java9 -->
-        <w3c-nu-validator.version>18.11.5</w3c-nu-validator.version>
+        <w3c-nu-validator.version>20.3.16</w3c-nu-validator.version>
         <xerces.version>2.12.0</xerces.version>
         <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
         <xmpcore.version>6.1.10</xmpcore.version>
         <xstream.version>1.4.11</xstream.version>
-        <yubico.version>3.0.5</yubico.version>
+        <yubico.version>3.1.0</yubico.version>
         <zxing.version>3.4.0</zxing.version>
         <jasypt-spring-boot-starter.version>3.0.2</jasypt-spring-boot-starter.version>
     </properties>
@@ -2796,7 +2797,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2804,7 +2805,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
