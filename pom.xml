@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -158,7 +158,7 @@
         <ehcache3.version>3.8.1</ehcache3.version>
         <elasticsearch-emebedded.version>2.10.0</elasticsearch-emebedded.version>
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
-        <elasticsearch.version>6.8.6</elasticsearch.version>
+        <!--elasticsearch.version>6.8.6</elasticsearch.version-->
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
         <extra.jvmargs/>
         <failsafe.parallel/>
