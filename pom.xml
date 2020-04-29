@@ -178,6 +178,7 @@
         <graphql-spqr.version>0.0.4</graphql-spqr.version>
         <gridgain.version>6.6.9</gridgain.version>
         <guava.version>28.1-jre</guava.version>
+        <reactor.version>0.1.0</reactor.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <hazelcast-quartz.version>1.0.4</hazelcast-quartz.version>
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
@@ -1635,6 +1636,11 @@
                 <artifactId>wagon-provider-api</artifactId>
                 <version>${wagon.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.xe.xecd</groupId>
+                <artifactId>xecd-rates-client</artifactId>
+                <version>${reactor.version}</version>
+            </dependency>
             <!-- Nemesis -->
             <dependency>
                 <groupId>io.nemesis.tools</groupId>
@@ -1979,6 +1985,16 @@
             <dependency>
                 <groupId>io.nemesis.platform.module.currency</groupId>
                 <artifactId>nemesis-module-openexchangerates</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.currency</groupId>
+                <artifactId>nemesis-module-commonexchange</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.currency</groupId>
+                <artifactId>nemesis-module-xe</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
