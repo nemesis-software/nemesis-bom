@@ -383,6 +383,7 @@
         <xerces.version>2.12.0</xerces.version>
         <xml-apis.version>1.4.01</xml-apis.version> <!-- xml-apis has latest version of 1.4.01 - do not UPDATE -->
         <xalan.version>2.7.2</xalan.version>
+        <xe-rates-client.version>0.1.0</xe-rates-client.version>
         <xmpcore.version>6.1.10</xmpcore.version>
         <xstream.version>1.4.11</xstream.version>
         <yubico.version>3.1.0</yubico.version>
@@ -700,7 +701,6 @@
                 <artifactId>spring-webflow</artifactId>
                 <version>${spring-webflow.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
@@ -1628,6 +1628,11 @@
                 <artifactId>wagon-provider-api</artifactId>
                 <version>${wagon.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.xe.xecd</groupId>
+                <artifactId>xecd-rates-client</artifactId>
+                <version>${xe-rates-client.version}</version>
+            </dependency>
             <!-- Nemesis -->
             <dependency>
                 <groupId>io.nemesis.tools</groupId>
@@ -1965,8 +1970,23 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-ldap</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.nemesis.platform.module.currency</groupId>
                 <artifactId>nemesis-module-openexchangerates</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.currency</groupId>
+                <artifactId>nemesis-module-commonexchange</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.currency</groupId>
+                <artifactId>nemesis-module-xe</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
