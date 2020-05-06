@@ -128,6 +128,7 @@
         <asciidoctorj-diagram.version>2.0.1</asciidoctorj-diagram.version>
         <asciidoctorj-pdf.version>1.5.3</asciidoctorj-pdf.version>
         <atmosphere.version>2.2.13</atmosphere.version>
+        <avatax-rest-v2-api-java_2.11.version>20.1.2</avatax-rest-v2-api-java_2.11.version>
         <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
         <camunda.version>7.12.0</camunda.version>
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
@@ -1236,6 +1237,11 @@
                 <artifactId>thumbnailator</artifactId>
                 <version>${thumbnailator.version}</version>
             </dependency>
+            <dependency>
+                <groupId>net.avalara.avatax</groupId>
+                <artifactId>avatax-rest-v2-api-java_2.11</artifactId>
+                <version>${avatax-rest-v2-api-java_2.11.version}</version>
+            </dependency>
             <!-- SuperCSV -->
             <dependency>
                 <groupId>net.sf.supercsv</groupId>
@@ -1702,6 +1708,11 @@
             <dependency>
                 <groupId>io.nemesis.platform.module.storage</groupId>
                 <artifactId>nemesis-module-gcs</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.tax</groupId>
+                <artifactId>nemesis-module-avalara</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
