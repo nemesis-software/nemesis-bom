@@ -1711,7 +1711,7 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.nemesis.platform.module.avalara</groupId>
+                <groupId>io.nemesis.platform.module.tax</groupId>
                 <artifactId>nemesis-module-avalara</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
