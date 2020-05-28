@@ -1647,6 +1647,11 @@
             </dependency>
             <dependency>
                 <groupId>io.nemesis.platform</groupId>
+                <artifactId>nemesis-codegenerator-processor</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform</groupId>
                 <artifactId>nemesis-platform-util</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
