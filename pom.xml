@@ -132,7 +132,7 @@
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
         <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
         <classindex.version>3.9</classindex.version>
-        <codemodel.version>3.2.4</codemodel.version>
+        <codemodel.version>3.4.0</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-collections4.version>4.4</commons-collections4.version>
@@ -384,7 +384,8 @@
         <xalan.version>2.7.2</xalan.version>
         <xmpcore.version>6.1.10</xmpcore.version>
         <xstream.version>1.4.11</xstream.version>
-        <yubico.version>3.0.5</yubico.version>
+        <yandex-ashot.version>1.5.4</yandex-ashot.version>
+        <yubico.version>3.1.0</yubico.version>
         <zxing.version>3.4.0</zxing.version>
         <jasypt-spring-boot-starter.version>3.0.2</jasypt-spring-boot-starter.version>
     </properties>
@@ -2178,6 +2179,11 @@
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
                 <version>${selenium.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ru.yandex.qatools.ashot</groupId>
+                <artifactId>ashot</artifactId>
+                <version>${yandex-ashot.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.bytebuddy</groupId>
