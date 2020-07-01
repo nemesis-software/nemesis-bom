@@ -352,6 +352,7 @@
         <spotbugs.version>4.0.2</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
+        <spring-boot-starter-data-redis.version>2.3.0.RELEASE</spring-boot-starter-data-redis.version>
         <springdoc.version>1.2.33</springdoc.version>
         <!--spring.version>5.1.0.BUILD-SNAPSHOT</spring.version-->
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
@@ -737,6 +738,12 @@
                 <groupId>com.adobe.xmp</groupId>
                 <artifactId>xmpcore</artifactId>
                 <version>${xmpcore.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-starter-data-redis.version}</version>
             </dependency>
 
             <dependency>
@@ -2109,6 +2116,11 @@
             <dependency>
                 <groupId>io.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-popup</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-rss</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
