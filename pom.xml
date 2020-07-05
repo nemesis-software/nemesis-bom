@@ -174,7 +174,7 @@
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.8</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
-        <google-maps-services.version>0.2.9</google-maps-services.version>
+        <google-maps-services.version>0.9.4</google-maps-services.version>
         <gsap-js.version>1.13.1</gsap-js.version>
         <graphql-spqr.version>0.0.4</graphql-spqr.version>
         <gridgain.version>6.6.9</gridgain.version>
@@ -1944,6 +1944,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-reservation</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.nemesis.platform.module.fraud</groupId>
                 <artifactId>nemesis-module-riskified</artifactId>
                 <version>${nemesis.version}</version>
@@ -2813,7 +2818,7 @@
                                 <!--exclude>commons-collections:commons-collections</exclude-->
                                 <exclude>com.mchange:*</exclude>
                                 <exclude>c3p0:*</exclude>
-                                <!-- Waiting on https://github.com/aws/aws-sdk-java/issues/1580 and https://jira.spring.io/browse/DATAES-290-->
+                                <!-- Waiting on https://github.com/aws/aws-sdk-java/issues/1580 and https://github.com/Activiti/Activiti/issues/3323-->
                                 <!--exclude>joda-time:*</exclude-->
                                 <!-- waiting for https://github.com/querydsl/querydsl/issues/2324 -->
                                 <!--exclude>com.google.guava:*</exclude-->
