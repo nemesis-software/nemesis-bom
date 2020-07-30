@@ -2150,6 +2150,11 @@
             </dependency>
             <dependency>
                 <groupId>io.nemesis.platform.module.widget</groupId>
+                <artifactId>nemesis-widget-rss</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.widget</groupId>
                 <artifactId>nemesis-widget-googlemap</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
