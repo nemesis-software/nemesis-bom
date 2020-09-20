@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.7.RELEASE</version>
-        <relativePath />
+        <version>2.3.1.RELEASE</version>
+        <relativePath/>
     </parent>
 
     <groupId>io.nemesis</groupId>
@@ -150,7 +151,7 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
         <dozer.version>6.5.0</dozer.version>
@@ -161,9 +162,9 @@
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <!--elasticsearch.version>6.8.6</elasticsearch.version-->
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <extra.jvmargs />
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <extra.jvmargs/>
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.20</flying-saucer.version>
         <gatling.version>3.3.1</gatling.version>
@@ -220,6 +221,7 @@
         <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
         <jcaptcha.version>1.0-RC6</jcaptcha.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
+        <jna.version>5.6.0</jna.version>
         <jpasskit.version>0.1.2</jpasskit.version>
         <jquery-webjars.version>3.4.1</jquery-webjars.version>
         <jqueryui-webjars.version>1.12.1</jqueryui-webjars.version>
@@ -288,6 +290,7 @@
         <maven-rat-plugin.version>0.13</maven-rat-plugin.version>
         <maven-rat-plugin.skip>false</maven-rat-plugin.skip>
         <maven-surefire-plugin.skip>false</maven-surefire-plugin.skip>
+        <maven-site-plugin.version>3.9.1</maven-site-plugin.version>
         <maven-remote-resources-plugin.skip>false</maven-remote-resources-plugin.skip>
         <maven-compiler-test-compile.skip>false</maven-compiler-test-compile.skip>
         <maven-extraenforcer.version>1.2</maven-extraenforcer.version>
@@ -360,7 +363,7 @@
         <spring-mobile.version>2.0.0.M2</spring-mobile.version>
         <spring-webflow.version>2.5.0.RELEASE</spring-webflow.version>
         <!--spring-security.version>5.0.2.BUILD-20180214.212521-49</spring-security.version-->
-        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <spring-hateoas.version>1.0.1.RELEASE</spring-hateoas.version>
         <!--spring-data-releasetrain.version>Moore-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
@@ -1548,6 +1551,11 @@
                 <groupId>org.apache.olingo</groupId>
                 <artifactId>odata-server-core</artifactId>
                 <version>${olingo-odata4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
             </dependency>
             <!-- Yubico -->
             <dependency>
@@ -2892,7 +2900,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2900,7 +2908,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
