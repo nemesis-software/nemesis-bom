@@ -172,6 +172,7 @@
         <geotools.version>21.0</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
         <googleauth.version>1.5.0</googleauth.version>
+        <google-api-services-compute.version>v1-rev20200901-1.30.10</google-api-services-compute.version>
         <google-concurrentlinkedhashmap.version>1.4.2</google-concurrentlinkedhashmap.version>
         <google-cloud-storage.version>1.0.8</google-cloud-storage.version>
         <google.geocoder.version>0.16</google.geocoder.version>
@@ -185,7 +186,7 @@
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.1</hibernate-hydrate.version>
-        <httpclient5.version>5.0</httpclient5.version>
+        <httpclient5.version>5.0.2</httpclient5.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
@@ -546,6 +547,11 @@
                 <groupId>com.amazonaws</groupId>
                 <artifactId>aws-java-sdk-cloudfront</artifactId>
                 <version>${amazon-aws-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.apis</groupId>
+                <artifactId>google-api-services-compute</artifactId>
+                <version>${google-api-services-compute.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.fusesource.jansi</groupId>
