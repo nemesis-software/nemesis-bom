@@ -167,6 +167,7 @@
         <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.20</flying-saucer.version>
+        <fst.version>2.57</fst.version>
         <gatling.version>3.3.1</gatling.version>
         <gemfire.version>9.3.0</gemfire.version>
         <geotools.version>21.0</geotools.version>
@@ -336,6 +337,7 @@
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.12</reflections.version>
         <redis-embedded.version>0.6</redis-embedded.version>
+        <redisson.version>3.13.6</redisson.version>
         <redis-hibernate.version>2.4.0</redis-hibernate.version>
         <redis-quartz.version>1.2.0-NEMESIS-RELEASE</redis-quartz.version>
         <riskified.version>1.2.7</riskified.version>
@@ -1169,6 +1171,26 @@
                 <groupId>com.github.kstyrc</groupId>
                 <artifactId>embedded-redis</artifactId>
                 <version>${redis-embedded.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-hibernate-53</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.ruedigermoeller</groupId>
+                <artifactId>fst</artifactId>
+                <version>${fst.version}</version>
             </dependency>
             <dependency>
                 <groupId>de.svenkubiak</groupId>
