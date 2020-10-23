@@ -1604,6 +1604,11 @@
                 <version>${elasticsearch-emebedded.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.elasticsearch.plugin</groupId>
+                <artifactId>reindex-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.codelibs.elasticsearch.module</groupId>
                 <artifactId>analysis-common</artifactId>
                 <version>${elasticsearch.version}</version>
