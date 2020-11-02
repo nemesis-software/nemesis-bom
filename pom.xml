@@ -347,6 +347,7 @@
         <byte-buddy.version>1.10.9</byte-buddy.version>
         <selenium-htmlunit.version>3.9.1</selenium-htmlunit.version>
         <smartsprites.version>0.2.13</smartsprites.version>
+        <smartystreets.version>3.7.0</smartystreets.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
         <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
         <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
@@ -1548,6 +1549,12 @@
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
             </dependency>
+            <!-- SmartyStreets -->
+            <dependency>
+                <groupId>com.smartystreets.api</groupId>
+                <artifactId>smartystreets-java-sdk</artifactId>
+                <version>${smartystreets.version}</version>
+            </dependency>
             <!-- Google  Compile Testing -->
             <dependency>
                 <groupId>com.google.testing.compile</groupId>
@@ -1943,6 +1950,11 @@
             <dependency>
                 <groupId>io.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-sitemap</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-smartystreets</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
