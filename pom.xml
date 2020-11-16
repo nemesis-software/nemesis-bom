@@ -22,7 +22,7 @@
 
     <groupId>io.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>2.3.1.BUILD-SNAPSHOT</version>
+    <version>2.3.1.ANTHEM-BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
