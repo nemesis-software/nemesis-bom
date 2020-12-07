@@ -1973,17 +1973,7 @@
             </dependency>
             <dependency>
                 <groupId>io.nemesis.platform.module.payment</groupId>
-                <artifactId>nemesis-module-alipay</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.nemesis.platform.module.payment</groupId>
                 <artifactId>nemesis-module-paysera</artifactId>
-                <version>${nemesis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.nemesis.platform.module.payment</groupId>
-                <artifactId>nemesis-module-safecharge</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
