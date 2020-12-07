@@ -1952,6 +1952,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.nemesis.platform.module.security</groupId>
+                <artifactId>nemesis-module-vasco</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-business</artifactId>
                 <version>${nemesis.version}</version>
@@ -1968,7 +1973,17 @@
             </dependency>
             <dependency>
                 <groupId>io.nemesis.platform.module.payment</groupId>
+                <artifactId>nemesis-module-alipay</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.payment</groupId>
                 <artifactId>nemesis-module-paysera</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.payment</groupId>
+                <artifactId>nemesis-module-safecharge</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
