@@ -10,14 +10,15 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.3.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>io.nemesis</groupId>
@@ -103,7 +104,7 @@
     <distributionManagement>
         <site>
             <id>nemesis-docs</id>
-            <url>scp://178.62.150.204/var/www/html/docs/${project.version}/</url>
+            <url>scp://104.248.241.30/var/www/html/docs/${project.version}/</url>
         </site>
         <repository>
             <id>nemesis-repository-releases</id>
@@ -150,7 +151,7 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
         <dozer.version>6.5.0</dozer.version>
@@ -161,9 +162,9 @@
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <!--elasticsearch.version>6.8.6</elasticsearch.version-->
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <extra.jvmargs />
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <extra.jvmargs/>
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.20</flying-saucer.version>
         <fst.version>2.57</fst.version>
@@ -187,6 +188,7 @@
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
         <hibernate-hydrate.version>5.2.1</hibernate-hydrate.version>
         <httpclient5.version>5.0.2</httpclient5.version>
+        <icu4j.version>68.1</icu4j.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
@@ -248,6 +250,7 @@
         <jsitemapgenerator.version>2.2</jsitemapgenerator.version>
         <jsoup.version>1.13.1</jsoup.version>
         <json.version>20190722</json.version>
+        <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
         <jstree.version>3.3.3</jstree.version>
         <jstree-bootstrap-theme.version>1.0.1</jstree-bootstrap-theme.version>
         <license-maven-plugin>1.20</license-maven-plugin>
@@ -346,6 +349,7 @@
         <byte-buddy.version>1.10.9</byte-buddy.version>
         <selenium-htmlunit.version>3.9.1</selenium-htmlunit.version>
         <smartsprites.version>0.2.13</smartsprites.version>
+        <smartystreets.version>3.7.0</smartystreets.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
         <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
         <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
@@ -1257,6 +1261,11 @@
                 <version>${json.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jsonwebtoken.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>net.htmlparser.jericho</groupId>
                 <artifactId>jericho-html</artifactId>
                 <version>${jericho.version}</version>
@@ -1265,6 +1274,11 @@
                 <groupId>org.imgscalr</groupId>
                 <artifactId>imgscalr-lib</artifactId>
                 <version>${imgscalr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ibm.icu</groupId>
+                <artifactId>icu4j</artifactId>
+                <version>${icu4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.coobird</groupId>
@@ -1546,6 +1560,12 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc.version}</version>
+            </dependency>
+            <!-- SmartyStreets -->
+            <dependency>
+                <groupId>com.smartystreets.api</groupId>
+                <artifactId>smartystreets-java-sdk</artifactId>
+                <version>${smartystreets.version}</version>
             </dependency>
             <!-- Google  Compile Testing -->
             <dependency>
@@ -1946,6 +1966,11 @@
             </dependency>
             <dependency>
                 <groupId>io.nemesis.platform.module</groupId>
+                <artifactId>nemesis-module-smartystreets</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module</groupId>
                 <artifactId>nemesis-module-deeplink</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
@@ -2017,6 +2042,11 @@
             <dependency>
                 <groupId>io.nemesis.platform.module.security</groupId>
                 <artifactId>nemesis-module-commonsecurity</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.nemesis.platform.module.security</groupId>
+                <artifactId>nemesis-module-vasco</artifactId>
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
@@ -2937,7 +2967,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -2945,7 +2975,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
