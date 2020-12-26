@@ -170,7 +170,7 @@
         <fst.version>2.57</fst.version>
         <gatling.version>3.3.1</gatling.version>
         <gemfire.version>9.3.0</gemfire.version>
-        <geotools.version>21.0</geotools.version>
+        <geotools.version>24.1</geotools.version>
         <github-com-gregra81-jqzoom-webjars.version>1.0.1</github-com-gregra81-jqzoom-webjars.version>
         <googleauth.version>1.5.0</googleauth.version>
         <google-api-services-compute.version>v1-rev20200901-1.30.10</google-api-services-compute.version>
