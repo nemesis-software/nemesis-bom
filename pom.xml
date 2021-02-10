@@ -208,12 +208,14 @@
         <javauom-domain.version>2.0.1-SNAPSHOT</javauom-domain.version>
         <javaparser.version>3.15.21</javaparser.version>
         <java-types.version>1.0.1</java-types.version>
+        <javax-ws.version>2.3.1</javax-ws.version>
         <javax-inject.version>1</javax-inject.version>
         <javax-jstl.version>1.2.2</javax-jstl.version>
         <javax-activation.version>1.2.0</javax-activation.version>
         <javax-xml-soap.version>1.4.0</javax-xml-soap.version>
         <jsr250.version>1.0</jsr250.version>
         <javax-interceptor.version>1.2.2</javax-interceptor.version>
+        <javax-jws.version>1.1</javax-jws.version>
         <javax-jsp.version>2.3.3</javax-jsp.version>
         <jansi.version>1.18</jansi.version>
         <jaxb.version>2.3.0.1</jaxb.version>
@@ -1453,6 +1455,23 @@
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcpkix-jdk15on</artifactId>
                 <version>${bcpkix-jdk15on.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-ri-bom</artifactId>
+                <version>${javax-ws.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>rt</artifactId>
+                <version>${javax-ws.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.jws</groupId>
+                <artifactId>javax.jws-api</artifactId>
+                <version>${javax-jws.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.xml.soap</groupId>
