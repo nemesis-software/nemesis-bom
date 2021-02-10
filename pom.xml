@@ -2897,6 +2897,7 @@
                     <defaultAuthor>Petar Tahchiev</defaultAuthor>
                     <defaultSince>0.6</defaultSince>
                     <excludes>**/*Impl.java,**/Default**.java,**/**Configuration.java,**/**Dto.java</excludes>
+                    <excludePackageNames>*.wsdl.*</excludePackageNames>
                 </configuration>
                 <executions>
                     <execution>
