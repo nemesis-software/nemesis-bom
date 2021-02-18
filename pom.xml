@@ -200,7 +200,7 @@
         <jackson.version>2.11.2</jackson.version>
         <jackson-datatype-money.version>1.1.1</jackson-datatype-money.version>
         <jackson-datatype-jts.version>2.4</jackson-datatype-jts.version>
-        <jackson-datatype.version>2.10.1</jackson-datatype.version>
+        <jackson-datatype.version>2.10.5.1</jackson-datatype.version>
         <javauom.version>2.1.1</javauom.version>
         <javauom-ri.version>2.1.1</javauom-ri.version>
         <javauom-systems.version>2.0.2</javauom-systems.version>
