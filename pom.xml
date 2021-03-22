@@ -398,7 +398,7 @@
         <xalan.version>2.7.2</xalan.version>
         <xe-rates-client.version>0.1.0</xe-rates-client.version>
         <xmpcore.version>6.1.10</xmpcore.version>
-        <xstream.version>1.4.15</xstream.version>
+        <xstream.version>1.4.16</xstream.version>
         <yandex-ashot.version>1.5.4</yandex-ashot.version>
         <yubico.version>3.1.0</yubico.version>
         <zxing.version>3.4.0</zxing.version>
