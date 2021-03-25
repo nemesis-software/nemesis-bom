@@ -181,7 +181,7 @@
         <gsap-js.version>1.13.1</gsap-js.version>
         <graphql-spqr.version>0.0.4</graphql-spqr.version>
         <gridgain.version>6.6.9</gridgain.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <hazelcast-quartz.version>1.0.4</hazelcast-quartz.version>
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
