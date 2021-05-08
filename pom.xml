@@ -152,8 +152,7 @@
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.xjc.jvmArgs/>
-        <docker-maven-plugin.version>1.2.0</docker-maven-plugin.version>
-        <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
+        <docker-maven-plugin.version>0.35.0</docker-maven-plugin.version>
         <dozer.version>6.5.0</dozer.version>
         <easymock.version>4.2</easymock.version>
         <ehcache-jcache.version>1.0.1</ehcache-jcache.version>
@@ -2743,14 +2742,9 @@
                     <version>${cxf-codegen-plugin.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>com.spotify</groupId>
+                    <groupId>io.fabric8</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>${docker-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.spotify</groupId>
-                    <artifactId>dockerfile-maven-plugin</artifactId>
-                    <version>${dockerfile-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>com.lazerycode.jmeter</groupId>
