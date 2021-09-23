@@ -360,7 +360,7 @@
         <select2-webjars.version>4.0.3</select2-webjars.version>
         <simplecaptcha.version>1.2.1</simplecaptcha.version>
         <sockjsclient-webjars.version>1.0.3</sockjsclient-webjars.version>
-        <spotbugs.version>4.0.2</spotbugs.version>
+        <spotbugs.version>4.2.2</spotbugs.version>
         <spotbugs.omitvisitors>SerializableIdiom</spotbugs.omitvisitors>
         <stacktable-webjars.version>1.0.1</stacktable-webjars.version>
         <springdoc.version>1.2.33</springdoc.version>
@@ -3088,7 +3088,7 @@
         <profile>
             <id>jdk9-profile</id>
             <properties>
-                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindNullDeref
+                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindReturnRef,FindNullDeref
                 </spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
                 <java.version>11</java.version>
                 <extra.jvmargs>--illegal-access=permit</extra.jvmargs>
