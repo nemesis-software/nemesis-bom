@@ -180,7 +180,7 @@
         <gsap-js.version>1.13.1</gsap-js.version>
         <graphql-spqr.version>0.0.4</graphql-spqr.version>
         <gridgain.version>6.6.9</gridgain.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>31.0.1-jre</guava.version>
         <handlebars-webjars.version>4.0.2</handlebars-webjars.version>
         <hazelcast-quartz.version>1.0.4</hazelcast-quartz.version>
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
@@ -247,7 +247,7 @@
         <jquerysoundmanager2-webjars.version>2.97a.20131201</jquerysoundmanager2-webjars.version>
         <jqueryflowplayer-webjars.version>6.0.4</jqueryflowplayer-webjars.version>
         <jsitemapgenerator.version>4.5</jsitemapgenerator.version>
-        <jsoup.version>1.13.1</jsoup.version>
+        <jsoup.version>1.14.3</jsoup.version>
         <json.version>20190722</json.version>
         <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
         <jstree.version>3.3.3</jstree.version>
@@ -397,7 +397,7 @@
         <xalan.version>2.7.2</xalan.version>
         <xe-rates-client.version>0.1.0</xe-rates-client.version>
         <xmpcore.version>6.1.10</xmpcore.version>
-        <xstream.version>1.4.15</xstream.version>
+        <xstream.version>1.4.18</xstream.version>
         <yandex-ashot.version>1.5.4</yandex-ashot.version>
         <yubico.version>3.1.0</yubico.version>
         <zxing.version>3.4.0</zxing.version>
