@@ -210,7 +210,6 @@
         <javax-jstl.version>1.2.2</javax-jstl.version>
         <javax-activation.version>1.2.0</javax-activation.version>
         <javax-xml-soap.version>1.4.0</javax-xml-soap.version>
-        <jsr250.version>1.0</jsr250.version>
         <javax-interceptor.version>1.2.2</javax-interceptor.version>
         <javax-jws.version>1.1</javax-jws.version>
         <javax-jsp.version>2.3.3</javax-jsp.version>
@@ -379,7 +378,7 @@
         <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe-api.version>20.9.0</stripe-api.version>
+        <stripe-api.version>20.90.0</stripe-api.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
         <thumbnailator.version>0.4.11</thumbnailator.version>
         <tika-parsers.version>1.24.1</tika-parsers.version>
@@ -1472,11 +1471,6 @@
                 <version>${sun-mail-impl.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.annotation</groupId>
-                <artifactId>jsr250-api</artifactId>
-                <version>${jsr250.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>javax.interceptor</groupId>
                 <artifactId>javax.interceptor-api</artifactId>
                 <version>${javax-interceptor.version}</version>
@@ -2489,11 +2483,6 @@
                 <artifactId>javax.annotation-api</artifactId>
                 <version>1.3.2</version>
             </extension>
-            <extension>
-                <groupId>javax.annotation</groupId>
-                <artifactId>jsr250-api</artifactId>
-                <version>1.0</version>
-            </extension>
         </extensions>
         <resources>
             <resource>
@@ -2538,6 +2527,8 @@
                         <compilerArgs>
                             <arg>-Xlint:unchecked</arg>
                             <arg>-Xlint:deprecation</arg>
+                            <arg>--add-modules</arg>
+                            <arg>java.xml.ws.annotation</arg>
                         </compilerArgs>
                         <!--failOnWarning>true</failOnWarning-->
                         <showDeprecation>true</showDeprecation>
