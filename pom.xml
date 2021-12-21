@@ -1816,6 +1816,11 @@
                 <version>${nemesis.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.nemesis.platform.module.accounting</groupId>
+                <artifactId>nemesis-module-eboekhouden</artifactId>
+                <version>${nemesis.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.nemesis.platform.module.avatar</groupId>
                 <artifactId>nemesis-module-gravatar</artifactId>
                 <version>${nemesis.version}</version>
