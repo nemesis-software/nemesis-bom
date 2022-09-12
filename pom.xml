@@ -286,7 +286,7 @@
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
         <maven-source-plugin.skip>false</maven-source-plugin.skip>
         <maven-source-plugin.attach>true</maven-source-plugin.attach>
-        <maven-spotbugs-plugin.version>4.3.0</maven-spotbugs-plugin.version>
+        <maven-spotbugs-plugin.version>4.7.2.0</maven-spotbugs-plugin.version>
         <maven-spotbugs-plugin.skip>false</maven-spotbugs-plugin.skip>
         <maven-pmd-plugin.version>3.12.0</maven-pmd-plugin.version>
         <maven-pmd-plugin.skip>false</maven-pmd-plugin.skip>
