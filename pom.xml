@@ -379,7 +379,7 @@
         <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
         <supercsv.version>2.4.0</supercsv.version>
-        <stripe-api.version>20.90.0</stripe-api.version>
+        <stripe-api.version>22.3.0</stripe-api.version>
         <stompwebsocket-webjars.version>2.3.4</stompwebsocket-webjars.version>
         <thumbnailator.version>0.4.11</thumbnailator.version>
         <tika-parsers.version>1.24.1</tika-parsers.version>
@@ -3207,8 +3207,7 @@
                         <configuration>
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
-                                -XX:+UseCMSInitiatingOccupancyOnly -XX:+DisableExplicitGC ${extra.jvmargs}
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+DisableExplicitGC ${extra.jvmargs} --add-opens java.base/java.lang=ALL-UNNAMED
                                 <!--
                                 -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
                                                                 -Dma.glasnost.orika.writeSourceFiles=true
