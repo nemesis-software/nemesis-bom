@@ -144,7 +144,7 @@
         <commons-vfs2-s3.version>4.3.5-nemesis</commons-vfs2-s3.version>
         <commons-vfs2-azure.version>1.2.patched</commons-vfs2-azure.version>
         <commons-jcs.version>2.2.1</commons-jcs.version>
-        <commons-text.version>1.8</commons-text.version>
+        <commons-text.version>1.10.0</commons-text.version>
         <compile-testing.version>0.18</compile-testing.version>
         <cybersource.version>6.2.9</cybersource.version>
         <cxf.version>3.3.6</cxf.version>
