@@ -2552,6 +2552,22 @@
                             </configuration>
                         </execution>
                     </executions>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.helger</groupId>
+                            <artifactId>jcodemodel</artifactId>
+                            <exclusions>
+                                <exclusion>
+                                    <groupId>com.google.code.findbugs</groupId>
+                                    <artifactId>annotations</artifactId>
+                                </exclusion>
+                                <exclusion>
+                                    <groupId>com.google.code.findbugs</groupId>
+                                    <artifactId>jsr305</artifactId>
+                                </exclusion>
+                            </exclusions>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -3207,7 +3223,8 @@
                         <configuration>
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+DisableExplicitGC ${extra.jvmargs} --add-opens java.base/java.lang=ALL-UNNAMED
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+DisableExplicitGC ${extra.jvmargs} --add-opens
+                                java.base/java.lang=ALL-UNNAMED
                                 <!--
                                 -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
                                                                 -Dma.glasnost.orika.writeSourceFiles=true
