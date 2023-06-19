@@ -338,7 +338,7 @@
         <recaptcha4j.version>0.0.7</recaptcha4j.version>
         <reflections.version>0.9.12</reflections.version>
         <redis-embedded.version>0.6</redis-embedded.version>
-        <redisson.version>3.13.6</redisson.version>
+        <redisson.version>3.22.0</redisson.version>
         <redis-hibernate.version>2.4.0</redis-hibernate.version>
         <redis-quartz.version>1.2.0-NEMESIS-RELEASE</redis-quartz.version>
         <riskified.version>1.2.7</riskified.version>
@@ -1173,6 +1173,11 @@
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-hibernate-53</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-data-23</artifactId>
                 <version>${redisson.version}</version>
             </dependency>
             <dependency>
