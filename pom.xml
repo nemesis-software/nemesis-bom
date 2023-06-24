@@ -145,7 +145,7 @@
         <commons-vfs2-azure.version>1.2.patched</commons-vfs2-azure.version>
         <commons-jcs.version>2.2.1</commons-jcs.version>
         <commons-text.version>1.8</commons-text.version>
-        <compile-testing.version>0.18</compile-testing.version>
+        <compile-testing.version>0.21.0</compile-testing.version>
         <cybersource.version>6.2.9</cybersource.version>
         <cxf.version>3.3.6</cxf.version>
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
@@ -723,8 +723,6 @@
                 <artifactId>spring-data-rest-hal-explorer</artifactId>
                 <version>${spring-data-rest.version}</version>
             </dependency>
-
-
 
 
             <!-- Spring Webflow -->
@@ -3099,10 +3097,10 @@
         <profile>
             <id>jdk9-profile</id>
             <properties>
-                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindReturnRef,FindNullDeref
-                </spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
+                <spotbugs.omitvisitors>SerializableIdiom,FindUnsatisfiedObligation,FindReturnRef,FindNullDeref</spotbugs.omitvisitors> <!--FindNullDeref is here because of https://github.com/spotbugs/spotbugs/issues/756 -->
                 <java.version>11</java.version>
-                <extra.jvmargs>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED</extra.jvmargs>
+
+                <extra.jvmargs>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</extra.jvmargs> <!--last three add-exports are here because of https://github.com/google/compile-testing/issues/222 -->
             </properties>
             <activation>
                 <jdk>[9,</jdk>
