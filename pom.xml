@@ -1638,6 +1638,16 @@
                 <version>${elasticsearch.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.codelibs.elasticsearch.module</groupId>
+                <artifactId>transport-netty4</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codelibs.elasticsearch.lib</groupId>
+                <artifactId>ssl-config</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.raisin</groupId>
                 <artifactId>maleorang</artifactId>
                 <version>${maleorang.version}</version>
