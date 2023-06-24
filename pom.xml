@@ -373,6 +373,7 @@
         <spring-social.version>2.0.0.NEMESIS-RELEASE</spring-social.version>
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.NEMESIS-RELEASE</spring-social-facebook.version>
+        <spring-data-rest.version>3.7.14-SNAPSHOT</spring-data-rest.version>
         <sun-mail-impl.version>1.6.2</sun-mail-impl.version>
         <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
@@ -702,6 +703,30 @@
                 <artifactId>spring-social-facebook-web</artifactId>
                 <version>${spring-social-facebook.version}</version>
             </dependency>
+
+
+            <!-- Spring data rest -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-rest-webmvc</artifactId>
+                <version>${spring-data-rest.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-rest-core</artifactId>
+                <version>${spring-data-rest.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-rest-hal-explorer</artifactId>
+                <version>${spring-data-rest.version}</version>
+            </dependency>
+
+
+
+
             <!-- Spring Webflow -->
             <dependency>
                 <groupId>org.springframework.webflow</groupId>
