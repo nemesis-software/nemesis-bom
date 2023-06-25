@@ -308,6 +308,7 @@
         <metadata-extractor.version>2.12.0</metadata-extractor.version>
         <money-validation.version>2.0.0</money-validation.version>
         <mongodb-embedded.version>5.0.5</mongodb-embedded.version>
+        <native-maven-plugin.version>0.9.23</native-maven-plugin.version>
         <nemesis.version>${project.version}</nemesis.version>
         <nemesis-tools.version>2.2.1.BUILD-SNAPSHOT</nemesis-tools.version>
         <nemesis-rules.version>2.1.0.RELEASE</nemesis-rules.version>
@@ -370,6 +371,7 @@
         <!--spring-hateoas.version>1.0.1.RELEASE</spring-hateoas.version-->
         <!--spring-data-releasetrain.version>Moore-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
+        <spring-security.version>5.8.2</spring-security.version>
         <spring-social.version>2.0.0.NEMESIS-RELEASE</spring-social.version>
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.NEMESIS-RELEASE</spring-social-facebook.version>
@@ -2529,6 +2531,11 @@
         </resources>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.graalvm.buildtools</groupId>
+                    <artifactId>native-maven-plugin</artifactId>
+                    <version>${native-maven-plugin.version}</version>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
