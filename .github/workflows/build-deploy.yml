@@ -36,4 +36,4 @@ jobs:
       - name: Build Layered Jar with Maven
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: mvn clean deploy javadoc:javadoc site:site site:deploy -Ptest -s src/main/resources/settings.xml
+        run: mvn clean deploy javadoc:javadoc site:site site:deploy -Ptest -s src/main/resources/settings.xml -e
