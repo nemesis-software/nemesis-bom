@@ -36,7 +36,17 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11.0.4
+      - name: Add SSH key
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+          mkdir -p /home/runner/.ssh
+          ssh-keyscan -t rsa 178.128.241.213 >> /home/runner/.ssh/known_hosts
       - name: Prepare Release Artifacts with Maven
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: mvn release:clean release:prepare -B -DdryRun=${{github.event.inputs.dryRun}} -Dtag=${{github.event.inputs.releaseVersion}} -DreleaseVersion=${{github.event.inputs.releaseVersion}} -DdevelopmentVersion=${{github.event.inputs.developmentVersion}} -Dnemesis.version=${{github.event.inputs.releaseVersion}} -s src/main/resources/settings.xml
       - name: Perform The Release
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: mvn release:perform -DdryRun=${{github.event.inputs.dryRun}} -s src/main/resources/settings.xml
