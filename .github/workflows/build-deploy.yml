@@ -16,6 +16,7 @@ jobs:
       NEMESIS_REPOSITORY_HTTP_PASSWORD: ${{ secrets.NEMESIS_REPOSITORY_HTTP_PASSWORD }}
       DOCKER_REPO: ${{ secrets.DOCKER_REPO }}
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
