@@ -37,6 +37,6 @@ jobs:
         with:
           java-version: 11.0.4
       - name: Prepare Release Artifacts with Maven
-        run: mvn release:clean release:prepare -B -DdryRun=${github.event.inputs.dryRun} -Dtag=${github.event.inputs.releaseVersion} -DreleaseVersion=${github.event.inputs.releaseVersion} -DdevelopmentVersion=${github.event.inputs.developmentVersion} -Dnemesis.version=${github.event.inputs.releaseVersion} -s src/main/resources/settings.xml
+        run: mvn release:clean release:prepare -B -DdryRun=${{github.event.inputs.dryRun}} -Dtag=${{github.event.inputs.releaseVersion}} -DreleaseVersion=${{github.event.inputs.releaseVersion}} -DdevelopmentVersion=${{github.event.inputs.developmentVersion}} -Dnemesis.version=${{github.event.inputs.releaseVersion}} -s src/main/resources/settings.xml
       - name: Perform The Release
-        run: mvn release:perform -DdryRun=${github.event.inputs.dryRun} -s src/main/resources/settings.xml
+        run: mvn release:perform -DdryRun=${{github.event.inputs.dryRun}} -s src/main/resources/settings.xml
