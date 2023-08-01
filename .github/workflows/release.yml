@@ -45,6 +45,8 @@ jobs:
       - name: Prepare Release Artifacts with Maven
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        with: 
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: mvn release:clean release:prepare -B -DdryRun=${{github.event.inputs.dryRun}} -Dtag=${{github.event.inputs.releaseVersion}} -DreleaseVersion=${{github.event.inputs.releaseVersion}} -DdevelopmentVersion=${{github.event.inputs.developmentVersion}} -Dnemesis.version=${{github.event.inputs.releaseVersion}} -s src/main/resources/settings.xml
       - name: Perform The Release
         env:
