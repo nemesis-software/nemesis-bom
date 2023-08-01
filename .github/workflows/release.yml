@@ -33,11 +33,14 @@ jobs:
           key: maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: maven-
       - name: Set up JDK 11
+        id: setup-java
         uses: actions/setup-java@v1
         with:
           java-version: 11.0.4
       - name: Prepare Release Artifacts with Maven
         uses: qcastel/github-actions-maven-release@master
+        env:
+          JAVA_HOME: ${{ steps.setup-java.outputs.path }}
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           maven-args: release:clean release:prepare -B -DdryRun=${{github.event.inputs.dryRun}} -Dtag=${{github.event.inputs.releaseVersion}} -DreleaseVersion=${{github.event.inputs.releaseVersion}} -DdevelopmentVersion=${{github.event.inputs.developmentVersion}} -Dnemesis.version=${{github.event.inputs.releaseVersion}} -s src/main/resources/settings.xml
