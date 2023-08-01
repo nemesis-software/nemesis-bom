@@ -2571,6 +2571,7 @@
                         </execution>
                     </executions>
                     <configuration>
+                        <skipDeploy>true</skipDeploy>
                         <generateReports>false</generateReports>
                         <generateSitemap>false</generateSitemap>
                         <relativizeDecorationLinks>false</relativizeDecorationLinks>
