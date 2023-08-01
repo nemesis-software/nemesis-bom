@@ -1,0 +1,42 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Maven
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseVersion:
+        description: 'releaseVersion'
+        required: true
+        default: '2.1.1.RELEASE'
+      developmentVersion:
+        description: 'developmentVersion'
+        required: true
+        default: '2.1.2.BUILD-SNAPSHOT'
+      dryRun:
+        description: 'dryRun'
+        required: true
+        default: 'false'
+jobs:
+  build:
+    env:
+      NEMESIS_REPOSITORY_HTTP_USERNAME: ${{ secrets.NEMESIS_REPOSITORY_HTTP_USERNAME }}
+      NEMESIS_REPOSITORY_HTTP_PASSWORD: ${{ secrets.NEMESIS_REPOSITORY_HTTP_PASSWORD }}
+      DOCKER_REPO: ${{ secrets.DOCKER_REPO }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: maven-
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11.0.4
+      - name: Prepare Release Artifacts with Maven
+        run: mvn release:clean release:prepare -B -DdryRun=${github.event.inputs.dryRun} -Dtag=${github.event.inputs.releaseVersion} -DreleaseVersion=${github.event.inputs.releaseVersion} -DdevelopmentVersion=${github.event.inputs.developmentVersion} -Dnemesis.version=${github.event.inputs.releaseVersion} -s src/main/resources/settings.xml
+      - name: Perform The Release
+        run: mvn release:perform -DdryRun=${github.event.inputs.dryRun} -s src/main/resources/settings.xml
