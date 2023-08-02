@@ -10,19 +10,20 @@
   ~ Information and shall use it only in accordance with the terms of the
   ~ license agreement you entered into with nemesis.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.12.RELEASE</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>io.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>2.4.0.BUILD-SNAPSHOT</version>
+    <version>2.3.12.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -131,7 +132,8 @@
         <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
         <camunda.version>7.12.0</camunda.version>
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
-        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
+        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength
+        </checkstyle.violation.ignore>
         <classindex.version>3.9</classindex.version>
         <codemodel.version>3.4.0</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
@@ -150,7 +152,7 @@
         <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
         <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
-        <cxf.xjc.jvmArgs />
+        <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>0.35.0</docker-maven-plugin.version>
         <dozer.version>6.5.0</dozer.version>
         <easymock.version>4.2</easymock.version>
@@ -160,9 +162,9 @@
         <elasticsearch-head-webjars.version>5.0.0</elasticsearch-head-webjars.version>
         <!--elasticsearch.version>6.8.6</elasticsearch.version-->
         <extjs-webjars.version>5.1.1-light</extjs-webjars.version>
-        <extra.jvmargs />
-        <failsafe.parallel />
-        <failsafe.useUnlimitedThreads />
+        <extra.jvmargs/>
+        <failsafe.parallel/>
+        <failsafe.useUnlimitedThreads/>
         <fontawesome-webjars.version>4.6.3</fontawesome-webjars.version>
         <flying-saucer.version>9.1.20</flying-saucer.version>
         <fst.version>2.57</fst.version>
@@ -309,7 +311,7 @@
         <money-validation.version>2.0.0</money-validation.version>
         <mongodb-embedded.version>5.0.5</mongodb-embedded.version>
         <nemesis.version>${project.version}</nemesis.version>
-        <nemesis-tools.version>2.2.1.BUILD-SNAPSHOT</nemesis-tools.version>
+        <nemesis-tools.version>2.2.4.RELEASE</nemesis-tools.version>
         <nemesis-rules.version>2.1.0.RELEASE</nemesis-rules.version>
         <opencmis.version>1.1.0</opencmis.version>
         <olingo-odata2.version>2.0.11</olingo-odata2.version>
@@ -2992,7 +2994,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>AL2</licenseFamilyCategory>
                             <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>Licensed to the Apache Software Foundation (ASF) under one</pattern>
                             </patterns>
@@ -3000,7 +3002,7 @@
                         <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
                             <licenseFamilyCategory>NSCL</licenseFamilyCategory>
                             <licenseFamilyName>Nemesis Software Commercial License 1.0</licenseFamilyName>
-                            <notes />
+                            <notes/>
                             <patterns>
                                 <pattern>nemesis Platform - NExt-generation Multichannel E-commerce SYStem</pattern>
                             </patterns>
@@ -3212,7 +3214,8 @@
                         <configuration>
                             <skip>${maven-failsafe-plugin.skip}</skip>
                             <!--argLine>${failsafeArgLine}</argLine-->
-                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+DisableExplicitGC ${extra.jvmargs} --add-opens
+                            <argLine>-Xms512m -Xmx3072m -Dfile.encoding=UTF-8 -XX:+DisableExplicitGC ${extra.jvmargs}
+                                --add-opens
                                 java.base/java.lang=ALL-UNNAMED
                                 <!--
                                 -Dma.glasnost.orika.compilerStrategy=ma.glasnost.orika.impl.generator.EclipseJdtCompilerStrategy
