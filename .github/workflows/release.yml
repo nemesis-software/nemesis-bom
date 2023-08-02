@@ -44,12 +44,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           maven-args: -B -DdryRun=${{github.event.inputs.dryRun}} -Dtag=${{github.event.inputs.releaseVersion}} -Dnemesis.version=${{github.event.inputs.releaseVersion}} -s src/main/resources/settings.xml
+          maven-development-version-number: ${{github.event.inputs.developmentVersion}}
+          maven-release-version-number: ${{github.event.inputs.releaseVersion}}
       - name: Perform The Release
         uses: qcastel/github-actions-maven-release@master
         env:
           JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          maven-args: release:perform -DdryRun=${{github.event.inputs.dryRun}} -s src/main/resources/settings.xml
+          maven-args: -DdryRun=${{github.event.inputs.dryRun}} -s src/main/resources/settings.xml
           maven-development-version-number: ${{github.event.inputs.developmentVersion}}
           maven-release-version-number: ${{github.event.inputs.releaseVersion}}
