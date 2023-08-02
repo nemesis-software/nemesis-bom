@@ -23,7 +23,6 @@ jobs:
     env:
       NEMESIS_REPOSITORY_HTTP_USERNAME: ${{ secrets.NEMESIS_REPOSITORY_HTTP_USERNAME }}
       NEMESIS_REPOSITORY_HTTP_PASSWORD: ${{ secrets.NEMESIS_REPOSITORY_HTTP_PASSWORD }}
-      DOCKER_REPO: ${{ secrets.DOCKER_REPO }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -41,6 +40,8 @@ jobs:
         uses: qcastel/github-actions-maven-release@master
         env:
           JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
+          NEMESIS_REPOSITORY_HTTP_USERNAME: ${{ secrets.NEMESIS_REPOSITORY_HTTP_USERNAME }}
+          NEMESIS_REPOSITORY_HTTP_PASSWORD: ${{ secrets.NEMESIS_REPOSITORY_HTTP_PASSWORD }}
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           maven-args: -B -DdryRun=${{github.event.inputs.dryRun}} -Dtag=${{github.event.inputs.releaseVersion}} -Dnemesis.version=${{github.event.inputs.releaseVersion}} -s src/main/resources/settings.xml
@@ -50,6 +51,8 @@ jobs:
         uses: qcastel/github-actions-maven-release@master
         env:
           JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
+          NEMESIS_REPOSITORY_HTTP_USERNAME: ${{ secrets.NEMESIS_REPOSITORY_HTTP_USERNAME }}
+          NEMESIS_REPOSITORY_HTTP_PASSWORD: ${{ secrets.NEMESIS_REPOSITORY_HTTP_PASSWORD }}
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           maven-args: -DdryRun=${{github.event.inputs.dryRun}} -s src/main/resources/settings.xml
