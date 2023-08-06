@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.9</version>
+        <version>3.1.2</version>
         <relativePath/>
     </parent>
 
@@ -147,9 +147,10 @@
         <commons-text.version>1.8</commons-text.version>
         <compile-testing.version>0.21.0</compile-testing.version>
         <cybersource.version>6.2.9</cybersource.version>
-        <cxf.version>3.3.6</cxf.version>
-        <cxf-xjc-plugin.version>3.2.1</cxf-xjc-plugin.version>
-        <cxf-codegen-plugin.version>3.2.2</cxf-codegen-plugin.version>
+        <cxf.version>4.0.2</cxf.version>
+        <cxf-swagger.version>3.6.1</cxf-swagger.version>
+        <cxf-xjc-plugin.version>4.0.0</cxf-xjc-plugin.version>
+        <cxf-codegen-plugin.version>4.0.2</cxf-codegen-plugin.version>
         <cxf.codegenplugin.forkmode>once</cxf.codegenplugin.forkmode>
         <cxf.xjc.jvmArgs/>
         <docker-maven-plugin.version>0.35.0</docker-maven-plugin.version>
@@ -185,15 +186,14 @@
         <hazelcast-quartz.version>1.0.4</hazelcast-quartz.version>
         <!--hibernate.version>5.2.17.Final</hibernate.version-->
         <hibernate.ogm.version>5.1.0.Final</hibernate.ogm.version>
-        <hibernate-hydrate.version>5.2.1</hibernate-hydrate.version>
+        <hibernate-hydrate.version>6.2.2</hibernate-hydrate.version>
         <httpclient5.version>5.0.2</httpclient5.version>
         <icu4j.version>68.1</icu4j.version>
         <!-- Remove once boot updates -->
         <!--hazelcast.version>3.7.2</hazelcast.version-->
         <!--hazelcast-hibernate.version>1.2.2</hazelcast-hibernate.version-->
         <imgscalr.version>4.2</imgscalr.version>
-        <infinispan.version>9.1.7.Final</infinispan.version>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <!-- Upgrade only after jackson-datatype-money upgrade-->
         <javamoney.version>1.4.2</javamoney.version>
         <jackson-datatype-money.version>1.2.1</jackson-datatype-money.version>
@@ -207,12 +207,12 @@
         <java-types.version>1.0.1</java-types.version>
         <javax-ws.version>2.3.1</javax-ws.version>
         <javax-inject.version>1</javax-inject.version>
-        <javax-jstl.version>1.2.2</javax-jstl.version>
+        <jakarta-jstl.version>3.0.0</jakarta-jstl.version>
         <javax-activation.version>1.2.0</javax-activation.version>
         <javax-xml-soap.version>1.4.0</javax-xml-soap.version>
         <javax-interceptor.version>1.2.2</javax-interceptor.version>
         <javax-jws.version>1.1</javax-jws.version>
-        <javax-jsp.version>2.3.3</javax-jsp.version>
+        <jakarta-jsp.version>3.1.1</jakarta-jsp.version>
         <jansi.version>1.18</jansi.version>
         <jaxb.version>2.3.0.1</jaxb.version>
         <jcip.version>1.0</jcip.version>
@@ -220,6 +220,7 @@
         <jest.version>6.3.1</jest.version>
         <jgravatar.version>1.2</jgravatar.version>
         <jadira-usertype.version>7.0.0.CR1</jadira-usertype.version>
+        <javassist.version>3.29.2-GA</javassist.version>
         <jcaptcha.version>1.0-RC6</jcaptcha.version>
         <jmeter-maven-plugin.version>1.10.1</jmeter-maven-plugin.version>
         <jna.version>5.6.0</jna.version>
@@ -254,7 +255,7 @@
         <license-maven-plugin>1.20</license-maven-plugin>
         <log4j2.version>2.17.1</log4j2.version>
         <lutung.version>0.0.8</lutung.version>
-        <kie.version>7.39.0.Final</kie.version>
+        <kie.version>7.74.1.Final</kie.version>
         <klarna-sdk.version>4.0.3</klarna-sdk.version>
         <magicsuggest-webjars.version>2.1.4</magicsuggest-webjars.version>
         <maleorang.version>3.0-0.9.8</maleorang.version>
@@ -279,7 +280,7 @@
         <maven-remote-resources-plugin.version>1.4</maven-remote-resources-plugin.version>
         <maven-release-plugin.version>3.0.0-M1</maven-release-plugin.version>
         <maven-plugin-log4j.version>1.0.1</maven-plugin-log4j.version>
-        <maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
+        <maven-plugin-plugin.version>3.9.0</maven-plugin-plugin.version>
         <maven-project-info-reports.plugin>2.9</maven-project-info-reports.plugin>
         <maven-appassembler-plugin.version>1.8</maven-appassembler-plugin.version>
         <maven-changes-plugin.version>2.9</maven-changes-plugin.version>
@@ -369,7 +370,7 @@
         <!--spring-hateoas.version>1.0.1.RELEASE</spring-hateoas.version-->
         <!--spring-data-releasetrain.version>Moore-BUILD-SNAPSHOT</spring-data-releasetrain.version-->
         <!--spring-session.version>1.1.1.RELEASE</spring-session.version-->
-        <spring-security.version>5.8.2</spring-security.version>
+<!--        <spring-security.version>5.8.2</spring-security.version>-->
         <spring-social.version>2.0.0.NEMESIS-RELEASE</spring-social.version>
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.NEMESIS-RELEASE</spring-social-facebook.version>
@@ -732,6 +733,11 @@
                 <version>${spring-webflow.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache3.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache-core</artifactId>
                 <version>${ehcache.version}</version>
@@ -765,6 +771,12 @@
                 <groupId>com.adobe.xmp</groupId>
                 <artifactId>xmpcore</artifactId>
                 <version>${xmpcore.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
             </dependency>
 
             <dependency>
@@ -828,44 +840,29 @@
                 <version>${oracle.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.hibernate</groupId>
+                <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.hibernate</groupId>
+                <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-jcache</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.hibernate</groupId>
+                <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-java8</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-infinispan</artifactId>
-                <version>${hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
+                <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-hikaricp</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.javaetmoi.core</groupId>
-                <artifactId>javaetmoi-hibernate5-hydrate</artifactId>
+                <artifactId>javaetmoi-hibernate6-hydrate</artifactId>
                 <version>${hibernate-hydrate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.infinispan</groupId>
-                <artifactId>infinispan-embedded</artifactId>
-                <version>${infinispan.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.infinispan</groupId>
-                <artifactId>infinispan-jcache</artifactId>
-                <version>${infinispan.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.pivotal.gemfire</groupId>
@@ -1498,24 +1495,19 @@
                 <version>${javax-xml-soap.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>javax.mail</artifactId>
-                <version>${sun-mail-impl.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>javax.interceptor</groupId>
                 <artifactId>javax.interceptor-api</artifactId>
                 <version>${javax-interceptor.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.servlet.jsp</groupId>
-                <artifactId>javax.servlet.jsp-api</artifactId>
-                <version>${javax-jsp.version}</version>
+                <groupId>jakarta.servlet.jsp</groupId>
+                <artifactId>jakarta.servlet.jsp-api</artifactId>
+                <version>${jakarta-jsp.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.servlet.jsp.jstl</groupId>
-                <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-                <version>${javax-jstl.version}</version>
+                <groupId>jakarta.servlet.jsp.jstl</groupId>
+                <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+                <version>${jakarta-jstl.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
@@ -1653,22 +1645,22 @@
             <dependency>
                 <groupId>org.codelibs.elasticsearch.module</groupId>
                 <artifactId>reindex</artifactId>
-                <version>${elasticsearch.version}</version>
+                <version>${elasticsearch-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.codelibs.elasticsearch.module</groupId>
                 <artifactId>analysis-common</artifactId>
-                <version>${elasticsearch.version}</version>
+                <version>${elasticsearch-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.codelibs.elasticsearch.module</groupId>
                 <artifactId>transport-netty4</artifactId>
-                <version>${elasticsearch.version}</version>
+                <version>${elasticsearch-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.codelibs.elasticsearch.lib</groupId>
                 <artifactId>ssl-config</artifactId>
-                <version>${elasticsearch.version}</version>
+                <version>${elasticsearch-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.raisin</groupId>
@@ -1713,7 +1705,7 @@
             <dependency>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
-                <version>${cxf.version}</version>
+                <version>${cxf-swagger.version}</version>
             </dependency>
             <!-- Maven -->
             <dependency>
