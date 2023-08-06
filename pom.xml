@@ -128,7 +128,7 @@
         <asciidoctorj-diagram.version>2.0.1</asciidoctorj-diagram.version>
         <asciidoctorj-pdf.version>1.5.3</asciidoctorj-pdf.version>
         <atmosphere.version>2.2.13</atmosphere.version>
-        <avatax-rest-v2-api-java_2.11.version>20.1.2</avatax-rest-v2-api-java_2.11.version>
+        <avatax-rest-v2-api-java_2.11.version>23.7.0</avatax-rest-v2-api-java_2.11.version>
         <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
         <camunda.version>7.12.0</camunda.version>
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
@@ -346,7 +346,7 @@
         <!--byte-buddy-agent.version>1.12</byte-buddy-agent.version>
         <byte-buddy.version>1.12</byte-buddy.version-->
         <smartsprites.version>0.2.13</smartsprites.version>
-        <smartystreets.version>3.7.0</smartystreets.version>
+        <smartystreets.version>3.13.19</smartystreets.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
         <tablesaw-webjars.version>2.0.3</tablesaw-webjars.version>
         <tooltipster-webjars.version>4.2.5</tooltipster-webjars.version>
@@ -387,7 +387,7 @@
         <!--thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version-->
         <thymeleaf-extras.version>3.0.4.RELEASE</thymeleaf-extras.version>
-        <twilio-sdk.version>7.49.1</twilio-sdk.version>
+        <twilio-sdk.version>9.9.1</twilio-sdk.version>
         <uimafit-core.version>3.0.0</uimafit-core.version>
         <wagon.version>3.3.4</wagon.version>
         <wuic.version>0.5.2.RC1</wuic.version>
