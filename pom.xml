@@ -23,7 +23,7 @@
 
     <groupId>io.nemesis</groupId>
     <artifactId>bom</artifactId>
-    <version>2.3.1.BUILD-SNAPSHOT</version>
+    <version>2.7.9.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Nemesis BOM</name>
@@ -342,10 +342,8 @@
         <redis-quartz.version>1.2.0-NEMESIS-RELEASE</redis-quartz.version>
         <riskified.version>1.2.7</riskified.version>
         <rometools.version>1.12.2</rometools.version>
-        <selenium.version>3.9.1</selenium.version>
         <!--byte-buddy-agent.version>1.12</byte-buddy-agent.version>
         <byte-buddy.version>1.12</byte-buddy.version-->
-        <selenium-htmlunit.version>3.9.1</selenium-htmlunit.version>
         <smartsprites.version>0.2.13</smartsprites.version>
         <smartystreets.version>3.7.0</smartystreets.version>
         <slick-webjars.version>1.6.0</slick-webjars.version>
@@ -2395,16 +2393,16 @@
                 <artifactId>xercesImpl</artifactId>
                 <version>${xerces.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>htmlunit-driver</artifactId>
-                <version>${selenium-htmlunit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-java</artifactId>
-                <version>${selenium.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.seleniumhq.selenium</groupId>-->
+<!--                <artifactId>htmlunit-driver</artifactId>-->
+<!--                <version>${selenium-htmlunit.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.seleniumhq.selenium</groupId>-->
+<!--                <artifactId>selenium-java</artifactId>-->
+<!--                <version>${selenium.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>ru.yandex.qatools.ashot</groupId>
                 <artifactId>ashot</artifactId>
