@@ -132,7 +132,7 @@
         <bcpkix-jdk15on.version>1.64</bcpkix-jdk15on.version>
         <camunda.version>7.12.0</camunda.version>
         <camunda-spring-boot.version>3.3.5</camunda-spring-boot.version>
-        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength</checkstyle.violation.ignore>
+        <checkstyle.violation.ignore>RedundantThrows,NewlineAtEndOfFile,ParameterNumber,MethodLength,FileLength,JavadocPackage</checkstyle.violation.ignore>
         <classindex.version>3.9</classindex.version>
         <codemodel.version>3.4.0</codemodel.version>
         <codemirror-webjars.version>5.1</codemirror-webjars.version>
@@ -374,7 +374,7 @@
         <spring-social.version>2.0.0.NEMESIS-RELEASE</spring-social.version>
         <spring-social-twitter.version>2.0.2.NEMESIS-RELEASE</spring-social-twitter.version>
         <spring-social-facebook.version>3.0.0.NEMESIS-RELEASE</spring-social-facebook.version>
-        <spring-data-rest.version>3.7.14-SNAPSHOT</spring-data-rest.version>
+        <!--spring-data-rest.version>3.7.14-SNAPSHOT</spring-data-rest.version-->
         <sun-mail-impl.version>1.6.2</sun-mail-impl.version>
         <swagger.version>1.5.24</swagger.version>
         <swagger-ui-webjars.version>3.24.3</swagger-ui-webjars.version>
@@ -702,23 +702,23 @@
 
 
             <!-- Spring data rest -->
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-rest-webmvc</artifactId>
-                <version>${spring-data-rest.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-rest-webmvc</artifactId>-->
+<!--                <version>${spring-data-rest.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-rest-core</artifactId>
-                <version>${spring-data-rest.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-rest-core</artifactId>-->
+<!--                <version>${spring-data-rest.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-rest-hal-explorer</artifactId>
-                <version>${spring-data-rest.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-rest-hal-explorer</artifactId>-->
+<!--                <version>${spring-data-rest.version}</version>-->
+<!--            </dependency>-->
 
 
             <!-- Spring Webflow -->
@@ -3229,6 +3229,9 @@
                                                                 -Dma.glasnost.orika.writeClassFiles=true
                                                                 -Dma.glasnost.orika.writeClassFilesToPath=target/generated-classes/
                                                                 -->
+                            </argLine>
+                            <argLine>
+                                -javaagent:/home/petar/.m2/repository/org/springframework/spring-instrument/5.1.0.BUILD-SNAPSHOT/spring-instrument-5.1.0.BUILD-SNAPSHOT.jar
                             </argLine>
                             <useManifestOnlyJar>false</useManifestOnlyJar>
                             <useSystemClassLoader>true</useSystemClassLoader>

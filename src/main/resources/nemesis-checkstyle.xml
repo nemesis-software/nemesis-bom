@@ -21,6 +21,9 @@
       <property name="headerFile" value="${checkstyle.header.file}"/>
       <property name="ignoreLines" value="1"/>
     </module-->
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="JavadocPackage"/>
+    </module>
     <module name="FileLength"/>
     <!--module name="FileTabCharacter"/-->
     <module name="RegexpSingleline">
