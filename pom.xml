@@ -3121,6 +3121,8 @@
                                 <release>${java.version}</release>
                                 <source>${java.version}</source>
                                 <target>${java.version}</target>
+                                <encoding>UTF-8</encoding>
+                                <compilerVersion>${java.version}</compilerVersion>
                                 <compilerArgs>
                                     <arg>-Xlint:unchecked</arg>
                                     <arg>-Xlint:deprecation</arg>
