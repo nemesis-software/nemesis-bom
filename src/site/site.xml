@@ -39,9 +39,9 @@
         </menu>
     </body>
 
-    <skin>
-        <groupId>io.nemesis.tools</groupId>
-        <artifactId>nemesis-maven-skin</artifactId>
-        <version>1.7.0.RELEASE</version>
-    </skin>
+<!--    <skin>-->
+<!--        <groupId>io.nemesis.tools</groupId>-->
+<!--        <artifactId>nemesis-maven-skin</artifactId>-->
+<!--        <version>1.7.0.RELEASE</version>-->
+<!--    </skin>-->
 </project>
