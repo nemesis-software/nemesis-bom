@@ -100,7 +100,7 @@
             </notifier>
         </notifiers>
     </ciManagement>
-    <distributionManagement>
+    <!--distributionManagement>
         <snapshotRepository>
             <id>SonatypeOSSRH</id>
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
@@ -109,7 +109,7 @@
             <id>SonatypeOSSRH</id>
             <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement-->
 
     <properties>
         <activiti.version>7-201802-EA</activiti.version>
