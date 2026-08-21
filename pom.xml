@@ -2631,7 +2631,7 @@
                     <configuration>
                         <releaseProfiles>nemesis-release</releaseProfiles>
                         <useReleaseProfile>true</useReleaseProfile>
-                        <goals>clean deploy javadoc:javadoc site site:deploy</goals>
+                        <goals>clean verify central-publishing:publish</goals>
                         <completionGoals>clean deploy javadoc:javadoc site site:deploy</completionGoals>
                         <scmCommentPrefix>[maven-release-plugin][ci-skip]</scmCommentPrefix>
                         <localCheckout>true</localCheckout>
@@ -2806,7 +2806,7 @@
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
-                        <phase>deploy</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
