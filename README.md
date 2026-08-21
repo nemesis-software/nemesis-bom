@@ -7,7 +7,7 @@ The parent BOM for the Nemesis Platform.
 = RELEASE
 
 ```
-mvn release:prepare -B -DdryRun=false -Dtag=2.3.17 -Dnemesis.version=2.3.17.RELEASE -DdevelopmentVersion=2.3.18.BUILD-SNAPSHOT -DreleaseVersion=2.3.17.RELEASE
+mvn release:prepare -B -DdryRun=false -Dtag=2.3.17 -Dnemesis.version=2.3.17.RELEASE -DdevelopmentVersion=2.3.18.BUILD-SNAPSHOT -DreleaseVersion=2.3.17.RELEASE -Darguments="-Dmaven.deploy.skip=true"
 
 mvn release:perform
 
